@@ -6,7 +6,7 @@ import tinymce
 class Categories(models.Model):
     name = models.CharField('Категория', max_length=250)
     img = models.ImageField(upload_to='static/img/main_page', null=True, blank=True)
-    slug = models.SlugField('url', unique=True)
+    slug = models.CharField('url', unique=True, max_length=250)
 
     def __str__(self):
         return self.name
