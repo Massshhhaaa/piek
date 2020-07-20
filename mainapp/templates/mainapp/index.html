@@ -1,0 +1,57 @@
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% include 'mainapp/source.html' %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Kvantorium journal</title>
+
+</head>
+<body>
+<div id="progressbar"></div>
+<div id="scrollPath"></div>
+
+<section style="height:100vh;">
+  <nav id="navbar_alpha" class="d-flex justify-content-center py-2 py-md-3">
+        <a class="px-md-5 px-3 nav-item" href="#">Команды</a>
+        <a class="px-md-5 px-3 nav-item" href="#">О проекте</a>
+  </nav>
+
+
+    <div class="container inner-center-sm" >
+        <div class="d-flex flex-row">
+            <div class="pt-md-5 name align-self-center">
+                <h1  class='sf-thin'>The children science and engineering journal</h1>
+            </div>
+            <div class="art">
+              <div class="d-flex flex-column">
+                <img src="{% static 'img/art/top.svg' %}" class="art-top">
+                <img src="{% static 'img/art/bottom.svg' %}" class="art-bottom">
+                <img src="{% static 'img/art/particle.svg' %}" class="art-particle">
+              </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% for h in hello %}
+<section>
+  <div style="background-image: url({{ h.img.url }})" class="post-image">
+      <div class="d-flex flex-column align-items-center post-container">
+        <h1 class="py-5 post_title"><a href="{{ h.slug }}">{{ h.title }}</a></h1>
+        <p class="py-5 excerption">{{ h.excerption }}</p>
+      </div>
+  </div>
+  <div class="annotation">{{h.annotation}}</div>
+</section>
+{% endfor %}
+
+</body>
+</html>
