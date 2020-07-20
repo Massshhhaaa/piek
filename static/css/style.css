@@ -162,3 +162,6 @@ LI.over UL.nav {
 DIV.lnk:hover {
 	BACKGROUND: #d1dcfb
 }
+header .navbar-light{
+  background-color: #000;
+}
