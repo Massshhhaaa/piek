@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+header .navbar-light{
+  background-color: #8B0000;
+
+}
 
 body{
   background-color: #fafafa;
@@ -40,3 +44,4 @@ width: 30% !important;
 .item-name :hover{
   text-decoration: none;
 }
+

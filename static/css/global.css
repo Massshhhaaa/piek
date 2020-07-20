@@ -70,3 +70,7 @@ body  {
     font-size: 1px;
     line-height: 0px;
 }
+
+header .navbar-light{
+	background-color: #f00;
+}
