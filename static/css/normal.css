@@ -4,13 +4,19 @@
   font-weight: normal;
   font-style: normal;
 }
-
+* { overflow-x: hidden;}
 body{
-    background-color: #fafafa;
+  background-color: #000;
 }
-section{
-  max-width: 1170px;
+main{
+  position: relative;
+  width: 100vw;
   margin: 0 auto;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: #fafafa;
+  margin: 0 auto;
+  margin-bottom: 400px;
 }
 
 a:hover{
@@ -30,7 +36,7 @@ a:hover{
 
 .separately{
 background-color: #fff;
-border-radius: 15px;
+border-radius: 20px;
 width: 30% !important;
 }
 
@@ -48,6 +54,13 @@ width: 30% !important;
 .footer{
   background-color: #333333;
   font-weight: lighter;
+  padding-top: 300px;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footer a{
@@ -72,7 +85,7 @@ width: 30% !important;
 
 .tiny-footer{
  background-color: #262626;
- min-height: 40px;
+ min-height: 30px;
 }
 .tiny-footer p{
   color: #fff;
