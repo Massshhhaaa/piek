@@ -21,22 +21,32 @@
 
 </head>
 
-<body class="twoColHybLtHdr">
+<body class="">
 
 	{% include 'mainapp/header.html' %}
-	{% include 'mainapp/slider.html' %}
 
 
-<div id="main-container" class="main-container">
-	<!--main-container-->
-	<div id="tp-blog" class="tp-blog">
-    <!--tp-blog-->
+
+<section class="container">
+	<p>Основными направлениями деятельности "Поволжской электротехнической компании" являются:</p>
+
+	<div class="d-flex flex-column">
+	<p>Разработка и производство электрических исполнительных механизмов, электроприводов для трубопроводной арматуры и пуско-управляющих устройств.</p>
+	<p>Изготовление взрывозащищенных электроприводов по нормативам 1ExdIIСT4 (1ExdIIBT4).</p>
+	<p>Изготовление автоматических шлагбаумов и блоков управления взрывозащищенного исполнения.</p>
+	<p>Изготовление трубопроводной арматуры с электроприводами.</p>
+	</div>
+
+
+
+
+<!-- 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-81 tp-right-side"><!--left-side-->
+				<div class="col-md-8 col-md-81 tp-right-side">
 					<div class="row">
-						<div class="col-md-12 blog-block"><!-- blog-block -->
-							<div class="blog-info"><!-- blog-info -->
+						<div class="col-md-12 blog-block"> -->
+						<!-- <div class="blog-info">
 								<h3>Мы рады приветствовать Вас на сайте Поволжской электротехнической компании</h3>
 								<p>Основными направлениями деятельности "Поволжской электротехнической компании" являются:
 								<ul>
@@ -47,18 +57,18 @@
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
-				<div class="border">
+				<div  class="cat border">
 					<div class="d-flex flex-wrap">
 						{% for cat in categories %}
 							<div class="m-2 p-3 separately">
-								<a href="{{ cat.slug }}">
+
+								<a class="d-flex flex-column" href="{{ cat.slug }}">
 									<img src="{{ cat.img.url }}" class="pic" alt="Исполнительный механизм" title="{{ cat.name }}">
+									<p>{{ cat.name }}</p>
 								</a>
-								<div class="">
-									<a href="/catalog/mechanisms/info/meo/">{{ cat.name }}</a>
-							</div>
+
 							</div>
 
 						{% endfor %}
@@ -84,7 +94,7 @@
 						{% endfor %}
 						</div>
 					</div> -->
-					<div class="row">
+				<!-- 	<div class="row">
 						<div class="col-md-12">
 							<p>Главными преимуществами компании являются <b>короткие сроки изготовления</b> и <b>конкурентная цена.</b></p>
 							<p>Наша продукция применяется в таких отраслях как: энергетика, химическая, металлургическая, нефтегазовая отрасли, машиностроение, ЖКХ, пищевая промышленность, агропромышленный комплекс.</p>
@@ -103,8 +113,8 @@
 				</div>
 			</div>
 		</div>
-  </div>
-</div>
+ -->
+</section>
 
 
 

@@ -1,23 +1,26 @@
+html{
+  height: auto !important;
+}
 body{
   max-width: 1170px !important;
   margin: 0 auto;
+  border: 1px solid black;
 }
-
+.cat{
+  display: block;
+  position: relative;
+}
 
 .pic{
   display: block;
-  max-width: 185px;
   margin: 0 auto;
-  float: left;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  width: 185px;
-  height: 124px;
-  overflow: hidden;
 
 }
 .separately{
+height: 40vh;
 background-color: #fff;
 border-radius: 15px;
+width: 30% !important;
 
 }
+
