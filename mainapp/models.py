@@ -1,5 +1,5 @@
 from django.db import models
-import tinymce
+import tinymce 
 
 # Create your models here.
 
