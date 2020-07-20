@@ -4,7 +4,8 @@ from .models import Categories
 
 # Create your views here.
 def main_def(request):
-    return render(request, 'mainapp/index.html', context={'categories' : Categories.objects.all()})
+    categories = Categories.objects.all()
+    return render(request, 'mainapp/index.html', context={'categories' : categories})
 
 # def detail(request, slug):
 #     post = get_object_or_404(Hello, slug = slug)

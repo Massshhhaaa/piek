@@ -1,16 +1,16 @@
 from django.db import models
-from pytils.translit import slugify
+import tinymce
 
 # Create your models here.
 
 class Categories(models.Model):
     name = models.CharField('Категория', max_length=250)
     img = models.ImageField(upload_to='static/img/main_page', null=True, blank=True)
-    slug = models.SlugField('url', unique=True, null=True)
+    slug = models.SlugField('url', unique=True)
 
     def __str__(self):
         return self.name
-
+#
 #
 # class Person(models.Model):
 #     team = models.ForeignKey(Team, on_delete=models.CASCADE, null=True)
@@ -45,9 +45,9 @@ class Categories(models.Model):
 #
 #
 #
-
-
-
+#
+#
+#
 # def slug_generator(sender, instance, *args,**kwargs):
 #     if not instance.slug:
 #         instance.slug = 'SLUG'
