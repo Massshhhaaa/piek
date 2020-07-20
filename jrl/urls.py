@@ -21,8 +21,5 @@ from mainapp.views import *
 
 urlpatterns = [
     path('', main_def, name='main_def'),
-    path('teams/', team_view, name='team_view'),
-    path('<slug:slug>/', detail, name='detail'),
     path('admin/', admin.site.urls),
-    path('tinymce/', include('tinymce.urls')),
     ]
