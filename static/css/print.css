@@ -1,0 +1,53 @@
+* { -webkit-print-color-adjust: exact; }
+
+head {
+	display:none;
+}
+.tp-left-side, #tp-breadcrumb, .tp-navigations, .tp-top-bar, .footer, #tiny-footer {
+	display:none;
+}
+.tp-right-side {
+	width: 100%;
+}
+.col-md-6 {
+	width: 48%;
+	float:left;
+}
+.btn {
+	display:none;
+}
+.table, .table p, p {
+	font-size: 12px;
+}
+p {
+	margin-bottom: 7px
+}
+
+a[href^=http]:after {content:" <" attr(href) ">";}
+ul {
+	margin:0;
+	padding:0px;
+}
+ul li a {
+	margin:0;
+	padding:0px;
+}
+ul li {
+	font-size: 12px;
+	list-style: none;
+	margin:0;
+	padding:0px;
+}
+.blog-block ul li {
+	margin-left: 0 !important;
+}
+h4 {
+	text-align: left;
+}
+
+.jivo-iframe-container-right, .jivo-state-widget-collapsed, .jivo-state-widget, .jivo-collapsed, .jivo_shadow, .jivo_rounded_corners, .jivo_gradient, .jivo_3d_effect, .jivo_border, .jivo_3px_border{
+	display:none !important;
+}
+div#jivo-iframe-container.jivo-iframe-container-right {
+    display: none !important;
+}
