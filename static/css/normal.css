@@ -5,10 +5,11 @@
   font-style: normal;
 }
 
-
 body{
-  background-color: #fafafa;
-  max-width: 1170px !important;
+    background-color: #fafafa;
+}
+section{
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -39,4 +40,45 @@ width: 30% !important;
 }
 .item-name :hover{
   text-decoration: none;
+}
+
+
+
+/* --footer */
+.footer{
+  background-color: #333333;
+  font-weight: lighter;
+}
+
+.footer a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+.footer h2{
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+
+.angle-double-right li a:first-child:before{
+ margin-right: 10px;
+ font-family: FontAwesome;
+ color:#777;
+ top: 0;
+ left: -5px;
+ content: "\f101";
+}
+
+.tiny-footer{
+ background-color: #262626;
+ min-height: 40px;
+}
+.tiny-footer p{
+  color: #fff;
+  font-size: 0.8em;
+  padding: 1em;
+  font-family: sf;
+  font-weight: lighter;
+  font-weight: lighter;
 }
