@@ -16,6 +16,7 @@
 <link href="{% static 'css/newstyle.css' %}" rel="stylesheet" type="text/css" />
 <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
 <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static 'css/normal.css' %}" rel="stylesheet">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
@@ -47,21 +48,42 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
+
+				<div class="border">
+					<div class="d-flex flex-wrap">
+						{% for cat in categories %}
+							<div class="m-2 p-3 separately">
+								<a href="{{ cat.slug }}">
+									<img src="{{ cat.img.url }}" class="pic" alt="Исполнительный механизм" title="{{ cat.name }}">
+								</a>
+								<div class="">
+									<a href="/catalog/mechanisms/info/meo/">{{ cat.name }}</a>
+							</div>
+							</div>
+
+						{% endfor %}
+					</div>
+				</div>
+
+
+
+
+					<!-- <div class="row">
 						<div class="portfolioContainer isotope">
 						{% for cat in categories %}
 							<div class="col-md-4 category-4 isotope-item">
-								<div class="tp-gallery-pic">
-									<a href="{{ cat.slug }}"><img src="{{ cat.img.url }}" class="img-responsive" alt="Исполнительный механизм" title="{{ cat.name }}"></a>
+								<div class="">
+									<a href="{{ cat.slug }}">
+										<img src="{{ cat.img.url }}" class="img-responsive" alt="Исполнительный механизм" title="{{ cat.name }}">
+									</a>
 									<div class="tp-gallery-caption center">
 										<a href="/catalog/mechanisms/info/meo/">{{ cat.name }}</a>
 									</div>
 								</div>
 							</div>
 						{% endfor %}
-
 						</div>
-					</div>
+					</div> -->
 					<div class="row">
 						<div class="col-md-12">
 							<p>Главными преимуществами компании являются <b>короткие сроки изготовления</b> и <b>конкурентная цена.</b></p>

@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6{
 	color:#2a2a2a;
 	margin-bottom:15px;
 	margin-top:0px;
-	font-family: 'Roboto Condensed', sans-serif; 
+	font-family: 'Roboto Condensed', sans-serif;
 	letter-spacing:-1px;
 	text-transform: none;
 	text-align:left;
@@ -68,23 +68,23 @@ h2.optim{
 	margin:20px 0px;
 	border:#ccc 1px solid;
 	border-collapse:separate;
- 
+
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
- 
+
 	-moz-box-shadow: 0 1px 2px #d1d1d1;
 	-webkit-box-shadow: 0 1px 2px #d1d1d1;
 	box-shadow: 0 1px 2px #d1d1d1;
 }
- 
+
 .simple-little-table th {
 	font-size: 14px;
 	font-weight:bold;
 	padding:21px 12px 22px 12px;
 	border-top:1px solid #fafafa;
 	border-bottom:1px solid #e0e0e0;
- 
+
 	background: #ededed;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
 	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
@@ -117,7 +117,7 @@ h2.optim{
 	border-top: 1px solid #ffffff;
 	border-bottom:1px solid #e0e0e0;
 	border-left: 1px solid #e0e0e0;
- 
+
 	background: #fafafa;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
 	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
@@ -145,7 +145,7 @@ h2.optim{
 	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
 	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
 }
- 
+
 .simple-little-table a:link {
 	color: #337ab7;
 	font-weight: bold;
@@ -170,7 +170,7 @@ a{
 a:hover{ color:#2a2a2a; text-decoration: none;}
 .copyright-ct a:hover {
 	color: #FCCE13;
-} 
+}
 body {
 	background: #f5f5f5;
 	color: #444444;
@@ -210,7 +210,7 @@ b, strong {
 
 /*********** Header Start**********/
 
-.tp-top-bar{ 
+.tp-top-bar{
 	background-color: #770E23;;
 	padding: 15px 0px;
 }
@@ -325,7 +325,7 @@ b, strong {
 }
 
 /*******************************
-			tp-breadcrumb			
+			tp-breadcrumb
 ******************************/
 #tp-breadcrumb{}
 .tp-breadcrumb{
@@ -337,7 +337,7 @@ b, strong {
 .tp-breadcrumb .breadcrumb {
 	background-color:transparent;
 	margin-bottom:0px;
-	font-size:14px; 
+	font-size:14px;
 	text-transform:uppercase;
 	padding: 10px 0px;
 	text-align:left;
@@ -361,12 +361,12 @@ text-decoration:none}
     white-space: nowrap;
 }
 .caret-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid rgba(0, 0, 0, 0);
     border-right: 4px solid rgba(0, 0, 0, 0);
     border-bottom: 4px solid;
-    
+
     display: inline-block;
     margin-left: 2px;
     vertical-align: middle;
@@ -407,11 +407,11 @@ color: #FFFFFF;
 .white-box{  padding: 15px;
   background-color: #FFF;
   margin-bottom: 30px;
-  } 
+  }
 .main-container{
 
 }
-   
+
 ul.nav li a {
 	background: none;
 	border:0;
@@ -429,7 +429,7 @@ ul.nav li a:hover {
 .tp-btn-rounded{ border-radius:50px; padding:12px 30px; font-size:14px; text-transform:uppercase;
 font-family: 'Roboto Condensed', sans-serif;
 font-weight:400; border:none; letter-spacing: 1px; text-decoration:none;}
-.tp-btn-grey{ background-color:#444444; color:#fff;   
+.tp-btn-grey{ background-color:#444444; color:#fff;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -563,7 +563,7 @@ ul, ol {
 }
 
 /************************************
-				Template Blog 
+				Template Blog
 *************************************/
 #tp-blog{}
 .tp-blog{}
@@ -573,7 +573,7 @@ ul, ol {
   font-size: 14px;
 }
 .tp-blog .tp-left-side .blog-block .tp-meta{ margin-bottom:50px;}
-.tp-meta .meta-calendar, .tp-meta .meta-comment, .tp-meta .meta-admin, .tp-meta .meta-tags{  margin-right: 15px;}  
+.tp-meta .meta-calendar, .tp-meta .meta-comment, .tp-meta .meta-admin, .tp-meta .meta-tags{  margin-right: 15px;}
 .tp-meta i {
   color: #777;
   margin-right: 10px;
@@ -740,7 +740,7 @@ input.form-control, select.form-control {
 }
 #tp-gallery{}
 .tp-gallery{}
-.tp-gallery-pic{padding: 30px 30px 0px 30px; margin-bottom:30px;}  
+.tp-gallery-pic{padding: 30px 30px 0px 30px; margin-bottom:30px;}
 .tp-gallery-caption{  background-color: #FFF;
   padding: 15px 0px;}
 .tp-gallery-caption h2{ margin-bottom:15px;}
@@ -757,7 +757,7 @@ input.form-control, select.form-control {
 }
 .isotope, .isotope .isotope-item {
 	/* change duration value to whatever you like */
- 
+
 	-webkit-transition-duration: 0.8s;
 	-moz-transition-duration: 0.8s;
 	transition-duration: 0.8s;
@@ -793,7 +793,7 @@ input.form-control, select.form-control {
 .portfolioFilter{margin-bottom:30px;}
 .portfolioFilter a.current{background-color: #fcce13;
   border: 2px solid #fcce13}
- 
+
 .pb30 {
 	padding-bottom: 30px;
 }
@@ -827,7 +827,7 @@ a.my_collapse {
     float:left;
     margin: 1px 10px 1px 0px;
    }
-   
+
 /* Gallery Styling */
 .gallery .image-title,
 .gallery .image-description,
