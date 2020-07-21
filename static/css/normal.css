@@ -4,10 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-* { overflow-x: hidden;}
-body{
-  background-color: #000;
-}
+
 main{
   position: relative;
   width: 100vw;
@@ -15,7 +12,6 @@ main{
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   background-color: #fafafa;
-  margin: 0 auto;
   margin-bottom: 400px;
 }
 
@@ -48,6 +44,11 @@ width: 30% !important;
   text-decoration: none;
 }
 
+/* ----header */
+
+
+
+
 
 
 /* --footer */
@@ -72,8 +73,6 @@ width: 30% !important;
   font-size: 1.5em;
   font-weight: lighter;
 }
-
-
 .angle-double-right li a:first-child:before{
  margin-right: 10px;
  font-family: FontAwesome;
@@ -84,8 +83,10 @@ width: 30% !important;
 }
 
 .tiny-footer{
+ display: flex;
+  align-items: flex-end;
  background-color: #262626;
- min-height: 30px;
+ min-height: 20px;
 }
 .tiny-footer p{
   color: #fff;
