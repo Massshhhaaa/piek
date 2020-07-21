@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Categories, Subgroup, SubgroupImage
 
 
-class SubgroupImageInline(admin.TabulaInline):
+class SubgroupImageInline(admin.TabularInline):
     model = SubgroupImage
     extra = 0
 
