@@ -1,5 +1,5 @@
 from django.db import models
-import tinymce 
+from pytils.translit import slugify
 
 # Create your models here.
 
@@ -10,7 +10,23 @@ class Categories(models.Model):
 
     def __str__(self):
         return self.name
-#
+
+    # def get_image_filename(instance, filename):
+    # name = instance.categories.name
+    # slug = slugify(name)
+    # return "static/img/subgroups/%s-%s" % (slug, filename)
+
+
+# ...подгруппы категорий
+class Subgroup(models.Model):
+    category = models.ForeignKey(Categories, on_delete=models.CASCADE)
+
+class Image(models.Model):
+    post = models.ForeignKey(Subgroup, default=None, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='static/img', verbose_name='Image')
+
+    def __str__(self):
+        return self.post.category
 #
 # class Person(models.Model):
 #     team = models.ForeignKey(Team, on_delete=models.CASCADE, null=True)
