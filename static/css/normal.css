@@ -133,7 +133,6 @@ width: 30% !important;
     justify-content: center;
 }
   .tiny-footer { font-size: 0.8em;}
-=======
 .nav-link{
   color:#FFF;
   font-size: 1em;
@@ -151,6 +150,6 @@ width: 30% !important;
 nav.navbar .dropdown:hover > .dropdown-menu {
 transition-duration:.1s;
  display: block;
- border-radius: 15px; 
+ border-radius: 15px;
 
-} 
+}
