@@ -9,7 +9,7 @@ class Categories(models.Model):
     slug = models.CharField('url', unique=True, max_length=250)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     # def get_image_filename(instance, filename):
     # name = instance.categories.name
@@ -21,12 +21,15 @@ class Categories(models.Model):
 class Subgroup(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return str(self.category)
+
 class SubgroupImage(models.Model):
     post = models.ForeignKey(Subgroup, default=None, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='static/img', verbose_name='Image')
+    image = models.ImageField(upload_to='static/img')
 
     def __str__(self):
-        return self.post.category
+        return str(self.post.category)
 #
 # class Person(models.Model):
 #     team = models.ForeignKey(Team, on_delete=models.CASCADE, null=True)
