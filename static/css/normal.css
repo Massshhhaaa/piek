@@ -5,9 +5,23 @@
   font-style: normal;
 }
 
+html{
+
+    width: 100%;
+    max-width: 100%;
+}
+
+body
+  {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
 main{
   position: relative;
-  width: 100vw;
   margin: 0 auto;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -96,3 +110,30 @@ width: 30% !important;
   font-weight: lighter;
   font-weight: lighter;
 }
+
+
+.navbar{
+  background-color: #821228;
+  height: 120px;
+  z-index: 100;
+}
+
+.nav-link{
+  color:#FFF;
+  font-size: 1em;
+  font-family: "sf";
+  font-weight: lighter;
+}
+ .nav-item a:hover{
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid yellow;
+
+  margin-bottom: -1.5px;
+}
+
+nav.navbar .dropdown:hover > .dropdown-menu {
+transition-duration:.1s;
+ display: block;
+ border-radius: 15px; 
+
+} 
