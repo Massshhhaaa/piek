@@ -21,7 +21,7 @@ class Categories(models.Model):
 class Subgroup(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
 
-class Image(models.Model):
+class SubgroupImage(models.Model):
     post = models.ForeignKey(Subgroup, default=None, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='static/img', verbose_name='Image')
 
