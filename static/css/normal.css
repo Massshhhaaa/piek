@@ -87,13 +87,15 @@ width: 30%;
 
 nav.navbar .dropdown:hover > .dropdown-menu {
  display: block;
+ margin-bottom: 0px;
  border-radius: 15px;
  visibility: visible;
   opacity: 1;
 }
 nav.navbar .dropdown:hover > .dropdown-menu > .dropdown-item{
-border-bottom: none;
+border-bottom: 0px;
 border-radius: 15px;
+margin-bottom: 0px;
 }
 
 .dropdown .dropdown-menu {
@@ -105,6 +107,8 @@ border-radius: 15px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
+  margin-bottom: 0px;
+
 }
 
 
