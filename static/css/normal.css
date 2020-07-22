@@ -53,13 +53,7 @@ background-color: #fff;
 border-radius: 20px;
 width: 30%;
 }
-.separately:hover{
- box-shadow: 5px;
- -webkit-box-shadow: 0px 69px 79px -18px rgba(184,184,184,0.46);
--moz-box-shadow: 0px 69px 79px -18px rgba(184,184,184,0.46);
-box-shadow: 0px 69px 79px -18px rgba(184,184,184,0.46);
-transition-duration: .3s
-}
+
 .separately p{
   text-align: center;
   color: #292929;
