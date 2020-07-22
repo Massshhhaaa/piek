@@ -6,7 +6,7 @@ from pytils.translit import slugify
 class Categories(models.Model):
     name = models.CharField('Категория', max_length=250)
     img = models.ImageField(upload_to='static/img/main_page', null=True, blank=True)
-    slug = models.CharField('url', unique=True, max_length=250)
+    slug = models.CharField('url', unique=True, null=True, max_length=200, help_text='for instance, "catalog/mechanisms/meo"' )
 
     def __str__(self):
         return str(self.name)

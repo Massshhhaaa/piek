@@ -7,12 +7,6 @@ def main_def(request):
     categories = Categories.objects.all()
     return render(request, 'mainapp/index.html', context={'categories' : categories})
 
-# def detail(request, slug):
-#     post = get_object_or_404(Hello, slug = slug)
-#     return render(request, "mainapp/post.html", {'post': post})
-#
-#
-# def team_view(request):
-#     teams= Team.objects.all()
-#     persons = Person.objects.all()
-#     return render(request, 'mainapp/teams.html', context={'teams' :teams, 'persons' :persons})
+def SubgroupDetailView(request, slug):
+    queryset = get_object_or_404(Categories, slug= slug)
+    return render(request, 'mainapp/index.html', context={'queryset' : queryset})

@@ -22,6 +22,7 @@ from mainapp.views import *
 urlpatterns = [
     path('', main_def, name='main_def'),
     path('admin/', admin.site.urls),
+    path('<path:slug>/', SubgroupDetailView),
 
     # path('about/', about, name='about'),
     # path('about/gallery/', about_gallery, name='about_gallery'),
