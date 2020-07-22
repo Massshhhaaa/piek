@@ -12,7 +12,7 @@ html{
     width: 100%;
     max-width: 100%;
     font-family: sf;
-}  
+}
 
 body {
     width: 100%;
@@ -78,7 +78,7 @@ width: 30%;
 
 }
  .nav-item a:hover{
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
   border-bottom: 1.5px solid yellow;
 }
 
@@ -109,10 +109,6 @@ border-radius: 15px;
 
 
 @media (max-width: 760px){
-  .navbar{
-    z-index: 3 !important;
-    transition-duration: 2s;
-  }
   .dropdown .dropdown-menu{
   display: block;
   visibility: visible;
@@ -126,7 +122,7 @@ border-radius: 15px;
       border-bottom: none;
   }
   .media_small{
-    width: 65px; 
+    width: 65px;
     height: auto;
   }
   .dropdown-item:hover{
