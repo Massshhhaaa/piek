@@ -53,7 +53,13 @@ background-color: #fff;
 border-radius: 20px;
 width: 30%;
 }
-
+.separately:hover{
+ box-shadow: 5px;
+ -webkit-box-shadow: 0px 69px 79px -18px rgba(184,184,184,0.46);
+-moz-box-shadow: 0px 69px 79px -18px rgba(184,184,184,0.46);
+box-shadow: 0px 69px 79px -18px rgba(184,184,184,0.46);
+transition-duration: .3s
+}
 .separately p{
   text-align: center;
   color: #292929;
@@ -161,12 +167,12 @@ border-radius: 15px;
   font-size: .8em;
   color: #a8a8a8;
   padding: 5px 10px;
-  text-decoration: none !important;
+  text-decoration: none;
   transition-duration: .2s;
 }
 .footer a:hover{
-    background-color: #2e2e2e;
-    border-radius: 10px;
+    text-decoration: none;
+    color: #d8f8fd;
 
 }
 .footer h2{
