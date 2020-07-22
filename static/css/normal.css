@@ -25,13 +25,14 @@ body {
 main{
   position: relative;
   margin: 0 auto;
+  z-index: 1;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   background-color: #fafafa;
   margin-bottom: 400px;
 }
 
-main a:hover{
+main a:hover, a:focus{
   text-decoration: none;
 }
 
@@ -65,7 +66,7 @@ width: 30%;
 
 .navbar{
   background-color: #821228;
-  z-index: 1 !important;
+  z-index: 2 !important;
 }
 
 .nav-link{
@@ -144,33 +145,29 @@ border-radius: 15px;
   font-weight: lighter;
   position: fixed;
   width: 100%;
-  z-index: -1;
   bottom: 0;
   left: 0;
   right: 0;
 }
-
+.text_light{
+    font-weight: lighter!important;
+    letter-spacing: .56px;
+}
 .footer a, p{
   font-size: .8em;
   color: #a8a8a8;
+  padding: 5px 10px;
   text-decoration: none !important;
+  transition-duration: .3s;
 }
-.footer a:hover{
-  border-bottom: 1px solid #a8a8a8;
-  color: #a8a8a8;
-  margin-bottom: -1px;
+.footer a:hover, a:focus{
+    background-color: #2e2e2e;
+    border-radius: 10px;
+
 }
 .footer h2{
   font-size: 1.5em;
   font-weight: lighter;
-}
-.angle-double-right li a:first-child:before{
- margin-right: 10px;
- font-family: FontAwesome;
- color:#777;
- top: 0;
- left: -5px;
- content: "\f101";
 }
 
 .tiny-footer{
@@ -192,11 +189,13 @@ border-radius: 15px;
     margin-bottom: 90vh !important;
   }
   footer h2{ font-size: 1em; display: flex; justify-content: center;}
-  footer a, p{
+  footer a{
+    display: table;
     font-size: 0.8em;
-    display: flex;
-    justify-content: center;
+    margin:0 auto;
 }
+
+
   .tiny-footer {font-size: 0.8em;}
   .center-md{font-size: 1em; text-align: center;}
   .container{padding: 0;}
@@ -206,4 +205,6 @@ border-radius: 15px;
 
 @media (min-width: 300px) and (max-width: 370px){
     .iphoneseoff {display: none;}
+    .footer a, p{
+      padding: 2px 5px;
 }
