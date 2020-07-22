@@ -28,7 +28,7 @@ main{
   z-index: 1;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  background-color: #fafafa;
+  background-color: #fff;
   margin-bottom: 400px;
 }
 
@@ -145,7 +145,7 @@ border-radius: 15px;
 /* --footer */
 
 .footer{
-  padding-top: 300px;
+  padding-top: 100px;
   letter-spacing: .56px;
   background-color: #333333;
   font-weight: lighter;
@@ -164,9 +164,9 @@ border-radius: 15px;
   color: #a8a8a8;
   padding: 5px 10px;
   text-decoration: none !important;
-  transition-duration: .3s;
+  transition-duration: .2s;
 }
-.footer a:hover, a:focus{
+.footer a:hover{
     background-color: #2e2e2e;
     border-radius: 10px;
 
