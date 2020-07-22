@@ -4,13 +4,15 @@
   font-weight: normal;
   font-style: normal;
 }
-
+.container{
+  max-width: 1050px !important;
+}
 html{
     margin-top: -25px;
     width: 100%;
     max-width: 100%;
     font-family: sf;
-}
+}  
 
 body {
     width: 100%;

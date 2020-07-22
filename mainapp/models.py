@@ -21,6 +21,7 @@ class Categories(models.Model):
 class Subgroup(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
 
+
     def __str__(self):
         return str(self.category)
 
