@@ -22,4 +22,13 @@ from mainapp.views import *
 urlpatterns = [
     path('', main_def, name='main_def'),
     path('admin/', admin.site.urls),
+
+    # path('about/', about, name='about'),
+    # path('about/gallery/', about_gallery, name='about_gallery'),
+    #
+    # path('docs/', docs_list, name='docs_list'),
+    # path('docs/questionnaire/', docs_questionnaire, name='docs_questionnaire'),
+    #
+    # path('contact/', contact, name='contact'),
+
     ]
