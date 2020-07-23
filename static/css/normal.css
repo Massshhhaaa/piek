@@ -116,16 +116,44 @@ margin-bottom: 0px;
 }
 .banner {
 
-  background-size: cover;
-  height: 25vh;
+  background-size: auto;
+  height: 28vh;
   width: 100%;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
-  
   margin-bottom: 8vh;
-
+  box-sizing: border-box;
+  -webkit-animation: slide 720s linear infinite;
 }
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -8000px 0; }
+}
+
+
+.text-banner{
+  background-color: #000; 
+  opacity: 0.5; 
+  width: 50%;
+  height: 28vh;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 15px;
+  
+}
+.text-banner p{
+  font-size: 4em;
+  color: yellow;
+  text-align: center;
+}
+
+
+.text-banner:hover{
+  opacity: 0.6;
+}
+
 
 .media_small{
   padding: 10px;
