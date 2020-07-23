@@ -27,10 +27,13 @@
 	<div class="container">
 		<div class="d-flex flex-wrap">
 
-        <h1>{{q.name}}</h1>
-        <p>{{q.description}}</p>
-				<p>{{q.slug}}</p>
-
+        <h1>{{subgroup_info.name}}</h1>
+        <p>{{subgroup_info.description}}</p></br>
+				<p>{{subgroup_info.category__slug}}</p>
+				{% for p in photos %}
+				<div class="container"><img src="{{p.image.url}}" style="min-height=10vh;" class="w-100">
+				</div>
+				{% endfor %}
 		</div>
 	</div>
 
