@@ -21,6 +21,8 @@ class Categories(models.Model):
 # ...подгруппы категорий
 class Subgroup(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
+    name = models.CharField( max_length=250)
+    description = models.TextField(max_length=300)
 
     def __str__(self):
         return str(self.category)

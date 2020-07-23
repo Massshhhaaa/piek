@@ -9,7 +9,7 @@ def main_def(request):
 
 def SubgroupDetailView(request, slug):
     queryset = Subgroup.objects.select_related('category__slug')#потрачено три часа на эту строчку
-    q = Subgroup.objects.filter(pk__in=queryset)
+    q = Subgroup.get_object_or_404(Subgroup)
 
 
 

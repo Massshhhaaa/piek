@@ -26,8 +26,9 @@
 <main>
 	<div class="container">
 		<div class="d-flex flex-wrap">
-			{% for cat in queryset %}
-        <div>{{cat.category}}</div>
+			{% for cat in q %}
+        <h1>{{cat.name}}</h1>
+        <p>{{ cat.description }}</p>
 			{% endfor %}
 		</div>
 	</div>
