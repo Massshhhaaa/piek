@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,27 +23,15 @@
 </head>
 <body>
 {% include 'mainapp/header.html' %}
-		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
-
-
-	</div>
 <main>
-
-	<!-- <div class="container">	
+	<div class="container">
 		<div class="d-flex flex-wrap">
-			{% for cat in categories %}
-			<div class="m-1 m-md-2 d-flex flex-fill separately">
-				<a class="d-flex flex-column flex-fill" href="{{ cat.slug }}">
-
-					<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.name }}"></div>
-					<div class="py-2 py-lg-5"><p class="item-name"style="text-decoration:none;">{{ cat.name }}</p></div>
-
-				</a>
-			</div>
+			{% for cat in queryset %}
+        <div>{{cat.category}}</div>
 			{% endfor %}
 		</div>
 	</div>
- -->
+
 
 </main>
 

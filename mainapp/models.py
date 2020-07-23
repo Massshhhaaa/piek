@@ -11,6 +11,7 @@ class Categories(models.Model):
     def __str__(self):
         return str(self.name)
 
+
     # def get_image_filename(instance, filename):
     # name = instance.categories.name
     # slug = slugify(name)
@@ -21,9 +22,10 @@ class Categories(models.Model):
 class Subgroup(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
 
-
     def __str__(self):
         return str(self.category)
+
+
 
 class SubgroupImage(models.Model):
     post = models.ForeignKey(Subgroup, default=None, on_delete=models.CASCADE)

@@ -20,6 +20,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    background-image: url(C:\Users\vlat\_\www\piek.ru\images\slider-1.jpg);
 }
 
 main{
@@ -52,8 +53,13 @@ main a:hover, a:focus{
 background-color: #fff;
 border-radius: 20px;
 width: 30%;
+transition-delay: .6s;
 }
+.separately:hover{
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
 
+}
 .separately p{
   text-align: center;
   color: #292929;
@@ -108,6 +114,11 @@ margin-bottom: 0px;
   -ms-transition: all 0.2s ease;
   margin-bottom: 0px;
 
+}
+.banner {
+  width: 100vw;
+  height: auto;
+  z-index: 5!important;
 }
 
 
