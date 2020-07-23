@@ -52,8 +52,13 @@ main a:hover, a:focus{
 background-color: #fff;
 border-radius: 20px;
 width: 30%;
+transition-delay: .6s;
 }
+.separately:hover{
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
 
+}
 .separately p{
   text-align: center;
   color: #292929;
