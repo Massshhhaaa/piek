@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Categories, Subgroup
+from .models import Categories, Subgroup, SubgroupImage
 
 
 
@@ -19,9 +19,9 @@ def SubgroupDetailView(request, slug):
     # q = Subgroup.objects.get(slug=slug__in(categories))
     # print(q)
     c = Subgroup.objects.filter(category__slug=slug).values('pk')
-    q = get_object_or_404(Subgroup, pk__in=c)
+    subgroup_info = get_object_or_404(Subgroup, pk__in=c)
+    photos = SubgroupImage.objects.filter(post = subgroup_info)
 
 
 
-
-    return render(request, 'mainapp/SubgroupDetailView.html', context={'q' : q})
+    return render(request, 'mainapp/SubgroupDetailView.html', context={'subgroup_info' : subgroup_info, 'photos': photos})
