@@ -82,6 +82,11 @@ transition-delay: .6s;
 .navbar{
   background-color: #821228;
   z-index: 2 !important;
+  min-height: 5em;
+}
+
+.navbar-brand{
+  margin-top: 10px !important;
 }
 
 .nav-link{
@@ -142,16 +147,16 @@ margin-bottom: 0px;
 
 
 
-.media_small{
-  padding: 10px;
-}
+
 
 
 .title-text{
   color: #fff;
   font-size: 3em;
-  font-family: sf;
+  font-family: title;
+  letter-spacing: 1px;
   text-align: center;
+  text-transform: uppercase;
 
 }
 .text{
@@ -188,8 +193,8 @@ padding-top: 100px;
       margin-bottom: 0px;
   }
   .media_small{
-    width: 111px;
-    height: 65px;
+    width: 50px;
+    height: auto;
 
   }
   .dropdown-item:hover{
@@ -209,7 +214,7 @@ padding-top: 100px;
   }
   .title-text{
     padding-top:0.5em;
-    font-size: 2.5em;
+    font-size: 2.1em;
   }
 }
 
