@@ -46,6 +46,7 @@ main a:hover, a:focus{
   text-decoration: none;
 }
 
+
 /* ----box catalog */
 .container p{
   font-family: sf;
@@ -158,12 +159,28 @@ margin-bottom: 0px;
   padding: 10px;
 }
 
-.text{
-  color:#696969;
-  font-size: 3.2em;
-  text-align: center;
+.title-text{
+  color:#fff;
+  font-size: 3em;
   font-family: title;
-  letter-spacing: 2px;
+  text-align: center;
+}
+.text{
+  color:#FFD700;
+  font-size: 1em;
+  font-family: title;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 20px;
+
+}
+.title-container{
+  position: absolute;;
+  top:80px;
+  margin-right: -50%;
+  padding-top: 3em;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 
 
