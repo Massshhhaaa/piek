@@ -41,7 +41,9 @@ TINYMCE_DEFAULT_CONFIG = {
             ''',
     'contextmenu': 'formats | link image',
     'menubar': True,
+    'content_css' : "/Users/user/Documents/GitHub/piek/static/css/content.css",
     'statusbar': True,
+    'min_height': '900',
 }
 
 # Application definition
