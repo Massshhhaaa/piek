@@ -29,11 +29,13 @@
 
         <h1>{{subgroup_info.name}}</h1>
         <p>{{subgroup_info.description}}</p></br>
-				<p>{{subgroup_info.category__slug}}</p>
+				<p>{{subgroup_info.}}</p>
 				{% for p in photos %}
 				<div class="container"><img src="{{p.image.url}}" style="min-height=10vh;" class="w-100">
 				</div>
 				{% endfor %}
+
+				<div>{{ subgroup_info.content|safe }}</div>
 		</div>
 	</div>
 
