@@ -1,6 +1,5 @@
 
 import os
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -41,7 +40,7 @@ TINYMCE_DEFAULT_CONFIG = {
             ''',
     'contextmenu': 'formats | link image',
     'menubar': True,
-    'content_css' : "/Users/user/Documents/GitHub/piek/static/css/content.css",
+    'content_css' : '/static/css/SubgroupDetailView.css',
     'statusbar': True,
     'min_height': '900',
 }

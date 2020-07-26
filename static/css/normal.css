@@ -21,7 +21,7 @@ html{
     width: 100%;
     max-width: 100%;
     font-family: sf;
-    font-size: 0.7em !important;
+    font-size: 0.8em;
 }
 
 body {
@@ -46,6 +46,8 @@ main a:hover, a:focus{
   text-decoration: none;
 }
 
+
+
 /* ----box catalog */
 .container p{
   font-family: sf;
@@ -62,18 +64,13 @@ main a:hover, a:focus{
 background-color: #fff;
 border-radius: 20px;
 width: 30%;
-transition-delay: .6s;
 }
-.separately:hover{
-  border-left: 1px solid #ebebeb;
-  border-right: 1px solid #ebebeb;
 
-}
 .separately p{
   text-align: center;
   color: #292929;
 }
-.item-name :hover{
+.item-name p:hover{
   text-decoration: none;
 }
 
@@ -148,11 +145,9 @@ margin-bottom: 0px;
 
 
 
-
-
 .title-text{
   color: #fff;
-  font-size: 3em;
+  font-size: 2.6em;
   font-family: title;
   letter-spacing: 1px;
   text-align: center;
@@ -164,7 +159,7 @@ margin-bottom: 0px;
   font-size: 1em;
   font-family: sf;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 
 }
 .title{
