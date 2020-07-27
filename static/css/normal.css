@@ -319,13 +319,17 @@ padding: 5.5em;
 .footer a:hover{
     text-decoration: none;
     color: #d8f8fd;
-
 }
 .footer h2{
+  font-family: Raleway;
   font-size: 1.5em;
-  font-weight: lighter;
+  font-weight: 400;
 }
-
+.left-block p, .left-block a{
+  font-family: Raleway;
+  color: #fff;
+  font-weight: 300;
+}
 .tiny-footer{
  display: flex;
  align-items: flex-end;
