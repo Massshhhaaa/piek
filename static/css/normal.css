@@ -93,39 +93,6 @@ main a:hover, a:focus{
 
 
 
-/* ----box catalog */
-
-.container p,h1,h2,h3{
-  font-family: Raleway;
-}
-
-
-.pic{
-  display: block;
-  width: 100%;
-  max-width: 184px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.separately{
-background-color: #fff;
-border-radius: 20px;
-width: 30%;
-}
-
-.separately p{
-  font-family: Raleway;
-  font-weight: 400;
-  text-align: center;
-  color: #292929;
-}
-.item-name p:hover{
-  text-decoration: none;
-}
-
-
-
 /* ----header */
 
 .navbar{
@@ -169,11 +136,11 @@ margin-bottom: 0px;
   display: block;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.2s ease;
+  /* transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease; */
   margin-bottom: 0px;
 
 }
@@ -230,9 +197,6 @@ padding: 5.5em;
 }
 
 
-
-
-
 @media (max-width: 760px){
   .dropdown .dropdown-menu{
   display: block;
@@ -278,6 +242,42 @@ padding: 5.5em;
 }
 
 
+
+
+/* ----box catalog */
+
+.container p,h1,h2,h3{
+  font-family: "Raleway";
+}
+
+
+.pic{
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.separately{
+background-color: #fff;
+border-radius: 20px;
+width: 30%;
+}
+
+.separately p{
+  font-family: "Raleway";
+  font-weight: 400;
+  text-align: center;
+  color: #292929;
+}
+.item-name:hover{
+  text-decoration: none;
+  color: #4e0000;
+}
+
+
+
 /* --footer */
 
 .footer{
@@ -298,7 +298,7 @@ padding: 5.5em;
 .footer a, .footer p{
   font-size: 0.9em;
   color: #a8a8a8;
-  font-family: Raleway;
+  font-family: "Raleway";
   font-weight: 300;
 
   text-decoration: none;
@@ -314,22 +314,21 @@ padding: 5.5em;
   font-weight: 400;
 }
 .left-block p, .left-block a{
-  font-family: Raleway;
-  color: #fff;
-  font-weight: 300;
+  font-family: "sf";
+  color: #dedede;
 }
 .tiny-footer{
  display: flex;
- align-items: flex-end;
  background-color: #262626;
  min-height: 20px;
 }
 .tiny-footer p{
-  color: #a8a8a8;
-  font-size: 0.6em;
+  color: #dedede;
+  font-size: 0.7em;
   font-family: sf;
   font-weight: lighter;
 }
+
 
 
 @media (max-width: 760px) {
