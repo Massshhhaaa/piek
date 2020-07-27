@@ -7,8 +7,8 @@ def main_def(request):
     categories = Categories.objects.all()
     return render(request, 'mainapp/index.html', context={'categories' : categories})
 
-def contact(request):
-    return render(request,'mainapp/contact.html')
+def contacts(request):
+    return render(request,'mainapp/contacts.html')
 
 def SubgroupDetailView(request, slug):
     # queryset = Subgroup.objects.select_related('category__name').values('subgroup__id')#потрачено три часа на эту строчку
@@ -27,6 +27,3 @@ def SubgroupDetailView(request, slug):
 
 
     return render(request, 'mainapp/SubgroupDetailView.html', context={'subgroup_info' : subgroup_info, 'photos': photos})
-
-
-

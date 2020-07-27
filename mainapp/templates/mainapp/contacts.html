@@ -17,37 +17,29 @@
 	<!-- <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
 	<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet"> -->
 	<link href="{% static 'css/normal.css' %}" rel="stylesheet">
+	<link href="{% static 'css/contacts.css' %}" rel="stylesheet">
 </head>
 
 <body>
 {% include 'mainapp/header.html' %}
 <main>
-	<div class="container" style="margin-bottom: 2px">
-		<div class="d-flex flex-column">
-			<h1 style="font-size: 1.5em; color: #000;font-weight: 400; margin-bottom: 0px;">Контакты</h1>
-			<p style="font-size: 1em; color: #000; padding-left: 0px; margin-top: 10px;margin-bottom: 0px; padding: 0px; ">Мы надеемся на долгое, взаимное и плодотворное сотрудничество!</p>
-			<h2 style="font-size: 1.5em; color: #000;font-weight: 400;">Производство и главный офис ООО "ПЭК" (Чебоксары)</h2>
-			<p style="font-size: 1em; color: #000;"><b>Адрес:</b> Россия, 428037, Чувашская Республика, г. Чебоксары, пр. Машиностроителей, 17 </br>
-													<b><Почтовый адрес:</b> Россия, 428000, Чувашская Республика, г. Чебоксары, а/я 163 </br>
-													<b>Тел./факс:</b> 8 (8352) 57-05-16, 57-05-19 </br>
-													<b>По коммерческим вопросам:</b><a href="mailto:info@piek.ru"> info@piek.ru</a> </br>
-													<b>По техническим вопросам:</b><a href="mailto:loseev@piek.ru"> loseev@piek.ru</a></br>
-													<b>Отдел снабжения:</b> <a href="mailto:snab@piek.ru">snab@piek.ru</a> </br>
-			</p>
-
-			<h3 style="font-size: 1.5em; color: #000;font-weight: 400;">Московское представительство</h3>
-			<p style="font-size: 1em; color: #000;"><b>Адрес:</b> Россия, 105318, г.Москва, Измайловское шоссе, д.28</br>
-													<b>Тел./факс:</b> 8 (499) 110-90-85</br>
-													<b>E-mail:</b> <a href="mailto:info@piek.ru">info@piek.ru</a></br>
-			</p>
-
-
-			
-
-			 
-		</div>
+	<div class="contacts-title mt-md-5 mb-md-2">
+		<h1>Наши контакты</h2>
 	</div>
-	
+	<div class="container-fluid" style="background-color:#eeeeee;">
+
+		<div class="d-flex flex-column">
+			<div class="adress">
+			<h2 class="mt-md-4 office-title">Оффис в Чебоксарах</h2>
+			<p class="pt-md-2">Россия, 428037 Чувашская Республика, г. Чебоксары, </br>пр. Машиностроителей, 17</p>
+			<p class="pt-md-2"><b>Почтовый адрес:</b></br> Россия, 428000, Чувашская Республика, </br>г. Чебоксары, а/я 163</p>
+
+			<p class="tel/fax"> <b>Тел./факс:</b></br> 8 (8352) 57-05-16 </br>
+	    57-05-19</p>
+			</div>
+
+	</div>
+</div>
 </main>
 {% include 'mainapp/footer.html' %}
 

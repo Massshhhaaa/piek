@@ -307,7 +307,7 @@ padding: 5.5em;
     font-weight: lighter!important;
     letter-spacing: .56px;
 }
-.footer a, p{
+.footer a, .footer p{
   font-size: 1em;
   color: #a8a8a8;
   font-family: Raleway;

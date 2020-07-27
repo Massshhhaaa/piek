@@ -21,11 +21,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', main_def, name='main_def'),
-    path('contact/', contact, name='contact'),
-    
+    path('contacts/', contacts, name='contacts'),
+
     path('admin/', admin.site.urls),
     path('<path:slug>/', SubgroupDetailView),
- 
+
 
 
     path('tinymce/', include('tinymce.urls')),

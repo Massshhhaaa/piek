@@ -1,0 +1,15 @@
+.contacts-title h1{
+  color: #414141;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.office-title{
+  font-weight: 400;
+  font-size: 1.8em;
+}
+.adress{
+    margin-left: 10em;
+
+}
