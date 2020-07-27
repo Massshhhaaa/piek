@@ -5,11 +5,69 @@
   font-style: normal;
 }
 
+
+
 @font-face {
-  font-family: 'title';
-  src:url('../fonts/post/Golos Text_Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Raleway';
+    src: local('Raleway Thin'), local('Raleway-Thin'), url('../fonts/ralewaythin.woff2') format('woff2'), url('../fonts/ralewaythin.woff') format('woff'), url('../fonts/ralewaythin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url('../fonts/ralewayextralight.woff2') format('woff2'), url('../fonts/ralewayextralight.woff') format('woff'), url('../fonts/ralewayextralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Light'), local('Raleway-Light'), url('../fonts/ralewaylight.woff2') format('woff2'), url('../fonts/ralewaylight.woff') format('woff'), url('../fonts/ralewaylight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Regular'), local('Raleway-Regular'), url('../fonts/ralewayregular.woff2') format('woff2'), url('../fonts/ralewayregular.woff') format('woff'), url('../fonts/ralewayregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Medium'), local('Raleway-Medium'), url('../fonts/ralewaymedium.woff2') format('woff2'), url('../fonts/ralewaymedium.woff') format('woff'), url('../fonts/ralewaymedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url('../fonts/ralewaysemibold.woff2') format('woff2'), url('../fonts/ralewaysemibold.woff') format('woff'), url('../fonts/ralewaysemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Bold'), local('Raleway-Bold'), url('../fonts/ralewaybold.woff2') format('woff2'), url('../fonts/ralewaybold.woff') format('woff'), url('../fonts/ralewaybold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url('../fonts/ralewayextrabold.woff2') format('woff2'), url('../fonts/ralewayextrabold.woff') format('woff'), url('../fonts/ralewayextrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Black'), local('Raleway-Black'), url('../fonts/ralewayblack.woff2') format('woff2'), url('../fonts/ralewayblack.woff') format('woff'), url('../fonts/ralewayblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
 
 
@@ -20,7 +78,6 @@ html{
     margin-top: -25px;
     width: 100%;
     max-width: 100%;
-    font-family: sf;
     font-size: 0.8em;
 }
 
@@ -67,6 +124,8 @@ width: 30%;
 }
 
 .separately p{
+  font-family: Raleway;
+  font-weight: 400;
   text-align: center;
   color: #292929;
 }
@@ -88,8 +147,8 @@ width: 30%;
 
 .nav-link{
   color:#e8e8e8;
-  font-family: "sf";
-  font-weight: lighter;
+  font-family: Raleway;
+  font-weight: 500;
   letter-spacing: .100px;
 
 }
@@ -146,18 +205,20 @@ margin-bottom: 0px;
 
 
 .title-text{
+  font-family: Raleway;
+  font-weight: 500;
   color: #fff;
   font-size: 2.6em;
-  font-family: title;
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
 
 }
 .text{
+  font-family: Raleway;
+  font-weight: 400;
   color: #FFD700;
   font-size: 1em;
-  font-family: sf;
   text-align: center;
   margin-top: 30px;
 
@@ -234,6 +295,8 @@ padding-top: 100px;
 .footer a, p{
   font-size: 1em;
   color: #a8a8a8;
+  font-family: Raleway;
+  font-weight: 300;
   padding: 5px 10px;
   text-decoration: none;
   transition-duration: .2s;
