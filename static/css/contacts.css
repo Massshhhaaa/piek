@@ -7,14 +7,27 @@
   letter-spacing: 1px;
 }
 .office-title{
+
   font-weight: 400;
   font-size: 1.8em;
+  color: #4e0000;
 }
 .adress{
+    font-family: sf;
     margin-left: 10em;
     font-size: 1em;
+    color: #555;
+}
+.email-block h5{
+  font-size: 1.1em;
+
 }
 
-.office-title{
-  color:#dbb21d;
+@media (max-width: 760px){
+  .adress{ margin-left: 0;}
+}
+
+.tel-email b{
+ font-family: "sf";
+ font-weight: 600;
 }

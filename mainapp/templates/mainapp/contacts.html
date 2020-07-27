@@ -23,26 +23,25 @@
 <body>
 {% include 'mainapp/header.html' %}
 <main>
-	<div class="contacts-title mt-md-5 mb-md-2 py-md-3">
-		<h1>Наши контакты</h2>
+	<div class="contacts-title pt-md-5 mb-md-2 py-3 py-md-3">
+		<h1>Наши контакты</h1>
 	</div>
 
-	<div class="container-fluid" style="background-color:#eeeeee;">
-	<div class="d-flex flex-row justify-content-around">
+	<div class="container-fluid" style="background-color:#eeeeee; border-radius: 30px;">
+	<div class="d-flex flex-row justify-content-md-around">
 
-			<div class="flex-column mt-md-5" >
+			<div class="flex-column my-5" >
 				<div class="adress">
-				<h2 class="mt-md-4 office-title">Офис в Чебоксарах</h2>
+				<h2 class="mt-md-4 office-title">Производство и главный офис </h2>
 				<p class="pt-md-2">Россия, 428037 Чувашская Республика, г. Чебоксары, </br>пр. Машиностроителей, 17</p>
 				<p class="pt-md-2"><b>Почтовый адрес:</b></br> Россия, 428000, Чувашская Республика, </br>г. Чебоксары, а/я 163</p>
-
-				<p class="tel/fax"> Тел:<b>  8 (8352) 57-05-16 </b></p>
-		    <p class="tel/fax"> Факс:<b> 8 (8352) 57-05-19  </b></p>
-				<p class=""> E-mail:<b> info@piek.ru </b></p>
+				<p class="tel-email"> Тел:<b>  8 (8352) 57-05-16 </b></p>
+		    <p class="tel-email"> Факс:<b> 8 (8352) 57-05-19  </b></p>
+				<p class="tel-email"> E-mail:<b> info@piek.ru </b></p>
 				</div>
 			</div>
 
-			<div class="d-flex flex-column">
+			<div class="d-none d-md-flex flex-column ">
 					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A320e4aab6ce01c7ee9354ad188eda03fd3f901fb8415afd039c50d58346ec2b5&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
 		</div>
 
@@ -50,18 +49,28 @@
 </div>
 
 <div class="container">
-	<div class="d-flex">
+	<div class="d-flex flex-column flex-md-row pb-5">
 
-		<div class="flex-column mt-md-4 pb-md-4">
-				<h2 class="mt-md-4 office-title">Московское представительство</h2>
-				<p class="pt-md-2">Россия, 428037 Чувашская Республика, г. Чебоксары, </br>пр. Машиностроителей, 17</p>
-				<p class="tel/fax"> Тел/Факс:<b> 8 (499) 110-90-85  </b></p>
-		</div>
+				<div class="flex-column my-5 px-3 pr-md-5" style="color: #555;">
+						<h2 class="mt-md-4 office-title">Московское представительство</h2>
+						<p class="pt-md-2"> Россия, 105318, г.Москва, Измайловское шоссе, д.28</p>
+						<p class="tel-email"> Тел/Факс:<b> 8 (499) 110-90-85  </b></p>
+						<p class="tel-email"> E-mail:<b> info@piek.ru </b></p>
+				</div>
 
-		<div class="flex-column">
+				<div class="flex-column email-block my-5 px-5">
+						<h5 class="mt-md-4 office-title">По коммерческим вопросам</h5>
+						<p class="tel-email"> E-mail:<b> info@piek.ru </b></p>
+
+						<h5 class="mt-5 office-title">По техническим вопросам</h5>
+						<p class="tel-email"> E-mail:<b> loseev@piek.ru </b></p>
+				</div>
 
 
-		</div>
+				<div class="flex-column email-block my-md-5 px-5">
+						<h5 class="mt-md-4 office-title">Отдел снабжения</h5>
+						<p class="tel-email"> E-mail:<b> snab@piek.ru </b></p>
+				</div>
 
 	</div>
 </div>
