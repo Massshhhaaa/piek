@@ -1,6 +1,11 @@
-p{
+main{
+  font-family: Raleway;
+}
 
-  color: red!important;
-  border-bottom: 2px solid black;
-  padding: 50px;
+section{
+  padding: 3em;
+}
+
+table tr{
+  border-bottom: 2px solid #fbf7f2 !important;
 }
