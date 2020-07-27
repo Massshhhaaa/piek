@@ -1,4 +1,5 @@
-.contacts-title h1{
+
+  .contacts-title h1{
   color: #414141;
   text-align: center;
   font-size: 2em;
@@ -11,5 +12,5 @@
 }
 .adress{
     margin-left: 10em;
-
+    font-size: 1.2em;
 }
