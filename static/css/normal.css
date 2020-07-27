@@ -106,9 +106,12 @@ main a:hover, a:focus{
 
 
 /* ----box catalog */
-.container p{
-  font-family: sf;
+
+.container p,h1,h2,h3{
+  font-family: Raleway;
 }
+
+
 .pic{
   display: block;
   width: 100%;
@@ -132,6 +135,8 @@ width: 30%;
 .item-name p:hover{
   text-decoration: none;
 }
+
+
 
 /* ----header */
 
@@ -213,6 +218,15 @@ margin-bottom: 0px;
   text-align: center;
   text-transform: uppercase;
 
+ /* position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
+
 }
 .text{
   font-family: Raleway;
@@ -220,12 +234,13 @@ margin-bottom: 0px;
   color: #FFD700;
   font-size: 1em;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 1em;
 
 }
 .title{
-padding-top: 100px;
+padding: 5.5em;
 }
+
 
 
 
@@ -265,12 +280,12 @@ padding-top: 100px;
   }
 
   .text{
-    font-size: 2em;
+    font-size: 1.5em;
     padding-bottom: 0.5em;
   }
   .title-text{
     padding-top:0.5em;
-    font-size: 2.1em;
+    font-size: 2em;
   }
 }
 

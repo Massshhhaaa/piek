@@ -21,8 +21,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', main_def, name='main_def'),
+    path('contact/', contact, name='contact'),
+    
     path('admin/', admin.site.urls),
     path('<path:slug>/', SubgroupDetailView),
+ 
+
 
     path('tinymce/', include('tinymce.urls')),
 
@@ -32,6 +36,6 @@ urlpatterns = [
     # path('docs/', docs_list, name='docs_list'),
     # path('docs/questionnaire/', docs_questionnaire, name='docs_questionnaire'),
     #
-    # path('contact/', contact, name='contact'),
+
 
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
