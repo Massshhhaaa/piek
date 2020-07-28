@@ -24,7 +24,7 @@ class Categories(models.Model):
 
 # ...подгруппы категорий
 class Subgroup(models.Model):
-    category = models.ForeignKey(Categories, on_delete=models.CASCADE)
+    category = models.OneToOneField(Categories, on_delete=models.CASCADE)
     name = models.CharField( max_length=250)
     description = models.TextField(max_length=500, null=True, blank=True)
     content = HTMLField()

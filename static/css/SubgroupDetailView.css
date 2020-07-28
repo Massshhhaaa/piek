@@ -7,10 +7,8 @@ section{
 }
 
 table tr{
-  border-bottom: 1px solid #ffb0b0;
-  border-radius: 30px;
+  border-bottom: 1px solid #ffebf3;
 }
 table tr:hover{
   background-color: #eee;
-  border-radius: 30px;
 }
