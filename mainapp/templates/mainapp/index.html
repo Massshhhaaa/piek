@@ -19,13 +19,14 @@
 	<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet"> -->
 	<link href="{% static 'css/normal.css' %}" rel="stylesheet">
 <body>
-{% include 'mainapp/header.html' %}
-
 <main>
 
 		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
+			{% include 'mainapp/header-main-page.html' %}
 				<div class="container title">
-					<h1 class="title-text">Поволжская электротехническая компания</h1>
+					<h1 class="title-text">Поволжская</br>
+										   электротехническая</br> 
+										   компания</h1>
 					<h2 class="text">ПРОИЗВОДИТ ИСПОЛНИТЕЛЬНЫЕ МЕХАНИЗМЫ МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 
 				</div>
