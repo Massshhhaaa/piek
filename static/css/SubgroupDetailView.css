@@ -1,11 +1,16 @@
 main{
-  font-family: Raleway;
+  font-family: "sf";
 }
 
 section{
-  padding: 3em;
+
 }
 
 table tr{
-  border-bottom: 2px solid #fbf7f2 !important;
+  border-bottom: 1px solid #ffb0b0;
+  border-radius: 30px;
+}
+table tr:hover{
+  background-color: #eee;
+  border-radius: 30px;
 }
