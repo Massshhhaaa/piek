@@ -1,19 +1,28 @@
 main{
   font-family: "sf";
 }
-
-section{
-
-}
-
-table tr{
-  border-bottom: 1px solid #ffebf3;
-}
-table tr:hover{
-  background-color: #eee;
-}
 .image{
   width: 30%;
   height: auto;
+}
+
+
+section{
+  font-size: 1em;
+}
+
+table{
+  max-width: 100%;
+  border: hidden;
+  border-bottom: 1px solid #fa9a9a;
+
+}
+table td{border-right: hidden;}
+
+table tr{
+  border-bottom: 1px solid #fa9a9a;
+}
+table tr:hover{
+  background-color: #eee;
 
 }
