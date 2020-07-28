@@ -12,3 +12,8 @@ table tr{
 table tr:hover{
   background-color: #eee;
 }
+.image{
+  width: 30%;
+  height: auto;
+
+}
