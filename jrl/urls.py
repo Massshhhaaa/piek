@@ -25,6 +25,7 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('<path:slug>/', SubgroupDetailView),
+    path('<path:slug>/<path:slug_product>', ProductDetailView),
 
 
 

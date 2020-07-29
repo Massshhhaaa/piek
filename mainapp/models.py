@@ -37,12 +37,33 @@ class Subgroup(models.Model):
 
 
 class SubgroupImage(models.Model):
-    post = models.ForeignKey(Subgroup, on_delete=models.CASCADE)
+    page = models.ForeignKey(Subgroup, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='mechanisms', null=True)
 
     def __str__(self):
-        return str(self.post.name)
-#
+        return str(self.page.name)
+
+
+
+class Product(models.Model):
+    subgroup = models.ForeignKey(Subgroup, on_delete=models.CASCADE)
+    name = models.CharField( max_length=250)
+    content = HTMLField()
+    slug_product = models.CharField('url', unique=True, null=True, max_length=200, help_text='for instance, "40 or 25000"')
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return '%s %s' % (self.slug_product, self.subgroup)
+
+
+class ProductImage(models.Model):
+    page = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='mechanisms', null=True)
+
+    def __str__(self):
+        return str(self.page.name)
 # class Person(models.Model):
 #     team = models.ForeignKey(Team, on_delete=models.CASCADE, null=True)
 #     first_name = models.CharField(max_length=50)
