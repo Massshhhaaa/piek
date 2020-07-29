@@ -7,7 +7,7 @@ from tinymce import HTMLField
 class Categories(models.Model):
     name = models.CharField('Категория', max_length=250)
     img = models.ImageField(upload_to='main_page', null=True, blank=True)
-    slug = models.CharField('url', unique=True, null=True, max_length=200, help_text='for instance, "catalog/mechanisms/meo"' )
+    slug = models.CharField('url', unique=True, null=True, max_length=200, help_text='for instance, "mechanisms/meo"' )
 
     class Meta:
         ordering = ['id']
@@ -46,16 +46,16 @@ class SubgroupImage(models.Model):
 
 
 class Product(models.Model):
-    subgroup = models.ForeignKey(Subgroup, on_delete=models.CASCADE)
-    name = models.CharField( max_length=250)
-    content = HTMLField()
+    parental_slug = models.ForeignKey(Categories, on_delete=models.CASCADE)
     slug_product = models.CharField('url', unique=True, null=True, max_length=200, help_text='for instance, "40 or 25000"')
+    name = models.CharField(max_length=250)
+    content = HTMLField()
 
     class Meta:
-        ordering = ['name']
+        ordering = ['id']
 
     def __str__(self):
-        return '%s %s' % (self.slug_product, self.subgroup)
+        return str(self.name)
 
 
 class ProductImage(models.Model):

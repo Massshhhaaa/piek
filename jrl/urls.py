@@ -22,13 +22,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', main_def, name='main_def'),
     path('contacts/', contacts, name='contacts'),
-
     path('admin/', admin.site.urls),
-    path('<path:slug>/', SubgroupDetailView),
-    path('<path:slug>/<path:slug_product>', ProductDetailView),
+
+    path('catalog/<path:slug>/sep/<slug:slug_product>/', ProductDetailView),
 
 
-
+    path('catalog/<path:slug>/', SubgroupDetailView),
     path('tinymce/', include('tinymce.urls')),
 
     # path('about/', about, name='about'),

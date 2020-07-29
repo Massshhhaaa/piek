@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Categories, Subgroup, SubgroupImage
+from mainapp.models import Categories, Subgroup, SubgroupImage, Product, ProductImage
 
 
 
@@ -22,12 +22,19 @@ def SubgroupDetailView(request, slug):
     # q = Subgroup.objects.get(slug=slug__in(categories))
     # print(q)
     c = Subgroup.objects.filter(category__slug=slug).values('pk')
-    subgroup_info = get_object_or_404(Subgroup, pk__in=c)
-    photos = SubgroupImage.objects.filter(post = subgroup_info)
-    return render(request, 'mainapp/SubgroupDetailView.html', context={'subgroup_info' : subgroup_info, 'photos': photos})
+
+    subgroup_info = Subgroup.objects.get(pk__in=c)
+    photos = SubgroupImage.objects.filter(page = subgroup_info)
+
+    product_list = Product.objects.filter(parental_slug__slug=slug)
+    print(product_list)
+
+    return render(request, 'mainapp/SubgroupDetailView.html', context={'subgroup_info' : subgroup_info, 'photos': photos, 'product_list': product_list})
 
 
-def ProductDetailView(request, slug, slug_product):
+def ProductDetailView(request, slug_product, slug):
 
-    a = Categories.objects.filter(slug=slug)
-    b = Product.object.filter(slug_product=slug)
+    # product = Product.objects.filter(slug_product=slug_product)
+    # print(" ")
+    print(' ')
+    return render(request, 'mainapp/SubgroupDetailView.html')
