@@ -26,8 +26,8 @@ urlpatterns = [
 
     path('catalog/<path:slug>/sep/<slug:slug_product>/', ProductDetailView),
 
-
     path('catalog/<path:slug>/', SubgroupDetailView),
+
     path('tinymce/', include('tinymce.urls')),
 
     # path('about/', about, name='about'),

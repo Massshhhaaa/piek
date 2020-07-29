@@ -26,10 +26,10 @@ def SubgroupDetailView(request, slug):
     subgroup_info = Subgroup.objects.get(pk__in=c)
     photos = SubgroupImage.objects.filter(page = subgroup_info)
 
-    product_list = Product.objects.filter(parent__slug=slug)
-    print(product_list)
 
-    return render(request, 'mainapp/SubgroupDetailView.html', context={'subgroup_info' : subgroup_info, 'photos': photos, 'product_list': product_list})
+    product_list = Product.objects.filter(parent__slug=slug)
+
+    return render(request, 'mainapp/SubgroupDetailView.html', context={'subgroup_info' : subgroup_info, 'photos': photos, 'product_list': product_list,})
 
 
 def ProductDetailView(request, slug_product, slug):

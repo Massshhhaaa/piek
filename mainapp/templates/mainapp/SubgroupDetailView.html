@@ -34,13 +34,20 @@
 						{% endfor %}
 				</div>
 
-				{% for p in product_list %}
-				<div class="container">
-					<div class=""></div>
-					<div class="">{{ p.name }}</div>
 
-				</div>
-				{% endfor %}
+				<section class="container">
+					{% for p in product_list %}
+					<div class="wrapper">
+						<div class="d-flex flex-row">
+							<a href="sep/{{ p.slug_product }}">
+								<img src="{{ p.img.url }}" alt="" style="max-width: 50px; height: auto;">
+								<h1>{{ p.name }}</h1>
+							</a>
+						</div>
+					</div>
+					{% endfor %}
+				</section>
+
 
 		<section class="pb-5 px-3">
 				<div>{{ subgroup_info.content|safe }}</div>

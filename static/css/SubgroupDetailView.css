@@ -26,3 +26,10 @@ table tr:hover{
   background-color: #eee;
 
 }
+
+
+.wrapper{
+  background-color: #555;
+  border-radius: 20px;
+  
+}
