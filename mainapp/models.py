@@ -46,7 +46,7 @@ class SubgroupImage(models.Model):
 
 
 class Product(models.Model):
-    parental_slug = models.ForeignKey(Categories, on_delete=models.CASCADE)
+    parent = models.ForeignKey(Categories, on_delete=models.CASCADE)
     slug_product = models.CharField('url', unique=True, null=True, max_length=200, help_text='for instance, "40 or 25000"')
     name = models.CharField(max_length=250)
     content = HTMLField()
