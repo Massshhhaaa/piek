@@ -47,16 +47,17 @@ class SubgroupImage(models.Model):
 
 class Product(models.Model):
     parent = models.ForeignKey(Categories, on_delete=models.CASCADE)
-    slug_product = models.CharField('url', unique=True, null=True, max_length=200, help_text='for instance, "40 or 25000"')
-    img = models.ImageField(upload_to='mechanisms_preview', null=True)
-    name = models.CharField(max_length=250)
+    slug_product = models.SlugField('url', help_text='for instance, "40 or 6_3"')
+    img = models.ImageField('Изображение для ссылки', upload_to='mechanisms_preview')
+    href_title = models.CharField('Имя ссылки', max_length=250)
+    name = models.CharField('Имя группы', max_length=250)
     content = HTMLField()
 
     class Meta:
         ordering = ['id']
 
     def __str__(self):
-        return str(self.name)
+        return str(self.href_title)
 
 
 class ProductImage(models.Model):
