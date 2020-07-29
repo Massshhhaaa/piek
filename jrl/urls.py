@@ -24,7 +24,7 @@ urlpatterns = [
     path('contacts/', contacts, name='contacts'),
     path('admin/', admin.site.urls),
 
-    path('catalog/<path:slug>/sep/<slug:slug_product>/', ProductDetailView),
+    path('catalog/<path:slug>/info/<slug:slug_product>/', ProductDetailView),
 
     path('catalog/<path:slug>/', SubgroupDetailView),
 

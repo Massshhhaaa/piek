@@ -18,41 +18,17 @@
 	<!-- <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
 	<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet"> -->
 	<link href="{% static 'css/normal.css' %}" rel="stylesheet">
-	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
+	<link href="{% static 'css/ProductDetailView.css' %}" rel="stylesheet">
 
 </head>
 <body>
 {% include 'mainapp/header.html' %}
 <main>
-	<div class="container" style="max-width: 900px!important;">
-        <h1 style="font-size: 2em;" class="d-flex justify-content-center pt-md-4 pt-2 text-center">{{subgroup_info.name}}</h1>
+	{% for p in product %}
 
-				<div class="d-flex flex-wrap">
-						{% for p in photos %}
-						<img src="{{p.image.url}}"  class="flex-fill image">
-						{% endfor %}
-				</div>
+		{{ p.name }}
 
-
-				<section class="container">
-					{% for p in product_list %}
-					<div class="wrapper">
-						<div class="d-flex flex-row">
-							<a href="info/{{ p.slug_product }}">
-								<img src="{{ p.img.url }}" alt="" style="max-width: 50px; height: auto;">
-								<h1>{{ p.name }}</h1>
-							</a>
-						</div>
-					</div>
-					{% endfor %}
-				</section>
-
-
-		<section class="pb-5 px-3">
-				<div>{{ subgroup_info.content|safe }}</div>
-		</section>
-
-	</div>
+	{% endfor %}
 </main>
 
 {% include 'mainapp/footer.html' %}
