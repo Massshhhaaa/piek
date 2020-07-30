@@ -34,11 +34,13 @@
 				</div>
 
 
-				<section class="container">
+				<section class="container-fluid" style="background-color: #e8e8e8;">
+
+
 					{% for p in product_list %}
-					<div class="wrapper p-4 my-3">
+					<div class="d-flex wrapper p-2 m-3">
 						<a href="info/{{ p.slug_product }}">
-							<div class="d-flex flex-row">
+							<div class="d-flex">
 								<div class="flex-column">
 										<img src="{{ p.img.url }}" alt="" style="max-width: 100px; height: auto;">
 								</div>
@@ -49,6 +51,7 @@
 						</a>
 					</div>
 					{% endfor %}
+
 				</section>
 
 
