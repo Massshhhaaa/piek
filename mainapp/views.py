@@ -1,18 +1,16 @@
 from django.shortcuts import render, get_object_or_404
-from mainapp.models import Categories, Subgroup, SubgroupImage, Product, ProductImage
-
+from mainapp.models import Group, SubgroupImage, Product, ProductImage
 
 
 def main_def(request):
-    categories = Categories.objects.all()
+    categories = Group.objects.only('title', 'slug', 'img')
     return render(request, 'mainapp/index.html', context={'categories' : categories})
 
 def contacts(request):
     return render(request,'mainapp/contacts.html')
 
 def SubgroupDetailView(request, slug):
-    c = Subgroup.objects.filter(category__slug=slug).values('pk')
-    subgroup_info = Subgroup.objects.get(pk__in=c)
+    subgroup_info = get_object_or_404(Group, slug=slug)
     photos = SubgroupImage.objects.filter(page = subgroup_info)
     product_list = Product.objects.filter(parent__slug=slug)
     return render(
