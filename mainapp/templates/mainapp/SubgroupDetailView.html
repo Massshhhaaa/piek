@@ -32,10 +32,10 @@
 						<img src="{{p.image.url}}"  class="flex-fill image">
 						{% endfor %}
 				</div>
+	</div>
 
-
-				<section class="container-fluid" style="background-color: #e8e8e8;">
-
+				<section class="container-fluid py-md-5 my-2" style="background-color: #e8e8e8;">
+			<div class="container">
 
 					{% for p in product_list %}
 					<div class="d-flex wrapper p-2 m-3">
@@ -51,15 +51,15 @@
 						</a>
 					</div>
 					{% endfor %}
-
+				</div>
 				</section>
 
 
-		<section class="pb-5 px-3">
+		<section class="container pb-5 px-3">
 				<div>{{ subgroup_info.content|safe }}</div>
 		</section>
 
-	</div>
+
 </main>
 
 {% include 'mainapp/footer.html' %}
