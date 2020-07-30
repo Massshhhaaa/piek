@@ -29,7 +29,11 @@ table tr:hover{
 
 
 .wrapper{
-  background-color: #555;
+  border: 1px solid #8a1524;
+
   border-radius: 20px;
-  
+}
+.wrapper h1 {
+  font-size: 1.7em;
+  color: #555;
 }
