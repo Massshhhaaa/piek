@@ -31,6 +31,7 @@ table tr:hover{
  position: relative;
  background-color: #f5f4f3;
  border-radius: 30px;
+transition: all .3s ease;
 }
 .wrapper h1 {
   font-size: 1.5em;
@@ -46,8 +47,12 @@ table tr:hover{
     border-radius: 30px;
 }
 
-
-.wrapper::before {
+.wrapper:hover {
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+}
+/* .wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -64,6 +69,7 @@ table tr:hover{
   -o-filter: blur(2px);
   filter: blur(2px);
 }
+
 .wrapper:hover::before {
   background-color: rgba(	56, 56, 56,.3);
-}
+} */
