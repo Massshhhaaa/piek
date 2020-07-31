@@ -33,6 +33,7 @@ class Product(models.Model):
     img = models.ImageField('Изображение для ссылки', null=True, blank=True, upload_to='mechanisms_preview')
     href_title = models.CharField('Имя ссылки', max_length=250)
     name = models.CharField('Имя группы', max_length=250)
+    description = HTMLField()
     content = HTMLField()
 
     class Meta:
