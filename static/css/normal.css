@@ -85,7 +85,6 @@ main{
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   background-color: #fff;
-  margin-bottom: 400px;
 }
 
 main a:hover, a:focus{
@@ -154,7 +153,7 @@ margin-bottom: 0px;
   -moz-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease; 
+  -ms-transition: all 0.2s ease;
   margin-bottom: 0px;
   border-radius: 15px;
 
@@ -358,7 +357,8 @@ width: 30%;
 
 @media (max-width: 760px) {
   main {
-    margin-bottom: 90vh !important;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
   }
   footer h2{ font-size: 1em; display: flex; justify-content: center;}
   footer a{

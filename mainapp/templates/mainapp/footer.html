@@ -1,13 +1,13 @@
 <footer class="footer">
-	<div class="container">
+	<div class="container" id="Footer">
 		<div class="d-flex flex-column flex-md-row text-white text-left">
 
 			<div class="flex-column py-1 col-md-4 left-block">
-					<div class="py-md-3 py-3 center-md iphoneseoff"><p class="">ООО "ПЭК" - разработка, производство, модернизация и продажа электротехнической продукции</p></div>
-					<div class="py-md-3 py-3 center-md"><p class="">428037, г. Чебоксары, Машиностроительный<br>проезд 17</p></div>
-					<div class=""><a class="" href="tel:+78352570516">(8352) 57-05-16</a></div>
-					<div class=""><a class="" href="tel:+78352570519"> (8352) 57-05-19</a></div>
-					<div class="py-md-3 py-1"><a class="text-light" href="mailto:info@piek.ru">info@piek.ru</a></div>
+				<div class="py-md-3 py-3 center-md iphoneseoff"><p class="">ООО "ПЭК" - разработка, производство, модернизация и продажа электротехнической продукции</p></div>
+				<div class="py-md-3 py-3 center-md"><p class="">428037, г. Чебоксары, Машиностроительный<br>проезд 17</p></div>
+				<div class=""><a class="" href="tel:+78352570516">(8352) 57-05-16</a></div>
+				<div class=""><a class="" href="tel:+78352570519"> (8352) 57-05-19</a></div>
+				<div class="py-md-3 py-1"><a class="text-light" href="mailto:info@piek.ru">info@piek.ru</a></div>
 			</div>
 
 			<div class="flex-column py-1  py-md-3 col-md-4">
@@ -29,15 +29,31 @@
 
 		</div>
 	</div>
-	<div class="tiny-footer">
-			<div class="container pt-2 "><p>ПЭК © 2006-2020  Все права защищены</p></div>
+	<div class="tiny-footer" id="TiyFooter">
+		<div class="container pt-2 "><p>ПЭК © 2006-2020  Все права защищены</p></div>
 	</div>
 </footer>
 
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
 
+	function FooterHeight() {
+		let h = document.getElementById('Footer').offsetHeight;
+		let h1 = document.getElementById('TiyFooter').offsetHeight;
+		let height = h + h1 + 50;
+		document.querySelector('main').style['margin-bottom'] = height + 'px';
+	}
 
-
+	$(function(){
+		FooterHeight();//calling function on window load
+		$(window).resize(function(){
+			FooterHeight();//calling function on window resize
+		});
+	});
+</script>
 
 
 <!-- Yandex.Metrika counter -->
@@ -71,18 +87,18 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/173038" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Схема проезда</h4>
-			</div>
-			<div class="modal-body">
-				<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=SoHkB05mWtgf2y-0hcTASRPv1q7ESNG2&width=100%&height=426&lang=ru_RU&sourceType=constructor"></script>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-			</div>
-		</div>
-	</div>
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title" id="myModalLabel">Схема проезда</h4>
+</div>
+<div class="modal-body">
+<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=SoHkB05mWtgf2y-0hcTASRPv1q7ESNG2&width=100%&height=426&lang=ru_RU&sourceType=constructor"></script>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+</div>
+</div>
+</div>
 </div> -->
