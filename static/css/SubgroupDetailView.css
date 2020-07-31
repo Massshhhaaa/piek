@@ -24,15 +24,12 @@ table tr{
 }
 table tr:hover{
   background-color: #eee;
-
 }
 
 
 .wrapper{
 background-color: #f5f4f3;
 border-radius: 30px;
-
-
 }
 .wrapper h1 {
   font-size: 1.5em;
