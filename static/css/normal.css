@@ -100,7 +100,7 @@ main a:hover, a:focus{
   z-index: 2 !important;
   height: auto;
   padding-bottom: 0px;
-  padding-top: 0px;
+  padding-top: 1.5em;
   margin-top:-20px;
 }
 
