@@ -29,24 +29,26 @@ table tr:hover{
 
 
 .wrapper{
+background-color: #f5f4f3;
+border-radius: 30px;
 
-  background-color: #fff;
-  border-radius: 15px;
 
-  
 }
 .wrapper h1 {
-  font-size: 1.1em;
-  color: #000;
+  font-size: 1.5em;
+  color: #4e0000;
 }
 
+.wrapper p{
+  color: #555;
+}
 .wrapper img{
     width: 35vh;
     height: auto;
+    border-radius: 30px;
 }
 
 .hovermore:hover{
  background-color: #000;
 
 }
-
