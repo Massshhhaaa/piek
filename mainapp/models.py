@@ -30,7 +30,7 @@ class SubgroupImage(models.Model):
 class Product(models.Model):
     parent = models.ForeignKey(Group, on_delete=models.CASCADE)
     slug_product = models.SlugField('url', help_text='for instance, "40 or 6_3"')
-    img = models.ImageField('Изображение для ссылки', upload_to='mechanisms_preview')
+    img = models.ImageField('Изображение для ссылки', null=True, blank=True, upload_to='mechanisms_preview')
     href_title = models.CharField('Имя ссылки', max_length=250)
     name = models.CharField('Имя группы', max_length=250)
     content = HTMLField()
