@@ -23,12 +23,16 @@
 			<section class="container " style="max-width:900px !important;">
 
 				{% for p in product_list %}
+			
 				<div class="d-flex wrapper p-3 m-4">
+				
 					<a href="info/{{ p.slug_product }}">
+			
 						<div class="d-flex">
-							<div class="flex-column">
+							<div class="flex-column ">
+							
 								<img src="{{ p.img.url }}" alt="">
-								<div class="hovermore"></div>
+								
 							</div>
 							<div class="flex-column px-md-5">
 								<h1 class="py-3">{{ p.href_title }}</h1>
@@ -36,7 +40,9 @@
 							</div>
 						</div>
 					</a>
+					<div class="hovermore"></div>
 				</div>
+			
 				{% endfor %}
 			</section>
 
