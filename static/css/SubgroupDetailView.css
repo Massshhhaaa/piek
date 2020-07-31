@@ -33,9 +33,20 @@ table tr:hover{
   background-color: #fff;
   border-radius: 15px;
 
-
+  
 }
 .wrapper h1 {
   font-size: 1.1em;
   color: #000;
 }
+
+.wrapper img{
+    width: 35vh;
+    height: auto;
+}
+
+.hovermore:hover{
+ background-color: #000;
+
+}
+

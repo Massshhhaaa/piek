@@ -20,15 +20,16 @@
 			<p>{{subgroup_info.description}}</p>
 		</div>
 
-		<section class="container-fluid py-md-5 my-2" style="background-color: #e8e8e8;">
-			<div class="container">
+		<section class="container-fluid py-md-5 my-2" style="background-color: #f5f4f3;">
+			<div class="container " style="max-width:900px !important;">
 
 				{% for p in product_list %}
-				<div class="d-flex wrapper p-2 m-3">
+				<div class="d-flex wrapper p-3 m-4">
 					<a href="info/{{ p.slug_product }}">
 						<div class="d-flex">
 							<div class="flex-column">
-								<img src="{{ p.img.url }}" alt="" style="max-width: 100px; height: auto;">
+								<img src="{{ p.img.url }}" alt="">
+								<div class="hovermore"></div>
 							</div>
 							<div class="flex-column px-md-5">
 								<h1>{{ p.href_title }}</h1>
