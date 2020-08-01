@@ -10,13 +10,27 @@
 <body>
 {% include 'mainapp/header.html' %}
 <main>
-	{% for p in product %}
+	<section class="container">
 
-		{{ p.name }}
 
-	{% endfor %}
+		<div class="top-block">
+			<h1> {{ p.name }}</h1>
+
+			{% for p in photos %}
+			<img src="{{p.image.url}}"  class="flex-fill image">
+			{% endfor %}
+	</div>
+
+
+				{{ p.content | safe }}
+
+
+
+	</section>
 
 </main>
+
+
 {% include 'mainapp/footer.html' %}
 </body>
 </html>

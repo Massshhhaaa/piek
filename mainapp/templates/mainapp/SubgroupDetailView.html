@@ -9,15 +9,15 @@
 <body>
 	{% include 'mainapp/header.html' %}
 	<main>
-		<div class="container" style="max-width: 900px!important;">
-			<h1 style="font-size: 2em;" class="d-flex justify-content-center pt-md-4 pt-2 text-center">{{subgroup_info.name}}</h1>
+		<div class="container top-block" style="max-width: 900px!important;">
+			<h1 class="d-flex justify-content-center py-md-5 py-2 text-center ">{{subgroup_info.name}}</h1>
 
 			<div class="d-flex flex-wrap">
 				{% for p in photos %}
 				<img src="{{p.image.url}}"  class="flex-fill image">
 				{% endfor %}
 			</div>
-			<p>{{subgroup_info.description}}</p>
+			<p class="my-md-5">{{subgroup_info.description}}</p>
 		</div>
 
 			<section class="container" style="max-width:900px !important;">
