@@ -14,7 +14,7 @@
 
 
 		<div class="top-block">
-			<h1> {{ p.name }}</h1>
+			<h1> {{ product.name }}</h1>
 
 			{% for p in photos %}
 			<img src="{{p.image.url}}"  class="flex-fill image">
@@ -22,7 +22,7 @@
 	</div>
 
 
-				{{ p.content | safe }}
+				{{ product.content | safe }}
 
 
 
