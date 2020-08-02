@@ -6,12 +6,12 @@ from tinymce import HTMLField
 
 class Group(models.Model):
     title       = models.CharField(max_length=250)
-    position    = models.IntegerField('Позиция на странице')
+    position    = models.IntegerField('Позиция на странице', unique=True)
     name        = models.CharField(null=True, blank=True,max_length=250)
     img         = models.ImageField(upload_to='main_page', null=True, blank=True)
     slug        = models.CharField('url', unique=True, null=True, blank=True, max_length=200, help_text='for instance, "mechanisms/meo"' )
     description = models.TextField(max_length=500, null=True, blank=True)
-    content     = HTMLField(null=True, blank=True, )
+    content     = HTMLField(null=True, blank=True)
 
     class Meta:
         ordering = ['position']
