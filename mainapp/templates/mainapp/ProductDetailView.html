@@ -10,21 +10,23 @@
 <body>
 {% include 'mainapp/header.html' %}
 <main>
-	<section class="container">
 
 
-		<div class="top-block">
-			<h1> {{ product.name }}</h1>
 
+		<div class="container top-block">
+			<h1 class="py-5"> {{ product.name }}</h1>
+	</div>
+
+	<div class="d-flex flex-wrap justify-content-center">
 			{% for p in photos %}
-			<img src="{{p.image.url}}"  class="flex-fill image">
+			<img src="{{p.image.url}}"  class="image">
 			{% endfor %}
 	</div>
 
 
+	<section class="container my-5">
+
 				{{ product.content | safe }}
-
-
 
 	</section>
 

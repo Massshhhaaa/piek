@@ -12,12 +12,12 @@
 		<div class="container top-block" style="max-width: 900px!important;">
 			<h1 class="d-flex justify-content-center py-md-5 py-2 text-center ">{{subgroup_info.name}}</h1>
 
-			<div class="d-flex flex-wrap">
+			<div class="d-flex flex-wrap justify-content-center">
 				{% for p in photos %}
-				<img src="{{p.image.url}}"  class="flex-fill image">
+				<img src="{{p.image.url}}"  class="image">
 				{% endfor %}
 			</div>
-			<p class="my-md-5">{{subgroup_info.description}}</p>
+			<p class="my-md-5 p-4">{{subgroup_info.description}}</p>
 		</div>
 
 			<section class="container" style="max-width:900px !important;">

@@ -1,9 +1,11 @@
 main{
   font-family: "sf";
+  background-color: #fff;
 }
 .image{
-  width: 30%;
+  width: 20%;
   height: auto;
+  margin: 0 3em;
 }
 
 .top-block h1{
