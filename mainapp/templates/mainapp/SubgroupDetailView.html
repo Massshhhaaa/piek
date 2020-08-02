@@ -5,6 +5,8 @@
 	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
+	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
+
 </head>
 <body>
 	{% include 'mainapp/header.html' %}
@@ -13,8 +15,9 @@
 			<h1 class="d-flex justify-content-center py-md-5 py-2 text-center ">{{subgroup_info.name}}</h1>
 
 			<div class="d-flex flex-wrap justify-content-center">
+				<div style="display: none;" id="hidden-content"></div>
 				{% for p in photos %}
-				<img src="{{p.image.url}}"  class="image">
+					<img href={{p.image.url}} data-fancybox src="{{p.image.url}}" class="image">
 				{% endfor %}
 			</div>
 			<p class="my-md-5 p-4">{{subgroup_info.description}}</p>
@@ -51,5 +54,7 @@
 
 	</main>
 	{% include 'mainapp/footer.html' %}
+	<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery.fancybox.js' %}"></script>
 </body>
 </html>
