@@ -13,16 +13,16 @@
 
 
 
-		<div class="container top-block">
-			<h1 class="py-5"> {{ product.name }}</h1>
-	</div>
 
-	<div class="d-flex flex-wrap justify-content-center">
+
+	<div class="d-flex flex-wrap justify-content-center py-5">
 			{% for p in photos %}
 			<img src="{{p.image.url}}"  class="image">
 			{% endfor %}
 	</div>
-
+	<div class="container top-block">
+		<h1 class="py-5"> {{ product.name }}</h1>
+</div>
 
 	<section class="container my-5">
 

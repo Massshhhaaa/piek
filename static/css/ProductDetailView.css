@@ -1,11 +1,9 @@
 main{
   font-family: "sf";
-  background-color: #fff;
 }
 .image{
   width: 20%;
   height: auto;
-  margin: 0 3em;
 }
 
 .top-block h1{
@@ -28,13 +26,13 @@ section{
 table{
   max-width: 100%;
   border: hidden;
-  border-bottom: 1px solid #890000;
+  border-bottom: 1px solid #e1dedc;
 
 }
 table td{border-right: hidden;}
 
 table tr{
-  border-bottom: 1px solid #890000;
+  border-bottom: 1px solid #e1dedc;
 }
 table tr:hover{
   background-color: #eee;
