@@ -41,7 +41,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'menubar': True,
     'content_css' : '/static/css/SubgroupDetailView.css',
     'statusbar': True,
-    'min_height': '900',
+    'min_height': '300',
 }
 
 # Application definition
