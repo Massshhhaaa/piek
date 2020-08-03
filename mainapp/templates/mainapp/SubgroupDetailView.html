@@ -17,7 +17,10 @@
 			<div class="d-flex flex-wrap justify-content-center">
 				<div style="display: none;" id="hidden-content"></div>
 				{% for p in photos %}
-					<img href={{p.image.url}} data-fancybox src="{{p.image.url}}" class="image">
+				<a  data-fancybox href="{{p.image.url}}">
+					<img src={{p.image.url}} class="image">
+				</a>
+
 				{% endfor %}
 			</div>
 			<p class="my-md-5 p-4">{{subgroup_info.description}}</p>

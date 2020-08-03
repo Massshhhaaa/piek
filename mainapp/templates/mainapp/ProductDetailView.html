@@ -5,6 +5,8 @@
 	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 	<link href="{% static 'css/ProductDetailView.css' %}" rel="stylesheet">
+	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
+	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
 
 </head>
 <body>
@@ -17,7 +19,9 @@
 
 	<div class="d-flex flex-wrap justify-content-center py-5">
 			{% for p in photos %}
-			<img src="{{p.image.url}}"  class="image">
+				<a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
+					<img  src="{{p.image.url}}" class="image" style="width: 250px;">
+				</a>
 			{% endfor %}
 	</div>
 	<div class="container top-block">
@@ -31,8 +35,8 @@
 	</section>
 
 </main>
-
-
 {% include 'mainapp/footer.html' %}
+	<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery.fancybox.js' %}"></script>
 </body>
 </html>
