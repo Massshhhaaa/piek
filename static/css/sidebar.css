@@ -57,12 +57,9 @@
 }
 
 #content-left {
-vertical-align: baseline;
 width: 300px;
 float: left;
 margin-left: 50px !important;
-
-
 }
 
 .sidebar-wrap{

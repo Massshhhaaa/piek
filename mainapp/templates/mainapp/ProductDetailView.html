@@ -11,27 +11,24 @@
 </head>
 <body>
 {% include 'mainapp/header.html' %}
+
+<div class="d-flex flex-row justify-content-center py-5">
+		{% for p in photos %}
+			<a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
+				<img  src="{{p.image.url}}" class="image" style="width: 250px;">
+			</a>
+		{% endfor %}
+</div>
+
 <main>
 	{% include 'mainapp/sidebar.html' %}
 
-
-
-
-	<div class="d-flex flex-wrap justify-content-center py-5">
-			{% for p in photos %}
-				<a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
-					<img  src="{{p.image.url}}" class="image" style="width: 250px;">
-				</a>
-			{% endfor %}
-	</div>
 	<div class="container top-block">
 		<h1 class="py-5 text-center"> {{ product.name }}</h1>
 </div>
 
-	<section class="container my-5">
-
+	<section class="container py-5">
 				{{ product.content | safe }}
-
 	</section>
 
 </main>
