@@ -29,7 +29,7 @@ urlpatterns = [
     path('catalog/<path:slug>/', SubgroupDetailView),
 
     path('tinymce/', include('tinymce.urls')),
-
+    path('jet_api/', include('jet_django.urls')),
     # path('about/', about, name='about'),
     # path('about/gallery/', about_gallery, name='about_gallery'),
     #
