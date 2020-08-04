@@ -17,6 +17,7 @@ body {
 }
 
 main{
+
   position: relative;
   margin: 0 auto;
   z-index: 1;
@@ -244,7 +245,7 @@ width: 30%;
 /* --footer */
 
 .footer{
-  padding-top: 100px;
+  padding-top: 200px;
   letter-spacing: .56px;
   background-color: #333333;
   font-weight: lighter;
@@ -319,3 +320,5 @@ width: 30%;
     .footer a, p{
       padding: 2px 5px;
 }
+
+
