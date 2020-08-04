@@ -103,6 +103,7 @@ margin-bottom: 0px;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
+  margin-bottom: 8vh;
   box-sizing: border-box;
   -webkit-animation: slide 720s linear infinite;
 }

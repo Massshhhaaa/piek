@@ -4,11 +4,19 @@
 <head>
 {% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
-	<link href="{% static 'css/sidebar.css' %}" rel="stylesheet">
 </head>
 <body>
+<<<<<<< HEAD
 			<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
 
+=======
+	
+	<main>
+		
+
+		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
+			
+>>>>>>> parent of c3a2203... sidebar good
 			{% include 'mainapp/header-main-page.html' %}
 
 			<div class="container title">
@@ -18,12 +26,24 @@
 					<h2 class="text pt-3">ПРОИЗВОДИТ ИСПОЛНИТЕЛЬНЫЕ МЕХАНИЗМЫ МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 				</div>
 			</div>
+<<<<<<< HEAD
 
 	<main>
 <div>
 	{% include 'mainapp/sidebar.html' %}
 
 			<div class="container" id="">
+=======
+			{% include 'mainapp/sidebar.html' %}
+			
+				
+				
+			<div class="container">
+
+
+			</div>
+			<div class="container">
+>>>>>>> parent of c3a2203... sidebar good
 				<div class="d-flex flex-wrap">
 					{% for cat in categories %}
 					<div class="m-1 m-md-2 d-flex flex-fill separately">
@@ -38,15 +58,34 @@
 				</div>
 			</div>
 
+<<<<<<< HEAD
 		<div class="clear" style="clear: both;">
 
 		</div>
 </div>
+=======
+>>>>>>> parent of c3a2203... sidebar good
 
 
 		</main>
 		{% include 'mainapp/footer.html' %}
+<<<<<<< HEAD
 
+=======
+<script>		
+	$(function(){
+ var topPos = $('.metro').offset().top;
+  $(window).scroll(function() {
+  var top = $(document).scrollTop(),
+      pip = $('.footer').offset().top,
+      height = $('.metro').outerHeight();
+  if (top > topPos && top < pip - height) {$('.metro').addClass('fixed').removeAttr("style");}
+  else if (top > pip - height) {$('.metro').removeClass('fixed').css({'position':'absolute','bottom':'0'});}
+  else {$('.metro').removeClass('.fixed');}
+  });
+});
+</script>
+>>>>>>> parent of c3a2203... sidebar good
 
 	</body>
 	</html>
