@@ -4,13 +4,10 @@
 <head>
 {% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
+	<link href="{% static 'css/sidebar.css' %}" rel="stylesheet">
 </head>
 <body>
-	
-	<main>
-		
-
-		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
+			<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
 			
 			{% include 'mainapp/header-main-page.html' %}
 		
@@ -21,15 +18,12 @@
 					<h2 class="text pt-3">ПРОИЗВОДИТ ИСПОЛНИТЕЛЬНЫЕ МЕХАНИЗМЫ МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 				</div>
 			</div>
-			{% include 'mainapp/sidebar.html' %}
-			
-				
-				
-			<div class="container">
+	
+	<main>
+<div id="content">
+	{% include 'mainapp/sidebar.html' %}
 
-
-			</div>
-			<div class="container">
+			<div class="container" id="content-right">
 				<div class="d-flex flex-wrap">
 					{% for cat in categories %}
 					<div class="m-1 m-md-2 d-flex flex-fill separately">
@@ -44,21 +38,24 @@
 				</div>
 			</div>
 
+		<div class="clear" style="clear: both;">
+			
+		</div>
+</div>
 
 
 		</main>
 		{% include 'mainapp/footer.html' %}
-<script>		
-	$(function(){
- var topPos = $('.metro').offset().top;
-  $(window).scroll(function() {
-  var top = $(document).scrollTop(),
-      pip = $('.footer').offset().top,
-      height = $('.metro').outerHeight();
-  if (top > topPos && top < pip - height) {$('.metro').addClass('fixed').removeAttr("style");}
-  else if (top > pip - height) {$('.metro').removeClass('fixed').css({'position':'absolute','bottom':'0'});}
-  else {$('.metro').removeClass('.fixed');}
-  });
+ <script>
+$(document).ready(function(){
+
+// Находим плавающий блок и делаем его плавающим
+$('#content-left').stick_in_parent({
+// Чтобы сразу прокручивался обратно
+inner_scrolling: true,
+// Отступ сверху
+offset_top: 20
+});
 });
 </script>
 

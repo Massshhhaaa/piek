@@ -1,7 +1,6 @@
 .metro {
   list-style: none;
   border-left: 5px solid #DAE4F1;
-  position: fixed;
 }
 .metro li {line-height: 2em;}
 .metro ul {
@@ -52,4 +51,10 @@
   position: relative;
   border-radius: 50%;
   margin-right: .5em;
+}
+
+#content-left {
+vertical-align: baseline;
+width: 300px;
+float: left;
 }
