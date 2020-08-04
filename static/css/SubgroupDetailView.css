@@ -1,24 +1,22 @@
-main{
-  font-family: "sf";
-}
 .image{
   width: 30%;
   height: auto;
 }
 
 .top-block h1{
-  font-family: 'Raleway';
+  font-family: 'SF UI Display';
   font-weight: 200;
-  font-size: 2.3em;
+  font-size: 2.5em;
 }
 .top-block p{
-  font-family: 'Raleway';
-  font-weight: 400;
+  font-family: 'SF UI Text';
+  font-weight: 300;
   font-size: 1.2em;
-
 }
 
 section{
+  font-family: 'SF UI Text';
+  font-weight: 300;
   font-size: 1em;
   color: #555;
 }
@@ -46,12 +44,17 @@ table tr:hover{
 transition: all .3s ease;
 }
 .wrapper h1 {
+  font-family: 'SF UI Display';
+  font-weight: 500;
   font-size: 1.5em;
   color: #4e0000;
 }
 
 .wrapper p{
+  font-family: 'SF UI Text';
+  font-weight: 300;
   color: #555;
+
 }
 .wrapper img{
     width: 35vh;
