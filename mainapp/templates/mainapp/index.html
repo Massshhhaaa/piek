@@ -6,9 +6,12 @@
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 </head>
 <body>
+	
 	<main>
+		
 
 		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
+			
 			{% include 'mainapp/header-main-page.html' %}
 		
 			<div class="container title">
@@ -18,10 +21,10 @@
 					<h2 class="text pt-3">ПРОИЗВОДИТ ИСПОЛНИТЕЛЬНЫЕ МЕХАНИЗМЫ МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 				</div>
 			</div>
-			<div class="sidebar">
-				{% include 'mainapp/sidebar.html' %}
+			{% include 'mainapp/sidebar.html' %}
+			
 				
-			</div>
+				
 			<div class="container">
 
 
@@ -45,5 +48,19 @@
 
 		</main>
 		{% include 'mainapp/footer.html' %}
+<script>		
+	$(function(){
+ var topPos = $('.metro').offset().top;
+  $(window).scroll(function() {
+  var top = $(document).scrollTop(),
+      pip = $('.footer').offset().top,
+      height = $('.metro').outerHeight();
+  if (top > topPos && top < pip - height) {$('.metro').addClass('fixed').removeAttr("style");}
+  else if (top > pip - height) {$('.metro').removeClass('fixed').css({'position':'absolute','bottom':'0'});}
+  else {$('.metro').removeClass('.fixed');}
+  });
+});
+</script>
+
 	</body>
 	</html>

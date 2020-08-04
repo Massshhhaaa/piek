@@ -3,16 +3,26 @@
 <head>
 	<link href="{% static 'css/sidebar.css' %}" rel="stylesheet">
 </head>
-
-<ul class="metro">
-    <li><a href="">Элемент списка</a>
+<nav class="navbar navbar-expand-md navbar-light pt-5">
+	<ul class="metro" style="position: fixed; top:10px; z-index: 9999;">
+    	<li><a href="">Элемент списка</a>
       <ul>
         <li><a href="">Элемент вложенного списка</a></li>
         <li><a href="">Элемент вложенного списка</a></li>
         <li><a href="">Элемент вложенного списка</a></li>
+        <li class="nav-item dropdown active px-2">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Документация
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="">Action</a>
+              <a class="dropdown-item" href="">Another action</a>
+              <a class="dropdown-item" href="">Somethink else </a>
+        </li>
       </ul>
     </li>
     <li><a href="">Элемент списка</a></li>
     <li><a href="">Элемент списка</a></li>
 </ul>
 
+</nav>

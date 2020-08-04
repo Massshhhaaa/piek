@@ -1,8 +1,7 @@
 .metro {
   list-style: none;
-  padding: 100px;
-  margin: 30px 0 0 50px;
   border-left: 5px solid #DAE4F1;
+  position: fixed;
 }
 .metro li {line-height: 2em;}
 .metro ul {
@@ -15,7 +14,7 @@
   content: "";
   width: 5px;
   height: 28px;
-  background: #DAE4F1;
+  background: #000;/* #DAE4F1*/
   position: relative;
   display: block;
   left: -9px;
