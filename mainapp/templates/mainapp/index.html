@@ -8,9 +8,9 @@
 </head>
 <body>
 			<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
-
+			
 			{% include 'mainapp/header-main-page.html' %}
-
+		
 			<div class="container title">
 				<h1 class="title-text">Поволжская</br>
 					электротехническая</br>
@@ -18,12 +18,12 @@
 					<h2 class="text pt-3">ПРОИЗВОДИТ ИСПОЛНИТЕЛЬНЫЕ МЕХАНИЗМЫ МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 				</div>
 			</div>
-
+	
 	<main>
-<div>
+<div id="content">
 	{% include 'mainapp/sidebar.html' %}
 
-			<div class="container" id="">
+			<div class="container" id="content-right">
 				<div class="d-flex flex-wrap">
 					{% for cat in categories %}
 					<div class="m-1 m-md-2 d-flex flex-fill separately">
@@ -39,14 +39,25 @@
 			</div>
 
 		<div class="clear" style="clear: both;">
-
+			
 		</div>
 </div>
 
 
 		</main>
 		{% include 'mainapp/footer.html' %}
+ <script>
+$(document).ready(function(){
 
+// Находим плавающий блок и делаем его плавающим
+$('#content-left').stick_in_parent({
+// Чтобы сразу прокручивался обратно
+inner_scrolling: true,
+// Отступ сверху
+offset_top: 20
+});
+});
+</script>
 
 	</body>
 	</html>
