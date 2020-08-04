@@ -5,14 +5,14 @@
 	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 	<link href="{% static 'css/ProductDetailView.css' %}" rel="stylesheet">
-	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
+
 	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
 
 </head>
 <body>
 {% include 'mainapp/header.html' %}
 <main>
-
+	{% include 'mainapp/sidebar.html' %}
 
 
 
@@ -36,7 +36,7 @@
 
 </main>
 {% include 'mainapp/footer.html' %}
-	<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+
 	<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
 </html>

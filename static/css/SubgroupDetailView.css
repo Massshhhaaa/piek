@@ -4,20 +4,21 @@
 }
 
 .top-block h1{
-  font-family: 'SF UI Display';
-  font-weight: 200;
+  font-family: 'Raleway';
+  font-weight: 400;
   font-size: 2.5em;
 }
 .top-block p{
-  font-family: 'SF UI Text';
-  font-weight: 300;
+  font-family: 'Raleway';
+  font-weight: 400;
+  color: #222222;
   font-size: 1.2em;
+  line-height: 25px;
+  letter-spacing: .54px;
 }
 
 section{
   font-family: 'SF UI Text';
-  font-weight: 300;
-  font-size: 1em;
   color: #555;
 }
 
@@ -31,6 +32,7 @@ table td{border-right: hidden;}
 
 table tr{
   border-bottom: 1px solid #e1dedc;
+  transition-duration: .2s;
 }
 table tr:hover{
   background-color: #eee;
@@ -45,7 +47,7 @@ transition: all .3s ease;
 }
 .wrapper h1 {
   font-family: 'SF UI Display';
-  font-weight: 400;
+  font-weight: normal;
   font-size: 2em;
   color: #4e0000;
   letter-spacing: -.005em;
@@ -53,8 +55,7 @@ transition: all .3s ease;
 
 .wrapper p{
   font-family: 'SF UI Text';
-  font-weight: 300;
-  color: #555;
+  color: #666;
 
 }
 .wrapper img{

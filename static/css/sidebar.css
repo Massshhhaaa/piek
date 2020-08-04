@@ -60,15 +60,28 @@
 vertical-align: baseline;
 width: 300px;
 float: left;
+margin-left: 50px !important;
+
+
 }
 
+.sidebar-wrap{
+  background-color: #fff;
+  border-radius: 30px;
+}
 .title-sidebar{
-  font-size: 2.5em;
+  font-size: 2em;
+  text-align: center;
 }
 
-.text-sidebar{
-  margin: 0;
+.text-sidebar p{
+  padding-left: 1em;
   font-size: 1.2em;
   line-height: 1.2em !important;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
+}
+
+.text-sidebar a > p{
+  padding-left: 3em;
+  font-size: 1em;
 }
