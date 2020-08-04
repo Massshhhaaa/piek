@@ -1,10 +1,13 @@
 .metro {
   list-style: none;
   border-left: 5px solid #DAE4F1;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  margin-left: 0px;
 }
 .metro li {line-height: 2em;}
 .metro ul {
-  margin: 20px 0 20px 15px;
+  margin: 10px 0 20px 15px;
   padding: 0;
   border: none;
   list-style: none;
@@ -13,7 +16,7 @@
   content: "";
   width: 5px;
   height: 28px;
-  background: #000;/* #DAE4F1*/
+  background:#DAE4F1;
   position: relative;
   display: block;
   left: -9px;
@@ -57,4 +60,15 @@
 vertical-align: baseline;
 width: 300px;
 float: left;
+}
+
+.title-sidebar{
+  font-size: 2.5em;
+}
+
+.text-sidebar{
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.2em !important;
+  margin-bottom: 10px; 
 }
