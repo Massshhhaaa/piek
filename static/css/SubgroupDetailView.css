@@ -41,9 +41,8 @@ table tr:hover{
 
 .wrapper{
  position: relative;
- background-color: #f5f4f3;
- border-radius: 30px;
-transition: all .3s ease;
+ border-top: 1px solid rgba(0,0,0,.1);
+ transition: .3s;
 }
 .wrapper h1 {
   font-family: 'SF UI Display';
