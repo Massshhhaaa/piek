@@ -9,6 +9,7 @@
 
 </head>
 <body>
+	<!-- WARNING: Условия -->
 	{% if subgroup_info.pic_of_hat %}
 	<div class="banner" style="
 	 background-image: url({{ subgroup_info.pic_of_hat.url }});
@@ -38,7 +39,10 @@
 						</div>
 				</div>
 	{% endif %}
+	<!-- WARNING:  -->
 
+
+	
 
 	<main class="main-property">
 	{% include 'mainapp/sidebar.html' %}
