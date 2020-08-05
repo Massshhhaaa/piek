@@ -59,7 +59,7 @@ transition: all .3s ease;
 
 }
 .wrapper img{
-    width: 35vh;
+    width: 400px;
     height: auto;
     border-radius: 30px;
 }
