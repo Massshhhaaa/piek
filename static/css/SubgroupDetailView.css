@@ -4,13 +4,16 @@
 }
 
 .banner{
-  
+  position: fixed;
+  height: 500px;
+  top:-25px;
 }
-.top-block h1{
-  font-family: 'Raleway';
-  font-weight: 400;
-  font-size: 2.5em;
+.align-middle{
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%, -50%);
 }
+
 .top-block p{
   font-family: 'Raleway';
   font-weight: 400;
@@ -76,8 +79,14 @@ table tr:hover{
 
 
 @media (max-width: 760px) {
+  .iphone-text-small{
+    font-size: 0.7em;
+    font-family: 'SF UI Display';
+  	font-weight: normal;}
   .wrapper{
-    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .wrapper img{
     border-radius: 20px;
@@ -86,12 +95,8 @@ table tr:hover{
     margin: 0px !important;
     padding: 0px !important;
   }
-  .image{
-
-}
-  .top-block h1{
-    font-size: 1.5em;
-  }
+    .wrapper img{width: 200px;}
+    .wrapper h1{font-size: 1.5em; text-align: center;;}
 
 }
 /* .wrapper::before {

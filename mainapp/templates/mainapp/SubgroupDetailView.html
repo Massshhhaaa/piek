@@ -10,15 +10,14 @@
 </head>
 <body>
 	{% if subgroup_info.pic_of_hat %}
-	<div class="banner" style="
-	 background-image: url({{ subgroup_info.pic_of_hat.url }});
-	 position:fixed;
-	 height: 500px;
-	 top:-25px;">
+	<div class="banner" style="background-image: url({{ subgroup_info.pic_of_hat.url }});">
 
 	 {% include 'mainapp/header-main-page.html' %}
-				 <div class="container title">
-					 <h1 class="d-flex justify-content-center py-md-5 py-2 text-center text-light">{{subgroup_info.name}}</h1>
+				 <div class="container h-75" style="
+				   font-family: 'SF UI Display';
+				   font-weight: normal;
+				   font-size: 3em;">
+						 		<h1 class="container iphone-text-small d-flex text-center align-middle text-light">{{subgroup_info.name}}</h1>
 					 </div>
 				 </div>
 					<style media="screen">
@@ -31,17 +30,21 @@
 							box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
 						}
 						@media (max-width: 760px) {
-						  .main-property {border-top: 0px;
+						  .main-property {
+							border-top-left-radius: 0px;
+							border-top-right-radius: 0px;
+							margin-top: 0px!important;
 							}
 							.banner{
 								position: relative;
+								top: 0px;
 							}
 						}
 					</style>
 	{% else %}
 						{% include 'mainapp/header.html' %}
-						<div class="container title">
-							<h1 class="d-flex justify-content-center py-md-3 py-2 text-center">{{subgroup_info.name}}</h1>
+						<div class="container title" style="z-index: 2!important; position: relative;background-color: #fff;">
+							<h1 class="d-flex justify-content-center py-md-3 py-2 text-center mb-0">{{subgroup_info.name}}</h1>
 						</div>
 				</div>
 	{% endif %}
@@ -51,24 +54,23 @@
 	{% include 'mainapp/sidebar.html' %}
 
 		<div class="container top-block" style="max-width: 900px!important;">
-			<div class="my-md-5 p-3">{{subgroup_info.description | safe }}</div>
+			<div class="p-4 pt-5">{{subgroup_info.description | safe }}</div>
 		</div>
 
 			<section class="container pt-5 " style="max-width:900px !important;">
 					{% for p in product_list %}
-					<div class="d-flex wrapper py-md-5 p-3 my-3 m-md-4">
-
+					<div class="d-flex wrapper py-md-5 px-3 my-3 m-md-4">
 						<a href="info/{{ p.slug_product }}">
 
 							<div class="d-flex flex-column flex-md-row">
 
-								<div class="flex-column m-auto">
+								<div class="flex-column m-auto pb-4 py-md-0">
 									<img src="{{ p.img.url }}" alt="">
 								</div>
 
 								<div class="flex-column px-md-5">
 									<h1 class="py-md-3">{{ p.href_title }}</h1>
-									<p class="">{{p.description |safe }}</p>
+									<div class="d-none d-md-flex">{{ p.description |safe }}</div>
 								</div>
 							</div>
 						</a>
@@ -77,8 +79,8 @@
 				</section>
 
 
-		<section class="container pb-5 px-3">
-			<div class="content">{{ subgroup_info.content|safe }}</div>
+		<section class="container pb-5">
+			<div class="content p-2">{{ subgroup_info.content|safe }}</div>
 		</section>
 
 
