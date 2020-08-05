@@ -9,12 +9,20 @@
 
 </head>
 <body>
-	{% include 'mainapp/header.html' %}
+	<div class="banner" style="background-image: url({% static 'img/1.jpg' %});">
+
+	{% include 'mainapp/header-main-page.html' %}
+
+	<div class="container title">
+		<h1 class="d-flex justify-content-center py-md-5 py-2 text-center text-light">{{subgroup_info.name}}</h1>
+		</div>
+	</div>
+
 	<main>
 	{% include 'mainapp/sidebar.html' %}
 
 		<div class="container top-block" style="max-width: 900px!important;">
-			<h1 class="d-flex justify-content-center py-md-5 py-2 text-center ">{{subgroup_info.name}}</h1>
+
 
 			<!-- <div class="d-flex flex-wrap justify-content-center">
 				<div style="display: none;" id="hidden-content"></div>
