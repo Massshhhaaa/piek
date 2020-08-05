@@ -30,6 +30,13 @@
 							-moz-box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
 							box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
 						}
+						@media (max-width: 760px) {
+						  .main-property {border-top: 0px;
+							}
+							.banner{
+								position: relative;
+							}
+						}
 					</style>
 	{% else %}
 						{% include 'mainapp/header.html' %}
@@ -43,12 +50,11 @@
 	<main class="main-property">
 	{% include 'mainapp/sidebar.html' %}
 
-		<div class="container top-block pt-5" style="max-width: 900px!important;">
-			<p class="my-md-5">{{subgroup_info.description| safe }}</p>
+		<div class="container top-block" style="max-width: 900px!important;">
+			<div class="my-md-5 p-3">{{subgroup_info.description | safe }}</div>
 		</div>
 
 			<section class="container pt-5 " style="max-width:900px !important;">
-
 					{% for p in product_list %}
 					<div class="d-flex wrapper py-md-5 p-3 my-3 m-md-4">
 
@@ -72,7 +78,7 @@
 
 
 		<section class="container pb-5 px-3">
-			<div>{{ subgroup_info.content|safe }}</div>
+			<div class="content">{{ subgroup_info.content|safe }}</div>
 		</section>
 
 

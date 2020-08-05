@@ -3,6 +3,9 @@
   height: auto;
 }
 
+.banner{
+  
+}
 .top-block h1{
   font-family: 'Raleway';
   font-weight: 400;
@@ -17,10 +20,12 @@
   letter-spacing: .54px;
 }
 
-section{
+.content{
   font-family: 'SF UI Text';
   color: #555;
 }
+.content strong,
+.content span{font-family: 'SF UI Text';}
 
 table{
   max-width: 100%;
