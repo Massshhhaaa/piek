@@ -17,10 +17,9 @@ body {
 }
 
 main{
-
   position: relative;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 2;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   background-color: #fff;
@@ -98,6 +97,8 @@ margin-bottom: 0px;
 
 }
 .banner {
+  position: relative;
+  z-index: 1;
   background-size: auto;
   height: auto;
   width: 100%;
@@ -114,10 +115,8 @@ margin-bottom: 0px;
 }
 
 
-
-
 .title-text{
-  font-family: Raleway;
+  font-family: 'Raleway';
   font-weight: 400;
   color: #fff;
   font-size: 3.7em;
@@ -125,23 +124,15 @@ margin-bottom: 0px;
   text-align: left;
   text-transform: uppercase;
 
- /* position: absolute;
-  left: 50%;
-  top: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);*/
 
 }
 .text{
-  font-family: Raleway;
+  margin-bottom: 0px!important;
+  font-family: 'Raleway';
   font-weight: 300;
   color: #FFD700;
   font-size: 1em;
   text-align: left;
-  margin-top: 1em;
   letter-spacing: 1px;
 
 }
@@ -191,7 +182,6 @@ padding: 5.5em;
 
   .text{
     font-size: 1.5em;
-    padding-bottom: 0.5em;
   }
   .title-text{
     padding-top:0.5em;
@@ -297,8 +287,8 @@ width: 30%;
 
 @media (max-width: 760px) {
   main {
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   footer h2{ font-size: 1em; display: flex; justify-content: center;}
   footer a{
