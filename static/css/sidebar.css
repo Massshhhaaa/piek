@@ -1,11 +1,14 @@
 
 
 #content-left {
-width: 320px;
+
+width: 350px;
 float: left;
 margin-left: 50px !important;
 /*background-color: #f9f9f9;*/
-border-radius: 10px;
+border-radius: 30px;
+margin-bottom: 5vw;
+background-color: #f9f9f9;
 }
 
 .sidebar-wrap{
@@ -19,40 +22,46 @@ border-radius: 10px;
   color: #4e0000;
   padding-bottom: 1em;
   padding-top: 1em;
+  letter-spacing: 1px;
 }
 
-.text-sidebar p{
-  padding-left: 1em;
-  font-size: 1.2em;
-  line-height: 1.2em !important;
-  margin-bottom: 10px;
+.sidebar-text a{
+  color: #4e0000;
 }
 
-.text-sidebar a > p{
-  padding-left: 3em;
-  font-size: 1em;
+.sidebar-text a:hover{
+  color: #4e3333;
 }
 
 .lil_title {
   font-size: 1.2em;
-  margin:10px;
+  padding:20px;
+  padding-top: 10px;
   font-family: sf;
+  background-color:#f4f4f4;
+  border-radius: 15px;
 }
 
 .card{
   border:none;
-  background-color: #fff;
-
-
+  background-color: #f9f9f9;
+  border-radius: 30px;
 }
 .card-header{
-  border: 0px;
+  border: none;
   border-radius: 15px !important;
-  background-color: #fff;
+  background-color: #f9f9f9;
+  margin: 10px;
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 12pt;
 }
 
+.card-header a{
+  text-align: left;
+}
 .card-link{
-  font-size: 1em;
+  font-size: 1.2em;
   margin-right: 10px;
 }
 
@@ -62,8 +71,12 @@ border-radius: 10px;
   padding: 0px !important;
 }
 
-.card-body p:hover{ background-color: #f2e9e9; border-radius: 8px; }
+.card-body p:hover{ background-color: #f4f4f4; border-radius: 8px; }
 
 .card-body{
   padding: 0px !important;
+}
+
+.sidebar-link{
+  padding-left: 1.5em;
 }

@@ -56,6 +56,8 @@
 
 	<main class="main-property">
 	{% include 'mainapp/sidebar.html' %}
+	
+	<div id="content-right">
 
 		<div class="container top-block" style="max-width: 900px!important;">
 			<div class="p-4 pt-5">{{subgroup_info.description | safe }}</div>
@@ -86,6 +88,7 @@
 		<section class="container pb-5">
 			<div class="content p-2">{{ subgroup_info.content|safe }}</div>
 		</section>
+	    </div>
 
 
 	</main>
