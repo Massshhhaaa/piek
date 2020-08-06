@@ -1,74 +1,24 @@
-.metro {
-  list-style: none;
-  border-left: 5px solid #DAE4F1;
-  background-color: #f6f6f6;
-  border-radius: 15px;
-  margin-left: 0px;
-}
-.metro li {line-height: 2em;}
-.metro ul {
-  margin: 10px 0 20px 15px;
-  padding: 0;
-  border: none;
-  list-style: none;
-}
-.metro ul:before, .metro ul:after {
-  content: "";
-  width: 5px;
-  height: 28px;
-  background:#DAE4F1;
-  position: relative;
-  display: block;
-  left: -9px;
-}
-.metro ul:before {
-  transform: rotate(-45deg);
-  margin-top: -15px;
-}
-.metro ul:after {
-  transform: rotate(45deg);
-  bottom: -20px;
-}
-.metro ul li {border-left: 5px solid #DAE4F1;}
-.metro ul li:first-child {
-  margin-top: -5px;
-  padding-top: 5px;
-}
-.metro ul li:last-child {
-  padding-bottom: 9px;
-  margin-bottom: -25px;
-}
-.metro a {
-  text-decoration: none;
-  display: block;
-  font-family: 'Noto Sans', sans-serif;
-  color: #4A4B4D;
-}
-.metro a:before {
-  content: "";
-  display: inline-block;
-  background: #CA682D;
-  width: 12px;
-  height: 12px;
-  left: -9px;
-  position: relative;
-  border-radius: 50%;
-  margin-right: .5em;
-}
+
 
 #content-left {
-width: 300px;
+width: 320px;
 float: left;
 margin-left: 50px !important;
+/*background-color: #f9f9f9;*/
+border-radius: 10px;
 }
 
 .sidebar-wrap{
   background-color: #fff;
   border-radius: 30px;
 }
-.title-sidebar{
+.sidebar-title {
   font-size: 2em;
   text-align: center;
+  width: 100%;
+  color: #4e0000;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
 
 .text-sidebar p{
@@ -81,4 +31,39 @@ margin-left: 50px !important;
 .text-sidebar a > p{
   padding-left: 3em;
   font-size: 1em;
+}
+
+.lil_title {
+  font-size: 1.2em;
+  margin:10px;
+  font-family: sf;
+}
+
+.card{
+  border:none;
+  background-color: #fff;
+
+
+}
+.card-header{
+  border: 0px;
+  border-radius: 15px !important;
+  background-color: #fff;
+}
+
+.card-link{
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.card-body p{
+  font-size: 1.3em;
+  text-align: center;
+  padding: 0px !important;
+}
+
+.card-body p:hover{ background-color: #f2e9e9; border-radius: 8px; }
+
+.card-body{
+  padding: 0px !important;
 }
