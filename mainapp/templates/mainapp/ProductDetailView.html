@@ -10,65 +10,55 @@
 
 </head>
 <body>
-{% include 'mainapp/header.html' %}
+	{% include 'mainapp/header.html' %}
 
-<div class="d-flex flex-wrap justify-content-center " style="
-background-color: #fff;
-position: relative;
-z-index: 2;">
-		{% for p in photos %}
-			<a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
-				<img  src="{{p.image.url}}" class="image" style="width: 250px;">
-			</a>
-		{% endfor %}
+	<div class="d-flex flex-wrap justify-content-center " style="
+	background-color: #fff;
+	position: relative;
+	z-index: 2;">
+	{% for p in photos %}
+	<a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
+		<img  src="{{p.image.url}}" class="image" style="width: 250px;">
+	</a>
+	{% endfor %}
 </div>
 
 <main>
-<div>
-	{% include 'mainapp/sidebar.html' %}
-	<div class="container top-block">
-		<h1 class="py-5 text-center"> {{ product.name }}</h1>
-</div>
+	<div>
+		{% include 'mainapp/sidebar.html' %}
+		<div class="container top-block">
+			<h1 class="py-5 text-center"> {{ product.name }}</h1>
+		</div>
 
-<div class="container-fluid py-5" style="background-color: #f4f3f2;">
-	<div class="container d-flex flex-column">
-		{% for mod in mod_list %}
-			<a href="{{ mod.slug_mod}}" class="text-center py-2"><h5>{{mod.title}}</h5></a>
-		{% endfor %}
+
+		<section class="container content py-5 px-3">
+			{{ product.content | safe }}
+		</section>
 
 	</div>
-</div>
-
-
-
-
-	<section class="container content py-5 px-3">
-				{{ product.content | safe }}
-	</section>
-		<div class="clear" style="clear: both;">
-
-		</div>
-</div>
 
 </main>
 {% include 'mainapp/footer.html' %}
 
-	<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 
-	<script>
-	// NOTE: раскладываю queryset в js массив
-	var n = 0;
-	let arr = [];
-	{% for mod in mod_list %}
-	arr[n] = "{{mod.title}}";
-	n++;
-	{% endfor %}
 
-let k=2;
-for (let j = 0; j < 6; j++) { // NOTE: а если в arr будет больше 6? Может через while нужно?
-$("#MOD tr:nth-child(k) td:nth-child(1)").text(arr[j])
-k++;	// NOTE: k ,в строке выше - это номер строки в столбце. почему-то с k не работает, но если поставить цифру то все ок
+<script>
+var n = 0;
+let arr = [];
+let arr_slug = [];
+{% for mod in mod_list %}
+arr[n] = "{{mod.title}}";
+arr_slug[n] = "{{ mod.slug_mod }}";
+n++;
+{% endfor %}
+var k = 2; //номер строки в таблице
+for (let j = 0; j < arr.length; j++) {
+	$("#MOD tr:nth-child(" + k + ") td:nth-child(1)").text(arr[j]);
+	$("#MOD tr:nth-child(" + k + ") td:nth-child(1)").wrap("<a href=" + arr_slug[j] + "></a>");
+	k++;
 }
-	</script>
+</script>
+
+<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
 </html>

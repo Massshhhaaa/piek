@@ -25,7 +25,8 @@ class Product(models.Model):
     img          = models.ImageField('Изображение для ссылки', null=True, blank=True, upload_to='mechanisms_preview')
     href_title   = models.CharField(max_length=250)
     name         = models.CharField(max_length=250)
-    description  = HTMLField()
+    mod_table    = HTMLField(help_text="Указание идентификатора обязательно. id = 'MOD'")
+    description  = HTMLField(null=True, blank=True)
     content      = HTMLField()
 
     class Meta:
