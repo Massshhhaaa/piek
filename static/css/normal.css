@@ -117,7 +117,7 @@ margin-bottom: 0px;
 
 .title-text{
   font-family: 'Raleway';
-  font-weight: 400;
+  font-weight: 500;
   color: #fff;
   font-size: 3.7em;
   letter-spacing: 1px;
@@ -135,9 +135,10 @@ margin-bottom: 0px;
   text-align: left;
   letter-spacing: 1px;
 
+
 }
 .title{
-padding: 5.5em;
+padding: 5em;
 }
 
 
@@ -297,8 +298,6 @@ width: 30%;
     margin:0 auto;
 }
 
-
-  .tiny-footer {font-size: 1em;}
   .center-md{font-size: 1em; text-align: center;}
   .container{padding: 0;}
 
@@ -309,4 +308,6 @@ width: 30%;
     .iphoneseoff {display: none;}
     .footer a, p{
       padding: 2px 5px;
+    }
+    .title-text{font-size: 1.8em;}
 }

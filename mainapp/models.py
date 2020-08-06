@@ -2,8 +2,6 @@ from django.db import models
 from pytils.translit import slugify
 from tinymce import HTMLField
 
-# Create your models here.
-
 class Group(models.Model):
     title       = models.CharField(max_length=250)
     position    = models.IntegerField('Позиция на странице', unique=True)
@@ -19,14 +17,6 @@ class Group(models.Model):
 
     def __str__(self):
         return str(self.title)
-
-class SubgroupImage(models.Model):
-    page  = models.ForeignKey(Group, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='mechanisms', null=True)
-
-    def __str__(self):
-        return str(self.page)
-
 
 
 class Product(models.Model):
@@ -50,3 +40,20 @@ class ProductImage(models.Model):
 
     def __str__(self):
         return str(self.page.name)
+
+
+class Modification(models.Model):
+    parent   = models.ForeignKey(Product, on_delete=models.CASCADE)
+    title    = models.CharField(max_length=250, unique=True)
+    slug_mod = models.SlugField('url', null=True, blank=True, help_text='заполняется автоматически от title')
+    content  = HTMLField(null=True, blank=True)
+
+    class Meta:
+        ordering = ['parent']
+
+    def __str__(self):
+        return str(self.title)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Modification, self).save(*args, **kwargs)
