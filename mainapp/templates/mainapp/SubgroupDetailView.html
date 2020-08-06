@@ -44,6 +44,9 @@
 					</style>
 	{% else %}
 						{% include 'mainapp/header.html' %}
+						<style media="screen">
+							nav{background-color: #fff;}
+						</style>
 						<div class="container title" style="z-index: 2!important; position: relative;background-color: #fff;">
 							<h1 class="d-flex justify-content-center py-md-3 py-2 text-center mb-0">{{subgroup_info.name}}</h1>
 						</div>
@@ -52,10 +55,12 @@
 	<!-- WARNING:  -->
 
 
-	
+
 
 	<main class="main-property">
 	{% include 'mainapp/sidebar.html' %}
+	
+	<div id="content-right">
 
 		<div class="container top-block" style="max-width: 900px!important;">
 			<div class="p-4 pt-5">{{subgroup_info.description | safe }}</div>
@@ -68,7 +73,7 @@
 
 							<div class="d-flex flex-column flex-md-row">
 
-								<div class="flex-column m-auto pb-4 py-md-0">
+								<div class="flex-column m-auto pb-4 py-2 py-md-0">
 									<img src="{{ p.img.url }}" alt="">
 								</div>
 
@@ -86,6 +91,7 @@
 		<section class="container pb-5">
 			<div class="content p-2">{{ subgroup_info.content|safe }}</div>
 		</section>
+	    </div>
 
 
 	</main>

@@ -24,6 +24,8 @@ urlpatterns = [
     path('contacts/', contacts, name='contacts'),
     path('admin/', admin.site.urls),
 
+    path('catalog/<path:slug>/info/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView),
+
     path('catalog/<path:slug>/info/<slug:slug_product>/', ProductDetailView),
 
     path('catalog/<path:slug>/', SubgroupDetailView),
