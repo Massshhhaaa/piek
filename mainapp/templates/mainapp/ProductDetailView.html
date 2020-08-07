@@ -30,6 +30,11 @@
 			<h1 class="py-5 text-center"> {{ product.name }}</h1>
 		</div>
 
+		<div class="container-fluid" style="background-color: #f3f2f1;">
+			<section class="container content py-5 px-3">
+				{{ product.mod_table | safe }}
+			</section>
+		</div>
 
 		<section class="container content py-5 px-3">
 			{{ product.content | safe }}
