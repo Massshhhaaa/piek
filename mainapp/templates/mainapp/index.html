@@ -19,31 +19,33 @@
 			</div>
 
 	<main>
-<div>
-	{% include 'mainapp/sidebar.html' %}
+<div class="row p-0 m-0">
 
-			<div class="container pt-md-5">
-				<div class="d-flex flex-wrap">
-					{% for cat in categories %}
-					<div class="m-1 m-md-2 d-flex flex-fill separately">
-						<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+	<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
+			{% include 'mainapp/sidebar.html' %}
+	</div>
 
-							<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
-							<div class="py-2 py-lg-5"><p class="item-name"style="text-decoration:none;">{{ cat.title }}</p></div>
+				<div class="col-12 col-lg-10 col-xl-6">
 
-						</a>
+					<div class="container pt-md-5">
+						<div class="d-flex flex-wrap">
+							{% for cat in categories %}
+							<div class="m-1 m-md-2 d-flex flex-fill separately">
+								<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+
+									<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
+									<div class="py-2 py-lg-5"><p class="item-name"style="text-decoration:none;">{{ cat.title }}</p></div>
+
+								</a>
+							</div>
+							{% endfor %}
+						</div>
 					</div>
-					{% endfor %}
-				</div>
 			</div>
-
-		<div class="clear" style="clear: both;">
-
-		</div>
 </div>
 
-
-		</main>
-		{% include 'mainapp/footer.html' %}
-	</body>
-	</html>
+	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
+	</main>
+	{% include 'mainapp/footer.html' %}
+</body>
+</html>

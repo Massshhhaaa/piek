@@ -24,24 +24,33 @@
 </div>
 
 <main>
-	<div>
-		{% include 'mainapp/sidebar.html' %}
-		<div class="container top-block">
-			<h1 class="py-5 text-center"> {{ product.name }}</h1>
-		</div>
+<div class="row p-0 m-0">
 
-		<div class="container-fluid" style="background-color: #f3f2f1;">
-			<section class="container content py-5 px-3">
-				{{ product.mod_table | safe }}
-			</section>
-		</div>
+				<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
+						{% include 'mainapp/sidebar.html' %}
+				</div>
 
-		<section class="container content py-5 px-3">
-			{{ product.content | safe }}
-		</section>
+	<div class="col-12 col-lg-10 col-xl-6">
+
+
+				<div class="container top-block">
+					<h1 class="py-5 text-center"> {{ product.h1 }}</h1>
+				</div>
+
+				<div class="container-fluid" style="background-color: #f3f2f1;">
+					<section class="container content py-5 px-3">
+						{{ product.mod_table | safe }}
+					</section>
+				</div>
+
+				<section class="container content py-5 px-3">
+					{{ product.content | safe }}
+				</section>
 
 	</div>
+</div>
 
+<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
 </main>
 {% include 'mainapp/footer.html' %}
 

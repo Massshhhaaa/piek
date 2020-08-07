@@ -1,14 +1,18 @@
-
+@media (min-width: 1200px){
+  .col-xxl-6{
+    display: flex;
+    flex: 0 0 65%;
+    max-width: 65%;
+  }
+}
 
 #content-left {
-
-width: 350px;
-float: left;
-margin-left: 50px !important;
-/*background-color: #f9f9f9;*/
+width: 300px;
+padding: 0 1em;
 border-radius: 30px;
 margin-bottom: 5vw;
-background-color: #f9f9f9;
+margin-top: 1vw;
+border-right:1px solid #dedede;
 }
 
 .sidebar-wrap{
@@ -34,49 +38,58 @@ background-color: #f9f9f9;
 }
 
 .lil_title {
-  font-size: 1.2em;
-  padding:20px;
-  padding-top: 10px;
-  font-family: sf;
+  font-size: 1em;
+  margin-top: 1em;
+  padding: 0.5em;
+  margin-bottom: 0;
+  font-family: 'SF UI Text';
+  font-weight: normal;
   background-color:#f4f4f4;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .card{
   border:none;
   background-color: #f9f9f9;
-  border-radius: 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .card-header{
   border: none;
-  border-radius: 15px !important;
+
   background-color: #f9f9f9;
-  margin: 10px;
   margin-top: 0px;
-  padding-top: 0px;
-  font-size: 12pt;
+  padding: 0.2em 1em;
+}
+
+.card-header:last-child{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .card-header a{
   text-align: left;
+  font-size: 1.1em;
 }
 .card-link{
-  font-size: 1.2em;
+  font-size: 0.7em !important;
   margin-right: 10px;
 }
 
 .card-body p{
-  font-size: 1.3em;
+  font-size: 1em;
   text-align: center;
-  padding: 0px !important;
+  padding: 0.3em 0;
+  margin: 0px !important;
 }
 
-.card-body p:hover{ background-color: #f4f4f4; border-radius: 8px; }
+.card-body p:hover{ background-color: #f4f3f2; border-radius: 8px; }
 
 .card-body{
   padding: 0px !important;
 }
 
 .sidebar-link{
-  padding-left: 1.5em;
+  padding-left: 10px;
 }

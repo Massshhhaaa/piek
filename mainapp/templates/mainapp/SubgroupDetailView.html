@@ -58,13 +58,21 @@
 
 
 	<main class="main-property">
-	{% include 'mainapp/sidebar.html' %}
-	
+	<div class="row p-0 m-0">
+
+			<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
+					{% include 'mainapp/sidebar.html' %}
+			</div>
+
+
+<div class="col-12 col-lg-10 col-xl-8 col-xxl-6">
 	<div id="content-right">
 
 		<div class="container top-block" style="max-width: 900px!important;">
 			<div class="p-4 pt-5">{{subgroup_info.description | safe }}</div>
 		</div>
+
+
 
 			<section class="container pt-5 " style="max-width:900px !important;">
 					{% for p in product_list %}
@@ -93,7 +101,11 @@
 		</section>
 	    </div>
 
+</div>
 
+</div>
+
+<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
 	</main>
 	{% include 'mainapp/footer.html' %}
 	<script src="{% static 'js/jquery.fancybox.js' %}"></script>
