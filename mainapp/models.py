@@ -53,9 +53,9 @@ class Modification(models.Model):
     class Meta:
         ordering = ['parent']
 
+    def save(self, *args, **kwargs):
+        self.slug_mod = slugify(self.title)
+        super(Modification, self).save(*args, **kwargs)
+
     def __str__(self):
         return str(self.title)
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(Modification, self).save(*args, **kwargs)

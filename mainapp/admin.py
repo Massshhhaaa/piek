@@ -11,7 +11,8 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImageInline,]
 
 class ModificationAdmin(admin.ModelAdmin):
-    exclude = ('slug_mod',)
+    # exclude = ('slug_mod',)
+    pass
 
 admin.site.register(Group)
 admin.site.register(Product, ProductAdmin)

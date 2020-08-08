@@ -58,19 +58,17 @@ border-right:1px solid #dedede;
 }
 .card-header{
   border: none;
-
   background-color: #f9f9f9;
   margin-top: 0px;
   padding: 0.2em 1em;
 }
 
-.card-header:last-child{
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+.last-child{
+  border-bottom-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
 }
 
 .card-header a{
-  text-align: left;
   font-size: 1.1em;
 }
 .card-link{
