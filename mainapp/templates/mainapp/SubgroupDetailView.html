@@ -66,15 +66,15 @@
 
 
 <div class="col-12 col-lg-10 col-xl-8 col-xxl-6">
-	<div id="content-right">
+	<div id="content-right" class="m-auto">
 
-		<div class="container top-block" style="max-width: 900px!important;">
+		<div class="container top-block">
 			<div class="p-4 pt-5">{{subgroup_info.description | safe }}</div>
 		</div>
 
 
 
-			<section class="container pt-5 " style="max-width:900px !important;">
+			<section class="container m-auto pt-5">
 					{% for p in product_list %}
 					<div class="d-flex wrapper py-md-5 px-3 my-3 m-md-4">
 						<a href="info/{{ p.slug_product }}">

@@ -21,11 +21,28 @@
 	<main>
 <div class="row p-0 m-0">
 
+
+<style media="screen">
+@media (min-width: 1200px) and (max-width: 1600px){
+	.col-xxl-6{
+		display: flex;
+		flex: 0 0 70%;
+		max-width: 70%;
+	}
+}
+@media (min-width: 1600px){
+	.col-xxl-6-index{
+		display: flex;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+</style>
 	<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
 			{% include 'mainapp/sidebar.html' %}
 	</div>
 
-				<div class="col-12 col-lg-10 col-xl-6">
+				<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 col-xxl-6-index">
 
 					<div class="container pt-md-5">
 						<div class="d-flex flex-wrap">

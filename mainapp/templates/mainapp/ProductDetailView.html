@@ -30,23 +30,26 @@
 						{% include 'mainapp/sidebar.html' %}
 				</div>
 
-	<div class="col-12 col-lg-10 col-xl-6">
+	<div class="col-12 col-lg-10 col-xl-8 col-xxl-6">
+
+  <section class="col">
 
 
 				<div class="container top-block">
 					<h1 class="py-5 text-center"> {{ product.h1 }}</h1>
 				</div>
 
-				<div class="container-fluid" style="background-color: #f3f2f1;">
-					<section class="container content py-5 px-3">
+				<div class="mod_table_bg" style="background-color: #f3f2f1; border-radius: 15px;">
+					<div class="content m-auto py-5 px-3">
 						{{ product.mod_table | safe }}
-					</section>
+					</div>
 				</div>
 
-				<section class="container content py-5 px-3">
+				<div class="container content py-5 px-3">
 					{{ product.content | safe }}
-				</section>
+				</div>
 
+  </section>
 	</div>
 </div>
 
