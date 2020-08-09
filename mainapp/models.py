@@ -25,6 +25,7 @@ class Product(models.Model):
     img          = models.ImageField('Изображение для ссылки', null=True, blank=True, upload_to='mechanisms_preview')
     href_title   = models.CharField(max_length=250)
     name         = models.CharField(max_length=250)
+    h1_mod       = models.CharField(max_length=250)
     mod_table    = HTMLField(help_text="Указание идентификатора обязательно. id = 'MOD'")
     description  = HTMLField(null=True, blank=True)
     content      = HTMLField()
@@ -46,7 +47,6 @@ class ProductImage(models.Model):
 class Modification(models.Model):
     parent   = models.ForeignKey(Product, on_delete=models.CASCADE)
     title    = models.CharField(max_length=250, unique=True)
-    h1       = models.CharField(max_length=250)
     slug_mod = models.SlugField('url', null=True, blank=True, help_text='заполняется автоматически от title')
     content  = HTMLField(null=True, blank=True)
 
