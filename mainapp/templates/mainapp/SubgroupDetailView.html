@@ -48,7 +48,11 @@
 							nav{background-color: #fff;}
 						</style>
 						<div class="container title" style="z-index: 2!important; position: relative;background-color: #fff;">
-							<h1 class="d-flex justify-content-center py-md-3 py-2 text-center mb-0">{{subgroup_info.name}}</h1>
+
+						<div class="rellax" data-rellax-speed="5">
+								<h1 class="d-flex justify-content-center py-md-3 py-2 text-center mb-0">{{subgroup_info.name}}</h1>
+						</div>
+
 						</div>
 				</div>
 	{% endif %}
@@ -109,5 +113,10 @@
 	</main>
 	{% include 'mainapp/footer.html' %}
 	<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+	<script src="{% static 'js/rellax.min.js' %}"></script>
+	<script>
+	  // Accepts any class name
+	  var rellax = new Rellax('.rellax');
+	</script>
 </body>
 </html>

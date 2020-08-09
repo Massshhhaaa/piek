@@ -35,7 +35,7 @@ main a:hover, a:focus{
 
 .navbar{
   /*background-color: #821228;*/
-  z-index: 2 !important;
+  z-index: 3 !important;
   height: auto;
   padding-bottom: 0px;
   padding-top: 1.5em;
@@ -74,6 +74,7 @@ nav.navbar .dropdown:hover > .dropdown-menu {
  border-radius: 15px;
  visibility: visible;
   opacity: 1;
+  z-index: 5;
 }
 nav.navbar .dropdown:hover > .dropdown-menu > .dropdown-item{
 border-bottom: 0px;
@@ -92,7 +93,6 @@ margin-bottom: 0px;
   -ms-transition: all 0.2s ease;
   margin-bottom: 0px;
   border-radius: 15px;
-
 }
 .banner {
   position: relative;
