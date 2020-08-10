@@ -51,7 +51,7 @@ class Modification(models.Model):
     content  = HTMLField(null=True, blank=True)
 
     class Meta:
-        ordering = ['id']
+        ordering = ['parent__id']
 
     def save(self, *args, **kwargs):
         self.slug_mod = slugify(self.title)

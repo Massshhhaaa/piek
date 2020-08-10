@@ -36,6 +36,8 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
     product_content = Product.objects.only('content', 'href_title', 'h1_mod').get(pk__in = product)
     photos          = ProductImage.objects.filter(page__pk__in=product)
     mod             = get_object_or_404(Modification, slug_mod=slug_mod, parent__pk__in=product)
+    product_id      = get_object_or_404(Modification, id=5)
+    print(product_id.id)
     return render(
     request,
     'mainapp/ModificationDetailView.html',
