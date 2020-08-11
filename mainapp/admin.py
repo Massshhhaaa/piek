@@ -9,8 +9,10 @@ class ProductImageInline(admin.TabularInline):
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImageInline,]
+    list_display = ('href_title', 'parent')
 
 class ModificationAdmin(admin.ModelAdmin):
+    list_display = ('title', 'parent', 'slug_mod')
     # exclude = ('slug_mod',)
     pass
 

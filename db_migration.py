@@ -4,7 +4,7 @@ from pytils.translit import slugify
 from bs4 import BeautifulSoup
 
 
-URL = 'http://piek.ru/catalog/elektroprivody/pem-a/'
+URL = 'http://piek.ru/catalog/mechanisms/meof/4000/'
 HEADERS = {
     'accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'
@@ -17,11 +17,11 @@ def get_html(url):
     return r
 
 def get_content(html):
-    table_num = str(3)
+    table_num = str(2)
     soup = BeautifulSoup(html, 'html.parser')
-    items = soup.select("table:nth-of-type("+ table_num +")", class_='simple-little-table')   # номер таблицы на странице
+    items = soup.select("table:nth-of-type("+ table_num +")", class_='simple-little-table')
     print(items)
-    tr_list = soup.select("table:nth-of-type("+ table_num +") > tr", class_='simple-little-table')
+    tr_list = soup.select("table:nth-of-type("+ table_num +") > tr ", class_='simple-little-table')
     count_tr = len(tr_list)
     container = []
     print(count_tr - 1)
@@ -30,10 +30,10 @@ def get_content(html):
     for item in items:
         for i in range(1, count_tr):
             row = i + 1
-            title = item.select("tr:nth-child("+ str(row) +") td:nth-child(2)")[0].text
-            a = item.select("tr:nth-child(" + str(row) + ") td:nth-child(3)")[0].text
-            b = item.select("tr:nth-child(" + str(row) + ") td:nth-child(4)")[0].text
-            c = item.select("tr:nth-child(" + str(row) + ") td:nth-child(5)")[0].text
+            title = item.select("tr:nth-child("+ str(row) +") td:nth-child(2)")[0].get_text(strip=True)
+            a = item.select("tr:nth-child(" + str(row) + ") td:nth-child(3)")[0].get_text(strip=True)
+            b = item.select("tr:nth-child(" + str(row) + ") td:nth-child(4)")[0].get_text(strip=True)
+            c = item.select("tr:nth-child(" + str(row) + ") td:nth-child(5)")[0].get_text(strip=True)
 
             container.append(
                 {
@@ -92,10 +92,13 @@ for i in range(0, len(container)):
     print(container[i])
 accept = input('Для внесения изменений введи True:')
 parent_id = input("Идентификатор группы: ")
-if accept == 'True':
+if accept == 'y':
     for i in range(0, len(container)):
         title = container[i].get('title')
-        title = 'МЭО-' + title
+
+        title = 'МЭОФ-'+ title
+
+
         a = container[i].get('a')
         b = container[i].get('b')
         c = container[i].get('c')
@@ -103,6 +106,7 @@ if accept == 'True':
         content = mod_table(str(a), str(b), str(c))
         cur.execute("INSERT INTO mainapp_modification VALUES (?,?,?,?,?)", (next_id(), slug_mod(title), title, content, parent_id))
 
+print("записал. ты молодчинка!")
 db.commit()
 db.close()
 
@@ -112,5 +116,4 @@ db.close()
     # print('')
     # print(parse_content.values[1])
     # c.execute("INSERT INTO mainapp_modification VALUES (?,?,?,?,?)", (next_id(), slug_mod(title), title, content, 6))
-
 

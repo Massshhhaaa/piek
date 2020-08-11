@@ -46,7 +46,7 @@ class ProductImage(models.Model):
 
 class Modification(models.Model):
     parent   = models.ForeignKey(Product, on_delete=models.CASCADE)
-    title    = models.CharField(max_length=250, unique=True)
+    title    = models.CharField(max_length=250, )
     slug_mod = models.SlugField('url', null=True, blank=True, help_text='заполняется автоматически от title')
     content  = HTMLField(null=True, blank=True)
 
