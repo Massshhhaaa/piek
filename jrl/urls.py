@@ -21,7 +21,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', main_def, name='main_def'),
+    path('cart/', cart, name="cart"),
     path('contacts/', contacts, name='contacts'),
+    path('product/<int:pk>', product, name='product'),
     path('admin/', admin.site.urls),
 
     path('catalog/<path:slug>/info/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView),
