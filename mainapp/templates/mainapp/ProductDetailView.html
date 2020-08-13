@@ -18,7 +18,7 @@
 	z-index: 2;">
 	{% for p in photos %}
 	<a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
-		<img  src="{{p.image.url}}" class="image" style="width: 250px;">
+		<img  src="{{p.image.url}}" class="image" style="width: 400px;">
 	</a>
 	{% endfor %}
 </div>
@@ -30,25 +30,25 @@
 						{% include 'mainapp/sidebar.html' %}
 				</div>
 
-	<div class="col-12 col-lg-10 col-xl-8 col-xxl-6">
+	<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 p-0">
 
-  <section class="col">
+  <section class="col p-0">
 
 
 				<div class="container top-block">
 					<h1 class="py-5 text-center"> {{ product.name }}</h1>
 				</div>
 
-				<div class="mod_table_bg" style="background-color: #f3f2f1; border-radius: 15px;">
+				<div class="mod_table_bg">
 
 					<div class="d-flex">
-								<div class="flex-column pl-3" style="margin-top: 9em;">
+								<div class="d-flex flex-column pl-3" style="margin-top: 9em;">
 											{% for mod in mod_list %}
 											<form method="POST" action="{% url "product" pk=mod.id %}">
 												{% csrf_token %}
 												<input min="1" value=1 type="hidden" name="quantity">
 												<input type="hidden" name="next" value="{{ request.path }}"> <!-- WARNING:  -->
-												<input class="btn btn-light" type="submit" value="В корзину">
+												<input class="btn" type="submit" value="">
 											</form>
 											{% endfor %}
 
@@ -57,8 +57,9 @@
 
 
 								</div>
+
 								<div class="flex-column">
-									<div class="content m-auto py-5 px-3">
+									<div class="content m-auto py-5 ">
 										{{ product.mod_table | safe }}
 									</div>
 								</div>

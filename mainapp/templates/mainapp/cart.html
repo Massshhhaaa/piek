@@ -13,7 +13,6 @@
 				<table class="table">
 					<tr>
 						<th><h5>Items: <strong>{{order.get_cart_items}}</strong></h5></th>
-						<th><h5>Total:<strong> ${{order.get_cart_total}}</strong></h5></th>
 						<th>
 							<a  style="float:right; margin:5px;" class="btn btn-success" href="">Checkout</a>
 						</th>
@@ -22,18 +21,20 @@
 
 			</div>
 
-
+<section class="d-flex flex-wrap">
 				{% for item in order.orderitem_set.all %}
-				<div class="cart-row my-3 border ">
+				<div class="border m-3">
 
-					<div style="flex:2"><p>{{item.product.title}}</p></div>
-					<div style="flex:1"><p class="quantity">Количество: {{item.quantity}}</p></div>
+					<div ><h4>{{item.product.title}}</h4></div>
+					<div ><p class="quantity">Количество: {{item.quantity}}</p></div>
 
 					<div style="flex:1">
 						<a class="btn btn-sm btn-danger" href="{% url 'remove_from_cart' pk=item.product.id %}">Remove</a>
 					</div>
 				</div>
 				{% endfor %}
+</section>
+
 			</div>
 		</div>
 	</div>

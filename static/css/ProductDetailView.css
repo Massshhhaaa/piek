@@ -1,3 +1,6 @@
+html{
+  overflow-x: hidden;
+}
 nav{
 background-color: #fff;
 }
@@ -18,9 +21,22 @@ background-color: #fff;
   letter-spacing: .54px;
 }
 .btn{
-  padding: 5px;
-  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5em 0;
+  cursor: pointer;
+  background-image: url("/static/img/cart-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: inherit;
+  width: 30px;
+
 }
+.btn:hover{
+  background-color: #f1f1f1;
+}
+
 .content a, .content p, .content span{
   font-family: 'SF UI Text';
   color: #555;
@@ -34,19 +50,26 @@ background-color: #fff;
 .content strong,
 .content span{font-family: 'SF UI Text';}
 
+
+.mod_table_bg{
+  background-color: #f9f9f9;
+   border-radius: 15px;
+   overflow-x: auto;
+}
+
 table{
-  max-width: 100%;
+  width: 100% !important;
   border: hidden;
   border-bottom: 1px solid #e1dedc;
 
 }
-table td{border-right: hidden;}
+table td{border-right: hidden;padding: 0.2em;}
 
 table tr{
   border-bottom: 1px solid #e1dedc;
 }
 table tr:hover{
-  background-color: #eee;
+  background-color: #f4f3f2;
 }
 
 #MOD tr:nth-child(n+2) td:nth-child(1){
