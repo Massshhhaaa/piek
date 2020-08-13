@@ -29,9 +29,8 @@
 					<div style="flex:2"><p>{{item.product.title}}</p></div>
 					<div style="flex:1"><p class="quantity">Количество: {{item.quantity}}</p></div>
 
-
 					<div style="flex:1">
-						<a class="btn btn-sm btn-danger" href="">Remove</a>
+						<a class="btn btn-sm btn-danger" href="{% url 'remove_from_cart' pk=item.product.id %}">Remove</a>
 					</div>
 				</div>
 				{% endfor %}

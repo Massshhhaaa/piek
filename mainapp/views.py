@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, reverse
 from django.views.generic import ListView, DetailView, View
 from mainapp.models import *
 
@@ -23,13 +23,15 @@ def SubgroupDetailView(request, slug):
 
 
 def ProductDetailView(request, slug_product, slug):
-    product = Product.objects.get(parent__slug=slug, slug_product=slug_product)
-    photos = ProductImage.objects.filter(page = product)
-    mod_list = Modification.objects.only('title', 'slug_mod').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
-    print(mod_list)
-    return render(request,
-    'mainapp/ProductDetailView.html',
-    context = {'product' : product, 'photos': photos, 'mod_list' : mod_list})
+    product  = Product.objects.get(parent__slug=slug, slug_product=slug_product)
+    photos   = ProductImage.objects.filter(page = product)
+    mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
+
+    context = {
+    'product' : product,
+    'photos': photos,
+    'mod_list' : mod_list}
+    return render(request, 'mainapp/ProductDetailView.html', context)
 
 
 def ModificationDetailView(request, slug, slug_product, slug_mod):
@@ -42,24 +44,35 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
     'mod' : mod,
     'photos': photos,
     'product_content' : product_content,}
-
     return render(request, 'mainapp/ModificationDetailView.html', context)
 
 
 def product(request, pk):
-        if request.method == 'POST':
-            p = get_object_or_404(Modification, id=pk)
+    if request.method == 'POST':
+        product = get_object_or_404(Modification, id=pk)
 
-            device = request.COOKIES['device']
-            customer, created = Customer.objects.get_or_create(device=device)
+        device = request.COOKIES['device']
+        customer, created = Customer.objects.get_or_create(device=device)
 
-            order, created = Order.objects.get_or_create(customer=customer, complete=False)
-            orderItem, created = OrderItem.objects.get_or_create(order=order, product=p)
-            orderItem.quantity=request.POST['quantity']
-            orderItem.save()
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
+        orderItem.quantity=request.POST['quantity']
+        orderItem.save()
 
-            next = request.POST.get('next', '/')
-            return HttpResponseRedirect(next)
+        next = request.POST.get('next', '/')
+        return HttpResponseRedirect(next)
+
+def remove_from_cart(request, pk):
+    product = get_object_or_404(Modification, id=pk)
+    device = request.COOKIES['device']
+    customer = Customer.objects.get(device=device)
+
+    order = Order.objects.get(customer=customer, complete=False)
+    orderItem = OrderItem.objects.get(order=order, product=product)
+    orderItem.delete()
+
+    next = request.POST.get('next', '/')
+    return HttpResponseRedirect(reverse('cart'))
 
 
 def cart(request):

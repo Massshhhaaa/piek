@@ -40,9 +40,33 @@
 				</div>
 
 				<div class="mod_table_bg" style="background-color: #f3f2f1; border-radius: 15px;">
-					<div class="content m-auto py-5 px-3">
-						{{ product.mod_table | safe }}
+
+					<div class="d-flex">
+								<div class="flex-column pl-3" style="margin-top: 9em;">
+											{% for mod in mod_list %}
+											<form method="POST" action="{% url "product" pk=mod.id %}">
+												{% csrf_token %}
+												<input min="1" value=1 type="hidden" name="quantity">
+												<input type="hidden" name="next" value="{{ request.path }}"> <!-- WARNING:  -->
+												<input class="btn btn-light" type="submit" value="В корзину">
+											</form>
+											{% endfor %}
+
+
+
+
+
+								</div>
+								<div class="flex-column">
+									<div class="content m-auto py-5 px-3">
+										{{ product.mod_table | safe }}
+									</div>
+								</div>
 					</div>
+
+
+
+
 				</div>
 
 				<div class="container content py-5 px-3">
@@ -68,6 +92,7 @@ arr[n] = "{{mod.title}}";
 arr_slug[n] = "{{ mod.slug_mod }}";
 n++;
 {% endfor %}
+
 var k = 2; //номер строки в таблице
 for (let j = 0; j < arr.length; j++) {
 	$("#MOD tr:nth-child(" + k + ") td:nth-child(1)").text(arr[j]);

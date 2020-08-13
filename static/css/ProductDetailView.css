@@ -17,7 +17,10 @@ background-color: #fff;
   line-height: 25px;
   letter-spacing: .54px;
 }
-
+.btn{
+  padding: 5px;
+  margin: 1px;
+}
 .content a, .content p, .content span{
   font-family: 'SF UI Text';
   color: #555;

@@ -68,11 +68,7 @@ class Customer(models.Model):
 	device = models.CharField(max_length=200, null=True, blank=True)
 
 	def __str__(self):
-		if self.name:
-			name = self.name
-		else:
-			name = self.device
-		return str(name)
+	       return str(self.device)
 
 
 
