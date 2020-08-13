@@ -21,16 +21,16 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', main_def, name='main_def'),
-    path('cart/', cart, name="cart"),
     path('contacts/', contacts, name='contacts'),
-    path('product/<int:pk>', product, name='product'),
     path('admin/', admin.site.urls),
-
+    path('cart/', cart, name="cart"),
+    path('product/<int:pk>', product, name='product'),
     path('catalog/<path:slug>/info/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView),
 
-    path('catalog/<path:slug>/info/<slug:slug_product>/', ProductDetailView),
+    path('catalog/<path:slug>/info/<slug:slug_product>/', ProductDetailView, name='ProductDetailView'),
 
-    path('catalog/<path:slug>/', SubgroupDetailView),
+    path('catalog/<path:slug>/', SubgroupDetailView, name='SubgroupDetailView'),
+
 
     path('tinymce/', include('tinymce.urls')),
     path('jet_api/', include('jet_django.urls')),
