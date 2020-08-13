@@ -15,9 +15,9 @@ ALLOWED_HOSTS = []
 DATABASES = {
 	'default':{
 		'ENGINE': 'django.db.backends.postgresql_psycop2',
-		'NAME': 'db_name',
-		'USER': 'user_name',
-		'PASSWORD': 'pass',
+		'NAME': 'piekdb',
+		'USER': 'userdb',
+		'PASSWORD': '123456',
 		'HOST': 'localhost',
 		'PORT': '5432',
  	}
