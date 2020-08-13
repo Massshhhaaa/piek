@@ -1,6 +1,7 @@
 from django.db import models
 from pytils.translit import slugify
 from tinymce import HTMLField
+from django.shortcuts import reverse
 
 class Group(models.Model):
     title       = models.CharField(max_length=250)
@@ -84,17 +85,6 @@ class Order(models.Model):
 	def __str__(self):
 		return str(self.id)
 
-	@property
-	def get_cart_total(self):
-		orderitems = self.orderitem_set.all()
-		total = sum([item.get_total for item in orderitems])
-		return total
-
-	@property
-	def get_cart_items(self):
-		orderitems = self.orderitem_set.all()
-		total = sum([item.quantity for item in orderitems])
-		return total
 
 class OrderItem(models.Model):
 	product = models.ForeignKey(Modification, on_delete=models.SET_NULL, null=True)
@@ -104,7 +94,7 @@ class OrderItem(models.Model):
 
 	@property
 	def get_total(self):
-		total = self.product.price * self.quantity
+		total = self.quantity
 		return total
 
 class ShippingAddress(models.Model):

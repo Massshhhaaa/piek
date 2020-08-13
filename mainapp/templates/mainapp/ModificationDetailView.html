@@ -35,13 +35,13 @@ z-index: 2;">
 
 
 								<div class="container top-block">
-									<h1 class="py-5 text-center"> {{ product_content.h1_mod }} {{ mod.title }}"  " {{mod.id}}</h1>
+									<h1 class="py-5 text-center"> {{ product_content.h1_mod }} {{ mod.title }}</h1>
 							</div>
 
-
-						<form method="POST" action="{% url 'product' pk=5 %}">
+						<form method="POST" action="{% url 'product' pk=mod.id %}">
 							{% csrf_token %}
 							<input min="1" value=1 type="number" name="quantity">
+							<input type="hidden" name="next" value="{{ request.path }}"> <!-- WARNING:  -->
 							<input class="btn btn-dark" type="submit" value="Add to Cart">
 						</form>
 

@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
+from django.views.generic import ListView, DetailView, View
 from mainapp.models import *
 
 
@@ -37,31 +38,29 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
     photos          = ProductImage.objects.filter(page__pk__in=product)
     mod             = get_object_or_404(Modification, slug_mod=slug_mod, parent__pk__in=product)
 
-    return render(
-    request,
-    'mainapp/ModificationDetailView.html',
-     context = {
+    context = {
     'mod' : mod,
     'photos': photos,
-    'product_content' : product_content,})
+    'product_content' : product_content,}
+
+    return render(request, 'mainapp/ModificationDetailView.html', context)
+
 
 def product(request, pk):
-	product = get_object_or_404(Modification, id=pk)
+        if request.method == 'POST':
+            p = get_object_or_404(Modification, id=pk)
 
-	if request.method == 'POST':
-		product = get_object_or_404(Modification, id=pk)
+            device = request.COOKIES['device']
+            customer, created = Customer.objects.get_or_create(device=device)
 
-		device = request.COOKIES['device']
-		customer, created = Customer.objects.get_or_create(device=device)
+            order, created = Order.objects.get_or_create(customer=customer, complete=False)
+            orderItem, created = OrderItem.objects.get_or_create(order=order, product=p)
+            orderItem.quantity=request.POST['quantity']
+            orderItem.save()
 
-		order, created = Order.objects.get_or_create(customer=customer, complete=False)
-		orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
-		orderItem.quantity=request.POST['quantity']
-		orderItem.save()
+            next = request.POST.get('next', '/')
+            return HttpResponseRedirect(next)
 
-		return redirect('cart')
-
-	pass
 
 def cart(request):
 	device = request.COOKIES['device']
