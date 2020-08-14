@@ -62,14 +62,21 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
 def product(request, pk):
     if request.method == 'POST':
         session_id = request.session._get_or_create_session_key()
-        product = get_object_or_404(Modification, id=pk)
 
-        customer, created = Customer.objects.get_or_create(device=session_id)
+        if 'modifications' not in request.session:
+            request.session['modifications'] = {'id': pk, 'quantity': request.POST['quantity']}
+        if pk not in request.session:
+            request.session['modifications'] = {'id': pk, 'quantity': request.POST['quantity']}
+        print(request.session['modifications'])
 
-        order, created = Order.objects.get_or_create(customer=customer, complete=False)
-        orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
-        orderItem.quantity=request.POST['quantity']
-        orderItem.save()
+
+
+        # product = get_object_or_404(Modification, id=pk)
+        # customer, created = Customer.objects.get_or_create(device=session_id)
+        # order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        # orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
+        # orderItem.quantity=request.POST['quantity']
+        # orderItem.save()
 
         next = request.POST.get('next', '/')
         return HttpResponseRedirect(next)
