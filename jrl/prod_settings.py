@@ -1,5 +1,4 @@
 import os
-from unipath import Path
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -10,7 +9,7 @@ SECRET_KEY = 'kr3u3@2s8$a_&3oy$q-$=1woj5vso!%q1(mm7%2(1itq#ig-16'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['45.10.110.71', 'localhost']
+ALLOWED_HOSTS = ['45.10.110.71']
 
 
 DATABASES = {
@@ -25,13 +24,10 @@ DATABASES = {
 }
 
 
-STATICFILES_DIRS = (
-    BASE_DIR.child('piek').child('static'),
-)
-
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 MEDIA_URL = '/media/'
-
-STATIC_URL = '/static'
-STATIC_ROOT = DASE_DIR.child('static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
