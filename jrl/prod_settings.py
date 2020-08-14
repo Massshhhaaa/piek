@@ -25,7 +25,6 @@ DATABASES = {
 
 
 STATICFILES_DIRS = [
-    'piek/static/',
     '/piek/venv/lib/python3.7/site-packages/django/contrib/admin/static/admin/',
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
