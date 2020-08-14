@@ -1,11 +1,14 @@
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, reverse
 from django.views.generic import ListView, DetailView, View
+from django.conf import settings
 from mainapp.models import *
 
 
 def main_def(request):
     categories = Group.objects.only('title', 'slug', 'img')
     m = request.session._get_or_create_session_key()
+    request.session.set_expiry(43200)
+
     print(m)
     return render(request, 'mainapp/index.html', context={'categories' : categories})
 
@@ -25,13 +28,14 @@ def SubgroupDetailView(request, slug):
 
 
 def ProductDetailView(request, slug_product, slug):
+    session_id = request.session._get_or_create_session_key()
+    request.session.set_expiry(43200)
     product  = Product.objects.get(parent__slug=slug, slug_product=slug_product)
     photos   = ProductImage.objects.filter(page = product)
     mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
 
-    device = request.COOKIES['device']
-    customer= Customer.objects.get(device=device)
-    order = Order.objects.get(customer=customer, complete=False)
+    customer, created = Customer.objects.get_or_create(device=session_id)
+    order, created = Order.objects.get_or_create(customer=customer, complete=False)
 
     context = {
     'product' : product,
@@ -57,10 +61,10 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
 
 def product(request, pk):
     if request.method == 'POST':
+        session_id = request.session._get_or_create_session_key()
         product = get_object_or_404(Modification, id=pk)
 
-        device = request.COOKIES['device']
-        customer, created = Customer.objects.get_or_create(device=device)
+        customer, created = Customer.objects.get_or_create(device=session_id)
 
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
         orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
@@ -72,8 +76,9 @@ def product(request, pk):
 
 def remove_from_cart(request, pk):
     product = get_object_or_404(Modification, id=pk)
-    device = request.COOKIES['device']
-    customer = Customer.objects.get(device=device)
+    session_id = request.session._get_or_create_session_key()
+    request.session.set_expiry(43200)
+    customer = Customer.objects.get(device=session_id)
 
     order = Order.objects.get(customer=customer, complete=False)
     orderItem = OrderItem.objects.get(order=order, product=product)
@@ -84,8 +89,8 @@ def remove_from_cart(request, pk):
 
 
 def cart(request):
-	device = request.COOKIES['device']
-	customer, created = Customer.objects.get_or_create(device=device)
+	session_id = request.session._get_or_create_session_key()
+	customer, created = Customer.objects.get_or_create(device=session_id)
 
 	order, created = Order.objects.get_or_create(customer=customer, complete=False)
 
