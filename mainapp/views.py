@@ -5,6 +5,8 @@ from mainapp.models import *
 
 def main_def(request):
     categories = Group.objects.only('title', 'slug', 'img')
+    m = request.session._get_or_create_session_key()
+    print(m)
     return render(request, 'mainapp/index.html', context={'categories' : categories})
 
 def contacts(request):
