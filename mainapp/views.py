@@ -27,10 +27,16 @@ def ProductDetailView(request, slug_product, slug):
     photos   = ProductImage.objects.filter(page = product)
     mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
 
+    device = request.COOKIES['device']
+    customer= Customer.objects.get(device=device)
+    order = Order.objects.get(customer=customer, complete=False)
+
     context = {
     'product' : product,
     'photos': photos,
-    'mod_list' : mod_list}
+    'mod_list' : mod_list,
+    'order':order,
+    }
     return render(request, 'mainapp/ProductDetailView.html', context)
 
 
