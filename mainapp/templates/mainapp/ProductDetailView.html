@@ -24,15 +24,15 @@
 </div>
 
 <main>
-<div class="row p-0 m-0">
+	<div class="row p-0 m-0">
 
-				<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
-						{% include 'mainapp/sidebar.html' %}
-				</div>
+		<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
+			{% include 'mainapp/sidebar.html' %}
+		</div>
 
-	<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 p-0">
+		<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 p-0">
 
-  <section class="col p-0">
+			<section class="col p-0">
 
 
 				<div class="container top-block">
@@ -42,23 +42,31 @@
 				<div class="mod_table_bg">
 
 					<div class="d-flex">
-								<div class="d-flex flex-column pl-3 py-5"  id="cart_btn">
-											{% for mod in mod_list %}
-											<form method="POST" action="{% url "product" pk=mod.id %}">
-												{% csrf_token %}
-												<input min="1" value=1 type="hidden" name="quantity">
-												<input type="hidden" name="next" value="{{ request.path }}"> <!-- WARNING:  -->
-												<input class="btn" type="submit" value="">
-											</form>
-											{% endfor %}
 
-								</div>
 
-								<div class="flex-column">
-									<div class="content m-auto py-5 ">
-										{{ product.mod_table | safe }}
-									</div>
-								</div>
+						<div class="d-flex flex-column pl-3 py-5"  id="cart_btn">
+
+							{% for mod in mod_list %}
+							
+							<form method="POST" action="{% url "product" pk=mod.id %}">
+
+								{% csrf_token %}
+								<input min="1" value=1 type="hidden" name="quantity">
+								<input type="hidden" name="next" value="{{ request.path }}"> <!-- WARNING:  -->
+								<input class="btn" type="submit" value="">
+							</form>
+
+							{% endfor %}
+
+
+
+						</div>
+
+						<div class="flex-column">
+							<div class="content m-auto py-5 ">
+								{{ product.mod_table | safe }}
+							</div>
+						</div>
 					</div>
 
 
@@ -70,24 +78,24 @@
 					{{ product.content | safe }}
 				</div>
 
-  </section>
+			</section>
+		</div>
 	</div>
-</div>
 
-<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
+	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
 </main>
 {% include 'mainapp/footer.html' %}
 
 <script>
-        document.addEventListener("DOMContentLoaded", function(event) {
-            var scrollpos = localStorage.getItem('scrollpos');
-            if (scrollpos) window.scrollTo(0, scrollpos);
-        });
+document.addEventListener("DOMContentLoaded", function(event) {
+	var scrollpos = localStorage.getItem('scrollpos');
+	if (scrollpos) window.scrollTo(0, scrollpos);
+});
 
-        window.onbeforeunload = function(e) {
-            localStorage.setItem('scrollpos', window.scrollY);
-        };
-    </script>
+window.onbeforeunload = function(e) {
+	localStorage.setItem('scrollpos', window.scrollY);
+};
+</script>
 <!-- WARNING:  -->
 <script>
 var n = 0;
