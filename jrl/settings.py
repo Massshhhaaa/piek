@@ -6,6 +6,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JET_PROJECT = 'piek'
 JET_TOKEN = '89f45bf8-c275-43f6-ab51-7ecbd30c9732'
 
+DEBUG = False
+
 ALLOWED_HOSTS = ['45.10.110.71', 'localhost']
 
 TINYMCE_DEFAULT_CONFIG = {
