@@ -24,13 +24,14 @@ background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .5em 0;
   cursor: pointer;
+  border: 0px !important;
   background-image: url("/static/img/cart-plus.svg");
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 0px;
+  border-bottom: 1px solid #e1dedc !important;
   background-color: inherit;
-  width: 30px;
 
 }
 .btn:hover{
@@ -63,8 +64,7 @@ table{
   border-bottom: 1px solid #e1dedc;
 
 }
-table td{border-right: hidden;padding: 0.2em;}
-
+table td{border-right: hidden; margin: 0;}
 table tr{
   border-bottom: 1px solid #e1dedc;
 }
@@ -75,4 +75,5 @@ table tr:hover{
 #MOD tr:nth-child(n+2) td:nth-child(1){
   border: none;
   padding-top: 8px;
+
 }
