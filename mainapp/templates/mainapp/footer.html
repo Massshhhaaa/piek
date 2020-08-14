@@ -48,8 +48,13 @@
 	function FooterHeight() {
 		let h = document.getElementById('Footer').offsetHeight;
 		let h1 = document.getElementById('TiyFooter').offsetHeight;
+		let first_row_height = $('#MOD > tbody > tr:nth-child(1)').outerHeight();
+		let second_row_height = $('#MOD > tbody > tr:nth-child(2)').outerHeight();
 		let height = h + h1 + 50;
 		document.querySelector('main').style['margin-bottom'] = height + 'px';
+		$(".btn").css({ height: second_row_height + 'px'});
+		$(".btn").css({ width: second_row_height + 'px'});
+		document.querySelector('#cart_btn').style['margin-top'] = first_row_height + 1 + 'px';
 	}
 
 	$(function(){
