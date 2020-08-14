@@ -239,17 +239,6 @@ JAZZMIN_SETTINGS = {
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs",},
 }
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    'piek/static/',
-    '/piek/venv/lib/python3.7/site-packages/django/contrib/admin/static/admin/',
-]
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
-MEDIA_URL = '/media/'
-
-STATIC_ROOT = '/static'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
 
 
 try:

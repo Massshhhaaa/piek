@@ -1,4 +1,5 @@
 import os
+from unipath import Path
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -24,11 +25,13 @@ DATABASES = {
 }
 
 
-STATICFILES_DIRS = [
-    '/piek/venv/lib/python3.7/site-packages/django/contrib/admin/static/admin/',
-]
+STATICFILES_DIRS = (
+    BASE_DIR.child('piek').child('static'),
+)
+
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 MEDIA_URL = '/media/'
 
 STATIC_URL = '/static'
-STATIC_ROOT = '/home/piek/static/'
+STATIC_ROOT = DASE_DIR.child('static')
