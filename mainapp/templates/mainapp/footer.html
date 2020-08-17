@@ -55,6 +55,8 @@
 		$(".btn").css({ height: second_row_height + 'px'});
 		$(".btn").css({ width: second_row_height + 'px'});
 		document.querySelector('#cart_btn').style['margin-top'] = first_row_height + 1 + 'px';
+		document.querySelector('table').style['margin-left'] = 0 + 'px';
+
 	}
 
 	$(function(){
@@ -63,6 +65,16 @@
 			FooterHeight();//calling function on window resize
 		});
 	});
+</script>
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var scrollpos = localStorage.getItem('scrollpos');
+		if (scrollpos) window.scrollTo(0, scrollpos);
+	});
+
+	window.onbeforeunload = function(e) {
+		localStorage.setItem('scrollpos', window.scrollY);
+	};
 </script>
 
 

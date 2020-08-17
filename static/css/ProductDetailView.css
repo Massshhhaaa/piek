@@ -1,3 +1,25 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 html{
   overflow-x: hidden;
 }
@@ -67,9 +89,10 @@ table{
   width: 100% !important;
   border: hidden;
   border-bottom: 1px solid #e1dedc;
+  margin-left: 53px;
 
 }
-table td{border-right: hidden; margin: 0;}
+table td{border-right: hidden; margin: 0; }
 table tr{
   border-bottom: 1px solid #e1dedc;
 }
@@ -81,4 +104,13 @@ table tr:hover{
   border: none;
   padding-top: 8px;
 
+}
+.btn{
+outline: none !important;
+box-shadow: none !important;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1s; /* Firefox < 16 */
+      -ms-animation: fadein 1s; /* Internet Explorer */
+       -o-animation: fadein 1s; /* Opera < 12.1 */
+          animation: fadein 1s;
 }

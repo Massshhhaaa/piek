@@ -1,15 +1,12 @@
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, reverse
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect, reverse
 from django.views.generic import ListView, DetailView, View
+from django.views.decorators.http import require_POST
 from django.conf import settings
 from mainapp.models import *
 
 
 def main_def(request):
     categories = Group.objects.only('title', 'slug', 'img')
-    m = request.session._get_or_create_session_key()
-    request.session.set_expiry(43200)
-
-    print(m)
     return render(request, 'mainapp/index.html', context={'categories' : categories})
 
 def contacts(request):
@@ -29,7 +26,6 @@ def SubgroupDetailView(request, slug):
 
 def ProductDetailView(request, slug_product, slug):
     session_id = request.session._get_or_create_session_key()
-    request.session.set_expiry(43200)
     product  = Product.objects.get(parent__slug=slug, slug_product=slug_product)
     photos   = ProductImage.objects.filter(page = product)
     mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
@@ -59,18 +55,64 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
     return render(request, 'mainapp/ModificationDetailView.html', context)
 
 
+def cart(request):
+    id = list(request.session.keys())
+    quantity = list(request.session.items())
+    product_list = Modification.objects.filter(pk__in=id)
+    counter = 0
+    for product in product_list:
+        for i in range(len(quantity)):
+            if int(quantity[i][0]) == product.id:
+                product.quantity = int(quantity[i][1].get('quantity'))
+                product.conventional_designation = quantity[i][1].get('conventional_designation')
+                counter += int(quantity[i][1].get('quantity'))
+    context = {"product_list": product_list, "counter": counter}
+    return render(request, 'mainapp/cart.html', context)
+
+def remove_from_cart(request, pk):
+    # product = get_object_or_404(Modification, id=pk)
+    # session_id = request.session._get_or_create_session_key()
+    # customer = Customer.objects.get(device=session_id)
+    #
+    # order = Order.objects.get(customer=customer, complete=False)
+    # orderItem = OrderItem.objects.get(order=order, product=product)
+    # orderItem.delete()
+    del request.session[str(pk)]
+    request.session.modified = True
+    return redirect('cart')
+
+@require_POST
+def update_quantity(request, pk):
+    quantity = request.session[str(pk)].get('quantity')
+    print(quantity)
+    quantity = int(quantity)
+    if 'plus' in request.POST:
+        print("урааааа")
+        request.session[str(pk)].update({'quantity': quantity + 1 })
+    if 'minus' in request.POST:
+        request.session[str(pk)].update({'quantity': quantity - 1 })
+    if 'integer' in request.POST:
+        request.session[str(pk)].update({'quantity': request.POST['integer']})
+    request.session.modified = True
+    return redirect('cart')
+
+@require_POST
+def update_conventional_designation(request, pk):
+    if 'conventional_designation' in request.POST:
+        request.session[str(pk)].update({'conventional_designation': request.POST['conventional_designation']})
+        request.session.modified = True
+    return redirect('cart')
+
+@require_POST
 def product(request, pk):
-    if request.method == 'POST':
-        session_id = request.session._get_or_create_session_key()
+    # cart = Cart(request)
+    # product = get_object_or_404(Modification, id=pk)
+    # cart.add(pk=product, quantity=request.POST['quantity'])
 
-        if 'modifications' not in request.session:
-            request.session['modifications'] = {'id': pk, 'quantity': request.POST['quantity']}
-        if pk not in request.session:
-            request.session['modifications'] = {'id': pk, 'quantity': request.POST['quantity']}
-        print(request.session['modifications'])
-
-
-
+    if pk not in request.session:
+        request.session[str(pk)]= {'quantity': request.POST['quantity']}
+    if pk not in request.session:
+        request.session[str(pk)] = {'quantity': request.POST['quantity']}
         # product = get_object_or_404(Modification, id=pk)
         # customer, created = Customer.objects.get_or_create(device=session_id)
         # order, created = Order.objects.get_or_create(customer=customer, complete=False)
@@ -78,28 +120,5 @@ def product(request, pk):
         # orderItem.quantity=request.POST['quantity']
         # orderItem.save()
 
-        next = request.POST.get('next', '/')
-        return HttpResponseRedirect(next)
-
-def remove_from_cart(request, pk):
-    product = get_object_or_404(Modification, id=pk)
-    session_id = request.session._get_or_create_session_key()
-    request.session.set_expiry(43200)
-    customer = Customer.objects.get(device=session_id)
-
-    order = Order.objects.get(customer=customer, complete=False)
-    orderItem = OrderItem.objects.get(order=order, product=product)
-    orderItem.delete()
-
     next = request.POST.get('next', '/')
-    return HttpResponseRedirect(reverse('cart'))
-
-
-def cart(request):
-	session_id = request.session._get_or_create_session_key()
-	customer, created = Customer.objects.get_or_create(device=session_id)
-
-	order, created = Order.objects.get_or_create(customer=customer, complete=False)
-
-	context = {'order':order}
-	return render(request, 'mainapp/cart.html', context)
+    return HttpResponseRedirect(next)

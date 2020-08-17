@@ -50,6 +50,8 @@ class Modification(models.Model):
     title    = models.CharField(max_length=250, )
     slug_mod = models.SlugField('url', null=True, blank=True, help_text='заполняется автоматически от title')
     content  = HTMLField(null=True, blank=True)
+    quantity = models.IntegerField(default=0)
+    conventional_designation = models.CharField(max_length=250, default=0)
 
     class Meta:
         ordering = ['parent__id']

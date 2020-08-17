@@ -24,9 +24,12 @@ urlpatterns = [
     path('contacts/', contacts, name='contacts'),
     path('admin/', admin.site.urls),
     path('cart/', cart, name="cart"),
-    path('product/<int:pk>', product, name='product'),
+    path('product/<int:pk>', product, name='product'), # this using as add-to-cart
     path('remove_from_cart/<int:pk>', remove_from_cart, name='remove_from_cart'),
-    
+    path('update_quantity/<int:pk>', update_quantity, name='update_quantity'),
+    path('update_conventional_designation/<int:pk>', update_conventional_designation, name='update_conventional_designation'),
+
+
     path('catalog/<path:slug>/info/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView),
 
     path('catalog/<path:slug>/info/<slug:slug_product>/', ProductDetailView, name='ProductDetailView'),
