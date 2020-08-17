@@ -32,12 +32,13 @@ def ProductDetailView(request, slug_product, slug):
 
     customer, created = Customer.objects.get_or_create(device=session_id)
     order, created = Order.objects.get_or_create(customer=customer, complete=False)
-
+    mods_in_cart = request.session.keys()
     context = {
     'product' : product,
     'photos': photos,
     'mod_list' : mod_list,
     'order':order,
+    'mods_in_cart' : mods_in_cart,
     }
     return render(request, 'mainapp/ProductDetailView.html', context)
 

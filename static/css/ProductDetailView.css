@@ -1,25 +1,3 @@
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
 html{
   overflow-x: hidden;
 }
@@ -42,8 +20,15 @@ background-color: #fff;
   line-height: 25px;
   letter-spacing: .54px;
 }
+
+#cart_btn{
+  width: 53px;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
 .btn{
   display: flex;
+  width: 40px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -53,6 +38,8 @@ background-color: #fff;
   border-radius: 0px;
   border-bottom: 1px solid #e1dedc !important;
   background-color: inherit;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .btn:hover{
   background-color: #f1f1f1;
@@ -63,7 +50,6 @@ background-color: #fff;
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
-
 
 .content a, .content p, .content span{
   font-family: 'SF UI Text';
@@ -89,7 +75,6 @@ table{
   width: 100% !important;
   border: hidden;
   border-bottom: 1px solid #e1dedc;
-  margin-left: 53px;
 
 }
 table td{border-right: hidden; margin: 0; }
@@ -104,13 +89,4 @@ table tr:hover{
   border: none;
   padding-top: 8px;
 
-}
-.btn{
-outline: none !important;
-box-shadow: none !important;
-  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 1s; /* Firefox < 16 */
-      -ms-animation: fadein 1s; /* Internet Explorer */
-       -o-animation: fadein 1s; /* Opera < 12.1 */
-          animation: fadein 1s;
 }
