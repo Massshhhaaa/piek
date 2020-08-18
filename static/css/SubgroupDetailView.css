@@ -17,7 +17,10 @@
   line-height: 25px;
   letter-spacing: .54px;
 }
-
+.title h1{
+  font-family: 'SF Ui Display';
+  font-weight: 400;
+}
 .content{
   font-family: 'SF UI Text';
   color: #555;

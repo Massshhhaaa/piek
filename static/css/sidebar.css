@@ -10,10 +10,9 @@
 #content-left {
 width: 300px;
 padding: 0 1em;
-border-radius: 30px;
 margin-bottom: 5vw;
 margin-top: 1vw;
-border-right:1px solid #dedede;
+border-right: 1px solid #dedede;
 }
 
 .sidebar-wrap{
@@ -72,19 +71,19 @@ border-right:1px solid #dedede;
   font-size: 1.1em;
 }
 .card-link{
-  font-size: 0.7em !important;
+  font-size: 0.8em !important;
   margin-right: 10px;
+  opacity: 0.6;
 }
 
 .card-body p{
+  color: #111;
   font-size: 1em;
   text-align: center;
   padding: 0.3em 0;
   margin: 0px !important;
 }
-
-.card-body p:hover{ background-color: #f4f3f2; border-radius: 8px; }
-
+.card-body p:hover{color: #8a1524;}
 .card-body{
   padding: 0px !important;
 }
