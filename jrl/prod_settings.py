@@ -22,6 +22,4 @@ DATABASES = {
  	}
 }
 
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATIFILES_DIRS = [STATIC_DIR]
 
