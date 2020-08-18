@@ -53,8 +53,8 @@
 		let height = h + h1 + 50;
 		document.querySelector('main').style['margin-bottom'] = height + 'px';
 		$(".btn").css({ height: second_row_height + 'px'});
-		$(".btn").css({ width: second_row_height + 'px'});
 		document.querySelector('#cart_btn').style['margin-top'] = first_row_height + 1 + 'px';
+		document.querySelector('#cart_btn').style['opacity'] = 1;
 	}
 
 	$(function(){
@@ -64,10 +64,20 @@
 		});
 	});
 </script>
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var scrollpos = localStorage.getItem('scrollpos');
+		if (scrollpos) window.scrollTo(0, scrollpos);
+	});
+
+	window.onbeforeunload = function(e) {
+		localStorage.setItem('scrollpos', window.scrollY);
+	};
+</script>
 
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	(function (d, w, c) {
 		(w[c] = w[c] || []).push(function() {
 			try {
@@ -93,43 +103,9 @@
 			d.addEventListener("DOMContentLoaded", f, false);
 		} else { f(); }
 	})(document, window, "yandex_metrika_callbacks");
-</script>
-
-<script type="text/javascript">
-
-	function getCookie(name) {
-			var cookieValue = null;
-			if (document.cookie && document.cookie !== '') {
-					var cookies = document.cookie.split(';');
-					for (var i = 0; i < cookies.length; i++) {
-							var cookie = cookies[i].trim();
-							// Does this cookie string begin with the name we want?
-							if (cookie.substring(0, name.length + 1) === (name + '=')) {
-									cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-									break;
-							}
-					}
-			}
-			return cookieValue;
-	}
+</script> -->
 
 
-	function uuidv4() {
-		return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-			var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-			return v.toString(16);
-		});
-	}
-
-
-	let device = getCookie('device')
-
-	if (device == null || device == undefined){
-		device = uuidv4()
-	}
-
-	document.cookie ='device=' + device + ";domain=;path=/"
-</script>
 
 <noscript><div><img src="https://mc.yandex.ru/watch/173038" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->

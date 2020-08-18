@@ -1,44 +1,49 @@
 {% extends 'mainapp/main-cart.html' %}
 {% load static %}
 {% block content %}
-	{% if order != False %}
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="box-element">
+{% if product_list %}
 
-				<a  class="btn btn-outline-dark" href="/">&#x2190; Continue Shopping</a>
 
-				<br>
-				<br>
-				<table class="table">
-					<tr>
-						<th><h5>Items: <strong>{{order.get_cart_items}}</strong></h5></th>
-						<th>
-							<a  style="float:right; margin:5px;" class="btn btn-success" href="">Checkout</a>
-						</th>
-					</tr>
-				</table>
+<div class="container">
+	<h1 class="my-5 cart-ttl">Корзина<span class="pl-2">({{counter}})</span></h1>
 
-			</div>
+	<div class="cart-header">
+		<p>Наименование</p>
+		<p>Количество</p>
+		<p></p>
+	</div>
 
-<section class="d-flex flex-wrap">
-				{% for item in order.orderitem_set.all %}
-				<div class="border m-3">
+	{% for item in product_list %}
+	<div class="d-flex flex-row border-bottom my-1 py-5 justify-content-between item">
+		<form method="POST" action="{% url 'update_conventional_designation' pk=item.id %}">
+			{% csrf_token %}
+			<input class="input-designation" type="text" name='conventional_designation' autocomplete="off" onchange="form.submit()"  value="{% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}">
+		</form>
 
-					<div ><h4>{{item.product.title}}</h4></div>
-					<div ><p class="quantity">Количество: {{item.quantity}}</p></div>
+		<div class="ml-5">
 
-					<div style="flex:1">
-						<a class="btn btn-sm btn-danger" href="{% url 'remove_from_cart' pk=item.product.id %}">Remove</a>
-					</div>
-				</div>
-				{% endfor %}
-</section>
+			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
+				{% csrf_token %}
+				<input class="btn-quantity" type="submit" name="plus" value="+">
+			</form>
+			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
+				{% csrf_token %}
+				<input class="input-integer" type="text" name='integer' autocomplete="off" onchange="form.submit()"  value='{{ item.quantity }}' min="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+			</form>
+			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
+				{% csrf_token %}
+				<input class="btn-quantity" type="submit" name="minus" value="-">
+			</form>
+		</div>
 
-			</div>
+		<div>
+			<a class="btn-delete mr-3" href="{% url 'remove_from_cart' pk=item.id %}">Удалить</a>
 		</div>
 	</div>
-	{% else %}
-	<h1 style="text-align:center;padding: 100px">No Items in cart</h1>
-	{% endif %}
+	{% endfor %}
+</div>
+
+{% else %}
+<h1 style="text-align:center;padding: 100px">Ваша корзина пуста</h1>
+{% endif %}
 {% endblock content %}

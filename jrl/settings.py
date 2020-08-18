@@ -6,7 +6,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JET_PROJECT = 'piek'
 JET_TOKEN = '89f45bf8-c275-43f6-ab51-7ecbd30c9732'
 
+SESSION_COOKIE_AGE = 43200
+
 ALLOWED_HOSTS = ['45.10.110.71', 'localhost']
+
 
 TINYMCE_DEFAULT_CONFIG = {
     'cleanup_on_startup': True,
@@ -122,18 +125,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-
-MEDIA_URL = '/media'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-
-
-
-
+STATICFILES_DIR = (
+    os.path.join(BASE_DIR, 'static'),
+    )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 

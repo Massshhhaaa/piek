@@ -8,7 +8,7 @@ SECRET_KEY = 'kr3u3@2s8$a_&3oy$q-$=1woj5vso!%q1(mm7%2(1itq#ig-16'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['45.10.110.71', '127.0.0.1']
+ALLOWED_HOSTS = ['45.10.110.71']
 
 
 DATABASES = {
@@ -23,6 +23,13 @@ DATABASES = {
 }
 
 
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [STATIC_DIR] 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_URL = '/media/'
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIR = (
+    os.path.join(BASE_DIR, 'static'),
+    )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

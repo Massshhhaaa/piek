@@ -2,44 +2,45 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-{% include 'mainapp/head-property.html' %}
+	{% include 'mainapp/head-property.html' %}
+	<link rel="stylesheet" href="{% static 'css/cart.css' %}">
 	<title>Корзина - ООО "ПЭК"</title>
 </head>
 <body>
-{% include 'mainapp/header.html' %}
+	{% include 'mainapp/header.html' %}
 
 	<main>
-<div class="row p-0 m-0">
+		<div class="row p-0 m-0">
 
 
-<style media="screen">
-@media (min-width: 1200px) and (max-width: 1600px){
-	.col-xxl-6{
-		display: flex;
-		flex: 0 0 70%;
-		max-width: 70%;
-	}
-}
-@media (min-width: 1600px){
-	.col-xxl-6-index{
-		display: flex;
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
-}
-</style>
-	<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
+			<style media="screen">
+			@media (min-width: 1200px) and (max-width: 1600px){
+				.col-xxl-6{
+					display: flex;
+					flex: 0 0 70%;
+					max-width: 70%;
+				}
+			}
+			@media (min-width: 1600px){
+				.col-xxl-6-index{
+					display: flex;
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+			}
+		</style>
+		<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
 			{% include 'mainapp/sidebar.html' %}
+		</div>
+
+		<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 col-xxl-6-index">
+			{% block content %}
+			{% endblock content %}
+		</div>
 	</div>
 
-				<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 col-xxl-6-index">
-            {% block content %}
-            {% endblock content %}
-			</div>
-</div>
-
 	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
-	</main>
-	{% include 'mainapp/footer.html' %}
+</main>
+{% include 'mainapp/footer.html' %}
 </body>
 </html>
