@@ -2691,3 +2691,16 @@ WARNING - 2020-08-18 21:22:34: Table "sqlite_sequence" does not have primary key
 [2020-08-18 22:17:32,620] log: WARNING - Not Found: /favicon.ico
 [2020-08-18 22:19:15,070] log: WARNING - Not Found: /favicon.ico
 [2020-08-18 22:19:18,573] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:22:38,363] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:22:41,319] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:24:47,825] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:27:42,278] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:31:44,319] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:33:22,819] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:33:35,333] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:33:58,697] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:37:13,556] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:38:21,410] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:39:31,775] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:47:20,063] log: WARNING - Not Found: /favicon.ico
+[2020-08-18 22:49:20,012] log: WARNING - Not Found: /favicon.ico
