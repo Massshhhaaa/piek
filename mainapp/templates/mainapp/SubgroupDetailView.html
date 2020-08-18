@@ -13,72 +13,72 @@
 	{% if subgroup_info.pic_of_hat %}
 	<div class="banner" style="background-image: url({{ subgroup_info.pic_of_hat.url }});">
 
-	 {% include 'mainapp/header-main-page.html' %}
-				 <div class="container h-75" style="
-				   font-family: 'SF UI Display';
-				   font-weight: normal;
-				   font-size: 3em;">
-						 		<h1 class="container iphone-text-small d-flex text-center align-middle text-light">{{subgroup_info.name}}</h1>
-					 </div>
-				 </div>
-					<style media="screen">
-						.main-property{
-							margin-top: 465px!important;
-							border-top-left-radius: 40px;
-							border-top-right-radius: 40px;
-							-webkit-box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
-							-moz-box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
-							box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
-						}
-						@media (max-width: 760px) {
-						  .main-property {
-							border-top-left-radius: 0px;
-							border-top-right-radius: 0px;
-							margin-top: 0px!important;
-							}
-							.banner{
-								position: relative;
-								top: 0px;
-							}
-						}
-					</style>
-	{% else %}
-						{% include 'mainapp/header.html' %}
-						<style media="screen">
-							nav{background-color: #fff;}
-						</style>
-						<div class="container title" style="z-index: 2!important; position: relative;background-color: #fff;">
+		{% include 'mainapp/header-main-page.html' %}
+		<div class="container h-75" style="
+		font-family: 'SF UI Display';
+		font-weight: normal;
+		font-size: 3em;">
+		<h1 class="container iphone-text-small d-flex text-center align-middle text-light">{{subgroup_info.name}}</h1>
+	</div>
+</div>
+<style media="screen">
+.main-property{
+	margin-top: 465px!important;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	-webkit-box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
+	-moz-box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
+	box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
+}
+@media (max-width: 760px) {
+	.main-property {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		margin-top: 0px!important;
+	}
+	.banner{
+		position: relative;
+		top: 0px;
+	}
+}
+</style>
+{% else %}
+{% include 'mainapp/header.html' %}
+<style media="screen">
+nav{background-color: #fff;}
+</style>
+<div class="container title" style="z-index: 3!important; position: relative;background-color: #fff;">
 
-						<div class="rellax" data-rellax-speed="5">
-								<h1 class="d-flex justify-content-center py-md-3 py-2 text-center mb-0">{{subgroup_info.name}}</h1>
-						</div>
+	<div class="rellax" data-rellax-speed="5">
+		<h1 class="d-flex justify-content-center py-md-3 py-2 text-center mb-0">{{subgroup_info.name}}</h1>
+	</div>
 
-						</div>
-				</div>
-	{% endif %}
-	<!-- WARNING:  -->
-
-
+</div>
+</div>
+{% endif %}
+<!-- WARNING:  -->
 
 
-	<main class="main-property">
+
+
+<main class="main-property">
 	<div class="row p-0 m-0">
 
-			<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center p-0">
-					{% include 'mainapp/sidebar.html' %}
-			</div>
-
-
-<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 p-0">
-	<div id="content-right" class="m-auto">
-
-		<div class="container top-block">
-			<div class="px-3 pt-5">{{subgroup_info.description | safe }}</div>
+		<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center p-0">
+			{% include 'mainapp/sidebar.html' %}
 		</div>
 
 
+		<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 p-0">
+			<div id="content-right" class="m-auto">
 
-			<section class="container m-auto pt-5">
+				<div class="container top-block">
+					<div class="px-3 pt-5">{{subgroup_info.description | safe }}</div>
+				</div>
+
+
+
+				<section class="container m-auto pt-5">
 					{% for p in product_list %}
 					<div class="d-flex wrapper py-md-5 px-3 my-3 m-md-4">
 						<a href="info/{{ p.slug_product }}">
@@ -100,23 +100,32 @@
 				</section>
 
 
-		<section class="container pb-5">
-			<div class="content p-2">{{ subgroup_info.content|safe }}</div>
-		</section>
-	    </div>
+				<section class="container pb-5">
+					<div class="content p-2">{{ subgroup_info.content|safe }}</div>
+				</section>
+			</div>
 
-</div>
+		</div>
 
-</div>
+		<div class="col-lg-2 d-none d-lg-flex justify-content-center">
+			<div class="d-flex flex-column">
+				<p><a href="/cart">Корзина</a></p>
+				<p>E-mail: info@piek.ru</p>
+				<p> 8 (8352) 57-05-16</p>
+			</div>
+		</div>
 
-<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
-	</main>
-	{% include 'mainapp/footer.html' %}
-	<script src="{% static 'js/jquery.fancybox.js' %}"></script>
-	<script src="{% static 'js/rellax.min.js' %}"></script>
-	<script>
-	  // Accepts any class name
-	  var rellax = new Rellax('.rellax');
-	</script>
+
+	</div>
+
+	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
+</main>
+{% include 'mainapp/footer.html' %}
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'js/rellax.min.js' %}"></script>
+<script>
+// Accepts any class name
+var rellax = new Rellax('.rellax');
+</script>
 </body>
 </html>
