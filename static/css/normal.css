@@ -4,10 +4,16 @@
   max-width: 1050px !important;
   padding-top:0px;
 }
+
+.fix{
+  position: absolute;
+  width: 100vw;
+  height: 300px;
+  top: -300px;
+  left: 0;
+}
 html{
-    padding-top: 100px !important;
-    background-color: #fff;
-    margin-top: -125px !important;
+    margin-top: -25px;
     width: 100%;
     max-width: 100%;
     font-size: 0.8em;
