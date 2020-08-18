@@ -10,6 +10,8 @@
   width: 100vw;
   height: 300px;
   top: -300px;
+  background-color: #fff;
+  z-index: 3;
   left: 0;
 }
 html{
