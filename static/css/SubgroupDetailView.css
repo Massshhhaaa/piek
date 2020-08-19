@@ -78,7 +78,7 @@ table tr:hover{
 
 @media (max-width: 760px) {
   .iphone-text-small{
-    font-size: 0.7em;
+    font-size: 2rem;
     font-family: 'SF UI Display';
   	font-weight: normal;}
   .wrapper{
