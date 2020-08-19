@@ -43,7 +43,20 @@ main a:hover, a:focus{
 }
 
 /* ----header */
-
+.pre-header{
+  margin-top: 25px;
+  background-color: #78061f; #78061f;
+  z-index: 3 !important;
+  color: #fff;
+}
+.pre-header p{
+  font-family: "SF UI Display" !important;
+  font-weight: 400;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1em;
+  opacity: .9;
+}
 .navbar{
   /*background-color: #821228;*/
   z-index: 3 !important;
@@ -62,6 +75,7 @@ margin-left: 3em;
 -webkit-animation-delay: 1.7s;
 -moz-animation-delay: 1.7s;
 animation-delay: 1.7s;
+padding-top: 1px;;
 }
 
 
