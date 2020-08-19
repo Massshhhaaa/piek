@@ -76,10 +76,11 @@ background-color: #fff;
 table{
   width: 100% !important;
   border: hidden;
+  height: auto !important;
   border-bottom: 1px solid #e1dedc;
 
 }
-table td{border-right: hidden; margin: 0; }
+table td{border-right: hidden; margin: 0; padding: 8px !important;}
 table tr{
   border-bottom: 1px solid #e1dedc;
 }
@@ -89,9 +90,11 @@ table tr:hover{
 
 #MOD tr:nth-child(n+2) td:nth-child(1){
   border: none;
-  padding-top: 8px;
-
 }
+#MOD tr:nth-child(1) td:nth-child(1){
+  width: 30% !important;
+}
+
 @media (max-width: 760px) {
   .image{width: 250px;}
 }
