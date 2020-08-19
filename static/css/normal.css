@@ -4,11 +4,22 @@
   max-width: 1050px !important;
   padding-top:0px;
 }
+
+.fix{
+  position: absolute;
+  width: 100vw;
+  height: 300px;
+  top: -300px;
+  background-color: #fff;
+  z-index: 3;
+  left: 0;
+}
 html{
     margin-top: -25px;
     width: 100%;
     max-width: 100%;
     font-size: 0.8em;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -236,7 +247,7 @@ width: 30%;
 .footer{
   padding-top: 100px;
   letter-spacing: .56px;
-  background-color: #333333;
+  background-color: #444;
   font-weight: lighter;
   position: fixed;
   width: 100%;
@@ -249,17 +260,15 @@ width: 30%;
     letter-spacing: .56px;
 }
 .footer a, .footer p{
-  font-size: 0.9em;
+  letter-spacing: .56px;
   color: #a8a8a8;
   font-family: "Raleway";
   font-weight: 300;
-
-  text-decoration: none;
   transition-duration: .2s;
 }
 .footer a:hover{
     text-decoration: none;
-    color: #d8f8fd;
+    color: yellow;
 }
 .footer h2{
   font-family: Raleway;
@@ -267,12 +276,13 @@ width: 30%;
   font-weight: 400;
 }
 .left-block p, .left-block a{
-  font-family: "sf";
+  font-size: 0.91em;
+  font-family: "SF UI Text";
   color: #dedede;
 }
 .tiny-footer{
  display: flex;
- background-color: #262626;
+ background-color: #333;
  min-height: 20px;
 }
 .tiny-footer p{
