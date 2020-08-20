@@ -44,27 +44,24 @@ border-right: 1px solid #dedede;
   margin-bottom: 0;
   font-family: 'SF UI Text';
   font-weight: normal;
-  background-color:#f4f4f4;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  background-color:#f9f9f9;
+  border-radius: 15px;
 }
 
 .card{
-  border:none;
-  background-color: #f9f9f9;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border: none;
+  background-color: #fff;
+
 }
 .card-header{
-  border: none;
-  background-color: #f9f9f9;
+  border: none !important;
+  background-color: white;
   margin-top: 0px;
   padding: 0.2em 1em;
 }
 
 .last-child{
-  border-bottom-left-radius: 15px !important;
-  border-bottom-right-radius: 15px !important;
+
 }
 
 .card-header a{
