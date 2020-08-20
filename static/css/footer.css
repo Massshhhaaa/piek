@@ -1,0 +1,77 @@
+
+.footer{
+  padding-top: 100px;
+  letter-spacing: .56px;
+  background-color: #444;
+  font-weight: lighter;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.text_light{
+    font-weight: lighter!important;
+    letter-spacing: .56px;
+}
+.footer a, .footer p{
+  letter-spacing: .56px;
+  color: #a8a8a8;
+  font-family: "Raleway";
+  font-weight: 300;
+  transition-duration: .2s;
+}
+.footer a:hover{
+    text-decoration: none;
+    color: yellow;
+}
+.footer h2{
+  font-family: Raleway;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.left-block p, .left-block a{
+  font-size: 0.91em;
+  font-family: "SF UI Text";
+  color: #dedede;
+}
+.tiny-footer{
+ display: flex;
+ background-color: #333;
+ min-height: 20px;
+}
+.tiny-footer p{
+  color: #dedede;
+  font-size: 0.7em;
+  font-family: sf;
+  font-weight: lighter;
+}
+
+
+
+@media (max-width: 760px) {
+  .footer{
+  position: relative !important;
+  padding-top: 20px;
+  }
+  footer h2{ font-size: 1em; display: flex; justify-content: center;}
+  footer a{
+    display: table;
+    font-size: 1em;
+    margin:0 auto;
+}
+  .left-block div:last-child{
+    font-size: 1.2em;
+    background-color: #3d3d3d;
+    border-radius: 20px;
+    margin-top: 0.5em;
+  }
+  .tiny-footer p{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .center-md{font-size: 1em; text-align: center;}
+  .container{padding: 0;}
+}
