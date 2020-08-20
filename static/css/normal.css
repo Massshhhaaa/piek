@@ -1,9 +1,16 @@
 
-@media (min-width: 1200px) and (max-width: 1600px){
+@media (min-width: 1200px) and (max-width: 1400px){
 	.col-xxl-6{
 		display: flex;
 		flex: 0 0 70%;
 		max-width: 70%;
+	}
+}
+@media (min-width: 1400px) and (max-width: 1600px){
+	.col-xxl-pre-index{
+		display: flex;
+		flex: 0 0 60%;
+		max-width: 60%;
 	}
 }
 @media (min-width: 1600px){
