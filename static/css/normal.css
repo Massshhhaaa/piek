@@ -1,4 +1,18 @@
 
+@media (min-width: 1200px) and (max-width: 1600px){
+	.col-xxl-6{
+		display: flex;
+		flex: 0 0 70%;
+		max-width: 70%;
+	}
+}
+@media (min-width: 1600px){
+	.col-xxl-6-index{
+		display: flex;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
 
 .container{
   max-width: 1050px !important;
@@ -33,82 +47,6 @@ main a:hover, a:focus{
   text-decoration: none;
 }
 
-/* ----header */
-.pre-header{
-  margin-top: 25px;
-  background-color: #78061f;
-  z-index: 4 !important;
-  color: #fff;
-}
-.pre-header p{
-  font-family: "SF UI Display" !important;
-  font-weight: 400;
-  padding-top: 5px;
-  margin-bottom: 5px;
-  font-size: 1em;
-  opacity: .9;
-}
-.navbar{
-  /*background-color: #821228;*/
-  z-index: 3 !important;
-  height: auto;
-  padding-bottom: 0px;
-  padding-top: 20px !important; 
-}
-
-.navbar-brand{
-margin-left: 3em;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
--webkit-animation-delay: 1.7s;
--moz-animation-delay: 1.7s;
-animation-delay: 1.7s;
-padding-top: 1px;;
-}
-
-
-.nav-link{
-  color:#e8e8e8;
-  font-family: Raleway;
-  font-weight: 500;
-  letter-spacing: .100px;
-
-}
-
- .nav-item a:hover{
-  margin-bottom: -1px;
-  border-bottom: 1px solid yellow;
-}
-
-
-nav.navbar .dropdown:hover > .dropdown-menu {
- display: block;
- margin-bottom: 0px;
- border-radius: 15px;
- visibility: visible;
-  opacity: 1;
-  z-index: 5;
-}
-nav.navbar .dropdown:hover > .dropdown-menu > .dropdown-item{
-border-bottom: 0px;
-border-radius: 15px;
-margin-bottom: 0px;
-}
-
-.dropdown .dropdown-menu {
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-   transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  margin-bottom: 0px;
-  border-radius: 15px;
-}
 .banner {
   position: relative;
   z-index: 1;
@@ -156,54 +94,12 @@ padding: 5em;
 
 
 @media (max-width: 760px){
-  .dropdown .dropdown-menu{
-  display: block;
-  visibility: visible;
-  opacity: 1;
-  background-color: #000;/*#770E23*/
-  opacity: 0.5;
-  border-radius: 15px;
-}
-.title-text{font-size: 1.5em;}
-.text{font-size: 1em !important;}
-
-
-
-  .dropdown .dropdown-menu a{
-      color: #fff;
-      border-bottom: none;
-      margin-bottom: 0px;
-  }
-  .media_small{
-    width: 65px;
-    height: auto;
-  }
-
-  .navbar-brand{
-    margin-left: 0em;
-
-  }
-  .dropdown-item:hover{
-    background-color: transparent !important;
-    border-bottom: none;
-    margin-bottom: 0px;
-  }
-
-  .nav-item a:hover{
-    border-bottom: 0px;
-    margin-bottom: 0px;
-  }
-
   .text{
-    font-size: 1.5em;
+    font-size: 1em;
   }
   .title-text{
     padding-top:0.5em;
-    font-size: 2em;
-  }
-
-  .navbar{
-    padding-left: 0px;
+    font-size: 1.8em;
   }
 }
 
@@ -247,97 +143,16 @@ width: 30%;
 
 
 /* --footer */
-
-.footer{
-  padding-top: 100px;
-  letter-spacing: .56px;
-  background-color: #444;
-  font-weight: lighter;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.text_light{
-    font-weight: lighter!important;
-    letter-spacing: .56px;
-}
-.footer a, .footer p{
-  letter-spacing: .56px;
-  color: #a8a8a8;
-  font-family: "Raleway";
-  font-weight: 300;
-  transition-duration: .2s;
-}
-.footer a:hover{
-    text-decoration: none;
-    color: yellow;
-}
-.footer h2{
-  font-family: Raleway;
-  font-size: 1.5em;
-  font-weight: 400;
-}
-.left-block p, .left-block a{
-  font-size: 0.91em;
-  font-family: "SF UI Text";
-  color: #dedede;
-}
-.tiny-footer{
- display: flex;
- background-color: #333;
- min-height: 20px;
-}
-.tiny-footer p{
-  color: #dedede;
-  font-size: 0.7em;
-  font-family: sf;
-  font-weight: lighter;
-}
-
-
-
 @media (max-width: 760px) {
-  .dropdown-menu{background-color: #777 !important;}
-
   main {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     position: relative;
     margin-bottom: -20px !important;
   }
-  .footer{
-  position: relative !important;
-  padding-top: 20px;
-  }
-  footer h2{ font-size: 1em; display: flex; justify-content: center;}
-  footer a{
-    display: table;
-    font-size: 1em;
-    margin:0 auto;
-}
-  .left-block div:last-child{
-    font-size: 1.2em;
-    background-color: #3d3d3d;
-    border-radius: 20px;
-    margin-top: 0.5em;
-  }
-  .tiny-footer p{
-    display: flex;
-    justify-content: center;
-  }
-
   .title-text{text-align: center;}
   .center-md{font-size: 1em; text-align: center;}
   .container{padding: 0;}
 
   .separately{width: 45%;}
-}
-
-@media (min-width: 300px) and (max-width: 370px){
-    .footer a, p{
-      padding: 2px 5px;
-    }
-    .title-text{font-size: 1.8em;}
 }

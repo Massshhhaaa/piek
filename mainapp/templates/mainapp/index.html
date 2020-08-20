@@ -2,24 +2,42 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-{% include 'mainapp/head-property.html' %}
+	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 </head>
 
 <body>
-	<div class="d-none d-md-flex pre-header">
-	<div class="container">
-		<div class="d-flex flex-row justify-content-around">
-
-			<p class="d-flex flex-column">info@piek.ru</p>
-			<p class="d-flex flex-column" >8 (8352) 57-05-16</p>
+	<!-- mobile  -->
+	<div class="d-block d-md-none">
+		<style>
+		.navbar{margin-top: -20px !important;}
+		@media (max-width: 760px){.navbar{padding-top: 1.5rem !important;}}
+		</style>
+		{% include 'mainapp/header-main-page.html' %}
+		<div class="container title">
+			<h1 class="title-text text-dark p-3 pb-3 pb-md-5 pb-md-0 p-md-0">Поволжская</br>
+				электротехническая</br>
+				компания</h1>
+				<h2 class="text d-flex text-center p-3 p-md-0 pt-md-5">ПРОИЗВОДИТ ИСПОЛНИТЕЛЬНЫЕ МЕХАНИЗМЫ МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
+			</div>
 		</div>
-	</div>
-	</div>
-			<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
-				<style>
-				.navbar{margin-top: -40px !important;}
-				</style>
+		<!-- end -->
+
+		<div class="pre-header d-none d-md-flex ">
+			<div class="container">
+				<div class="d-flex flex-row justify-content-around">
+
+					<p class="d-flex flex-column">info@piek.ru</p>
+					<p class="d-flex flex-column" >8 (8352) 57-05-16</p>
+				</div>
+			</div>
+		</div>
+		<div class="banner d-none d-md-block" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
+			<style>
+			.navbar{margin-top: -20px !important;}
+			.nav-link{color: #fff !important;}
+			@media (max-width: 760px){.navbar{padding-top: 1.5rem !important;}}
+			</style>
 			{% include 'mainapp/header-main-page.html' %}
 
 			<div class="container title">
@@ -30,51 +48,36 @@
 				</div>
 			</div>
 
-	<main>
-<div class="row p-0 m-0">
+			<main>
+				<div class="row p-0 m-0">
 
 
-<style media="screen">
-@media (min-width: 1200px) and (max-width: 1600px){
-	.col-xxl-6{
-		display: flex;
-		flex: 0 0 70%;
-		max-width: 70%;
-	}
-}
-@media (min-width: 1600px){
-	.col-xxl-6-index{
-		display: flex;
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
-}
-</style>
-	<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
-			{% include 'mainapp/sidebar.html' %}
-	</div>
 
-				<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 col-xxl-6-index">
+					<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
+						{% include 'mainapp/sidebar.html' %}
+					</div>
 
-					<div class="container pt-md-5">
-						<div class="d-flex flex-wrap">
-							{% for cat in categories %}
-							<div class="m-1 m-md-2 d-flex flex-fill separately">
-								<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+					<div class="col-12 col-lg-10 col-xl-8 col-xxl-6 col-xxl-6-index">
 
-									<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
-									<div class="py-2 py-lg-5"><p class="item-name"style="text-decoration:none;">{{ cat.title }}</p></div>
+						<div class="container pt-md-5">
+							<div class="d-flex flex-wrap">
+								{% for cat in categories %}
+								<div class="m-1 m-md-2 d-flex flex-fill separately">
+									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
 
-								</a>
+										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
+										<div class="py-2 py-lg-5"><p class="item-name"style="text-decoration:none;">{{ cat.title }}</p></div>
+
+									</a>
+								</div>
+								{% endfor %}
 							</div>
-							{% endfor %}
 						</div>
 					</div>
-			</div>
-</div>
+				</div>
 
-	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
-	</main>
-	{% include 'mainapp/footer.html' %}
-</body>
-</html>
+				<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
+			</main>
+			{% include 'mainapp/footer.html' %}
+		</body>
+		</html>
