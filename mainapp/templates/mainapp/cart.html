@@ -44,6 +44,9 @@
 </div>
 
 {% else %}
-<h1 style="text-align:center;padding: 100px">Ваша корзина пуста</h1>
+<div style="height: 300px;" class="container">
+<h1 class="text-center p-2 mt-5" style="font-weight: 200;" >Ваша корзина пуста</h1>
+<div class="d-flex d-md-none py-3 mt-5 go-to-main w-100"><a href="/">Вернуться на главную </a></div>
+</div>
 {% endif %}
 {% endblock content %}

@@ -142,12 +142,12 @@ width: 30%;
 
 
 /* --footer */
-@media (max-width: 760px) {
+@media (max-width: 760px), (max-height: 876px){
   main {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     position: relative;
-    margin-bottom: -20px !important;
+    margin-bottom: -30px !important;
   }
   .title-text{text-align: center;}
   .center-md{font-size: 1em; text-align: center;}

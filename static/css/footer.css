@@ -49,10 +49,11 @@
 
 
 
-@media (max-width: 760px) {
+@media (max-width: 760px), (max-height: 876px) {
   .footer{
+  z-index: 1 !important;
   position: relative !important;
-  padding-top: 20px;
+  padding-top: 3em;
   }
   footer h2{ font-size: 1em; display: flex; justify-content: center;}
   footer a{

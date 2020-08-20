@@ -14,12 +14,6 @@
 	.media_small{
 		width: 65px;
 	}
-
-}
-.cart-icon{
-display: flex;
-align-items: center;
-align-self: center;
 }
 
 /* ----header */
@@ -113,7 +107,8 @@ margin-bottom: 0px;
       border-bottom: none;
       margin-bottom: 0px;
   }
-	.navbar-collapse .nav-link{color: #000 !important;}
+	.navbar-collapse .nav-link{color: #000 !important; padding-left: 0.5em;}
+	.navbar-nav{padding-top: 1.3em;}
   .media_small{
     width: 65px;
     height: auto;
@@ -131,6 +126,7 @@ margin-bottom: 0px;
     margin-bottom: 0px;
   }
   .navbar{
+		font-size: 1.2em;
     padding-left: 0px;
 		background-color: #fff !important;
 		 padding-right: 0px !important;
