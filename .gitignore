@@ -2,6 +2,5 @@
 logs/*
 config/*
 adminstatic/*
-*.sqlite3
 *.pyc
 piek.conf
