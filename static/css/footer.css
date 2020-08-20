@@ -49,10 +49,11 @@
 
 
 
-@media (max-width: 760px) {
+@media (max-width: 760px), (max-height: 870px) {
   .footer{
   position: relative !important;
   padding-top: 20px;
+  z-index: 5 !important;
   }
   footer h2{ font-size: 1em; display: flex; justify-content: center;}
   footer a{
@@ -62,7 +63,7 @@
 }
   .left-block div:last-child{
     font-size: 1.2em;
-    background-color: #3d3d3d;
+
     border-radius: 20px;
     margin-top: 0.5em;
   }
