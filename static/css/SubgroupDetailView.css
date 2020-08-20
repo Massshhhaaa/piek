@@ -86,15 +86,12 @@ table tr:hover{
     align-items: center;
     justify-content: center;
   }
-  .wrapper img{
-    border-radius: 20px;
-}
   .container{
     margin: 0px !important;
     padding: 0px !important;
   }
-    .wrapper img{width: 200px;}
-    .wrapper h1{font-size: 1.5em; text-align: center;}
+    .wrapper img{width: 150px; border-radius: 20px;}
+    .wrapper h1{font-size: 1.2em; text-align: center;}
     .content span{font-size: 0.85em!important;}
 
 }

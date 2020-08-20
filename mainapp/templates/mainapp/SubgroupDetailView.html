@@ -76,17 +76,17 @@
 
 				<section class="container m-auto pt-5">
 					{% for p in product_list %}
-					<div class="d-flex wrapper py-md-5 px-3 my-3 m-md-4">
+					<div class="d-flex wrapper py-md-5 my-3 m-md-4">
 						<a href="info/{{ p.slug_product }}">
 
-							<div class="d-flex flex-column flex-md-row">
+							<div class="d-flex">
 
 								<div class="flex-column m-auto pb-4 py-2 py-md-0">
 									<img src="{{ p.img.url }}" alt="">
 								</div>
 
 								<div class="flex-column px-md-5">
-									<h1 class="py-md-3">{{ p.href_title }}</h1>
+									<h1 class="py-md-3 py-5 px-3">{{ p.href_title }}</h1>
 									<div class="d-none d-md-flex">{{ p.description |safe }}</div>
 								</div>
 							</div>

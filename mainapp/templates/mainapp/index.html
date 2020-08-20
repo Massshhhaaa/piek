@@ -7,18 +7,19 @@
 </head>
 
 <body>
-	<div class="d-none d-md-flex pre-header">
-	<div class="container">
-		<div class="d-flex flex-row justify-content-around">
+	<div class="pre-header d-none d-md-flex ">
+		<div class="container">
+			<div class="d-flex flex-row justify-content-around">
 
-			<p class="d-flex flex-column">info@piek.ru</p>
-			<p class="d-flex flex-column" >8 (8352) 57-05-16</p>
+				<p class="d-flex flex-column">info@piek.ru</p>
+				<p class="d-flex flex-column" >8 (8352) 57-05-16</p>
+			</div>
 		</div>
-	</div>
 	</div>
 			<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
 				<style>
-				.navbar{margin-top: -40px !important;}
+				.navbar{margin-top: -20px !important;}
+				@media (max-width: 760px){.navbar{padding-top: 1.5rem !important;}}
 				</style>
 			{% include 'mainapp/header-main-page.html' %}
 
@@ -34,22 +35,7 @@
 <div class="row p-0 m-0">
 
 
-<style media="screen">
-@media (min-width: 1200px) and (max-width: 1600px){
-	.col-xxl-6{
-		display: flex;
-		flex: 0 0 70%;
-		max-width: 70%;
-	}
-}
-@media (min-width: 1600px){
-	.col-xxl-6-index{
-		display: flex;
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
-}
-</style>
+
 	<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
 			{% include 'mainapp/sidebar.html' %}
 	</div>
