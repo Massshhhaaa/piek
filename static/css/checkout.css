@@ -7,3 +7,14 @@
 	background-color: #f5f5f5;
 	border-radius: 15px;
 }
+
+label{
+	font-size: 1.2em;
+	font-family: sf;
+	font-weight: 200;
+	padding-top: 1.5em;
+}
+.form {
+	background-color: #f5f5f5;
+	border-radius: 20px;
+}

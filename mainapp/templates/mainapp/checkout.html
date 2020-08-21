@@ -6,21 +6,50 @@
 
 <div class="container">
 	<h1 class="my-5 cart-ttl">Оформление заказа</h1>
-<div class="d-flex ">
-	<div class="d-flex justify-content-center w-50 check-list" style="background-color: #f5f5f5;">
-		<div class="flex-column check mb-4">
-			{% for item in product_list %}
-			<div class="pt-4 ">{% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}</div>
-			{% endfor %}
+	<div class="d-flex ">
+		<div class="d-flex justify-content-center check-list" style="background-color: #f5f5f5;">
+			<div class="flex-column check mb-4">
+				{% for item in product_list %}
+				<div class="pt-4 ">{% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}</div>
+				{% endfor %}
+			</div>
+
+			<div class="flex-column check">
+				{% for item in product_list %}
+				<div class="pt-4 pl-5"> | {{ item.quantity }} шт.</div>
+				{% endfor %}
+			</div>
 		</div>
 
-		<div class="flex-column check"> 
-			{% for item in product_list %}
-			<div class="pt-4 pl-5"> | {{ item.quantity }} шт.</div>
-			{% endfor %}
+		<div class="flex-column p-4 ml-auto form">
+
+			<form class="" action="{% url 'checkout' %}" method="POST">
+				<div class="d-flex flex-column p-4 form">
+
+					<label for="firstname"><i class="fa fa-user"></i> Контактное лицо</label>
+					<input type="text" id="form" name="firstname" placeholder="Эдуард Николаевич">
+					<label for="email"><i class="fa"></i> Email</label>
+					<input type="text" id="form" name="email" placeholder="mail@examlpe.ru">
+					<label for="adr"><i class="fa"></i> Адрес</label>
+					<input type="text" id="form" name="address" placeholder="542 W. 15th Street">
+					<label for="city"><i class="fa"></i>Организация</label>
+					<input type="text" id="form" name="company">
+					<label for="city"><i class="fa"></i>Телефон</label>
+					<input type="text" id="form" name="phone">
+					<label for="description"><i class="fa"></i>Дополнительная информация</label>
+					<input type="text" id="description" name="description">
+
+				</div>
+			</form>
+
 		</div>
+
+
+
 	</div>
 </div>
+
+
 
 </div>
 
