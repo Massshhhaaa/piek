@@ -1,0 +1,28 @@
+{% extends 'mainapp/main-cart.html' %}
+{% load static %}
+{% block content %}
+{% if product_list %}
+
+
+<div class="container">
+	<h1 class="my-5 cart-ttl">Оформление заказа</h1>
+<div class="d-flex ">
+	<div class="d-flex justify-content-center w-50 check-list" style="background-color: #f5f5f5;">
+		<div class="flex-column check mb-4">
+			{% for item in product_list %}
+			<div class="pt-4 ">{% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}</div>
+			{% endfor %}
+		</div>
+
+		<div class="flex-column check"> 
+			{% for item in product_list %}
+			<div class="pt-4 pl-5"> | {{ item.quantity }} шт.</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+</div>
+
+{% endif %}
+{% endblock content %}
