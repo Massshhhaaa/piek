@@ -145,9 +145,11 @@ margin-bottom: 0px;
 	border-radius: 50%;
 }
 .cart-counter p {
-	padding-top: 0.8px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 padding-left: 0.5px;
-position: relative;
 font-size: 10px;
 text-align: center;
 font-family: "SF UI Text";
