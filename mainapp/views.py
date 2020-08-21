@@ -7,10 +7,13 @@ from mainapp.models import *
 
 def main_def(request):
     categories = Group.objects.only('title', 'slug', 'img')
-    return render(request, 'mainapp/index.html', context={'categories' : categories})
+    print(request.session.items())
+    context={'categories' : categories,
+             'in_cart_counter': cart_counter(request),}
+    return render(request, 'mainapp/index.html', context)
 
 def contacts(request):
-    return render(request,'mainapp/contacts.html')
+    return render(request,'mainapp/contacts.html', context={'in_cart_counter': cart_counter(request)})
 
 def SubgroupDetailView(request, slug):
     subgroup_info = get_object_or_404(Group, slug=slug)
@@ -21,6 +24,7 @@ def SubgroupDetailView(request, slug):
     context = {
     'subgroup_info' : subgroup_info,
     'product_list'  : product_list,
+    'in_cart_counter': cart_counter(request),
     })
 
 
@@ -38,7 +42,8 @@ def ProductDetailView(request, slug_product, slug):
     'photos': photos,
     'mod_list' : mod_list,
     'order':order,
-    'mods_in_cart' : mods_in_cart,
+    'mods_in_cart' : mods_in_cart,#not using now
+    'in_cart_counter': cart_counter(request),
     }
     return render(request, 'mainapp/ProductDetailView.html', context)
 
@@ -52,7 +57,8 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
     context = {
     'mod' : mod,
     'photos': photos,
-    'product_content' : product_content,}
+    'product_content' : product_content,
+    'in_cart_counter': cart_counter(request),}
     return render(request, 'mainapp/ModificationDetailView.html', context)
 
 
@@ -67,7 +73,7 @@ def cart(request):
                 product.quantity = int(quantity[i][1].get('quantity'))
                 product.conventional_designation = quantity[i][1].get('conventional_designation')
                 counter += int(quantity[i][1].get('quantity'))
-    context = {"product_list": product_list, "counter": counter}
+    context = {"product_list": product_list, "counter": counter, 'in_cart_counter': cart_counter(request),}
     return render(request, 'mainapp/cart.html', context)
 
 def remove_from_cart(request, pk):
@@ -123,6 +129,7 @@ def product(request, pk):
 
     next = request.POST.get('next', '/')
     return HttpResponseRedirect(next)
+    
 def checkout(request):
     id = list(request.session.keys())
     quantity = list(request.session.items())
@@ -136,3 +143,10 @@ def checkout(request):
                 counter += int(quantity[i][1].get('quantity'))
     context = {"product_list": product_list, "counter": counter}
     return render(request, 'mainapp/checkout.html', context)
+
+def cart_counter(request):
+    quantity = list(request.session.items())
+    counter=0
+    for i in range(len(quantity)):
+        counter += int(quantity[i][1].get('quantity'))
+    return counter

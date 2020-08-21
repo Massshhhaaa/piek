@@ -5,39 +5,44 @@
 
 
 <div class="container">
-	<h1 class="my-5 cart-ttl">Корзина<span class="pl-2">({{counter}})</span></h1>
+	<h1 class="my-2 my-md-5 cart-ttl pb-3">Корзина<span class="pl-2">({{counter}})</span></h1>
 
-	<div class="cart-header">
+	<div class="cart-header d-none d-md-flex">
 		<p>Наименование</p>
 		<p>Количество</p>
 		<p></p>
 	</div>
 
 	{% for item in product_list %}
-	<div class="d-flex flex-row border-bottom my-1 py-5 justify-content-between item">
-		<form method="POST" action="{% url 'update_conventional_designation' pk=item.id %}">
+	<div class="d-flex flex-column flex-md-row border-bottom py-2 justify-content-around item">
+
+<div class="flex-row py-3 py-md-4">
+		<form class="d-flex justify-content-center"method="POST" action="{% url 'update_conventional_designation' pk=item.id %}">
 			{% csrf_token %}
 			<input class="input-designation" type="text" name='conventional_designation' autocomplete="off" onchange="form.submit()"  value="{% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}">
 		</form>
+</div>
+		<div class="flex-row mt-1 mt-md-0">
 
-		<div class="ml-5">
-
 			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
 				{% csrf_token %}
-				<input class="btn-quantity" type="submit" name="plus" value="+">
+				<input class="btn-quantity w-6rem" type="submit" name="plus" value="+">
 			</form>
 			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
 				{% csrf_token %}
-				<input class="input-integer" type="text" name='integer' autocomplete="off" onchange="form.submit()"  value='{{ item.quantity }}' min="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+				<input class="input-integer w-6rem" type="text" name='integer' autocomplete="off" onchange="form.submit()"  value='{{ item.quantity }}' min="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
 			</form>
 			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
 				{% csrf_token %}
-				<input class="btn-quantity" type="submit" name="minus" value="-">
+				<input class="btn-quantity w-6rem" type="submit" name="minus" value="-">
 			</form>
+			<div class="d-flex d-md-none">
+				<a class="btn-delete w-6rem" href="{% url 'remove_from_cart' pk=item.id %}">Удалить</a>
+			</div>
 		</div>
 
-		<div>
-			<a class="btn-delete mr-3" href="{% url 'remove_from_cart' pk=item.id %}">Удалить</a>
+		<div class="d-none d-md-flex">
+			<a class="btn-delete mr-3 w-6rem" href="{% url 'remove_from_cart' pk=item.id %}">Удалить</a>
 		</div>
 	</div>
 	{% endfor %}
