@@ -129,6 +129,20 @@ def product(request, pk):
 
     next = request.POST.get('next', '/')
     return HttpResponseRedirect(next)
+    
+def checkout(request):
+    id = list(request.session.keys())
+    quantity = list(request.session.items())
+    product_list = Modification.objects.filter(pk__in=id)
+    counter = 0
+    for product in product_list:
+        for i in range(len(quantity)):
+            if int(quantity[i][0]) == product.id:
+                product.quantity = int(quantity[i][1].get('quantity'))
+                product.conventional_designation = quantity[i][1].get('conventional_designation')
+                counter += int(quantity[i][1].get('quantity'))
+    context = {"product_list": product_list, "counter": counter}
+    return render(request, 'mainapp/checkout.html', context)
 
 def cart_counter(request):
     quantity = list(request.session.items())
