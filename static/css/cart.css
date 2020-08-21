@@ -56,11 +56,10 @@
   border: 1px solid #fbfbfb;
 }
 .btn-delete{
-  font-size: 0.8em;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff3a31;color: #fff;
+  color: #ff3a31 !important;
   transition: .2s;
   border: 0;
   border-radius: 10px;
