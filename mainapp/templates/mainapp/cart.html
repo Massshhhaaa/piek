@@ -14,10 +14,10 @@
 	</div>
 
 	{% for item in product_list %}
-	<div class="d-flex flex-column flex-md-row border-bottom my-1 py-5 justify-content-between item">
+	<div class="d-flex flex-column flex-md-row border-bottom my-1 py-5 justify-content-around item">
 
 <div class="flex-row">
-		<form method="POST" action="{% url 'update_conventional_designation' pk=item.id %}">
+		<form class="d-flex justify-content-center"method="POST" action="{% url 'update_conventional_designation' pk=item.id %}">
 			{% csrf_token %}
 			<input class="input-designation" type="text" name='conventional_designation' autocomplete="off" onchange="form.submit()"  value="{% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}">
 		</form>

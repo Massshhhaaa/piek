@@ -101,6 +101,6 @@ background-color: #f6f6f6; }
 
 @media (max-width: 760px) {
   .item div{
-    justify-content: flex-start !important;
+    justify-content: center !important;
   }
 }
