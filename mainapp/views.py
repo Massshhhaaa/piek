@@ -156,7 +156,7 @@ def sent_mail(request):
     subject = " ООО ПЭК | Заказ "
     html_template = 'mainapp/html_message.html'
     from_email = "kondensat01@gmail.com"
-    to_email = "kondensat228@gmail.com"
+    to_email = request.POST['email']
  # я тебя прекрасно понимаю, что то что находится ниже вызывает некоторые вопросы.
  # я использую поля бд для временного хранения данных, но я не сохраняю их в бд. да это тупо. но так код чище
  # я беру их из сессии сопоставляю по id и пихаю в эти поля quantity и conventional_designation и теперь они становятся частью коллекции
