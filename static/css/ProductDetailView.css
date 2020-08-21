@@ -47,11 +47,6 @@ background-color: #fff;
   background-color: #f4f3f2;
 }
 
-.btn:visited{
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-}
 
 .content a, .content p, .content span{
   font-family: 'SF UI Text';

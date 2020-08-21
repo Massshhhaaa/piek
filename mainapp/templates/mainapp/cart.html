@@ -5,22 +5,24 @@
 
 
 <div class="container">
-	<h1 class="my-5 cart-ttl">Корзина<span class="pl-2">({{counter}})</span></h1>
+	<h1 class="my-2 my-md-5 cart-ttl">Корзина<span class="pl-2">({{counter}})</span></h1>
 
-	<div class="cart-header">
+	<div class="cart-header d-none d-md-flex">
 		<p>Наименование</p>
 		<p>Количество</p>
 		<p></p>
 	</div>
 
 	{% for item in product_list %}
-	<div class="d-flex flex-row border-bottom my-1 py-5 justify-content-between item">
+	<div class="d-flex flex-column flex-md-row border-bottom my-1 py-5 justify-content-between item">
+
+<div class="flex-row">
 		<form method="POST" action="{% url 'update_conventional_designation' pk=item.id %}">
 			{% csrf_token %}
 			<input class="input-designation" type="text" name='conventional_designation' autocomplete="off" onchange="form.submit()"  value="{% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}">
 		</form>
-
-		<div class="ml-5">
+</div>
+		<div class="flex-row ml-5 mt-4 mt-md-0">
 
 			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
 				{% csrf_token %}
@@ -34,9 +36,12 @@
 				{% csrf_token %}
 				<input class="btn-quantity" type="submit" name="minus" value="-">
 			</form>
+			<div class="d-flex d-md-none">
+				<a class="btn-delete ml-5" href="{% url 'remove_from_cart' pk=item.id %}">Удалить</a>
+			</div>
 		</div>
 
-		<div>
+		<div class="d-none d-md-flex">
 			<a class="btn-delete mr-3" href="{% url 'remove_from_cart' pk=item.id %}">Удалить</a>
 		</div>
 	</div>

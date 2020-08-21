@@ -5,7 +5,7 @@
 	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 	<link href="{% static 'css/ProductDetailView.css' %}" rel="stylesheet">
-
+	<link href="{% static 'css/ModificationDetailView.css' %}" rel="stylesheet">
 	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
 
 </head>
@@ -26,32 +26,43 @@ z-index: 2;">
 <main>
 	<div class="row p-0 m-0">
 
-					<div class="col-lg-2 col-xl-3 d-none d-lg-flex justify-content-center">
+					<div class="col-lg-3 d-none d-lg-flex justify-content-center">
 							{% include 'mainapp/sidebar.html' %}
 					</div>
 
 
-	<div class="col-12 col-lg-10 col-xl-6">
+	<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index row p-0 m-0">
 
 
-								<div class="container top-block">
-									<h1 class="py-5 text-center"> {{ product_content.h1_mod }} {{ mod.title }}</h1>
+			<div class="container top-block">
+				<h1 class="py-5 text-center"> {{ product_content.h1_mod }} {{ mod.title }}</h1>
+		</div>
+
+	<div class="container" style="background-color: #f9f9f9;border-radius:15px;">
+
+		<div class="d-flex flex-column flex-md-row mt-5 justify-content-center">
+
+							<div class="d-flex flex-column justify-content-center">
+								<form method="POST" action="{% url "product" pk=mod.id %}">
+									{% csrf_token %}
+									<input class="input-quantity mr-3" min="1" value=1 type="text" name="quantity" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+									<input type="hidden" name="next" value="{{ request.path }}"> <!-- WARNING:  -->
+									<div class="d-flex align-self-center p-3 btn-wrap"><input class="btn" type="submit" value=""></div>
+								</form>
 							</div>
 
-						<form method="POST" action="{% url "product" pk=mod.id %}">
-							{% csrf_token %}
-							<input min="1" value=1 type="number" name="quantity">
-							<input type="hidden" name="next" value="{{ request.path }}"> <!-- WARNING:  -->
-							<input class="btn btn-dark" type="submit" value="Add to Cart">
-						</form>
+								<div class="flex-column m-auto pt-4 pt-md-0 m-md-0"><p class="help-text p-2 pl-md-5">Внести изменения в название вы сможете в корзине</p></div>
+		</div>
 
-							<section class="container content py-5 px-3">
-										{{ mod.content | safe }}
-							</section>
+	</div>
 
-								<section class="container content py-5 px-3">
-											{{ product_content.content | safe }}
-								</section>
+			<section class="container content py-5 px-3">
+						{{ mod.content | safe }}
+			</section>
+
+				<section class="container content py-5 px-3">
+							{{ product_content.content | safe }}
+				</section>
 
 		</div>
 	</div>
