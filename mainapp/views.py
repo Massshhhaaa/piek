@@ -4,6 +4,7 @@ from django.views.decorators.http import require_POST
 from django.conf import settings
 from mainapp.models import *
 from django.core.mail import send_mail
+from django.template import loader
 
 
 def main_def(request):
@@ -147,11 +148,15 @@ def checkout(request):
 
 @require_POST
 def sent_mail(request):
+    html_message = loader.render_to_string(
+            'mainapp/html_message.html')
     id = list(request.session.keys())
     quantity = list(request.session.items())
     product_list = Modification.objects.filter(pk__in=id)
     counter = cart_counter(request)
     title_str = ''
+    quantity_str = ''
+
 
     for product in product_list:
             title_str += str(product.title)+'\n'
@@ -159,10 +164,7 @@ def sent_mail(request):
     content = '''Здравствуйте, ''' + request.POST['firstname'] + '''.''' '''
     Ваш заказ отправлен на обработку и в ближайшее время с Вами свяжется менеджер для уточнение деталей заказа.\n'''+ '''Cодержимое заказа:\n'''+title_str
 
-
-
-
-    send_mail('ООО ПЭК | Заказ', content, 'loseev5@gmail.com', [request.POST['email'], 'kondensat2@gmail.com'], fail_silently=False)
+    send_mail('ООО ПЭК | Заказ', content, 'kondensat01@gmail.com', [request.POST['email']], html_message=html_message,fail_silently=False)
 
 
 
