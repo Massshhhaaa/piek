@@ -1,6 +1,6 @@
 :active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
+    outline: 0 !important;
+    outline-offset: 0 !important;
 }
 .cart-ttl{
   font-family: 'Raleway';
@@ -23,6 +23,9 @@
   font-weight: 500;
   text-transform: uppercase;
   border-bottom: 1px solid #e8e8e9;
+}
+.cart-header p:nth-of-type(2){
+  margin-right: 6.5em;
 }
 .item div{
   display: flex;
@@ -56,11 +59,10 @@
   border: 1px solid #fbfbfb;
 }
 .btn-delete{
-  font-size: 0.8em;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff3a31;color: #fff;
+  color: #ff3a31 !important;
   transition: .2s;
   border: 0;
   border-radius: 10px;
@@ -75,7 +77,7 @@ background-color: #f6f6f6; }
   height: 30px;
   color: #555;
   text-align: center;
-  min-width: 180%;
+  width: 400px;
   border-radius: 5px;
   border: 0;
 
@@ -97,6 +99,22 @@ background-color: #f6f6f6; }
 }
 .go-to-main a{color: #222;}
 
+.btn{
+  background-color: transparent;
+  color: #000;
+  border-color: #53e83c;
+  border-radius: 80px;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+}
+
+.btn:hover{
+  background-color: #e2ffde;
+  color: #000;
+  border-color: #53e83c;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+}
 
 @media (max-width: 760px) {
   .item div{

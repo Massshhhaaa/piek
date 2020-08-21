@@ -3,6 +3,8 @@ from django.views.generic import ListView, DetailView, View
 from django.views.decorators.http import require_POST
 from django.conf import settings
 from mainapp.models import *
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
 
 
 def main_def(request):
@@ -129,6 +131,48 @@ def product(request, pk):
 
     next = request.POST.get('next', '/')
     return HttpResponseRedirect(next)
+
+def checkout(request):
+    id = list(request.session.keys())
+    quantity = list(request.session.items())
+    product_list = Modification.objects.filter(pk__in=id)
+    counter = 0
+    for product in product_list:
+        for i in range(len(quantity)):
+            if int(quantity[i][0]) == product.id:
+                product.quantity = int(quantity[i][1].get('quantity'))
+                product.conventional_designation = quantity[i][1].get('conventional_designation')
+                counter += int(quantity[i][1].get('quantity'))
+    context = {"product_list": product_list, "counter": counter}
+    return render(request, 'mainapp/checkout.html', context)
+
+@require_POST
+def sent_mail(request):
+    id = list(request.session.keys())
+    quantity = list(request.session.items())
+    product_list = Modification.objects.filter(pk__in=id)
+    counter = cart_counter(request)
+
+    subject = " ООО ПЭК | Заказ "
+    html_template = 'mainapp/html_message.html'
+    from_email = "kondensat01@gmail.com"
+    to_email = request.POST['email']
+ # я тебя прекрасно понимаю, что то что находится ниже вызывает некоторые вопросы.
+ # я использую поля бд для временного хранения данных, но я не сохраняю их в бд. да это тупо. но так код чище
+ # я беру их из сессии сопоставляю по id и пихаю в эти поля quantity и conventional_designation и теперь они становятся частью коллекции
+ # поэтому можешь обращаться к этим полям в цикле как product.quantity и product.conventional_designation
+    for product in product_list:
+        for i in range(len(quantity)):
+            if int(quantity[i][0]) == product.id:
+                product.quantity = int(quantity[i][1].get('quantity'))
+                product.conventional_designation = quantity[i][1].get('conventional_designation')
+
+    html_message = render_to_string(html_template, { 'product_list': product_list, })
+
+    message = EmailMessage(subject, html_message, from_email, [to_email])
+    message.content_subtype = 'html' # this is required because there is no plain text email message
+    message.send()
+
 
 def cart_counter(request):
     quantity = list(request.session.items())

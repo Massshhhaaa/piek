@@ -38,8 +38,12 @@ TINYMCE_DEFAULT_CONFIG = {
     'statusbar': True,
     'min_height': '300',
 }
-
-# Application definition
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'kondensat01@gmail.com'
+EMAIL_HOST_PASSWORD = 'vladjous321'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAI_USE_SSL = False
 
 INSTALLED_APPS = [
     'jet_django',
