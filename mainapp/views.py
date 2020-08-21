@@ -3,6 +3,7 @@ from django.views.generic import ListView, DetailView, View
 from django.views.decorators.http import require_POST
 from django.conf import settings
 from mainapp.models import *
+from django.core.mail import send_mail
 
 
 def main_def(request):
@@ -129,7 +130,7 @@ def product(request, pk):
 
     next = request.POST.get('next', '/')
     return HttpResponseRedirect(next)
-    
+
 def checkout(request):
     id = list(request.session.keys())
     quantity = list(request.session.items())
@@ -143,6 +144,17 @@ def checkout(request):
                 counter += int(quantity[i][1].get('quantity'))
     context = {"product_list": product_list, "counter": counter}
     return render(request, 'mainapp/checkout.html', context)
+
+@require_POST
+def send_mail(request):
+    send_mail('EBAT', 'SUKA',
+'kondensat01@gmail.com', [request.POST['email']], fail_silently=False)
+
+
+
+
+
+
 
 def cart_counter(request):
     quantity = list(request.session.items())
