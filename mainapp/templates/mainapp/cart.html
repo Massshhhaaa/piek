@@ -16,7 +16,7 @@
 	{% for item in product_list %}
 	<div class="d-flex flex-column flex-md-row border-bottom py-2 justify-content-around item">
 
-<div class="flex-row py-2 py-md-4">
+<div class="flex-row py-3 py-md-4">
 		<form class="d-flex justify-content-center"method="POST" action="{% url 'update_conventional_designation' pk=item.id %}">
 			{% csrf_token %}
 			<input class="input-designation" type="text" name='conventional_designation' autocomplete="off" onchange="form.submit()"  value="{% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}">
