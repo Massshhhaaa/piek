@@ -50,6 +50,11 @@
 	window.onbeforeunload = function(e) {
 		localStorage.setItem('scrollpos', window.scrollY);
 	};
+
+function submitForm(){
+var text = document.getElementById("input-integer");
+var form = document.getElementById("main-form");
+if( text.value == '' ){text.value = '1';}form.submit();}
 </script>
 {% include 'mainapp/footer.html' %}
 </body>
