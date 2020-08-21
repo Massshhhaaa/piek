@@ -28,9 +28,9 @@
 				{% csrf_token %}
 				<input class="btn-quantity w-6rem" type="submit" name="plus" value="+">
 			</form>
-			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
+			<form id="main-form" method="POST" action="{% url 'update_quantity' pk=item.id %}">
 				{% csrf_token %}
-				<input class="input-integer w-6rem" type="text" name='integer' autocomplete="off" onchange="form.submit()"  value='{{ item.quantity }}' min="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+				<input id="input-integer" class="input-integer w-6rem" type="text" name='integer' autocomplete="off" onchange="if( this.value == '' ){this.value = '1';}form.submit();" value='{{ item.quantity }}' min="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
 			</form>
 			<form method="POST" action="{% url 'update_quantity' pk=item.id %}">
 				{% csrf_token %}

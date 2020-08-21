@@ -4,7 +4,6 @@
 <head>
 	{% include 'mainapp/head-property.html' %}
 	<link rel="stylesheet" href="{% static 'css/cart.css' %}">
-	<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
 	<title>Корзина - ООО "ПЭК"</title>
 </head>
 <body>
@@ -52,6 +51,12 @@
 		localStorage.setItem('scrollpos', window.scrollY);
 	};
 </script>
+<!-- <script>
+function submitForm(){
+var text = document.getElementById("input-integer");
+var form = document.getElementById("main-form");
+if( text.value == '' ){text.value = '1';}form.submit();}
+</script> -->
 {% include 'mainapp/footer.html' %}
 </body>
 </html>
