@@ -3,8 +3,8 @@ from django.views.generic import ListView, DetailView, View
 from django.views.decorators.http import require_POST
 from django.conf import settings
 from mainapp.models import *
-from django.core.mail import send_mail
-from django.template import loader
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
 
 
 def main_def(request):
@@ -148,16 +148,15 @@ def checkout(request):
 
 @require_POST
 def sent_mail(request):
-    html_message = loader.render_to_string(
-            'mainapp/html_message.html')
     id = list(request.session.keys())
     quantity = list(request.session.items())
     product_list = Modification.objects.filter(pk__in=id)
     counter = cart_counter(request)
-    title_str = ''
-    quantity_str = ''
 
-
+    subject = " ООО ПЭК | Заказ "
+    html_template = 'mainapp/html_message.html'
+    from_email = "kondensat01@gmail.com"
+    to_email = "kondensat228@gmail.com"
  # я тебя прекрасно понимаю, что то что находится ниже вызывает некоторые вопросы.
  # я использую поля бд для временного хранения данных, но я не сохраняю их в бд. да это тупо. но так код чище
  # я беру их из сессии сопоставляю по id и пихаю в эти поля quantity и conventional_designation и теперь они становятся частью коллекции
@@ -168,26 +167,11 @@ def sent_mail(request):
                 product.quantity = int(quantity[i][1].get('quantity'))
                 product.conventional_designation = quantity[i][1].get('conventional_designation')
 
-# как здесь
-    for product in product_list:
-        if product.conventional_designation != '' and product.conventional_designation != None:
-            title_str += str(product.conventional_designation)+'  |  '+str(product.quantity)+'\n'
-        else:
-            title_str += str(product.title)+'  |  '+str(product.quantity)+'\n'
+    html_message = render_to_string(html_template, { 'product_list': product_list, })
 
-    content = '''Здравствуйте, ''' + request.POST['firstname'] + '''.''' '''
-    Ваш заказ отправлен на обработку и в ближайшее время с Вами свяжется менеджер для уточнение деталей заказа.\n'''+ '''Cодержимое заказа:\n'''+title_str
-
-
-    send_mail('ООО ПЭК | Заказ', content, 'kondensat01@gmail.com', [request.POST['email']], html_message=html_message,fail_silently=False)
-
-    send_mail('ООО ПЭК | Заказ', content, 'loseev5@gmail.com', [request.POST['email'], 'kondensat2@gmail.com'], fail_silently=False)
-
-
-
-
-
-
+    message = EmailMessage(subject, html_message, from_email, [to_email])
+    message.content_subtype = 'html' # this is required because there is no plain text email message
+    message.send()
 
 
 def cart_counter(request):
