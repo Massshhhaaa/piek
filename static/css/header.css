@@ -134,3 +134,22 @@ margin-bottom: 0px;
 	.navbar button{margin-right: 1em;}
 	.show{border-bottom: 2px solid #dedede;}
 }
+
+.cart-counter{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 16px;
+	background-color: #ff3a31;
+	border-radius: 50%;
+}
+.cart-counter p {
+	padding-top: 0.8px;
+padding-left: 0.5px;
+position: relative;
+font-size: 10px;
+text-align: center;
+font-family: "SF UI Text";
+
+}
