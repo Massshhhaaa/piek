@@ -31,43 +31,42 @@
   font-size: 1.1em;
   color: #555;
 }
-
+.w-6rem{
+  width: 6rem;
+  height: 100%;
+}
 .btn-quantity{
   font-weight: 200;
-  width: 30px;
   padding: 0em;
   margin: 0 0.3em;
-  font-size: 1.4em;
-  background-color: #f6f6f6;
+  font-size: 2em;
+  background-color: #fbfbfb;
   transition: .1s;
   border: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #555;
 }
 .btn-quantity:hover, .btn-delete:hover{
-  background-color: #ececec;
+  background-color: #f6f6f6;
 }
 .input-integer{
-  width: 40px;
-  height: 30px;
   color: #555;
   text-align: center;
-  border-radius: 5px;
-  border: 1px solid #f6f6f6;
+  border-radius: 10px;
+  border: 1px solid #fbfbfb;
 }
 .btn-delete{
   font-size: 0.8em;
   display: flex;
   align-items: center;
-  padding: 0 0.5em;
-  background-color: #f6f6f6;
+  justify-content: center;
+  background-color: #ff9d9d;color: #fff;
   transition: .2s;
   border: 0;
-  border-radius: 5px;
-  color: #555;
+  border-radius: 10px;
   transition: all .2s;
 }
-.btn-delete a{padding: 0;}
+.btn-delete a{padding: 0px;}
 .btn-delete:hover{color: #8a1524;
 background-color: #f6f6f6; }
 
@@ -103,4 +102,7 @@ background-color: #f6f6f6; }
   .item div{
     justify-content: center !important;
   }
+  .w-6rem{width: 2em;}
+  .btn-delete{width: auto;padding:0.5em;}
+  .input-integer{width: 4em;}
 }
