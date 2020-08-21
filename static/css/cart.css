@@ -114,14 +114,6 @@ background-color: #f6f6f6; }
   outline-offset: 0 !important;
 }
 
-.btn:active  {
-  background-color: #e2ffde !important;
-  color: #000 !important;
-  border-color: #53e83c !important;
-  outline: 0 !important;
-  outline-offset: 0 !important;
-
-}
 @media (max-width: 760px) {
   .item div{
     justify-content: center !important;
