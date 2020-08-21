@@ -146,9 +146,23 @@ def checkout(request):
     return render(request, 'mainapp/checkout.html', context)
 
 @require_POST
-def send_mail(request):
-    send_mail('EBAT', 'SUKA',
-'kondensat01@gmail.com', [request.POST['email']], fail_silently=False)
+def sent_mail(request):
+    id = list(request.session.keys())
+    quantity = list(request.session.items())
+    product_list = Modification.objects.filter(pk__in=id)
+    counter = cart_counter(request)
+    title_str = ''
+
+    for product in product_list:
+            title_str += str(product.title)+'\n'
+
+    content = '''Здравствуйте, ''' + request.POST['firstname'] + '''.''' '''
+    Ваш заказ отправлен на обработку и в ближайшее время с Вами свяжется менеджер для уточнение деталей заказа.\n'''+ '''Cодержимое заказа:\n'''+title_str
+
+
+
+
+    send_mail('ООО ПЭК | Заказ', content, 'loseev5@gmail.com', [request.POST['email'], 'kondensat2@gmail.com'], fail_silently=False)
 
 
 

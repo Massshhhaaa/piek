@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', cart, name="cart"),
     path('checkout/', checkout, name="checkout"),
+    path('sent_mail/', sent_mail, name="sent_mail"),
     path('product/<int:pk>', product, name='product'), # this using as add-to-cart
     path('remove_from_cart/<int:pk>', remove_from_cart, name='remove_from_cart'),
     path('update_quantity/<int:pk>', update_quantity, name='update_quantity'),
