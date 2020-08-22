@@ -50,7 +50,7 @@ class DocIcon(models.Model):
 
 class ProductDocs(models.Model):
     page = models.ForeignKey(Product, on_delete=models.CASCADE)
-    file = models.FileField(upload_to='docs', null=True, blank=True)
+    file = models.FileField(upload_to='docs', null=True)
     name = models.CharField(max_length=255, null=True, blank=True)
     icon = models.ForeignKey(DocIcon, on_delete=models.CASCADE, null=True, blank=True)
 

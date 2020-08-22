@@ -38,15 +38,12 @@ def ProductDetailView(request, slug_product, slug):
     mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
 
 
-    customer, created = Customer.objects.get_or_create(device=session_id)
-    order, created = Order.objects.get_or_create(customer=customer, complete=False)
     mods_in_cart = request.session.keys()
     context = {
     'product' : product,
     'photos': photos,
     'docs': docs,
     'mod_list' : mod_list,
-    'order':order,
     'mods_in_cart' : mods_in_cart,#not using now
     'in_cart_counter': cart_counter(request),
     }
