@@ -34,7 +34,9 @@ def ProductDetailView(request, slug_product, slug):
     session_id = request.session._get_or_create_session_key()
     product  = Product.objects.get(parent__slug=slug, slug_product=slug_product)
     photos   = ProductImage.objects.filter(page = product)
+    docs     = ProductDocs.objects.filter(page = product)
     mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
+
 
     customer, created = Customer.objects.get_or_create(device=session_id)
     order, created = Order.objects.get_or_create(customer=customer, complete=False)
@@ -42,6 +44,7 @@ def ProductDetailView(request, slug_product, slug):
     context = {
     'product' : product,
     'photos': photos,
+    'docs': docs,
     'mod_list' : mod_list,
     'order':order,
     'mods_in_cart' : mods_in_cart,#not using now
