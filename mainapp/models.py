@@ -49,10 +49,11 @@ class DocIcon(models.Model):
     icon = models.TextField(max_length=1000, null=True, blank=True, help_text='bootstrap icons in svg tags')
 
 class ProductDocs(models.Model):
-    page = models.ForeignKey(Product, on_delete=models.CASCADE)
-    file = models.FileField(upload_to='docs')
-    name = models.CharField(max_length=255, null=True, blank=True)
     icon = models.ForeignKey(DocIcon, on_delete=models.CASCADE, null=True, blank=True)
+    page = models.ForeignKey(Product, on_delete=models.CASCADE)
+    file = models.FileField()
+    name = models.CharField(max_length=255, null=True, blank=True)
+
 
     def __str__(self):
         return str(self.page.name)
