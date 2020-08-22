@@ -3,8 +3,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-JET_PROJECT = 'piek_llc_2'
-JET_TOKEN = '4aff2689-c6dd-4cea-9fd3-dcde7e3c67e0'
+JET_PROJECT = 'piek'
+JET_TOKEN = '5a35fb9a-1c71-45c8-94ec-a6330f9a0fb4'
 
 SESSION_COOKIE_AGE = 43200
 
