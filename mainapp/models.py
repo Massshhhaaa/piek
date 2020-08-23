@@ -31,7 +31,6 @@ class Product(models.Model):
     description  = HTMLField(null=True, blank=True)
     content      = HTMLField()
 
-
     class Meta:
         ordering = ['id']
 
@@ -45,28 +44,14 @@ class ProductImage(models.Model):
     def __str__(self):
         return str(self.page.name)
 
-class DocIcon(models.Model):
-    icon = models.TextField(max_length=1000, null=True, blank=True, help_text='bootstrap icons in svg tags')
-    title = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.title
-
-class ProductDocs(models.Model):
-    icon = models.ForeignKey(DocIcon, on_delete=models.CASCADE, null=True, blank=True)
-    page = models.ForeignKey(Product, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255, null=True, blank=True)
-    file = models.FileField()
-
-    def __str__(self):
-        return str(self.page.name)
-
 
 class Modification(models.Model):
     parent   = models.ForeignKey(Product, on_delete=models.CASCADE)
     title    = models.CharField(max_length=250, )
     slug_mod = models.SlugField('url', null=True, blank=True, help_text='заполняется автоматически от title')
     content  = HTMLField(null=True, blank=True)
+    quantity = models.IntegerField(default=0)
+    conventional_designation = models.CharField(max_length=250, default=0)
 
     class Meta:
         ordering = ['parent__id']
@@ -77,3 +62,47 @@ class Modification(models.Model):
 
     def __str__(self):
         return str(self.title)
+
+
+class Customer(models.Model):
+	name = models.CharField(max_length=200, null=True, blank=True)
+	email = models.CharField(max_length=200, null=True, blank=True)
+	device = models.CharField(max_length=200, null=True, blank=True)
+
+	def __str__(self):
+	       return str(self.device)
+
+
+
+class Order(models.Model):
+	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
+	date_ordered = models.DateTimeField(auto_now_add=True)
+	complete = models.BooleanField(default=False)
+	transaction_id = models.CharField(max_length=100, null=True)
+
+	def __str__(self):
+		return str(self.id)
+
+
+class OrderItem(models.Model):
+	product = models.ForeignKey(Modification, on_delete=models.SET_NULL, null=True)
+	order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
+	quantity = models.IntegerField(default=0, null=True, blank=True)
+	date_added = models.DateTimeField(auto_now_add=True)
+
+	@property
+	def get_total(self):
+		total = self.quantity
+		return total
+
+class ShippingAddress(models.Model):
+	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
+	order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
+	address = models.CharField(max_length=200, null=False)
+	city = models.CharField(max_length=200, null=False)
+	state = models.CharField(max_length=200, null=False)
+	zipcode = models.CharField(max_length=200, null=False)
+	date_added = models.DateTimeField(auto_now_add=True)
+
+	def __str__(self):
+		return self.address

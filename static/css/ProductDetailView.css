@@ -93,16 +93,3 @@ table tr:hover{
 @media (max-width: 760px) {
   .image{width: 250px;}
 }
-
-
-.doc-wrap{
-  background-color: #edf1f6;
-  border-radius: 20px;
-  text-align: center;
-  width: 30%;
-  color: #444;
-}
-
-.doc-wrap a{
-  color: black;
-}
