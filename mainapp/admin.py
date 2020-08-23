@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Group, Product, ProductImage, Modification
+from .models import Group, Product, ProductImage, Modification, ProductDocs, DocIcon
 
 
 
@@ -17,5 +17,7 @@ class ModificationAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Group)
+admin.site.register(DocIcon)
+admin.site.register(ProductDocs)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Modification, ModificationAdmin)

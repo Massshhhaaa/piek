@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect, reverse
-from django.views.generic import ListView, DetailView, View
 from django.views.decorators.http import require_POST
 from django.conf import settings
 from mainapp.models import *
@@ -9,7 +8,6 @@ from django.core.mail import EmailMessage
 
 def main_def(request):
     categories = Group.objects.only('title', 'slug', 'img')
-    print(request.session.items())
     context={'categories' : categories,
              'in_cart_counter': cart_counter(request),}
     return render(request, 'mainapp/index.html', context)
@@ -34,17 +32,14 @@ def ProductDetailView(request, slug_product, slug):
     session_id = request.session._get_or_create_session_key()
     product  = Product.objects.get(parent__slug=slug, slug_product=slug_product)
     photos   = ProductImage.objects.filter(page = product)
+    docs     = ProductDocs.objects.filter(page = product)
     mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
 
-    customer, created = Customer.objects.get_or_create(device=session_id)
-    order, created = Order.objects.get_or_create(customer=customer, complete=False)
-    mods_in_cart = request.session.keys()
     context = {
     'product' : product,
     'photos': photos,
+    'docs': docs,
     'mod_list' : mod_list,
-    'order':order,
-    'mods_in_cart' : mods_in_cart,#not using now
     'in_cart_counter': cart_counter(request),
     }
     return render(request, 'mainapp/ProductDetailView.html', context)
@@ -65,89 +60,74 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
 
 
 def cart(request):
-    id = list(request.session.keys())
-    quantity = list(request.session.items())
-    product_list = Modification.objects.filter(pk__in=id)
-    counter = 0
-    for product in product_list:
-        for i in range(len(quantity)):
-            if int(quantity[i][0]) == product.id:
-                product.quantity = int(quantity[i][1].get('quantity'))
-                product.conventional_designation = quantity[i][1].get('conventional_designation')
-                counter += int(quantity[i][1].get('quantity'))
-    context = {"product_list": product_list, "counter": counter, 'in_cart_counter': cart_counter(request),}
+    product_list = None
+    if 'piek_cart' in request.session:
+        product_list = request.session['piek_cart']
+    context = {"product_list": product_list, 'in_cart_counter': cart_counter(request),}
     return render(request, 'mainapp/cart.html', context)
 
 def remove_from_cart(request, pk):
-    # product = get_object_or_404(Modification, id=pk)
-    # session_id = request.session._get_or_create_session_key()
-    # customer = Customer.objects.get(device=session_id)
-    #
-    # order = Order.objects.get(customer=customer, complete=False)
-    # orderItem = OrderItem.objects.get(order=order, product=product)
-    # orderItem.delete()
-    del request.session[str(pk)]
-    request.session.modified = True
+    if 'piek_cart' in request.session:
+        for i in range(0, len(request.session['piek_cart'])):
+            if pk == int(request.session['piek_cart'][i].get('id')):
+                request.session['piek_cart'].pop(i)
+                request.session.modified = True
+                break
     return redirect('cart')
 
 @require_POST
 def update_quantity(request, pk):
-    quantity = request.session[str(pk)].get('quantity')
-    print(quantity)
-    quantity = int(quantity)
-    if 'plus' in request.POST:
-        print("урааааа")
-        request.session[str(pk)].update({'quantity': quantity + 1 })
-    if 'minus' in request.POST:
-        request.session[str(pk)].update({'quantity': quantity - 1 })
-    if 'integer' in request.POST:
-        request.session[str(pk)].update({'quantity': request.POST['integer']})
-    request.session.modified = True
+    if 'piek_cart' in request.session:
+        for i in range(0, len(request.session['piek_cart'])):
+            if pk == int(request.session['piek_cart'][i].get('id')):
+                quantity = request.session['piek_cart'][i].get('quantity')
+                quantity = int(quantity)
+                if 'plus' in request.POST:
+                    request.session['piek_cart'][i].update({'quantity': quantity + 1 })
+                if 'minus' in request.POST:
+                    request.session['piek_cart'][i].update({'quantity': quantity - 1 })
+                if 'integer' in request.POST:
+                    request.session['piek_cart'][i].update({'quantity': request.POST['integer']})
+                request.session.modified = True
+                break
     return redirect('cart')
 
 @require_POST
 def update_conventional_designation(request, pk):
-    if 'conventional_designation' in request.POST:
-        request.session[str(pk)].update({'conventional_designation': request.POST['conventional_designation']})
-        request.session.modified = True
+    if 'piek_cart' in request.session:
+        for i in range(0, len(request.session['piek_cart'])):
+            if pk == int(request.session['piek_cart'][i].get('id')):
+                context = {'conventional_designation': request.POST['conventional_designation']}
+                request.session['piek_cart'][i].update(context)
+                request.session.modified = True
+                break
     return redirect('cart')
 
 @require_POST
 def product(request, pk):
-    # cart = Cart(request)
-    # product = get_object_or_404(Modification, id=pk)
-    # cart.add(pk=product, quantity=request.POST['quantity'])
-
-    if pk not in request.session:
-        request.session[str(pk)]= {'quantity': request.POST['quantity']}
-    if pk not in request.session:
-        request.session[str(pk)] = {'quantity': request.POST['quantity']}
-        # product = get_object_or_404(Modification, id=pk)
-        # customer, created = Customer.objects.get_or_create(device=session_id)
-        # order, created = Order.objects.get_or_create(customer=customer, complete=False)
-        # orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
-        # orderItem.quantity=request.POST['quantity']
-        # orderItem.save()
-
+    product_title = Modification.objects.only('title').get(pk__in=str(pk))
+    if 'piek_cart' not in request.session:
+        request.session['piek_cart']= []
+    if pk not in request.session['piek_cart']:
+        context={'title': str(product_title),
+                 'quantity': request.POST['quantity'],
+                 'id': pk,
+                }
+        request.session['piek_cart'].append(context)
+        request.session.modified = True
     next = request.POST.get('next', '/')
     return HttpResponseRedirect(next)
 
 def checkout(request):
-    id = list(request.session.keys())
-    quantity = list(request.session.items())
-    product_list = Modification.objects.filter(pk__in=id)
-    counter = 0
-    for product in product_list:
-        for i in range(len(quantity)):
-            if int(quantity[i][0]) == product.id:
-                product.quantity = int(quantity[i][1].get('quantity'))
-                product.conventional_designation = quantity[i][1].get('conventional_designation')
-                counter += int(quantity[i][1].get('quantity'))
-    context = {"product_list": product_list, "counter": counter}
+    product_list = None
+    if 'piek_cart' in request.session:
+        product_list = request.session['piek_cart']
+    context = {"product_list": product_list, "in_cart_counter": cart_counter(request)}
     return render(request, 'mainapp/checkout.html', context)
 
 @require_POST
 def sent_mail(request):
+
     id = list(request.session.keys())
     quantity = list(request.session.items())
     product_list = Modification.objects.filter(pk__in=id)
@@ -168,16 +148,23 @@ def sent_mail(request):
                 product.quantity = int(quantity[i][1].get('quantity'))
                 product.conventional_designation = quantity[i][1].get('conventional_designation')
 
+    product_list = request.session['piek_cart']
+    subject = " ООО ПЭК | Заказ "
+    html_template = 'mainapp/html_message.html'
+    from_email = "kondensat01@gmail.com"
+    to_email = request.POST['email']
+
+
     html_message = render_to_string(html_template, { 'product_list': product_list,'name': name, })
 
     message = EmailMessage(subject, html_message, from_email, [to_email])
-    message.content_subtype = 'html' # this is required because there is no plain text email message
+    message.content_subtype = 'html'
     message.send()
 
 
 def cart_counter(request):
-    quantity = list(request.session.items())
-    counter=0
-    for i in range(len(quantity)):
-        counter += int(quantity[i][1].get('quantity'))
+    counter = 0
+    if 'piek_cart' in request.session:
+        for i in range(0, len(request.session['piek_cart'])):
+            counter += int(request.session['piek_cart'][i].get('quantity'))
     return counter

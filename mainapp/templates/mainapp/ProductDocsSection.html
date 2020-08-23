@@ -1,0 +1,9 @@
+<div class="d-flex flex-wrap mb-5 justify-content-center">
+  {% for doc in docs %}
+  <div class="doc-wrap m-3 pt-4 p-2">
+      <div class="d-flex justify-content-center my-3">{{ doc.icon.icon |safe }}</div>
+      <a href="{{doc.file.url}}">{{doc.name}}</a>
+
+  </div>
+  {% endfor %}
+</div>

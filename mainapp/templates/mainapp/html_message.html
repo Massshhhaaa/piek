@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="width:100%;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
  <head> 
@@ -242,3 +243,46 @@ a[x-apple-data-detectors] {
   </div>  
  </body>
 </html>
+
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{% include 'mainapp/head-property.html' %}
+	<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+	<title>Корзина - ООО "ПЭК"</title>
+</head>
+<body>
+
+	{% include 'mainapp/header.html' %}
+
+<main>
+
+<div class="container">
+			<div class="d-flex justify-content-center my-md-5 my-3 p-3 p-md-5 check-list">
+
+					<div class="d-flex check-list-inner">
+
+						<div class="flex-column check mb-4">
+							{% for item in product_list %}
+							<div class="d-flex flex-row">
+
+								<div class="pt-4"><span class="pr-3">{{forloop.counter}}.</span> {% if item.conventional_designation != '' and item.conventional_designation != None %}{{ item.conventional_designation}} {% else %} {{ item.title }} {% endif %}</div>
+
+								<div class="d-flex ml-auto">
+								<div class="pt-4 pl-4 "> | {{ item.quantity }} шт.</div>
+									</div>
+							</div>
+							{% endfor %}
+							</div>
+					</div>
+			</div>
+
+
+
+	</div>
+</main>
+{% include 'mainapp/footer.html' %}
+</body>
+</html>
+
