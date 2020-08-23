@@ -100,6 +100,7 @@ table tr:hover{
   border-radius: 20px;
   text-align: center;
   width: 30%;
+  color: #444;
 }
 
 .doc-wrap a{
