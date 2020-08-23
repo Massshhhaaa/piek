@@ -152,11 +152,12 @@ def sent_mail(request):
     quantity = list(request.session.items())
     product_list = Modification.objects.filter(pk__in=id)
     counter = cart_counter(request)
+    name = request.POST['firstname']
 
     subject = " ООО ПЭК | Заказ "
     html_template = 'mainapp/html_message.html'
     from_email = "kondensat01@gmail.com"
-    to_email = "kondensat228@gmail.com"
+    to_email = "loseev5@gmail.com"
  # я тебя прекрасно понимаю, что то что находится ниже вызывает некоторые вопросы.
  # я использую поля бд для временного хранения данных, но я не сохраняю их в бд. да это тупо. но так код чище
  # я беру их из сессии сопоставляю по id и пихаю в эти поля quantity и conventional_designation и теперь они становятся частью коллекции
@@ -167,7 +168,7 @@ def sent_mail(request):
                 product.quantity = int(quantity[i][1].get('quantity'))
                 product.conventional_designation = quantity[i][1].get('conventional_designation')
 
-    html_message = render_to_string(html_template, { 'product_list': product_list, })
+    html_message = render_to_string(html_template, { 'product_list': product_list,'name': name, })
 
     message = EmailMessage(subject, html_message, from_email, [to_email])
     message.content_subtype = 'html' # this is required because there is no plain text email message
