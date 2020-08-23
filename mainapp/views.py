@@ -132,8 +132,9 @@ def sent_mail(request):
     html_template = 'mainapp/html_message.html'
     from_email = "kondensat01@gmail.com"
     to_email = request.POST['email']
+    name = request.POST['firstname']
 
-    html_message = render_to_string(html_template, { 'product_list': product_list, })
+    html_message = render_to_string(html_template, { 'product_list': product_list, 'name' : name, })
 
     message = EmailMessage(subject, html_message, from_email, [to_email])
     message.content_subtype = 'html'
