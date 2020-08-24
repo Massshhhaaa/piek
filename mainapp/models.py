@@ -31,7 +31,6 @@ class Product(models.Model):
     description  = HTMLField(null=True, blank=True)
     content      = HTMLField()
 
-
     class Meta:
         ordering = ['id']
 
@@ -45,18 +44,14 @@ class ProductImage(models.Model):
     def __str__(self):
         return str(self.page.name)
 
-class DocIcon(models.Model):
-    icon = models.TextField(max_length=1000, null=True, blank=True, help_text='bootstrap icons in svg tags')
-
 class ProductDocs(models.Model):
-    icon = models.ForeignKey(DocIcon, on_delete=models.CASCADE, null=True, blank=True)
     page = models.ForeignKey(Product, on_delete=models.CASCADE)
-    file = models.FileField()
     name = models.CharField(max_length=255, null=True, blank=True)
-
+    file = models.FileField()
 
     def __str__(self):
         return str(self.page.name)
+
 
 
 class Modification(models.Model):
@@ -64,8 +59,6 @@ class Modification(models.Model):
     title    = models.CharField(max_length=250, )
     slug_mod = models.SlugField('url', null=True, blank=True, help_text='заполняется автоматически от title')
     content  = HTMLField(null=True, blank=True)
-    quantity = models.IntegerField(default=0)
-    conventional_designation = models.CharField(max_length=250, default=0)
 
     class Meta:
         ordering = ['parent__id']

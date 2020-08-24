@@ -149,7 +149,7 @@ width: 30%;
 
 
 /* --footer */
-@media (max-width: 760px), (max-height: 876px){
+@media (max-width: 760px){
   main {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
