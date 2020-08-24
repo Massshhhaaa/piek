@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 JET_PROJECT = 'piek'
-JET_TOKEN = '7f3d5c10-0536-4765-a157-98ba0b3da775'
+JET_TOKEN = 'c6cafa38-c9cb-44c1-90c1-37e9ab0a96aa'
 
 SESSION_COOKIE_AGE = 43200
 
