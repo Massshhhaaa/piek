@@ -10,36 +10,6 @@ SESSION_COOKIE_AGE = 43200
 
 ALLOWED_HOSTS = ['45.10.110.71', 'localhost', '127.0.0.1']
 
-
-TINYMCE_DEFAULT_CONFIG = {
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 20,
-    'selector': 'textarea',
-    'theme': 'modern',
-    'plugins': '''
-            textcolor paste save link image media preview codesample contextmenu
-            table code lists fullscreen  insertdatetime  nonbreaking
-            contextmenu directionality searchreplace wordcount visualblocks
-            visualchars code fullscreen autolink lists  charmap print  hr
-            anchor pagebreak
-            ''',
-    'toolbar1': '''
-            fullscreen preview bold italic underline | styleselect | fontsizeselect  | forecolor backcolor | alignleft alignright |
-            aligncenter alignjustify | indent outdent | bullist numlist table |
-            | link image media | codesample | paste pastetext |
-            ''',
-    'toolbar2': '''
-            visualblocks visualchars |
-            charmap hr pagebreak nonbreaking anchor |  code |
-            ''',
-    'contextmenu': 'formats | link image',
-    'menubar': True,
-    'content_css' : '/static/css/SubgroupDetailView.css',
-    'statusbar': True,
-    'min_height': '300',
-}
-
-
 INSTALLED_APPS = [
     'jet_django',
     'jazzmin',
@@ -242,6 +212,34 @@ JAZZMIN_SETTINGS = {
     "changeform_format": "single",
     # override change forms on a per modeladmin basis
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs",},
+}
+
+TINYMCE_DEFAULT_CONFIG = {
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': '''
+            textcolor paste save link image media preview codesample contextmenu
+            table code lists fullscreen  insertdatetime  nonbreaking
+            contextmenu directionality searchreplace wordcount visualblocks
+            visualchars code fullscreen autolink lists  charmap print  hr
+            anchor pagebreak
+            ''',
+    'toolbar1': '''
+            fullscreen preview bold italic underline | styleselect | fontsizeselect  | forecolor backcolor | alignleft alignright |
+            aligncenter alignjustify | indent outdent | bullist numlist table |
+            | link image media | codesample | paste pastetext |
+            ''',
+    'toolbar2': '''
+            visualblocks visualchars |
+            charmap hr pagebreak nonbreaking anchor |  code |
+            ''',
+    'contextmenu': 'formats | link image',
+    'menubar': True,
+    'content_css' : '/static/css/SubgroupDetailView.css',
+    'statusbar': True,
+    'min_height': '300',
 }
 
 
