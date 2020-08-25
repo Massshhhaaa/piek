@@ -42,7 +42,7 @@ TINYMCE_DEFAULT_CONFIG = {
 
 INSTALLED_APPS = [
     'jet_django',
-   # 'jazzmin',
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
