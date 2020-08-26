@@ -111,20 +111,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 JAZZMIN_SETTINGS = {
     # title of the window
-    'site_title': 'Polls Admin',
+    'site_title': 'Piek Admin',
 
     # Title on the brand, and the login screen (19 chars max)
     'site_header': 'Piek',
 
 
     # Welcome text on the login screen
-    'welcome_sign': 'Welcome to polls',
-
-    # Copyright on the footer
-    'copyright': 'Acme Ltd',
+    'welcome_sign': 'Welcome to piek',
 
     # The model admin to search from the search bar, search bar omitted if excluded
-    'search_model': 'auth.User',
 
     # Field name on user model that contains avatar image
     'user_avatar': None,
@@ -148,7 +144,6 @@ JAZZMIN_SETTINGS = {
 
     # Additional links to include in the user menu on the top right ('app' url type is not allowed)
     'usermenu_links': [
-        {'name': 'Support', 'url': 'https://github.com/farridav/django-jazzmin/issues', 'new_window': True},
         {'model': 'auth.user'}
     ],
 

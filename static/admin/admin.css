@@ -59,9 +59,7 @@ background-color: #fff !important;
 border: none !important;
 }
 .table-striped th, .table-striped td {border: none !important;}
-.form-control-navbar, .btn-navbar{
- display: none !important;
-}
+
 .pagination .page-link{
   background-color: #999 !important;
   border-color: #000;
@@ -93,51 +91,47 @@ border: none !important;
 }
 
 .dynamic-modification_set, .dynamic-productimage_set{
-  background-color: #fcfcfc !important;
+  background-color: #f6f6f6 !important;
   color: #000 !important;
 }
 .select2-dropdown{
-  background-color: #999 !important;
-  color: #fff !important;
+  background-color: #f6f6f6 !important;
+  color: #000 !important;
   border: none !important;
 }
-.select2-dropdown li:hover{
-    background-color: #555 !important;
-
-}
 .select2-container--open .select2-dropdown--below{
-  border-bottom-left-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
   font-size: 0.8em !important;
   padding: 1em !important;
 }
 
 .select2-selection.select2-selection--single{
-    background-color: #999 !important;
+    background-color: #f6f6f6 !important;
     border: none !important;
 }
 .select2-search__field{
-  background-color: #333 !important;
+  background-color: #999 !important;
   border-radius: 30px !important;
   border: none !important;
   margin: 1em 0 !important;
   padding: 10px !important;
-  color: #fff !important;
+  color: #000 !important;
 }
 .select2-selection__rendered{
-    color: #fff !important;
+    color: #000 !important;
 }
 .select2-container--default .select2-results>.select2-results__options{
     max-height: 100% !important;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #555 !important;
-        color: white !important;
+    background-color: #999 !important;
+        color: black !important;
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
-    background-color: #555 !important;
-    color: white !important;
+    background-color: #999 !important;
+    color: black !important;
 }
 .form-group.field-parent > .row{
   width: 100% !important;
@@ -164,14 +158,14 @@ input[type="text"], select, .mce-tinymce.mce-container.mce-panel{
   color: #999 !important;
 }
 .card-title{
-  display: none;
+
 }
 .btn.btn-primary, .btn.btn-success{
   background-color: #fefefe !important;
   border: none !important;
   color: #777 !important;
 }
-.breadcrumb-item a{
+.breadcrumb-item a, .action-counter{
   color: #777 !important;
 }
 thead th a{
@@ -182,4 +176,5 @@ thead th a{
 }
 .card-header{
   border: none !important;
+  color: #777 !important;
 }
