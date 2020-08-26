@@ -1,0 +1,185 @@
+.content-wrapper{
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.bg-info{background-color: #fff !important; border-radius: 15px !important; font-weight: 400 !important; padding: 5px 10px !important; }
+.timeline-header{
+  color: #999 !important;
+}
+
+
+body{
+  background-color: #fff !important;
+}
+footer{
+  display: none;
+  background-color: #fff !important;
+}
+.navbar{
+  background-color: #fff !important;
+  border: 0;
+
+}
+.nav-link{color: #000 !important;}
+.text-dark{
+  color: #000 !important;
+}
+
+.card{
+  border-radius: 15px !important;
+  background-color: #fff !important;
+  border-top: none !important
+}
+.card-body tbody  a {
+  color: #555 !important;
+  font-weight: 600 !important;
+}
+table a{
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+table td, table th {
+  border-top: 1px solid #999 !important;
+}
+
+.dashboard tbody tr:first-child td {
+    border-top: none !important;
+}
+.timeline-item{
+  background-color: #fff !important;
+  border-radius: 15px !important;
+}
+
+.timeline-header a{color: #000 !important; font-weight: 300 !important;}
+thead th{
+border-top: none !important;
+}
+.form-control{
+background-color: #fff !important;
+border: none !important;
+}
+.table-striped th, .table-striped td {border: none !important;}
+.form-control-navbar, .btn-navbar{
+ display: none !important;
+}
+.pagination .page-link{
+  background-color: #999 !important;
+  border-color: #000;
+  padding: 10px;
+}
+
+.btn-default{
+  background-color: #000 !important;
+  border-radius: 15px !important;
+  color: #000 !important;
+  padding: 4px 10px !important;
+}
+.table-hover p {
+  color: #000 !important;
+}
+.help-block{
+  font-size: 1em !important;
+}
+.addlink,
+.changelink{display: none !important;}
+.nav-link.active{
+  background-color: #fff !important;
+  color: #000 !important;
+  border: none !important;
+}
+ .nav-link:hover{border: none !important;}
+.tabular.inline-related.last-related td {
+  border: none !important;
+}
+
+.dynamic-modification_set, .dynamic-productimage_set{
+  background-color: #fcfcfc !important;
+  color: #000 !important;
+}
+.select2-dropdown{
+  background-color: #999 !important;
+  color: #fff !important;
+  border: none !important;
+}
+.select2-dropdown li:hover{
+    background-color: #555 !important;
+
+}
+.select2-container--open .select2-dropdown--below{
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  font-size: 0.8em !important;
+  padding: 1em !important;
+}
+
+.select2-selection.select2-selection--single{
+    background-color: #999 !important;
+    border: none !important;
+}
+.select2-search__field{
+  background-color: #333 !important;
+  border-radius: 30px !important;
+  border: none !important;
+  margin: 1em 0 !important;
+  padding: 10px !important;
+  color: #fff !important;
+}
+.select2-selection__rendered{
+    color: #fff !important;
+}
+.select2-container--default .select2-results>.select2-results__options{
+    max-height: 100% !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #555 !important;
+        color: white !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #555 !important;
+    color: white !important;
+}
+.form-group.field-parent > .row{
+  width: 100% !important;
+}
+
+.card.card-primary.card-outline td{
+padding: 1em !important;
+}
+form > .form-group:first-of-type{
+  width: 300px !important;
+}
+
+input[type="text"], select, .mce-tinymce.mce-container.mce-panel{
+  border: none !important;
+  border-radius: 15px !important;
+}
+.elevation-3{
+  box-shadow: none !important;
+}
+.btn.btn-success.form-control{
+  color: #000 !important;
+}
+.btn.btn-outline-info.form-control{
+  color: #999 !important;
+}
+.card-title{
+  display: none;
+}
+.btn.btn-primary, .btn.btn-success{
+  background-color: #fefefe !important;
+  border: none !important;
+  color: #777 !important;
+}
+.breadcrumb-item a{
+  color: #777 !important;
+}
+thead th a{
+  color: #999 !important;
+}
+.btn.btn-danger.form-control{
+  color: #777 !important;
+}
+.card-header{
+  border: none !important;
+}
