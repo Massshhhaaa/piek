@@ -138,6 +138,7 @@ JAZZMIN_SETTINGS = {
 
         # Url that gets reversed (Permissions can be added)
         {'name': 'Home',  'url': 'admin:index', 'permissions': ['auth.view_user']},
+        {'name': 'Piek',  'url': 'http://piek.ru'},
 
     ],
 
@@ -195,7 +196,7 @@ JAZZMIN_SETTINGS = {
     # UI Tweaks #
     #############
     # Relative paths to custom CSS/JS scripts (must be present in static files)
-    "custom_css": None,
+    "custom_css": '../static/admin/admin.css',
     "custom_js": None,
     # Whether to show the UI customizer on the sidebar
     "show_ui_builder": False,
@@ -209,7 +210,7 @@ JAZZMIN_SETTINGS = {
     # - vertical_tabs
     # - collapsible
     # - carousel
-    "changeform_format": "single",
+
     # override change forms on a per modeladmin basis
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs",},
 }
