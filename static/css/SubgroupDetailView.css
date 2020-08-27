@@ -44,6 +44,25 @@ table tr:hover{
   background-color: #eee;
 }
 
+#MOD td{border: none !important; margin: 0; padding: 8px !important;}
+#MOD tr{
+  border-bottom: 1px solid #e1dedc;
+}
+#MOD tr:hover{
+  background-color: #f4f3f2;
+}
+#MOD{
+  width: 100% !important;
+  height: auto !important;
+  border-bottom: 1px solid #e1dedc;
+}
+#MOD tr:nth-child(n+2) td:nth-child(1){
+  border: none;
+  padding: 10px !important;
+}
+#MOD tr:nth-child(1) td:nth-child(1){
+  width: 30% !important;
+}
 
 .wrapper{
  position: relative;

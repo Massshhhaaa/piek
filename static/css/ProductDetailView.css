@@ -68,31 +68,6 @@ background-color: #fff;
    overflow-x: auto;
 }
 
-table{
-  width: 100% !important;
-  border: hidden;
-  height: auto !important;
-  border-bottom: 1px solid #e1dedc;
-
-}
-table td{border: none !important; margin: 0; padding: 8px !important;}
-table tr{
-  border-bottom: 1px solid #e1dedc;
-}
-table tr:hover{
-  background-color: #f4f3f2;
-}
-#MOD{
-  width: 100% !important;
-}
-#MOD tr:nth-child(n+2) td:nth-child(1){
-  border: none;
-  padding: 10px !important;
-}
-#MOD tr:nth-child(1) td:nth-child(1){
-  width: 30% !important;
-}
-
 @media (max-width: 760px) {
   .image{width: 250px;}
 }
@@ -107,4 +82,24 @@ table tr:hover{
 
 .doc-wrap a{
   color: black;
+}
+
+#MOD td{border: none !important; margin: 0; padding: 8px !important;}
+#MOD tr{
+  border-bottom: 1px solid #e1dedc;
+}
+#MOD tr:hover{
+  background-color: #f4f3f2;
+}
+#MOD{
+  width: 100% !important;
+  height: auto !important;
+  border-bottom: 1px solid #e1dedc;
+}
+#MOD tr:nth-child(n+2) td:nth-child(1){
+  border: none;
+  padding: 10px !important;
+}
+#MOD tr:nth-child(1) td:nth-child(1){
+  width: 30% !important;
 }
