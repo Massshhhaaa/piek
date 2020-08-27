@@ -194,19 +194,6 @@ JAZZMIN_SETTINGS = {
     "custom_css": '../static/admin/admin.css',
     "custom_js": None,
     # Whether to show the UI customizer on the sidebar
-    "show_ui_builder": False,
-
-    ###############
-    # Change view #
-    ###############
-    # Render out the change view as a single form, or in tabs, current options are
-    # - single
-    # - horizontal_tabs (default)
-    # - vertical_tabs
-    # - collapsible
-    # - carousel
-
-    # override change forms on a per modeladmin basis
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs",},
 }
 
@@ -223,13 +210,13 @@ TINYMCE_DEFAULT_CONFIG = {
             anchor pagebreak
             ''',
     'toolbar1': '''
-            fullscreen preview bold italic underline | styleselect | fontsizeselect  | forecolor backcolor | alignleft alignright |
+            fullscreen bold italic underline | styleselect | fontsizeselect  | forecolor backcolor | alignleft alignright |
             aligncenter alignjustify | indent outdent | bullist numlist table |
-            | link image media | codesample | paste pastetext |
+            | link image media | paste pastetext |
             ''',
     'toolbar2': '''
-            visualblocks visualchars |
-            charmap hr pagebreak nonbreaking anchor |  code |
+              code |visualblocks visualchars |
+            charmap hr pagebreak nonbreaking anchor |
             ''',
     'contextmenu': 'formats | link image',
     'menubar': True,
