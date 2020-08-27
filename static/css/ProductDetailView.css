@@ -83,7 +83,7 @@ table tr:hover{
   background-color: #f4f3f2;
 }
 #MOD{
-  width: 100%;
+  width: 100% !important;
 }
 #MOD tr:nth-child(n+2) td:nth-child(1){
   border: none;
