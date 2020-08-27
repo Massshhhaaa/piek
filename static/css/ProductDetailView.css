@@ -84,6 +84,23 @@ background-color: #fff;
   color: black;
 }
 
+table{
+  max-width: 100%;
+  border: hidden;
+  border-bottom: 1px solid #e1dedc;
+
+}
+table td{border-right: hidden;}
+
+table tr{
+  border-bottom: 1px solid #e1dedc;
+  transition-duration: .2s;
+}
+table tr:hover{
+  background-color: #eee;
+}
+
+
 #MOD td{border: none !important; margin: 0; padding: 8px !important;}
 #MOD tr{
   border-bottom: 1px solid #e1dedc;
