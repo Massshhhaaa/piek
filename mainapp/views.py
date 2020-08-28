@@ -139,6 +139,9 @@ def sent_mail(request):
     message = EmailMessage(subject, html_message, from_email, [to_email])
     message.content_subtype = 'html'
     message.send()
+    request.session['piek_cart'].clear()
+    request.session.modified = True
+    return render(request, 'mainapp/minor/sent_mail.html')
 
 
 def cart_counter(request):
