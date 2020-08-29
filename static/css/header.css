@@ -19,7 +19,7 @@
 /* ----header */
 .pre-header{
   margin-top: 25px;
-  background-color: #78061f;
+  background-color: rgb(0,0,0, 0.2);
   z-index: 4 !important;
   color: #fff;
 }
