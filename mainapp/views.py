@@ -105,7 +105,9 @@ def update_conventional_designation(request, pk):
 
 @require_POST
 def product(request, pk):
-    product_title = Modification.objects.only('title').get(pk__in=str(pk))
+    product_title = Modification.objects.only('title').get(id=pk)
+    print(product_title)
+    print(pk)
     if 'piek_cart' not in request.session:
         request.session['piek_cart']= []
     if pk not in request.session['piek_cart']:
