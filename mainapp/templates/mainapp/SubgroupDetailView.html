@@ -5,7 +5,11 @@
 	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
-
+	<style media="screen">
+		.navbar-nav{
+			z-index: 10 !important;
+		}
+	</style>
 </head>
 <body>
 	<!-- WARNING: Условия -->
@@ -77,17 +81,17 @@ main{margin-bottom: -40px !important;}
 
 				<section class="container m-auto pt-5">
 					{% for p in product_list %}
-					<div class="d-flex wrapper py-md-5 my-3 m-md-4">
-						<a href="info/{{ p.slug_product }}">
+					<div class="d-flex wrapper py-1 py-md-3 ">
+						<a href="info/{{ p.slug_product }}" class="w-100">
 
 							<div class="d-flex">
 
-								<div class="flex-column m-auto pb-4 py-2 py-md-0">
+								<div class="flex-column justify-content-start py-3 py-md0">
 									<img src="{{ p.img.url }}" alt="">
 								</div>
 
-								<div class="flex-column px-md-5">
-									<h1 class="py-md-3 py-5 px-3">{{ p.href_title }}</h1>
+								<div class="flex-column justify-content-center m-auto px-md-5">
+									<h1 class="py-md-3 py-5">{{ p.href_title }}</h1>
 									<div class="d-none d-md-flex">{{ p.description |safe }}</div>
 								</div>
 							</div>
