@@ -73,23 +73,21 @@ main a:hover, a:focus{
 }
 
 .title-text{
-  font-family: 'Raleway';
-  font-weight: 300;
+  font-family: 'SF UI Display';
+  font-weight: 400;
   color: #fff;
-  font-size: 3.2em;
-  letter-spacing: 1px;
-  text-align: left;
+  font-size: 2.5em;
+  letter-spacing: 0.4px;
+  text-align: center;
   text-transform: uppercase;
-
 
 }
 .text{
   margin-bottom: 0px!important;
   font-family: 'Raleway';
-  font-weight: 300;
-  color: #FFD700;
+  font-weight: 500;
+  color: #fff;
   font-size: 1em;
-  text-align: left;
   letter-spacing: 1px;
 
 
