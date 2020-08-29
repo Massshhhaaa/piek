@@ -5,11 +5,6 @@
 	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
-	<style media="screen">
-		.navbar-nav{
-			z-index: 10 !important;
-		}
-	</style>
 </head>
 <body>
 	<!-- WARNING: Условия -->
@@ -21,7 +16,7 @@
 		font-family: 'SF UI Display';
 		font-weight: normal;
 		font-size: 3em;">
-		<h1 class="container iphone-text-small d-flex text-center align-middle text-light">{{subgroup_info.name}}</h1>
+		<h1 class="container iphone-text-small  text-center align-middle text-light p-3">{{subgroup_info.name}}</h1>
 	</div>
 </div>
 <style media="screen">
@@ -86,11 +81,11 @@ main{margin-bottom: -40px !important;}
 
 							<div class="d-flex">
 
-								<div class="flex-column justify-content-start py-3 py-md0">
+								<div class="flex-column justify-content-start py-3 py-md-0">
 									<img src="{{ p.img.url }}" alt="">
 								</div>
 
-								<div class="flex-column justify-content-center my-auto px-md-5">
+								<div class="flex-column justify-content-center w-100 px-md-5">
 									<h1 class="py-md-3 py-5">{{ p.href_title }}</h1>
 									<div class="d-none d-md-flex">{{ p.description |safe }}</div>
 								</div>
