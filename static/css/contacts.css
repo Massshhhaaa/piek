@@ -1,4 +1,3 @@
-
   .contacts-title h1{
   color: #414141;
   text-align: center;
@@ -7,20 +6,14 @@
   letter-spacing: 1px;
 }
 .office-title{
-
-  font-weight: 400;
   font-size: 1.8em;
   color: #4e0000;
 }
-.adress{
-    font-family: sf;
-    margin-left: 10em;
-    font-size: 1em;
-    color: #555;
-}
-.email-block h5{
-  font-size: 1.1em;
-
+.adress, .adress p{
+  font-family: "SF UI Text" !important;
+  font-weight: normal;
+  font-size: 1em;
+  color: #555;
 }
 
 @media (max-width: 760px){
@@ -30,4 +23,18 @@
 .tel-email b{
  font-family: "SF UI Text";
  font-weight: 600;
+ color: #444;
+}
+ h5{  font-size: 1.1em !important;}
+
+@media (min-width: 768px) {
+  .emails{
+    width: 300px !important;
+  }
+}
+@media (min-width: 992px) {
+  .emails{
+    width: 500px !important;
+
+  }
 }
