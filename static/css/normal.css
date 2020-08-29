@@ -58,7 +58,7 @@ main a:hover, a:focus{
   position: relative;
   z-index: 1;
   background-size: auto;
-  height: 500px;
+  height: 450px;
   width: 100%;
   -webkit-background-size: cover;
   background-size: cover;
@@ -77,21 +77,21 @@ main a:hover, a:focus{
 }
 
 .title-text{
-  font-family: 'SF UI Display';
+  font-family: 'Raleway';
   font-weight: 600;
   color: #f0f8ff;
-  font-size: 2.5em;
-  letter-spacing: 0.4px;
-  text-align: center;
+  font-size: 3.5em;
+  letter-spacing: 1px;
+  text-align: left;
   text-transform: uppercase;
-
 }
 .text{
   margin-bottom: 0px!important;
   font-family: 'Raleway';
   font-weight: 500;
   color: #fff;
-  font-size: 1em;
+  font-size: 1.2em;
+	text-align: left;
   letter-spacing: 1px;
 
 
