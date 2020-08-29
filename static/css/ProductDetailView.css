@@ -1,3 +1,10 @@
+:root {
+  --mod_table_bg_color: #f9f9f9;
+  --mod_table_bg_color_hover: #f4f3f2;
+  --height_of_row_mod_table: 8px !important;
+  --doc_wrab_bg_color: #edf1f6;
+}
+
 html{
   overflow-x: hidden;
 }
@@ -65,7 +72,7 @@ background-color: #fff;
 
 
 .mod_table_bg{
-  background-color: #f9f9f9;
+  background-color: var(--mod_table_bg_color);
    border-radius: 15px;
    overflow-x: auto;
    -webkit-box-shadow: 0px 0px 3px 3px rgba(249,249,249,1);
@@ -79,7 +86,7 @@ background-color: #fff;
 
 
 .doc-wrap{
-  background-color: #edf1f6;
+  background-color: var(--doc_wrab_bg_color);
   border-radius: 10px;
   text-align: center;
   width: 30%;
@@ -105,22 +112,27 @@ table tr:hover{
   background-color: #eee;
 }
 
-#MOD td{border: none !important; margin: 0; padding: 8px !important;}
-#MOD tr{
-  border-bottom: 1px solid #e1dedc;
-}
-#MOD tr:hover{
-  background-color: #f4f3f2;
-}
+#MOD td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table);}
+#MOD tr{border-bottom: 1px solid #e1dedc;}
+#MOD tr:hover{ background-color: var(--mod_table_bg_color_hover);}
 #MOD{
   width: 100% !important;
   height: auto !important;
-  border-bottom: 1px solid #e1dedc;
+  border: none !important;
 }
 #MOD tr:nth-child(n+2) td:nth-child(1){
   border: none;
   padding: 10px !important;
 }
 #MOD tr:nth-child(1) td:nth-child(1){
-  width: 30% !important;
+  width:30% !important;
+}
+form:nth-last-of-type(1) .btn{
+  border: none !important;
+}
+#MOD tr:nth-last-of-type(1){
+  border: none !important;
+}
+#MOD tr:nth-of-type(1){
+  background-color: var(--mod_table_bg_color);
 }

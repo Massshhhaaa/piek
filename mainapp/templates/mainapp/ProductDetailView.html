@@ -114,6 +114,17 @@ for (let j = 0; j < arr.length; j++) {
 }
 </script>
 <script>
+let first_row_height = $('#MOD > tbody > tr:nth-child(1)').outerHeight();
+let second_row_height = $('#MOD > tbody > tr:nth-child(2)').outerHeight();
+{% for mod in mod_list %}
+var row_height = $('#MOD > tbody > tr:nth-child('+ ({{ forloop.counter }} + 1) +')').outerHeight();
+$('form:nth-of-type('+ {{ forloop.counter }} +') .btn').attr('id', 'btn_'+ {{forloop.counter}});
+document.querySelector('#btn_'+ {{forloop.counter }} +'').style['height'] = row_height + 'px';
+{% endfor %}
+document.querySelector('#cart_btn').style['margin-top'] = first_row_height + 1 + 'px';
+document.querySelector('#cart_btn').style['opacity'] = 1;
+</script>
+<script>
 	document.addEventListener("DOMContentLoaded", function(event) {
 		var scrollpos = localStorage.getItem('scrollpos');
 		if (scrollpos) window.scrollTo(0, scrollpos);
