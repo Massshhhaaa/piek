@@ -6,12 +6,25 @@
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
 </head>
+<style media="screen">
+:root{
+	--navbar_bg_color: #fff;
+	--nav_link_color: #000;
+	}
+</style>
+</style>
 <body>
 	<!-- WARNING: Условия -->
 	{% if subgroup_info.pic_of_hat %}
+	<style media="screen">
+	:root{
+		--navbar_bg_color: inherit;
+		--nav_link_color: #000;
+		}
+	</style>
 	<div class="banner" style="background-image: url({{ subgroup_info.pic_of_hat.url }});">
 
-		{% include 'mainapp/header-main-page.html' %}
+		{% include 'mainapp/header.html' %}
 		<div class="container h-75" style="
 		font-family: 'SF UI Display';
 		font-weight: normal;
