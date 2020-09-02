@@ -142,6 +142,8 @@ width: 30%;
   text-align: center;
   color: #292929;
   font-size: 1.1em;
+	box-sizing: border-box;
+
 }
 .item-name:hover{
   text-decoration: none;
@@ -158,7 +160,6 @@ width: 30%;
     position: relative;
     margin-bottom: -30px !important;
   }
-  .title-text{text-align: center;}
   .center-md{font-size: 1em; text-align: center;}
   .container{padding: 0;}
 

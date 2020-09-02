@@ -5,45 +5,41 @@
 	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
 </head>
-
+<style>
+:root{
+	--navbar_bg_color: inherit;
+	--nav_link_color: #fff;
+	}
+</style>
 <body>
 	<!-- mobile  -->
-	<div class="d-block d-md-none">
+	<!-- <div class="d-block d-md-none">
 		<style>
 		.navbar{margin-top: -20px !important;}
 		@media (max-width: 760px){.navbar{padding-top: 1.6rem !important;}
 		.navbar-brand{margin-top: 5px !important;}}
 		</style>
-		{% include 'mainapp/header-main-page.html' %}
+
 		<div class="container title">
 			<h1 class="title-text text-dark p-3 pb-3 pb-md-5 pb-md-0 p-md-0">Поволжская электротехническая компания</h1>
 				<h2 class="text d-flex text-center p-3 p-md-0 pt-md-5 mx-3" style="border: 1px solid #78061f; color: #78061f; border-radius: 15px;">ПРОИЗВОДИТ ИСПОЛНИТЕЛЬНЫЕ МЕХАНИЗМЫ МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 			</div>
-		</div>
+		</div> -->
 		<!-- end -->
 
 
-		<div class="banner d-none d-md-block" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
-
-				<style>
-				.navbar{padding-top: 1.6em!important;}
-				.nav-link{color: #fff !important;}
-				@media (max-width: 760px){.navbar{padding-top: 1.5rem !important;}}
-				</style>
-				{% include 'mainapp/header-main-page.html' %}
+		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %});">
+				{% include 'mainapp/header.html' %}
 
 				<div class="container title" style="padding-top: 5em;">
 					<h1 class="title-text p-3 pb-5 pb-md-0 p-md-0">Повожская </br> Электротехническая </br> Компания</h1>
-						<h2 class="d-none d-md-block text p-md-0 pt-md-4">Производит исполнительные механизмы МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
+						<h2 class="text p-md-0 pt-md-4">Производит исполнительные механизмы МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 					</div>
 			</div>
 
 
 			<main>
 				<div class="row p-0 m-0">
-
-
-
 					<div class="col-lg-3 d-none d-lg-flex justify-content-center">
 						{% include 'mainapp/sidebar.html' %}
 					</div>

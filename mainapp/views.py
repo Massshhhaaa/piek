@@ -66,6 +66,10 @@ def cart(request):
     context = {"product_list": product_list, 'in_cart_counter': cart_counter(request),}
     return render(request, 'mainapp/cart.html', context)
 
+def certificate(request):
+    return render(request, 'mainapp/certificate.html')
+
+
 def remove_from_cart(request, pk):
     if 'piek_cart' in request.session:
         for i in range(0, len(request.session['piek_cart'])):

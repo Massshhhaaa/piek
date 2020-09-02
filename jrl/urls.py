@@ -24,6 +24,7 @@ urlpatterns = [
     path('contacts/', contacts, name='contacts'),
     path('admin/', admin.site.urls),
     path('cart/', cart, name="cart"),
+    path('docs/certificate/', certificate, name='certificate'),
     path('checkout/', checkout, name="checkout"),
     path('sent_mail/', sent_mail, name="sent_mail"),
     path('product/<int:pk>', product, name='product'), # this using as add-to-cart

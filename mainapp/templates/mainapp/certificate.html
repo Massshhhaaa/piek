@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{% include 'mainapp/head-property.html' %}
+	<title>ООО "ПЭК" - Сертификаты</title>
+  	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
+</head>
+
+<style>
+:root{
+	--navbar_bg_color: #fff;
+	--nav_link_color: #000;
+	}
+.certificate a{
+  width: 50% !important;
+}
+.certificate img{
+width: 90% !important;
+height: auto;
+text-align: center;
+display: block;
+margin: 0 auto !important;
+}
+@media (max-width: 768px) {
+  .certificate a, .certificate img{
+    width: 100% !important;
+  }
+  .iphone-text-small{
+    font-size: 1.7rem !important;
+    font-family: 'SF UI Display';
+  	font-weight: normal;
+  }
+}
+
+</style>
+
+<body>
+  {% include 'mainapp/header.html' %}
+  <div class="container title" style="z-index: 3!important;">
+    <div class="rellax" data-rellax-speed="-3">
+      <h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center mb-0">Сертификаты и декларации о соответствии</h1>
+    </div>
+
+    <div class="top-block">
+      <p class="px-3 pt-5">Ниже представлены декларации о соответствии на механизмы МЭО и МЭОФ, многооборотные электроприводы МЭП, МЭМ и ПЭМ. Открыть сертификат в формате PDF можно просто кликнув на него.</p>
+    </div>
+
+  </div>
+			<main>
+
+
+				<div class="row p-0 m-0">
+					<div class="col-lg-3 d-none d-lg-flex justify-content-center">
+						{% include 'mainapp/sidebar.html' %}
+					</div>
+
+					<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index">
+
+
+							<div class="d-flex py-5 flex-wrap certificate">
+
+
+                <a href="{% static 'img/certificates/pdfs/certificate_of_conformity-meo(meof).pdf' %}">
+                  <img src="{% static 'img/certificates/sert1.png' %}" alt="Сертификат соответсвия на МЭО(МЭОФ)" title="Сертификат соответствия на механизмы МЭО(МЭОФ). При клике на картинку откроется PDF документ.">
+                </a>
+
+
+                <a href="{% static 'img/certificates/pdfs/declaration-004-020.pdf' %}">
+                  <img src="{% static 'img/certificates/sert2.png' %}" alt="ТР ТС 004/2011 и ТР ТС 020/2011 на механизмы электрические МЭОФ, ПЭМ, МЭП, МСП" title="ТР ТС 004/2011 и ТР ТС 020/2011 на механизмы электрические МЭОФ, ПЭМ, МЭП, МСП При клике на картинку откроется PDF документ.">
+                </a>
+
+
+                <a href="{% static 'img/certificates/pdfs/declaration-bez(bum).pdf' %}">
+                  <img src="{% static 'img/certificates/sert3.png' %}" alt="Декларация о соответствии БЭЗ и БУМ" title="Декларация о соответствии БЭЗ и БУМ. При клике на картинку откроется PDF документ.">
+                </a>
+
+                <a href="{% static 'img/certificates/pdfs/certificate_ISO_9001.pdf' %}">
+                  <img src="{% static 'img/certificates/sert4.png' %}" alt="Сертификат соответсвия ИСО-9001" title="Сертификат соответсвия ГОСТ Р ИСО-9001. При клике на картинку откроется PDF документ.">
+                </a>
+
+                <a href="{% static 'img/certificates/pdfs/certificate_of_conformity-shlagbaum.pdf' %}">
+                  <img src="{% static 'img/certificates/sert5.png' %}" alt="Сертификат соответсвия ТР ТС 012/2011 на АШК-IIBT4" title="Сертификат соответсвия ТР ТС 012/2011 на АШК-IIBT4. При клике на картинку откроется PDF документ.">
+                </a>
+
+                <a href="{% static 'img/certificates/pdfs/declaration-pbr.pdf' %}">
+                  <img src="{% static 'img/certificates/sert6.png' %}" alt="Декларация о соответствии ПБР" title="Декларация о соответствии ПБР. При клике на картинку откроется PDF документ.">
+                </a>
+
+
+							</div>
+
+					</div>
+				</div>
+
+				<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
+			</main>
+			{% include 'mainapp/footer.html' %}
+      <script src="{% static 'js/rellax.min.js' %}"></script>
+      <script>
+      // Accepts any class name
+      var rellax = new Rellax('.rellax');
+      </script>
+		</body>
+		</html>
