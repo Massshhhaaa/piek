@@ -9,7 +9,7 @@
   transform: translateY(-50%, -50%);
 }
 
-.top-block p{
+.subgroup-description p, .subgroup-description span{
   font-family: 'Raleway';
   font-weight: 400;
   color: #222222;

@@ -12,7 +12,8 @@
 <body>
 	{% include 'mainapp/header.html' %}
 
-	<div class="d-flex flex-wrap justify-content-center " style="
+<main>
+	<div class="d-flex flex-wrap justify-content-center mt-5 " style="
 	background-color: #fff;
 	position: relative;
 	z-index: 2;">
@@ -23,8 +24,9 @@
 	{% endfor %}
 </div>
 
-<main>
-	<div class="row p-0 m-0">
+
+
+	<div class="row p-0 m-0 mt-5">
 
 		<div class="col-lg-3 d-none d-lg-flex justify-content-center">
 			{% include 'mainapp/sidebar.html' %}
@@ -33,18 +35,17 @@
 		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
 
 			<section class="col p-0">
+				<div class="container">
 
 
-				<div class="container top-block">
-					<h1 class="py-5 text-center"> {{ product.name }}</h1>
-				</div>
 
-				<div class="mod_table_bg">
+					<div class=" top-block">
+						<h1 class="text-center"> {{ product.name }}</h1>
+					</div>
 
+				<div class="mod_table_bg my-5 py-5">
 					<div class="d-flex pl-4 pl-md-0">
-
-
-						<div class="d-flex flex-column py-5"  id="cart_btn">
+						<div class="d-flex flex-column"  id="cart_btn">
 
 							{% for mod in mod_list %}
 
@@ -60,7 +61,7 @@
 						</div>
 
 						<div class="flex-column">
-							<div class="content m-auto py-5 ">
+							<div class="content m-auto">
 								{{ product.mod_table | safe }}
 							</div>
 						</div>
@@ -68,25 +69,26 @@
 					</div>
 				</div>
 
-				<div class="container content py-5 px-3">
+				<div class="content px-3">
 					{{ product.content | safe }}
 				</div>
 
 				<div class="d-flex flex-wrap mb-5 justify-content-center">
 				  {% for doc in docs %}
-				  <div class="doc-wrap m-3 pb-3 p-2">
-				      <div class="d-flex justify-content-center my-3">
-									<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-file-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-								  <path fill-rule="evenodd" d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"/>
-								  <path fill-rule="evenodd" d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
-								</svg>
-						</div>
-				      <a href="{{doc.file.url}}">{{doc.name}}</a>
-
-				  </div>
+					  <div class="doc-wrap m-3 pb-3 p-2">
+							<a href="{{doc.file.url}}">
+					      <div class="d-flex justify-content-center my-3">
+										<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-file-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									  <path fill-rule="evenodd" d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"/>
+									  <path fill-rule="evenodd" d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+									</svg>
+							</div>
+							<p>{{doc.name}}</p>
+						</a>
+					  </div>
 				  {% endfor %}
 				</div>
-
+			</div>
 			</section>
 		</div>
 	</div>
@@ -114,15 +116,26 @@ for (let j = 0; j < arr.length; j++) {
 }
 </script>
 <script>
-let first_row_height = $('#MOD > tbody > tr:nth-child(1)').outerHeight();
-let second_row_height = $('#MOD > tbody > tr:nth-child(2)').outerHeight();
-{% for mod in mod_list %}
-var row_height = $('#MOD > tbody > tr:nth-child('+ ({{ forloop.counter }} + 1) +')').outerHeight();
-$('form:nth-of-type('+ {{ forloop.counter }} +') .btn').attr('id', 'btn_'+ {{forloop.counter}});
-document.querySelector('#btn_'+ {{forloop.counter }} +'').style['height'] = row_height + 'px';
-{% endfor %}
-document.querySelector('#cart_btn').style['margin-top'] = first_row_height + 1 + 'px';
-document.querySelector('#cart_btn').style['opacity'] = 1;
+
+function ArrangementCartIcons() {
+		let first_row_height = $('#MOD > tbody > tr:nth-child(1)').outerHeight();
+		let second_row_height = $('#MOD > tbody > tr:nth-child(2)').outerHeight();
+		{% for mod in mod_list %}
+		var row_height = $('#MOD > tbody > tr:nth-child('+ ({{ forloop.counter }} + 1) +')').outerHeight();
+		$('form:nth-of-type('+ {{ forloop.counter }} +') .btn').attr('id', 'btn_'+ {{forloop.counter}});
+		document.querySelector('#btn_'+ {{forloop.counter }} +'').style['height'] = row_height + 'px';
+		{% endfor %}
+		document.querySelector('#cart_btn').style['margin-top'] = first_row_height + 1 + 'px';
+		document.querySelector('#cart_btn').style['opacity'] = 1;
+	}
+
+	$(function(){
+		ArrangementCartIcons();//calling function on window load
+		$(window).resize(function(){
+			ArrangementCartIcons();//calling function on window resize
+		});
+	});
+
 </script>
 <script>
 	document.addEventListener("DOMContentLoaded", function(event) {
