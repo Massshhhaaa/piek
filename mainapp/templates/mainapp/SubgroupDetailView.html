@@ -81,26 +81,24 @@ main{margin-bottom: -40px !important;}
 		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
 			<div id="content-right" class="m-auto">
 
-				<div class="container top-block">
-					<div class="px-3 pt-5">{{subgroup_info.description | safe }}</div>
-				</div>
+				<div class="px-3 pt-5 subgroup-description">{{subgroup_info.description | safe }}</div>
 
 
 
 				<section class="container m-auto pt-5">
-					{% for p in product_list %}
-					<div class="d-flex wrapper py-1 py-md-3 ">
-						<a href="info/{{ p.slug_product }}" class="w-100">
+					{% for product in product_list %}
+					<div class="d-flex wrapper py-2 py-md-5 ">
+						<a href="info/{{ product.slug_product }}" class="w-100">
 
 							<div class="d-flex">
 
 								<div class="flex-column justify-content-start py-3 py-md-0">
-									<img src="{{ p.img.url }}" alt="">
+									<img src="{{ product.img.url }}" alt="">
 								</div>
 
 								<div class="flex-column justify-content-center w-100 px-md-5">
-									<h1 class="py-md-3 py-5">{{ p.href_title }}</h1>
-									<div class="d-none d-md-flex">{{ p.description |safe }}</div>
+									<h1 class="py-md-3 py-5">{{ product.href_title }}</h1>
+									<div class="d-none d-md-flex">{{ product.description |safe }}</div>
 								</div>
 							</div>
 						</a>

@@ -4,7 +4,7 @@ from pytils.translit import slugify
 from bs4 import BeautifulSoup
 
 
-URL = 'http://piek.ru/catalog/mechanisms/meof/4000/'
+URL = 'http://piek.ru/catalog/elektroprivody-vzryvozashishennye/meof/500/'
 HEADERS = {
     'accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'
@@ -61,6 +61,15 @@ def mod_table(a,b,c):
 <td style="width: 48.5656%;">Номинальный полный ход выходного вала, обороты</td>
 <td style="width: 51.4344%; text-align: center;">''' + c + '''</td>
 </tr>
+</tr>
+<tr style="height: 36px; text-align: left;">
+<td style="width: 49.8976%; height: 45px;">Потребл, мощность в ном. режиме, W, неболее</td>
+<td style="width: 50.1024%; height: 45px; text-align: center;">100</td>
+</tr>
+<tr style="height: 18px; text-align: left;">
+<td style="width: 49.8976%; height: 33px;">Масса, кг, не более</td>
+<td style="width: 50.1024%; height: 33px; text-align: center;">13</td>
+</tr>
 </tbody>
 </table>
 '''
@@ -86,7 +95,7 @@ def slug_mod(title):
 
 html = get_html(URL)
 container = get_content(html.text)
-db = sqlite3.connect("db.sqlite3")
+db = sqlite3.connect("/db.sqlite3")
 print('Предварительный просмотр:')
 for i in range(0, len(container)):
     print(container[i])
