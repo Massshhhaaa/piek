@@ -6,6 +6,7 @@ from django.shortcuts import reverse
 class Group(models.Model):
     title       = models.CharField(max_length=250)
     position    = models.IntegerField('Позиция на странице', unique=True)
+    meta_description = models.TextField(null=True, blank=True)
     name        = models.CharField('Название на странице группы', null=True, blank=True,max_length=250)
     img         = models.ImageField(upload_to='main_page', null=True, blank=True)
     slug        = models.CharField('url', unique=True, null=True, blank=True, max_length=200, help_text='for instance, "mechanisms/meo"' )
@@ -23,6 +24,7 @@ class Group(models.Model):
 class Product(models.Model):
     parent       = models.ForeignKey(Group, on_delete=models.CASCADE)
     slug_product = models.SlugField('url', help_text='for instance, "40 or 6_3"')
+    meta_description = models.TextField(null=True, blank=True)
     img          = models.ImageField('Изображение для ссылки', null=True, blank=True, upload_to='mechanisms_preview')
     href_title   = models.CharField(max_length=250)
     name         = models.CharField(max_length=250)
@@ -55,10 +57,10 @@ class ProductDocs(models.Model):
 
 
 class Modification(models.Model):
-    parent   = models.ForeignKey(Product, on_delete=models.CASCADE)
-    title    = models.CharField(max_length=250, )
-    slug_mod = models.SlugField('url', null=True, blank=True, help_text='заполняется автоматически от title')
-    content  = HTMLField(null=True, blank=True)
+    parent           = models.ForeignKey(Product, on_delete=models.CASCADE)
+    title            = models.CharField(max_length=250, )
+    slug_mod         = models.SlugField('url', null=True, blank=True, help_text='заполняется автоматически от title')
+    content          = HTMLField(null=True, blank=True)
 
     class Meta:
         ordering = ['parent__id']
