@@ -1,36 +1,22 @@
-﻿<nav class="navbar navbar-expand-md navbar-light">
+<div id="menu-close"></div>
+
+<nav class="navbar navbar-expand-md pt-4">
   <div class="container">
 
     <a class="navbar-brand" href="/"><img class="media_small" src="/static/img/main_page/logo.png" width="75"></a>
 
     <div class="d-flex d-md-none ml-auto pr-3">
       <a class="nav-link position-relative" href="/cart">
-        <svg width="1.6em" style="color: #444;" height="1.6em" viewBox="0 0 16 16" class="bi bi-cart-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-cart-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M11.354 5.646a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708 0z"/>
           <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
         </svg>
         <div class="cart-counter"><p>{{ in_cart_counter }}</p></div>
     </a>
     </div>
-  <div class="mob-menu">
-               <div class="menu">
-              <a class="menu-triger navbar-toggler-icon" href="#"></a>
-                <div class="menu-popup">
-                <a class="menu-close" href="#"></a>
-                  <ul>
-                      <li><a href="#">О компании</a></li>
-                      <li><a href="#">Услуги</a></li>   
-                      <li><a href="#">Прайс-лист</a></li>
-                      <li><a href="#">Услуги</a></li>
-                      <li><a href="#">Гарантии</a></li>
-                      <li><a href="#">Контакты</a></li>
-                  </ul>           
-            </div>
-          </div>
-  <div class="pc-menu">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+    <span class="nav-link mx-4 hamburger" onclick="openNav()">&#9776</span>
+
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav">
@@ -61,8 +47,6 @@
 
     </div>
 
-  </div>
-</div>
           <li class="d-none d-md-block nav-item ml-auto active px-3">
             <div class="d-flex flex-column contact-block">
             <div class="nav-link phone-number"> 8 (8352) 57-05-16</div>
@@ -83,6 +67,27 @@
             </a>
           </li>
   </div>
-
 </nav>
 
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">Главная</a>
+  <a href="/about">О компании</a>
+  <a href="/docs/certificate">Сертификаты</a>
+  <a href="/docs">Документация</a>
+  <a href="/contacts">Контакты</a>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "290px";
+  document.querySelector("#menu-close").style.visibility = "inherit";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.querySelector("#menu-close").style.visibility = "hidden";
+}
+</script>
