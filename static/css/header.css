@@ -231,9 +231,9 @@ font-family: "SF UI Text";
 	left: 0;
 	width: 100%;
 	z-index: 5;
-	background-color: rgba(250,250,250,.8);
+	background-color: rgba(0,0,0,.8);
 	visibility: hidden;
 	display: block;
 }
 
-.hamburger{font-size: 1.5em !important;}
+.hamburger{font-size: 1.8em !important;}
