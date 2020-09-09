@@ -59,24 +59,32 @@
 </nav>
 
 <body>
-
-<div id="mySidenav" class="d-block d-md-none sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="/">Главная</a>
-  <a href="/about">О компании</a>
-  <a href="/docs/certificate/">Сертификаты</a>
-  <a href="/docs">Документация</a>
-  <a href="/contacts">Контакты</a>
-</div>
+  <div class="bg-sidenav">
+    <div id="mySidenav" class="d-block d-md-none sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/">Главная</a>
+      <a href="/about">О компании</a>
+      <a href="/docs/certificate/">Сертификаты</a>
+      <a href="/docs">Документация</a>
+      <a href="/contacts">Контакты</a>
+    </div>
+  </div>
 
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "290px";
   document.querySelector("#menu-close").style.visibility = "inherit";
+  document.querySelector("#menu-close").style.background = "black";
+  document.querySelector("#menu-close").style.opacity = "0.7";
+  document.querySelector("#menu-close").style.transition = "1s";
+
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  document.querySelector("#menu-close").style.background = "transparent";
+  document.querySelector("#menu-close").style.opacity = "0.7";
+  document.querySelector("#menu-close").style.transition = "1s";
   document.querySelector("#menu-close").style.visibility = "hidden";
 }
 </script>
