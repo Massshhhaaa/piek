@@ -2,7 +2,6 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta name="keywords" content="{{ product.meta_keywords }}">
 	<meta name="description" content="{{ product.meta_description }}">
 	{% include 'mainapp/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
@@ -77,7 +76,7 @@
 
 				<div class="d-flex flex-wrap mb-5 justify-content-center">
 				  {% for doc in docs %}
-					  <div class="doc-wrap m-3 pb-3 p-2">
+					  <div class="doc-wrap m-2 m-md-3 pb-3 p-2">
 							<a href="{{doc.file.url}}">
 					      <div class="d-flex justify-content-center my-3">
 										<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-file-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

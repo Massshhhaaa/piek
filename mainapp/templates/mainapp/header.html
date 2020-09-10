@@ -29,8 +29,9 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="">Руководства по эксплуатации</a>
             <a class="dropdown-item" href="">Опросные листы</a>
+            <a class="d-block d-lg-none dropdown-item" href="">Сертификаты</a>
           </li>
-          <li class="nav-item active px-3"><a class="nav-link" href="/docs/certificate/">Сертификаты</a></li>
+          <li class="d-none d-lg-block nav-item active px-3"><a class="nav-link" href="/docs/certificate/">Сертификаты</a></li>
           <li class="nav-item active px-3"><a class="nav-link" href="/contacts/">Контакты</a></li>
   </ul>
 
@@ -72,11 +73,11 @@
 
 <script>
 function openNav() {
-  document.getElementById("mySidenav").style.width = "290px";
+  document.getElementById("mySidenav").style.width = "300px";
   document.querySelector("#menu-close").style.visibility = "inherit";
-  document.querySelector("#menu-close").style.background = "black";
+  document.querySelector("#menu-close").style.background = "white";
   document.querySelector("#menu-close").style.opacity = "0.7";
-  document.querySelector("#menu-close").style.transition = "1s";
+  document.querySelector("#menu-close").style.transition = ".6s";
 
 }
 
@@ -84,7 +85,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.querySelector("#menu-close").style.background = "transparent";
   document.querySelector("#menu-close").style.opacity = "0.7";
-  document.querySelector("#menu-close").style.transition = "1s";
+  document.querySelector("#menu-close").style.transition = ".6s";
   document.querySelector("#menu-close").style.visibility = "hidden";
 }
 </script>
