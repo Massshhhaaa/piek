@@ -112,17 +112,33 @@ def update_conventional_designation(request, pk):
 @require_POST
 def product(request, pk):
     product_title = Modification.objects.only('title').get(id=pk)
-    print(product_title)
-    print(pk)
     if 'piek_cart' not in request.session:
         request.session['piek_cart']= []
-    if pk not in request.session['piek_cart']:
+
+    for i in range(0, len(request.session['piek_cart'])):
+        if pk != request.session['piek_cart'][i].get('id'):
+            context={'title': str(product_title),
+                     'quantity': request.POST['quantity'],
+                     'id': pk,
+                    }
+            request.session['piek_cart'].append(context)
+            request.session.modified = True
+            break
+        if pk == request.session['piek_cart'][i].get('id'):
+            quantity = request.session['piek_cart'][i].get('quantity')
+            quantity = int(quantity)
+            request.session['piek_cart'][i].update({'quantity': quantity + 1 })
+            request.session.modified = True
+            break
+            
+    if len(request.session['piek_cart']) == 0:
         context={'title': str(product_title),
                  'quantity': request.POST['quantity'],
                  'id': pk,
                 }
         request.session['piek_cart'].append(context)
         request.session.modified = True
+
     next = request.POST.get('next', '/')
     return HttpResponseRedirect(next)
 
