@@ -75,16 +75,18 @@
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";
   document.querySelector("#menu-close").style.visibility = "inherit";
-  document.querySelector("#menu-close").style.background = "white";
-  document.querySelector("#menu-close").style.opacity = "0.7";
+  document.querySelector("#menu-close").style.background = "black";
+  document.querySelector("#menu-close").style.opacity = "0.3";
   document.querySelector("#menu-close").style.transition = ".6s";
-
+  $(window).scroll(function () {
+  closeNav();
+});
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.querySelector("#menu-close").style.background = "transparent";
-  document.querySelector("#menu-close").style.opacity = "0.7";
+  document.querySelector("#menu-close").style.opacity = "0.3";
   document.querySelector("#menu-close").style.transition = ".6s";
   document.querySelector("#menu-close").style.visibility = "hidden";
 }
