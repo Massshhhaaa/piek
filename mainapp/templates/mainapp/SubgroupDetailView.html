@@ -19,36 +19,32 @@
 	<style media="screen">
 	:root{
 		--navbar_bg_color: inherit;
-		--nav_link_color: #000;
+		--nav_link_color: #fff;
 		}
 	</style>
 	<div class="banner" style="background-image: url({{ subgroup_info.pic_of_hat.url }});">
-
 		{% include 'mainapp/header.html' %}
-		<div class="container h-75" style="
-		font-family: 'SF UI Display';
-		font-weight: normal;
-		font-size: 3em;">
-		<h1 class="container iphone-text-small  text-center align-middle text-light p-3">{{subgroup_info.name}}</h1>
+		<div class="container h-75">
+		<h1
+		class="container banner-title align-middle p-3">{{subgroup_info.name}}</h1>
 	</div>
 </div>
 <style media="screen">
-.nav-link{color: #fff !important;}
 .main-property{
 	margin-top: 465px!important;
 	border-top-left-radius: 40px;
 	border-top-right-radius: 40px;
+	z-index: 10;
 	-webkit-box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
 	-moz-box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
 	box-shadow: 0px -4px 1px 1px rgba(237,237,237,1);
 }
 main{margin-bottom: -40px !important;}
 .footer{position: relative;}
-@media (max-width: 760px){
+@media (max-width: 768px){
 	.main-property {
-		border-top-left-radius: 0px;
-		border-top-right-radius: 0px;
-
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 	.banner{
 		position: fixed;
