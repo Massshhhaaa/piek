@@ -12,7 +12,6 @@
 	--nav_link_color: #000;
 	}
 </style>
-</style>
 <body>
 	<!-- WARNING: Условия -->
 	{% if subgroup_info.pic_of_hat %}
@@ -43,8 +42,8 @@ main{margin-bottom: -40px !important;}
 .footer{position: relative;}
 @media (max-width: 768px){
 	.main-property {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
 	}
 	.banner{
 		position: fixed;
@@ -75,11 +74,9 @@ main{margin-bottom: -40px !important;}
 
 
 		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
-			<div id="content-right" class="m-auto">
+			<div id="content-right">
 
-				<div class="px-3 pt-5 subgroup-description">{{subgroup_info.description | safe }}</div>
-
-
+				{% if subgroup_info.description %}<div class="px-3 pt-5 subgroup-description">{{subgroup_info.description | safe }}</div>{% endif %}
 
 				<section class="container m-auto pt-5">
 					{% for product in product_list %}
@@ -92,9 +89,9 @@ main{margin-bottom: -40px !important;}
 									<img src="{{ product.img.url }}" alt="">
 								</div>
 
-								<div class="flex-column justify-content-center w-100 px-md-5">
-									<h1 class="py-md-3 py-5">{{ product.href_title }}</h1>
-									<div class="d-none d-md-flex">{{ product.description |safe }}</div>
+								<div class="flex-column justify-content-center w-100 px-md-5 position-relative">
+									<h1 class="pb-md-3 px-3 py-4 py-md-0 text-sm-left">{{ product.href_title }}</h1>
+									<div class="d-none px-3 py-2 py-md-0 d-sm-flex">{{ product.description |safe }}</div>
 								</div>
 							</div>
 						</a>
@@ -106,7 +103,7 @@ main{margin-bottom: -40px !important;}
 				<section class="container pb-5">
 					<div class="content p-2">{{ subgroup_info.content|safe }}</div>
 				</section>
-			</div>
+
 
 		</div>
 	</div>

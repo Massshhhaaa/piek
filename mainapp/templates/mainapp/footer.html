@@ -1,37 +1,37 @@
 {% load static %}
 <footer class="footer">
 	<div class="container" id="Footer">
-		<div class="d-flex flex-column flex-md-row text-white text-left">
+		<div class="d-flex flex-column flex-md-row text-white ">
 
-			<div class="flex-column py-1 col-md-4 left-block">
-				<div class="py-md-3 py-3 center-md iphoneseoff"><p class="">ООО "ПЭК" - разработка, производство, модернизация и продажа электротехнической продукции</p></div>
-				<div class="py-md-3 py-3 center-md"><p class="">428037, г. Чебоксары, Машиностроительный<br>проезд 17</p></div>
-				<div class=""><a class="" href="tel:+78352570516">(8352) 57-05-16</a></div>
-				<div class=""><a class="" href="tel:+78352570519"> (8352) 57-05-19</a></div>
-				<div class="py-md-3 py-1"><a class="text-light" href="mailto:info@piek.ru">info@piek.ru</a></div>
+			<div class="d-flex flex-column py-1 col-md-4 left-block">
+				<p class="py-3 center-md iphoneseoff">ООО "ПЭК" - разработка, производство, модернизация и продажа электротехнической продукции</p>
+				<p class="py-3 center-md">428037, г. Чебоксары, Машиностроительный<br>проезд 17</p>
+				<a href="tel:+78352570516">(8352) 57-05-16</a>
+				<a href="tel:+78352570519"> (8352) 57-05-19</a>
+				<a class="py-md-3 py-1" href="mailto:info@piek.ru">info@piek.ru</a>
 			</div>
 
-			<div class="flex-column py-3  py-md-3 col-md-4">
+			<div class="d-flex flex-column py-3  py-md-3 col-md-4 link-block">
 				<h2 class="pb-2 pb-md-4">Продукция</h2>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/catalog/armature/">Трубопроводная арматура</a></div>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/catalog/mechanisms/">Однооборотные механизмы</a></div>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/catalog/elektroprivody/pem/">Многооборотные механизмы</a></div>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/catalog/instruments/bez/on_1_sh/">Блоки электроприводов</a></div>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/catalog/blast/shlagbaumy_vzryvozashishennye/">Шлагбаумы взрывозащищенные</a></div>
+				<a href="/catalog/armature/"> Трубопроводная арматура </a>
+				<a href="/catalog/mechanisms/meof/"> Однооборотные механизмы </a>
+				<a href="/catalog/elektroprivody/pem/"> Многооборотные механизмы </a>
+				<a href="/catalog/instruments/"> Блоки электроприводов </a>
+				<a href="/catalog/blast/shlagbaumy_vzryvozashishennye/"> Шлагбаумы взрывозащищенные </a>
 			</div>
 
-			<div class="d-flex flex-column py-3 py-md-3 col-md-4">
-				<h2  class="pb-2 pb-md-4 ">Информация</h2>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/"> Главная </a></div>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/about/"> О компании </a></div>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/docum/"> Документация </a></div>
-				<div class="py-1 py-md-2"><a href="http://piek.ru/contact/"> Контакты </a></div>
+			<div class="d-flex flex-column py-3 py-md-3 col-md-4 link-block">
+				<h2  class="pb-2 pb-md-4">Информация</h2>
+				<a href="/"> Главная </a>
+				<a href="/about/"> О компании </a>
+				<a href="/docs/"> Документация </a>
+				<a href="/contacts/"> Контакты </a>
 			</div>
 
 		</div>
 	</div>
 	<div class="tiny-footer" id="TiyFooter">
-		<div class="container pl-2"><p>ПЭК © 2006-2020  Все права защищены</p></div>
+		<div class="container"><p>ПЭК © 2006-2020  Все права защищены</p></div>
 	</div>
 </footer>
 
@@ -40,16 +40,9 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-<!-- для навбара -->
-<script>
-  $(document).ready(function () {
-      $('[data-toggle=collapse-side]').click(function (e) {
-          $('.side-collapse').toggleClass('in');
-      });
-  });
-</script>
 
-<script>
+
+<script> <!-- скрипт для футера -->
 	function FooterHeight() {
 		let h = document.getElementById('Footer').offsetHeight;
 		let h1 = document.getElementById('TiyFooter').offsetHeight;
@@ -65,11 +58,12 @@
 	});
 </script>
 
-<script>
+<!-- вроде как не используется -->
+<!-- <script>
   $(function() {
   var $menu_popup = $('.menu-popup');
 
-  
+
   $(".menu-triger, .menu-close").click(function(){
     $menu_popup.slideToggle(300, function(){
       if ($menu_popup.is(':hidden')) {
@@ -77,12 +71,12 @@
       } else {
         $('body').addClass('body_pointer');
         $('body').css('overflow', 'hidden');
-      }         
-    });  
+      }
+    });
     return false;
   });
 
-  
+
   $(document).on('click', function(e){
     if (!$(e.target).closest('.menu').length){
       $('body').removeClass('body_pointer');
@@ -91,7 +85,7 @@
     }
   });
 });
-</script>
+</script> -->
 
 
 <!-- Yandex.Metrika counter -->

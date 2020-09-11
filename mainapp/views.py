@@ -69,7 +69,7 @@ def cart(request):
     return render(request, 'mainapp/cart.html', context)
 
 def certificate(request):
-    return render(request, 'mainapp/certificate.html')
+    return render(request, 'mainapp/certificate.html', {'in_cart_counter': cart_counter(request),})
 
 
 def remove_from_cart(request, pk):
@@ -112,11 +112,20 @@ def update_conventional_designation(request, pk):
 @require_POST
 def product(request, pk):
     product_title = Modification.objects.only('title').get(id=pk)
-    print(product_title)
-    print(pk)
     if 'piek_cart' not in request.session:
         request.session['piek_cart']= []
-    if pk not in request.session['piek_cart']:
+    existance_in_cart = True
+    #Проверка на то есть ли в корзину уже данный pk(id)
+    for i in range(0, len(request.session['piek_cart'])):
+        if  pk == request.session['piek_cart'][i].get('id'):
+            quantity = request.session['piek_cart'][i].get('quantity')
+            quantity = int(quantity)
+            request.session['piek_cart'][i].update({'quantity': quantity + 1 })
+            request.session.modified = True
+            existance_in_cart = False
+            break
+    #Если после проверки его там нет то existance_in_cart останется как True и он добавится
+    if existance_in_cart:
         context={'title': str(product_title),
                  'quantity': request.POST['quantity'],
                  'id': pk,
