@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{% include 'mainapp/head-property.html' %}
+	<title>ООО "ПЭК"  О компании </title>
+	<link href="{% static 'css/about.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+		<div class="banner" style="background-image: url({% static 'img/about-page/about-banner.jpg' %}); z-index: 99;">
+		{% include 'mainapp/header.html' %}
+		</div>
+
+
+	<div class="container"></div>
+
+
+
+
+
+
+	{% include 'mainapp/footer.html' %}
+</body>
+
+</html>

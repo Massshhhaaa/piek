@@ -13,7 +13,6 @@
 	}
 </style>
 <body>
-	<div style="z-index: 999;">{% include 'mainapp/header.html' %}</div>
 	<!-- WARNING: Условия -->
 	{% if subgroup_info.pic_of_hat %}
 	<style media="screen">
@@ -24,6 +23,7 @@
 	</style>
 
 	<div class="banner" style="background-image: url({{ subgroup_info.pic_of_hat.url }});">
+		{% include 'mainapp/header.html' %}
 		
 		<div class="container h-75">
 		<h1
@@ -32,7 +32,7 @@
 </div>
 <style media="screen">
 .main-property{
-	margin-top: 465px!important;
+	margin-top: 465px;
 	border-top-left-radius: 40px;
 	border-top-right-radius: 40px;
 	z-index: 10;
@@ -46,14 +46,16 @@ main{margin-bottom: -40px !important;}
 	.main-property {
 		border-top-left-radius: 0px;
 		border-top-right-radius: 0px;
+		margin-top: 0px !important;
 	}
 	.banner{
-		position: fixed;
+		position: relative;
+		top: 0 !important;
+		z-index: 99;
 	}
 }
 </style>
 {% else %}
-{% include 'mainapp/header.html' %}
 <div class="container title" style="z-index: 3!important; position: relative;background-color: #fff;">
 	<div class="rellax" data-rellax-speed="3">
 		<h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center mb-0">{{subgroup_info.name}}</h1>

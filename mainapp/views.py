@@ -68,6 +68,10 @@ def cart(request):
     context = {"product_list": product_list, 'in_cart_counter': cart_counter(request),}
     return render(request, 'mainapp/cart.html', context)
 
+def about(request):
+    return render(request, 'mainapp/about.html')
+
+
 def certificate(request):
     return render(request, 'mainapp/certificate.html', {'in_cart_counter': cart_counter(request),})
 
