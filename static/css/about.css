@@ -8,9 +8,7 @@
     text-transform: uppercase;
 }
 
-.benefits__element {
-    width: 25%;
-}
+.benefits__element {width: 25%;}
 
 main{
   height: 700px;
@@ -49,4 +47,9 @@ main{
   top: 0px;
   left: 0;
   z-index: 0;
+}
+
+@media (max-width: 575.98px) {
+  .benefits__element {width: 50%;}
+  .banner{height: auto;}
 }

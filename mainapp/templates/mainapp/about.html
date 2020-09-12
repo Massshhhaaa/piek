@@ -68,8 +68,15 @@ window.onload = function() {
  Particles.init ({
 	 selector: '.background',
 	color: ['#dedede' , '#e9d3d3'],
-	connectParticles: 'True',});
-	};
+	connectParticles: 'True',
+
+			responsive: [{
+		  	breakpoint: 768,
+		    options: {
+		    	maxParticles: 30, }
+		  }]
+	});
+};
 </script>
 </body>
 
