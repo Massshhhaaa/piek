@@ -6,22 +6,57 @@
 	<title>ООО "ПЭК"  О компании </title>
 	<link href="{% static 'css/about.css' %}" rel="stylesheet">
 </head>
-
 <body>
-
-		<div class="banner" style="background-image: url({% static 'img/about-page/about-banner.jpg' %}); z-index: 99;">
+<style media="screen">
+:root{
+	--navbar_bg_color: inherit;
+	--nav_link_color: #fff;
+	}
+</style>
+	<div class="banner" style="background-image: url({% static 'img/about-page/about-banner.jpg' %}); z-index: 99;">
 		{% include 'mainapp/header.html' %}
+		<div class="container mt-5 pt-5">
+			<h1 class="benefits__header">О компании в цифрах</h1>
+		    <div class="d-flex flex-row">
+		        
+		        <div class="benefits__element">
+		            <p>2000</p>
+		            <p>кв. м. производственных площадей</p>
+		        </div>
+		        <div class="benefits__element">
+		            <p>700</p>
+		            <p>Модификаций электроприводов</p>
+		        </div>
+		        <div class="benefits__element">
+		            <p>20</p>
+		            <p>лет в сфере производства электроприводов</p>
+		        </div>
+		    </div>
 		</div>
+	</div>
+
+<main>
+	<div class="container">
+		<div class="px-3 py-5 subgroup-description">Поволжская Электротехническая Компания (ООО "ПЭК") специализируется на разработке, изготовлении и реализации исполнительных механизмов и электроприводов для трубопроводной арматуры. Компания представлена на рынке систем автоматизации технологических процессов с 2000 года и зарекомендовала себя за это время как динамично развивающаяся компания, надежный поставщик продукции высокого качества.</br></br>
+
+		Благодаря производственному и интеллектуальному потенциалу, "ПЭК" выполняет полный цикл работ: от исследования и разработки, до выпуска продукции и ее сервисного обслуживания на объектах эксплуатации. Постоянная работа специалистов компании по совершествованию технических решений, позволяет предлагать потребителям продукцию, успешно конкурирующую с отечественными и зарубежными аналогами.
+
+		</div>
+	</div>
 
 
-	<div class="container"></div>
 
-
-
-
-
+</main>
 
 	{% include 'mainapp/footer.html' %}
+<script src="{% static 'js/jquery.spincrement.js' %}"></script>
+<script>$(document).ready(function(){
+    $('.benefits__element p:nth-of-type(1)').spincrement({
+        thousandSeparator: "",
+        duration: 3000
+    });
+});
+</script>
 </body>
 
 </html>
