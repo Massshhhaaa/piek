@@ -71,6 +71,9 @@ def cart(request):
 def about(request):
     return render(request, 'mainapp/about.html', {'in_cart_counter': cart_counter(request),})
 
+def docs(request):
+    return render(request, 'mainapp/docs/operation-manuals.html', {'in_cart_counter': cart_counter(request),})
+
 
 def certificate(request):
     return render(request, 'mainapp/certificate.html', {'in_cart_counter': cart_counter(request),})

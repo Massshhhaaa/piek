@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', cart, name="cart"),
     path('about/', about, name="about"),
+    path('docs/', docs, name='docs'),
     path('docs/certificate/', certificate, name='certificate'),
     path('checkout/', checkout, name="checkout"),
     path('sent_mail/', sent_mail, name="sent_mail"),

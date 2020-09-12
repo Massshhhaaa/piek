@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  {% include 'mainapp/head-property.html' %}
+  <title>Руководства по эксплуатации - ПЭК</title>
+</head>
+<style>
+  :root{
+    --navbar_bg_color: #fff;
+    --nav_link_color: #000;
+  }
+
+.docs-ttl{
+    font-family: 'Raleway';
+    font-weight: 200;
+    color: #333;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .wrapper:nth-of-type(1){
+    border: none;
+  }
+  .wrapper{
+   position: relative;
+   border-top: 1px solid rgba(0,0,0,.1);
+   transition: .3s;
+  }
+  .wrapper h1 {
+    font-family: 'SF UI Display';
+    font-weight: normal;
+    font-size: 2em;
+    color: #4e0000;
+    letter-spacing: -.005em;
+  }
+
+  .wrapper p{
+    font-family: 'SF UI Text';
+    color: #666;
+
+  }
+  .wrapper img{
+      width: 300px;
+      height: auto;
+      border-radius: 30px;
+  }
+
+  .wrapper:hover {
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+  }
+
+
+  @media (max-width: 767.98px) {
+
+    .banner-title{font-size: 2rem;}
+    .wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      .wrapper img{width: 200px; border-radius: 20px;}
+      .content span{font-size: 0.85em!important;}
+      .wrapper h1{font-size: 1.6em;}
+
+  }
+
+  @media (max-width: 575.98px) {
+    .wrapper h1{font-size: 1.2em;     display: flex;
+    justify-content: center;
+    align-items: center; height: 100%;
+  }
+    .wrapper img{width: 150px; border-radius: 20px;}
+  }
+
+</style>
+<body>
+  {% include 'mainapp/header.html' %}
+  <main>
+  <div class="container title" style="z-index: 3!important;"
+    <div class="rellax" data-rellax-speed="-3">
+      <h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center mb-0">Руководства по эксплуатации</h1>
+
+
+
+      <section class="container m-auto pt-5">
+        <div class="d-flex wrapper py-2 py-md-5 ">
+          <a href="info/" class="w-100">
+
+            <div class="d-flex">
+
+              <div class="flex-column justify-content-start py-3 py-md-0">
+                <img src="{% static 'img/Groups of operation manuals/Электроприводы в общепромышленном исполнении.jpg' %}" alt="">
+              </div>
+
+              <div class="flex-column justify-content-center w-100 px-md-5 position-relative">
+                <h1 class="pb-md-3 px-3 py-4 py-md-0 text-center text-sm-left">Электроприводы в общепромышленном исполнении</h1>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+
+
+
+    </div>
+
+  </div>
+  </main>
+  {% include 'mainapp/footer.html' %}
+</body>
+</html>
