@@ -25,12 +25,12 @@ class Product(models.Model):
     parent       = models.ForeignKey(Group, on_delete=models.CASCADE)
     slug_product = models.SlugField('url', help_text='for instance, "40 or 6_3"')
     meta_description = models.TextField(null=True, blank=True)
-    img          = models.ImageField('Изображение для ссылки', null=True, blank=True, upload_to='mechanisms_preview')
-    href_title   = models.CharField(max_length=250)
+    img          = models.ImageField('Изображение для ссылки', upload_to='mechanisms_preview')
+    href_title   = models.CharField("title group", max_length=250,)
     name         = models.CharField(max_length=250)
     h1_mod       = models.CharField(max_length=250)
     mod_table    = HTMLField(help_text="Указание идентификатора обязательно. id = 'MOD'")
-    description  = HTMLField(null=True, blank=True)
+    description  = HTMLField('description group', null=True, blank=True)
     content      = HTMLField()
 
     class Meta:

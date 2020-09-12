@@ -130,7 +130,7 @@ table tr:hover{
   padding: 10px !important;
 }
 #MOD tr:nth-child(1) td:nth-child(1){
-  width:30% !important;
+  min-width:30% !important;
 }
 form:nth-last-of-type(1) .btn{
   border: none !important;
