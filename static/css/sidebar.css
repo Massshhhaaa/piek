@@ -7,12 +7,21 @@
   }
 }
 
-#content-left {
+.content-left {
 width: 300px;
 padding: 0 1em;
 margin-bottom: 5vw;
 margin-top: 1vw;
 border-right: 1px solid #dedede;
+
+opacity: 0;
+margin-top: 50px;
+transition: 1.5s;
+transition-delay: 0.3s;
+}
+.content-left.animate {
+opacity: 1;
+margin-top: 0px;
 }
 
 .sidebar-wrap{
@@ -58,10 +67,6 @@ border-right: 1px solid #dedede;
   background-color: white;
   margin-top: 0px;
   padding: 0.2em 1em;
-}
-
-.last-child{
-
 }
 
 .card-header a{

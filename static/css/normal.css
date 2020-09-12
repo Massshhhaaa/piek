@@ -85,6 +85,14 @@ main a:hover, a:focus{
   letter-spacing: 1px;
   text-align: left;
   text-transform: uppercase;
+	opacity: 0;
+	margin-top: 30px;
+
+	transition: 1s;
+}.title-text.animate {
+	opacity: 1;
+	transform: rotate(0deg);
+	margin-top: 0px;
 }
 .text{
   margin-bottom: 0px!important;
