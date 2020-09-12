@@ -3,6 +3,7 @@
   --mod_table_bg_color_hover: #f4f3f2;
   --height_of_row_mod_table: 8px !important;
   --doc_wrab_bg_color: #edf1f6;
+  --doc_wrab_bg_color_hover:#f6eeed;
 }
 
 html{
@@ -94,11 +95,11 @@ background-color: #fff;
   border-radius: 10px;
   text-align: center;
   width: 30%;
+  transition-duration: .3s;
 }
-
-.doc-wrap a {
-  color: black;
-}
+.doc-wrap:hover{background-color: var(--doc_wrab_bg_color_hover);}
+.doc-wrap a {color: black;}
+.doc-wrap p:hover {text-decoration: underline;}
 
 table{
   max-width: 100%;

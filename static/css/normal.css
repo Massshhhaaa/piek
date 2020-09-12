@@ -91,7 +91,6 @@ main a:hover, a:focus{
 	transition: 1s;
 }.title-text.animate {
 	opacity: 1;
-	transform: rotate(0deg);
 	margin-top: 0px;
 }
 .text{
@@ -102,8 +101,14 @@ main a:hover, a:focus{
   font-size: 1.2em;
 	text-align: left;
   letter-spacing: 1px;
-
-
+	opacity: 0;
+	margin-top: 30px;
+	transition-delay: .5s;
+	transition: 1.3s;
+}
+.text.animate {
+	opacity: 1;
+	margin-top: 0px;
 }
 .title{
 padding: 5em;

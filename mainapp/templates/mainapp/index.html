@@ -10,6 +10,12 @@
 	--navbar_bg_color: inherit;
 	--nav_link_color: #fff;
 	}
+
+.content-left {
+	opacity: 0;
+	transition: 1s;
+	transition-delay: .4s;
+	}
 </style>
 <body>
 
@@ -67,6 +73,12 @@
 				<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
 			</main>
 			{% include 'mainapp/footer.html' %}
-
+			<script type="text/javascript">
+				$(document).ready(() => {
+					$('.title-text').addClass('animate');
+					$('.text').addClass('animate');
+					$('.content-left').addClass('animate');
+				});
+			</script>
 		</body>
 		</html>
