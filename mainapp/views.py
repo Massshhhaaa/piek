@@ -69,7 +69,7 @@ def cart(request):
     return render(request, 'mainapp/cart.html', context)
 
 def about(request):
-    return render(request, 'mainapp/about.html')
+    return render(request, 'mainapp/about.html', {'in_cart_counter': cart_counter(request),})
 
 
 def certificate(request):

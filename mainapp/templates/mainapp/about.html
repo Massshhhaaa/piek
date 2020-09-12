@@ -17,8 +17,8 @@
 		{% include 'mainapp/header.html' %}
 		<div class="container mt-5 pt-5">
 			<h1 class="benefits__header">О компании в цифрах</h1>
-		    <div class="d-flex flex-row">
-		        
+		    <div class="d-flex flex-wrap justify-content-center">
+
 		        <div class="benefits__element">
 		            <p>2000</p>
 		            <p>кв. м. производственных площадей</p>
@@ -27,6 +27,10 @@
 		            <p>700</p>
 		            <p>Модификаций электроприводов</p>
 		        </div>
+						<div class="benefits__element">
+							 <p>97</p>
+							 <p>Сотрудников</p>
+					 </div>
 		        <div class="benefits__element">
 		            <p>20</p>
 		            <p>лет в сфере производства электроприводов</p>
@@ -36,6 +40,7 @@
 	</div>
 
 <main>
+	<canvas class="background"></canvas>
 	<div class="container">
 		<div class="px-3 py-5 subgroup-description">Поволжская Электротехническая Компания (ООО "ПЭК") специализируется на разработке, изготовлении и реализации исполнительных механизмов и электроприводов для трубопроводной арматуры. Компания представлена на рынке систем автоматизации технологических процессов с 2000 года и зарекомендовала себя за это время как динамично развивающаяся компания, надежный поставщик продукции высокого качества.</br></br>
 
@@ -56,6 +61,15 @@
         duration: 3000
     });
 });
+</script>
+<script src="{% static 'js/particles.min.js' %}"></script>
+<script>
+window.onload = function() {
+ Particles.init ({
+	 selector: '.background',
+	color: ['#dedede' , '#e9d3d3'],
+	connectParticles: 'True',});
+	};
 </script>
 </body>
 
