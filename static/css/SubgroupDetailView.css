@@ -1,7 +1,7 @@
 .banner{
   position: fixed;
   height: 500px;
-  top:-25px;
+  top: -25px;
 }
 .align-middle{
   position: absolute;
@@ -107,6 +107,7 @@ table tr:hover{
 
 
 @media (max-width: 767.98px) {
+
   .banner-title{font-size: 2rem;}
   .wrapper{
     display: flex;
