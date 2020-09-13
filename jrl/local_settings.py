@@ -6,7 +6,7 @@ SECRET_KEY = 'kr3u3@2s8$a_&5oy$q-$=1woj3vsi!%q1(mm7%2(1itq#ig-16'
 
 DEBUG =  True
 
-ALLOWED_HOSTS = ['45.10.110.71','localhost']
+ALLOWED_HOSTS = ['45.10.110.71','localhost','45.10.110.58']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'kondensat01@gmail.com'
