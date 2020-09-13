@@ -8,7 +8,7 @@ JET_TOKEN = 'c6cafa38-c9cb-44c1-90c1-37e9ab0a96aa'
 
 SESSION_COOKIE_AGE = 43200
 
-ALLOWED_HOSTS = ['45.10.110.71', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['45.10.110.71', 'localhost', '127.0.0.1', '45.10.110.58']
 
 INSTALLED_APPS = [
     'jet_django',
