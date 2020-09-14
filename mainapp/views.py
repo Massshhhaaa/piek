@@ -154,7 +154,7 @@ def sent_mail(request):
     product_list = request.session['piek_cart']
     subject = " ООО ПЭК | Заказ "
     html_template = 'mainapp/html_message.html'
-    from_email = "kondensat01@gmail.com"
+    from_email = "pr@piek.ru"
     to_email = request.POST['email']
     name = request.POST['firstname']
 

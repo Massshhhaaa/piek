@@ -8,12 +8,6 @@ DEBUG =  True
 
 ALLOWED_HOSTS = ['45.10.110.71','localhost','45.10.110.58']
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kondensat01@gmail.com'
-EMAIL_HOST_PASSWORD = 'vladjous321123'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAI_USE_SSL = False
 
 DATABASES = {
     'default': {

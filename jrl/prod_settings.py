@@ -10,12 +10,12 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['45.10.110.71','45.10.110.58']
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kondensat01@gmail.com'
-EMAIL_HOST_PASSWORD = 'vladjous321123'
+EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 587
+EMAIL_HOST_USER = 'pr@piek.ru'
+EMAIL_HOST_PASSWORD = 'piek2017DF'
+DEFAULT_FROM_EMAIL = 'pr@piek.ru'
 EMAIL_USE_TLS = True
-EMAI_USE_SSL = False
 
 DATABASES = {
 	'default':{
