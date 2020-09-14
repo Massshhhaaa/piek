@@ -19,10 +19,6 @@
     justify-content: center;
   }
 
-
-  .wrapper:nth-of-type(1){
-    border: none;
-  }
   .wrapper{
    position: relative;
    border-top: 1px solid rgba(0,0,0,.1);
@@ -31,20 +27,14 @@
   .wrapper h1 {
     font-family: 'SF UI Display';
     font-weight: normal;
-    font-size: 2em;
-    color: #4e0000;
+    font-size: 1.7em;
+    color: #000;
     letter-spacing: -.005em;
   }
 
-  .wrapper p{
-    font-family: 'SF UI Text';
-    color: #666;
-
-  }
   .wrapper img{
-      width: 300px;
-      height: auto;
-      border-radius: 30px;
+      height: 120px;
+      width: auto;
   }
 
   .wrapper:hover {
@@ -55,15 +45,13 @@
 
 
   @media (max-width: 767.98px) {
-
-    .banner-title{font-size: 2rem;}
     .wrapper{
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 250px;
     }
-      .wrapper img{width: 200px; border-radius: 20px;}
-      .content span{font-size: 0.85em!important;}
+      .wrapper img{height: 70px;}
       .wrapper h1{font-size: 1.6em;}
 
   }
@@ -73,7 +61,7 @@
     justify-content: center;
     align-items: center; height: 100%;
   }
-    .wrapper img{width: 150px; border-radius: 20px;}
+    .wrapper img{height: 50px;}
   }
 
 </style>
@@ -87,21 +75,39 @@
 
 
       <section class="container m-auto pt-5">
-        <div class="d-flex wrapper py-2 py-md-5 ">
+
+        <div class="d-flex wrapper py-2 py-md-5 border">
+          <a href="info/" class="w-100">
+
+            <div class="d-flex">
+
+              <div class="flex-column justify-content-center py-3 py-md-0">
+                <img src="{% static 'img/Groups of operation manuals/Электроприводы в общепромышленном исполнении.jpg' %}" alt="">
+              </div>
+
+              <div class="flex-column justify-content-center w-100 px-md-5 position-relative">
+                <h1 class="pb-md-3 px-3 py-4 py-md-0 text-center">Электроприводы в общепромышленном исполнении</h1>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="d-flex wrapper py-2 py-md-5 border">
           <a href="info/" class="w-100">
 
             <div class="d-flex">
 
               <div class="flex-column justify-content-start py-3 py-md-0">
-                <img src="{% static 'img/Groups of operation manuals/Электроприводы в общепромышленном исполнении.jpg' %}" alt="">
+                <img src="{% static 'img/Groups of operation manuals/30_1_n1lHXHU.jpg' %}" alt="">
               </div>
 
-              <div class="flex-column justify-content-center w-100 px-md-5 position-relative">
-                <h1 class="pb-md-3 px-3 py-4 py-md-0 text-center text-sm-left">Электроприводы в общепромышленном исполнении</h1>
+              <div class="flex-column justify-content-center w-100 px-md-5">
+                <h1 class="pb-md-3 px-3 py-4 py-md-0 text-center text-sm-left">Электроприводы во взрывозащищенном исполнении</h1>
               </div>
             </div>
           </a>
         </div>
+
       </section>
 
 

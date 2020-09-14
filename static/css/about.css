@@ -13,6 +13,9 @@
 main{
   height: 700px;
 }
+.banner{
+  -webkit-animation: none;
+}
 .benefits__element p {
     color: #fff;
     font-family: "SF UI Display";
