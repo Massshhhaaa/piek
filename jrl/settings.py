@@ -3,9 +3,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-JET_PROJECT = 'piek'
-JET_TOKEN = 'c6cafa38-c9cb-44c1-90c1-37e9ab0a96aa'
-
 SESSION_COOKIE_AGE = 43200
 
 ALLOWED_HOSTS = ['45.10.110.71', 'localhost', '127.0.0.1', '45.10.110.58']
@@ -18,7 +15,6 @@ DEFAULT_FROM_EMAIL = 'pr@piek.ru'
 EMAIL_USE_TLS = True
 
 INSTALLED_APPS = [
-    'jet_django',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
