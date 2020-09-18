@@ -1,0 +1,52 @@
+
+.docs-ttl{
+  font-family: 'Raleway';
+  font-weight: 200;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper{
+  border-bottom: 1px solid rgba(0,0,0, 0.1);
+  width: 100%;
+  margin: 0.5em 0.5em;
+  transition: .3s;
+}
+.wrapper h1 {
+  font:  normal 1.4em 'SF UI Text';
+  color: #000;
+  padding: 2em;
+}
+
+.wrapper img{
+  height: 120px;
+  width: auto;
+}
+
+/* .wrapper:hover {
+-webkit-transform: scale(1.01);
+-ms-transform: scale(1.01);
+transform: scale(1.01);
+} */
+
+
+@media (max-width: 767.98px) {
+  .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+  }
+  .wrapper img{height: 70px;}
+  .wrapper h1{font-size: 1.6em;}
+
+}
+
+@media (max-width: 575.98px) {
+  .wrapper h1{font-size: 1.2em;     display: flex;
+    justify-content: center;
+    align-items: center; height: 100%;
+  }
+  .wrapper img{height: 50px;}
+}

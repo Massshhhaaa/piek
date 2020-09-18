@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from mainapp.views import *
+from mainapp.views_cart import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,6 +28,7 @@ urlpatterns = [
     path('about/', about, name="about"),
     path('docs/', docs, name='docs'),
     path('docs/certificate/', certificate, name='certificate'),
+    path('docs/explosion_proof_design/', explosion_proof_design, name='explosion_proof_design'),
     path('checkout/', checkout, name="checkout"),
     path('sent_mail/', sent_mail, name="sent_mail"),
     path('product/<int:pk>', product, name='product'), # this using as add-to-cart
@@ -41,17 +43,7 @@ urlpatterns = [
 
     path('catalog/<path:slug>/', SubgroupDetailView, name='SubgroupDetailView'),
 
-
     path('tinymce/', include('tinymce.urls')),
-    path('jet_api/', include('jet_django.urls')),
-    # path('about/', about, name='about'),
-    # path('about/gallery/', about_gallery, name='about_gallery'),
-    #
-    # path('docs/', docs_list, name='docs_list'),
-    # path('docs/questionnaire/', docs_questionnaire, name='docs_questionnaire'),
-    #
-
-
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

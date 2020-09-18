@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  {% include 'mainapp/head-property.html' %}
+  <link href="{% static 'css/ModificationDetailView.css' %}" rel="stylesheet">
+  {% block title %}
+  {% endblock title %}
+</head>
+<style>
+  :root{
+    --navbar_bg_color: #fff;
+    --nav_link_color: #000;
+    --main-bg-color: #fff;
+  }
+</style>
+<body>
+  {% include 'mainapp/header.html' %}
+
+  <div class="container title" style="z-index: 3!important;"
+    <div class="rellax" data-rellax-speed="-3">
+      <h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center mb-0">Руководства по эксплуатации</h1>
+    </div>
+  <main>
+  {% block content %}
+  {% endblock content %}
+  </div>
+  </main>
+  {% include 'mainapp/footer.html' %}
+</body>
+</html>
