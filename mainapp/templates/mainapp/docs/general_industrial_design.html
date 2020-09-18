@@ -1,4 +1,4 @@
-{% extends 'mainapp/docs/base_doc_list.html'%}
+{% extends 'mainapp/docs/genezis_doc_page.html'%}
 {% load static %}
 
 {% block title %}
@@ -11,6 +11,12 @@
   <div class="d-flex bg-light" style="height: 200px;">
   </div>
 </div>
+
+{% for doc in doc_list %}
+  {% if doc.key_filter == 'мэо'%}
+  <div>{{doc.name}}</div>
+  {% endif %}
+{% endfor %}
 
 
 {% endblock content %}

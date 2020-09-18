@@ -72,5 +72,14 @@ def certificate(request):
 def docs(request):
     return render(request, 'mainapp/docs/operation-manuals.html', {'in_cart_counter': cart_counter(request),})
 
+def general_industrial_design(request):
+    doc_list = Documentation.objects.all()
+    return render(request, 'mainapp/docs/general_industrial_design.html', {'in_cart_counter': cart_counter(request), 'doc_list': doc_list, })
 def explosion_proof_design(request):
     return render(request, 'mainapp/docs/explosion_proof_design.html', {'in_cart_counter': cart_counter(request),})
+def sensors_and_controllers(request):
+    return render(request, 'mainapp/docs/sensors_and_controllers.html', {'in_cart_counter': cart_counter(request),})
+def starting_and_control_devices(request):
+    return render(request, 'mainapp/docs/starting_and_control_devices.html', {'in_cart_counter': cart_counter(request),})
+def barriers(request):
+    return render(request, 'mainapp/docs/barriers.html', {'in_cart_counter': cart_counter(request),})
