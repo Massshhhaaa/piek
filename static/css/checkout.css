@@ -29,7 +29,7 @@
 	background-color: var(--main-bg-color)!important;
 }
 main{
-	background-color: var(--main-bg-color)!important;;
+	background-color: var(--main-bg-color)!important;
 }
 input, textarea{
 	border: 1px solid #f6f6f6;

@@ -4,119 +4,102 @@
 <head>
   {% include 'mainapp/head-property.html' %}
   <title>Руководства по эксплуатации - ПЭК</title>
+  <link href="{% static 'css/docs.css' %}" rel="stylesheet">
 </head>
 <style>
-  :root{
-    --navbar_bg_color: #fff;
-    --nav_link_color: #000;
-  }
-
-.docs-ttl{
-    font-family: 'Raleway';
-    font-weight: 200;
-    color: #333;
-    display: flex;
-    justify-content: center;
-  }
-
-  .wrapper{
-   position: relative;
-   border-top: 1px solid rgba(0,0,0,.1);
-   transition: .3s;
-  }
-  .wrapper h1 {
-    font-family: 'SF UI Display';
-    font-weight: normal;
-    font-size: 1.7em;
-    color: #000;
-    letter-spacing: -.005em;
-  }
-
-  .wrapper img{
-      height: 120px;
-      width: auto;
-  }
-
-  .wrapper:hover {
-    -webkit-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    transform: scale(1.01);
-  }
-
-
-  @media (max-width: 767.98px) {
-    .wrapper{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 250px;
-    }
-      .wrapper img{height: 70px;}
-      .wrapper h1{font-size: 1.6em;}
-
-  }
-
-  @media (max-width: 575.98px) {
-    .wrapper h1{font-size: 1.2em;     display: flex;
-    justify-content: center;
-    align-items: center; height: 100%;
-  }
-    .wrapper img{height: 50px;}
-  }
-
+:root{
+  --navbar_bg_color: #fff;
+  --nav_link_color: #000;
+  --main-bg-color: #fff;
+}
 </style>
 <body>
   {% include 'mainapp/header.html' %}
-  <main>
-  <div class="container title" style="z-index: 3!important;"
+
+  <div class="container title" style="z-index: 3!important;">
     <div class="rellax" data-rellax-speed="-3">
       <h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center mb-0">Руководства по эксплуатации</h1>
+    </div>
+    <div class="top-block">
+      <p class="px-3 pt-5">Ниже представлены декларации о соответствии на механизмы МЭО и МЭОФ, многооборотные электроприводы МЭП, МЭМ и ПЭМ. Открыть сертификат в формате PDF можно просто кликнув на него.</p>
+    </div>
+  </div>
 
+  <main>
 
+    <div class="row p-0 m-0">
+      <div class="col-lg-3 d-none d-lg-flex justify-content-center">
+        {% include 'mainapp/sidebar.html' %}
+      </div>
 
-      <section class="container m-auto pt-5">
+      <div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index">
 
-        <div class="d-flex wrapper py-2 py-md-5 border">
-          <a href="info/" class="w-100">
+        <section class="container">
 
-            <div class="d-flex">
+          <div class="d-flex wrapper py-2 py-md-5 ">
+            <a href="info/" class="w-100">
 
-              <div class="flex-column justify-content-center py-3 py-md-0">
-                <img src="{% static 'img/Groups of operation manuals/Электроприводы в общепромышленном исполнении.jpg' %}" alt="">
+              <div class="d-flex">
+
+                <div class="flex-column justify-content-center py-3 py-md-0">
+                  <img src="{% static 'img/Groups of operation manuals/Электроприводы в общепромышленном исполнении.jpg' %}" alt="">
+                </div>
+
+                <div class="flex-column justify-content-center">
+                  <h1>Электроприводы в общепромышленном исполнении</h1>
+                </div>
               </div>
+            </a>
+          </div>
 
-              <div class="flex-column justify-content-center w-100 px-md-5 position-relative">
-                <h1 class="pb-md-3 px-3 py-4 py-md-0 text-center">Электроприводы в общепромышленном исполнении</h1>
+          <div class="d-flex wrapper py-2 py-md-5">
+            <a href="info/" class="w-100">
+
+              <div class="d-flex">
+
+                <div class="flex-column justify-content-start py-3 py-md-0">
+                  <img src="{% static 'img/Groups of operation manuals/30_1_n1lHXHU.jpg' %}" alt="">
+                </div>
+
+                <div class="flex-column justify-content-center">
+                  <h1>Электроприводы во взрывозащищенном исполнении</h1>
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <div class="d-flex wrapper py-2 py-md-5 border">
-          <a href="info/" class="w-100">
+          <div class="d-flex wrapper py-2 py-md-5">
+            <a href="info/" class="w-100">
 
-            <div class="d-flex">
+              <div class="d-flex">
 
-              <div class="flex-column justify-content-start py-3 py-md-0">
-                <img src="{% static 'img/Groups of operation manuals/30_1_n1lHXHU.jpg' %}" alt="">
+                <div class="flex-column justify-content-start py-3 py-md-0">
+                  <img src="{% static 'img/Groups of operation manuals/4616379_1.jpeg' %}" alt="">
+                </div>
+
+                <div class="flex-column justify-content-center">
+                  <h1>Датчики и контроллеры для механизмов и приводов</h1>
+                </div>
               </div>
+            </a>
+          </div>
 
-              <div class="flex-column justify-content-center w-100 px-md-5">
-                <h1 class="pb-md-3 px-3 py-4 py-md-0 text-center text-sm-left">Электроприводы во взрывозащищенном исполнении</h1>
-              </div>
-            </div>
-          </a>
-        </div>
+        </section>
 
-      </section>
-
-
-
-
+      </div>
     </div>
 
+    <div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
+
   </div>
-  </main>
-  {% include 'mainapp/footer.html' %}
+
+</div>
+</main>
+{% include 'mainapp/footer.html' %}
+<script src="{% static 'js/rellax.min.js' %}"></script>
+<script>
+// Accepts any class name
+var rellax = new Rellax('.rellax');
+</script>
 </body>
 </html>
