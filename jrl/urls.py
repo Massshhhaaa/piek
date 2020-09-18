@@ -28,7 +28,13 @@ urlpatterns = [
     path('about/', about, name="about"),
     path('docs/', docs, name='docs'),
     path('docs/certificate/', certificate, name='certificate'),
-    path('docs/explosion_proof_design/', explosion_proof_design, name='explosion_proof_design'),
+    
+    path('docs/general-industrial-design/', general_industrial_design, name='general_industrial_design'),
+    path('docs/explosion-proof-design/', explosion_proof_design, name='explosion_proof_design'),
+    path('docs/sensors-and-controllers/', sensors_and_controllers, name='sensors_and_controllers'),
+    path('docs/starting-and-control-devices/', starting_and_control_devices, name='starting_and_control_devices'),
+    path('docs/barriers/', barriers, name='barriers'),
+
     path('checkout/', checkout, name="checkout"),
     path('sent_mail/', sent_mail, name="sent_mail"),
     path('product/<int:pk>', product, name='product'), # this using as add-to-cart
