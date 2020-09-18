@@ -20,6 +20,13 @@ class Group(models.Model):
     def __str__(self):
         return str(self.title)
 
+class Documentation(models.Model):
+    doc_group = models.IntegerField()
+    name = models.CharField(max_length=255)
+    file = models.FileField()
+    def __str__(self):
+        return str(self.name)
+
 
 class Product(models.Model):
     parent       = models.ForeignKey(Group, on_delete=models.CASCADE)
@@ -48,9 +55,8 @@ class ProductImage(models.Model):
 
 class ProductDocs(models.Model):
     page = models.ForeignKey(Product, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255, null=True, blank=True)
-    file = models.FileField()
-
+    name = models.CharField(max_length=255) 
+    item = models.ForeignKey(Documentation, on_delete=models.CASCADE)
     def __str__(self):
         return str(self.page.name)
 
