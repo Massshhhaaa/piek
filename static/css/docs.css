@@ -1,4 +1,10 @@
+main{
+  background-color: var(--main-bg-color) !important;
+}
 
+.content-wrapper{
+  max-width: 900px !important;
+}
 .docs-ttl{
   font-family: 'Raleway';
   font-weight: 200;
@@ -8,14 +14,18 @@
 }
 
 .wrapper{
-  border-bottom: 1px solid rgba(0,0,0, 0.1);
+  background-color: #fff;
   width: 100%;
-  margin: 0.5em 0.5em;
+  border-radius: 5px;
+  margin-bottom: 3px;
   transition: .3s;
 }
+/* .wrapper:last-of-type{
+  border-bottom: none !important;
+} */
 .wrapper h1 {
   font:  normal 1.4em 'SF UI Text';
-  color: #000;
+  color: #222;
   padding: 2em;
 }
 
@@ -36,17 +46,16 @@ transform: scale(1.01);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 250px;
   }
-  .wrapper img{height: 70px;}
+  .wrapper img{height: 100px;}
   .wrapper h1{font-size: 1.6em;}
 
 }
 
 @media (max-width: 575.98px) {
-  .wrapper h1{font-size: 1.2em;     display: flex;
-    justify-content: center;
-    align-items: center; height: 100%;
+  .wrapper h1{font-size: 1.1em;
+    padding: 1em;
+    padding-left: 2em;
   }
-  .wrapper img{height: 50px;}
+  .wrapper img{height: 70px; padding-left: 10px;}
 }

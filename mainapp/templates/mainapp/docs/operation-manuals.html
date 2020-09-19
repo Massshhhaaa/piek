@@ -8,15 +8,15 @@
 </head>
 <style>
 :root{
-  --navbar_bg_color: #fff;
+  --navbar_bg_color: #f6f4f5;
   --nav_link_color: #000;
-  --main-bg-color: #fff;
+  --main-bg-color: #f6f4f5;
 }
 </style>
-<body>
+<body style="background-color: var(--main-bg-color);">
   {% include 'mainapp/header.html' %}
 
-  <div class="container title" style="z-index: 3!important; background-color: #fff;">
+  <div class="container title" style="z-index: 3!important;">
     <div class="rellax" data-rellax-speed="-3">
       <h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center mb-0">Руководства по эксплуатации</h1>
     </div>
@@ -25,27 +25,20 @@
     </div>
   </div>
 
-  <main>
+  <main class="pb-5">
 
-    <div class="row p-0 m-0">
-      <div class="col-lg-3 d-none d-lg-flex justify-content-center">
-        {% include 'mainapp/sidebar.html' %}
-      </div>
+        <section class="container content-wrapper">
 
-      <div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index">
-
-        <section class="container">
-
-          <div class="d-flex wrapper py-2 py-md-5 ">
+          <div class="d-flex wrapper py-2 py-md-5">
             <a href="{% url 'general_industrial_design' %}" class="w-100">
 
-              <div class="d-flex">
+              <div class="d-flex justify-content-center ">
 
                 <div class="flex-column justify-content-center py-3 py-md-0">
                   <img src="{% static 'img/Groups of operation manuals/Электроприводы в общепромышленном исполнении.jpg' %}" alt="">
                 </div>
 
-                <div class="flex-column justify-content-center">
+                <div class="flex-column">
                   <h1>Электроприводы в общепромышленном исполнении</h1>
                 </div>
               </div>
@@ -55,13 +48,13 @@
           <div class="d-flex wrapper py-2 py-md-5">
             <a href="{% url 'explosion_proof_design' %}" class="w-100">
 
-              <div class="d-flex">
+              <div class="d-flex justify-content-center">
 
                 <div class="flex-column justify-content-start py-3 py-md-0">
                   <img src="{% static 'img/Groups of operation manuals/30_1_n1lHXHU.jpg' %}" alt="">
                 </div>
 
-                <div class="flex-column justify-content-center">
+                <div class="flex-column">
                   <h1>Электроприводы во взрывозащищенном исполнении</h1>
                 </div>
               </div>
@@ -71,13 +64,13 @@
           <div class="d-flex wrapper py-2 py-md-5">
             <a href="{% url 'sensors_and_controllers' %}" class="w-100">
 
-              <div class="d-flex">
+              <div class="d-flex justify-content-center">
 
                 <div class="flex-column justify-content-start py-3 py-md-0">
                   <img src="{% static 'img/Groups of operation manuals/4616379_1.jpeg' %}" alt="">
                 </div>
 
-                <div class="flex-column justify-content-center">
+                <div class="flex-column">
                   <h1>Датчики и контроллеры для механизмов и приводов</h1>
                 </div>
               </div>
@@ -87,14 +80,14 @@
           <div class="d-flex wrapper py-2 py-md-5">
             <a href="{% url 'starting_and_control_devices' %}" class="w-100">
 
-              <div class="d-flex">
+              <div class="d-flex justify-content-center">
 
                 <div class="flex-column justify-content-start py-3 py-md-0">
                   <img src="{% static 'img/Groups of operation manuals/pic_06_8c6HdDL.jpg' %}" alt="">
                 </div>
 
-                <div class="flex-column justify-content-center">
-                  <h1>Пусковые и управляющие устройства для механизмов и приводов</h1>
+                <div class="flex-column">
+                  <h1>Пусковые и управляющие устройства для механизмов</h1>
                 </div>
               </div>
             </a>
@@ -103,25 +96,20 @@
           <div class="d-flex wrapper py-2 py-md-5">
             <a href="{% url 'barriers' %}" class="w-100">
 
-              <div class="d-flex">
+              <div class="d-flex justify-content-center">
 
                 <div class="flex-column justify-content-start py-3 py-md-0">
                   <img src="{% static 'img/Groups of operation manuals/pic_5_k.jpg' %}" alt="">
                 </div>
 
-                <div class="flex-column justify-content-center">
+                <div class="flex-column">
                   <h1>Шлагбаумы во взрывозащищенном исполнении</h1>
-                </div>
+              </div>
               </div>
             </a>
           </div>
 
         </section>
-
-      </div>
-    </div>
-
-    <div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
 
   </div>
 
