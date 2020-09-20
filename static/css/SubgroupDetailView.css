@@ -105,6 +105,11 @@ table tr:hover{
   transform: scale(1.01);
 }
 
+.description strong{
+  font-weight: normal;
+  color: #111 !important;
+
+}
 
 @media (max-width: 767.98px) {
 
