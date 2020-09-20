@@ -52,7 +52,7 @@ table tr:hover{
   background-color: #eee;
 }
 
-#MOD td{border: none !important; margin: 0; padding: 8px !important;}
+#MOD td{border: none !important; margin: 0; padding: 8px !important; scrollbar-base-color: #000; }
 #MOD tr{
   border-bottom: 1px solid #e1dedc;
 }
@@ -112,7 +112,6 @@ table tr:hover{
 }
 
 @media (max-width: 767.98px) {
-
   .banner-title{font-size: 2rem;}
   .wrapper{
     display: flex;
