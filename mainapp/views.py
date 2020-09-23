@@ -76,10 +76,13 @@ def general_industrial_design(request):
     docs = Documentation.objects.all()
     return render(request, 'mainapp/docs/general_industrial_design.html', {'in_cart_counter': cart_counter(request), 'docs': docs, })
 def explosion_proof_design(request):
-    return render(request, 'mainapp/docs/explosion_proof_design.html', {'in_cart_counter': cart_counter(request),})
+    docs = Documentation.objects.all()
+    return render(request, 'mainapp/docs/explosion_proof_design.html', {'in_cart_counter': cart_counter(request), 'docs': docs, })
 def sensors_and_controllers(request):
-    return render(request, 'mainapp/docs/sensors_and_controllers.html', {'in_cart_counter': cart_counter(request),})
+    docs = Documentation.objects.all()
+    return render(request, 'mainapp/docs/sensors_and_controllers.html', {'in_cart_counter': cart_counter(request), 'docs': docs, })
 def starting_and_control_devices(request):
-    return render(request, 'mainapp/docs/starting_and_control_devices.html', {'in_cart_counter': cart_counter(request),})
+    return render(request, 'mainapp/docs/starting_and_control_devices.html', {'in_cart_counter': cart_counter(request), 'docs': docs, })
 def barriers(request):
-    return render(request, 'mainapp/docs/barriers.html', {'in_cart_counter': cart_counter(request),})
+    docs = Documentation.objects.all()
+    return render(request, 'mainapp/docs/barriers.html', {'in_cart_counter': cart_counter(request), 'docs': docs, })

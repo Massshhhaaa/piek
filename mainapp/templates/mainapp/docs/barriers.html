@@ -5,10 +5,22 @@
 <title>Руководства по эксплуатации для электроприводов во взрывозащищенном исполнении - ПЭК</title>
 {% endblock title %}
 
+{% block header %}
+Руководства по эксплуатации для шлагбаумов во взрывозащищеннном исполнении
+{% endblock header %}
+
+
+
 {% block content %}
 
-<div class="container">
-  <div class="d-flex bg-light" style="height: 200px;">
+
+<div class="container doc-section bg-light p-5">
+  <h2>Документация на шлагбаумы </h2>
+  <div class="d-flex flex-column">
+    {% for doc in docs %} {% if doc.key_filter == 'шлагбаум'%}
+      <a href="{{doc.file.url}}"><p>{{doc.name }}</p></a>
+      {% endif %} {% endfor %}
+
   </div>
 </div>
 
