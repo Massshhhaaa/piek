@@ -38,7 +38,7 @@
 					<h1 class="text-center"> {{ product_content.h1_mod }} {{ mod.title }}</h1>
 				</div>
 
-				<div class="container py-5" style="background-color: #f9f9f9;border-radius:15px;">
+				<div class="container py-5" id='cart-form-bg' style="background-color: #f9f9f9;border-radius:15px;">
 
 					<div class="d-flex flex-column flex-md-row justify-content-center">
 
@@ -85,7 +85,13 @@
 	</div>
 </main>
 {% include 'mainapp/footer.html' %}
-
+<script>
+let mod_bg = document.getElementById("cart-form-bg").getBoundingClientRect().top;
+let sidebar = document.getElementById('content-left');
+let sidebar_now_position = sidebar.getBoundingClientRect().top;
+var position  = mod_bg - sidebar_now_position;
+sidebar.style.marginTop = position+ 20 + 'px';
+</script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
 </html>

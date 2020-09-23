@@ -73,7 +73,7 @@ main{margin-bottom: -40px !important;}
 <main class="main-property">
 	<div class="row p-0 m-0">
 
-		<div class="col-lg-3 d-none d-lg-flex justify-content-end p-0">
+		<div class="col-lg-3 d-none d-lg-flex justify-content-center p-0">
 			{% include 'mainapp/sidebar.html' %}
 		</div>
 
@@ -81,8 +81,9 @@ main{margin-bottom: -40px !important;}
 		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
 			<div id="content-right" class="m-auto">
 
-				{% if subgroup_info.description %}<div class="px-3 pt-5 subgroup-description">{{subgroup_info.description | safe }}</div>{% endif %}
-
+				<div class="container px-3 pt-5">
+				{% if subgroup_info.description %}<div class="subgroup-description">{{subgroup_info.description | safe }}</div>{% endif %}
+				</div>
 				<section class="container m-auto pt-5">
 					{% for product in product_list %}
 					<div class="d-flex wrapper py-2 py-md-5 ">

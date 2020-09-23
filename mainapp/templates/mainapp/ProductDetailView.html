@@ -148,6 +148,14 @@ function ArrangementCartIcons() {
 		localStorage.setItem('scrollpos', window.scrollY);
 	};
 </script>
+
+<script>
+let mod_bg = document.getElementById("MOD").getBoundingClientRect().top;
+let sidebar = document.getElementById('content-left');
+let sidebar_now_position = sidebar.getBoundingClientRect().top;
+var position  = mod_bg - sidebar_now_position;
+sidebar.style.marginTop = position - 10 + 'px';
+</script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
 </html>
