@@ -7,16 +7,19 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="d-flex bg-light" style="height: 200px;">
-  </div>
-</div>
 
-{% for doc in doc_list %}
-  {% if doc.key_filter == 'мэоф'%}
-  <div>{{doc.name}}</div>
-  {% endif %}
-{% endfor %}
+
+  <div class="container doc-section text-dark bg-light p-5">
+    <h2>МЭО (МЭОФ)</h2>
+    <div class="d-flex flex-column">
+      {% for doc in doc_list %} {% if doc.key_filter == 'мэоф'%}
+        <a href="{{ doc.item.file.url }}"><p>{{doc.name}}</p></a>
+        {% endif %} {% endfor %}
+
+    </div>
+  </div>
+
+
 
 
 {% endblock content %}

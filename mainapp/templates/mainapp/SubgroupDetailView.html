@@ -73,13 +73,13 @@ main{margin-bottom: -40px !important;}
 <main class="main-property">
 	<div class="row p-0 m-0">
 
-		<div class="col-lg-3 d-none d-lg-flex justify-content-center p-0">
+		<div class="col-lg-3 d-none d-lg-flex justify-content-end p-0">
 			{% include 'mainapp/sidebar.html' %}
 		</div>
 
 
 		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
-			<div id="content-right">
+			<div id="content-right" class="m-auto">
 
 				{% if subgroup_info.description %}<div class="px-3 pt-5 subgroup-description">{{subgroup_info.description | safe }}</div>{% endif %}
 
