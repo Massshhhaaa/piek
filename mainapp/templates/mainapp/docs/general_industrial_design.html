@@ -13,8 +13,9 @@
 
 
 <section class="">
+  <h2 class="doc-section__title">Документация на механизмы МЭО (МЭОФ)</h2>
   <div class="doc-section bg-light p-md-5 p-3">
-    <h2>Документация на механизмы МЭО (МЭОФ)</h2>
+
     <div class="d-flex flex-column">
       {% for doc in docs %} {% if doc.key_filter == 'мэоф' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
@@ -25,8 +26,8 @@
 </section>
 
 <section class="">
+  <h2 class="doc-section__title">Документация на электроприводы ПЭМ</h2>
   <div class="doc-section bg-light p-md-5 p-3">
-    <h2>Документация на электроприводы ПЭМ</h2>
     <div class="d-flex flex-column">
       {% for doc in docs %} {% if doc.key_filter == 'пэм'%}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
