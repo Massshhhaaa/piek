@@ -124,10 +124,6 @@ table tr:hover{
   width: 100% !important;
   height: auto !important;
   border: none !important;
-  scrollbar-color: #000 #f9f9f9;
-}
-#MOD::-webkit-scrollbar {
-    background-color: #000;
 }
 #MOD tr:nth-child(n+2) td:nth-child(1){
   border: none;

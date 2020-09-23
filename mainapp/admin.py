@@ -20,9 +20,12 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImageInline, ModificationInline, ProductDocsInline]
     list_display = ('href_title', 'parent', 'slug_product',)
 
+class DocumentationAdmin(admin.ModelAdmin):
+    list_display = ('name' , 'key_filter')
+
 class ModificationAdmin(admin.ModelAdmin):
     exclude = ('slug_mod',)
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Group)
-admin.site.register(Documentation)
+admin.site.register(Documentation, DocumentationAdmin)
