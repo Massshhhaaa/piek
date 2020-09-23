@@ -13,7 +13,7 @@
     <h2>МЭО (МЭОФ)</h2>
     <div class="d-flex flex-column">
       {% for doc in docs %} {% if doc.key_filter == 'мэоф'%}
-        <a href="{{doc.item.file.url}}"><p>{{doc.item.file.url}}</p></a>
+        <a href="{{doc.item.file.url}}"><p>{{doc.name}}</p></a>
         {% endif %} {% endfor %}
 
     </div>
