@@ -73,7 +73,7 @@ def docs(request):
     return render(request, 'mainapp/docs/operation-manuals.html', {'in_cart_counter': cart_counter(request),})
 
 def general_industrial_design(request):
-    doc_list = Documentation.objects.all()
+    docs = Documentation.objects.all()
     return render(request, 'mainapp/docs/general_industrial_design.html', {'in_cart_counter': cart_counter(request), 'docs': docs, })
 def explosion_proof_design(request):
     return render(request, 'mainapp/docs/explosion_proof_design.html', {'in_cart_counter': cart_counter(request),})
