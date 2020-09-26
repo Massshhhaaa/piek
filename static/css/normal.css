@@ -207,4 +207,9 @@ width: 30%;
 		font-family: 'SF UI Display';
 		font-weight: normal;
 	}
+	.page-ttl{
+		margin-top: 0rem;
+		font: 200 1.8em 'Raleway';
+		padding: 0 1.5rem;
+	}
 }
