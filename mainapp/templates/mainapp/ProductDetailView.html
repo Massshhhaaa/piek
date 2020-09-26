@@ -25,7 +25,7 @@
 	{% endfor %}
 </div>
 
-<div class=" top-block">
+<div class="top-block">
 	<h1 class="text-center"> {{ product.name }}</h1>
 </div>
 
@@ -45,7 +45,7 @@
 
 
 
-				<div class="mod_table_bg my-5 py-5">
+				<div class="mod_table_bg py-5">
 					<div class="d-flex pl-4 pl-md-0">
 						<div class="d-flex flex-column"  id="cart_btn">
 
@@ -149,14 +149,16 @@ function ArrangementCartIcons() {
 		localStorage.setItem('scrollpos', window.scrollY);
 	};
 </script>
-
+ <!-- not used
 <script>
-let mod_bg = document.getElementById("MOD").getBoundingClientRect().top;
+let mod_bg = document.getElementById("MOD").getBoundingClientRect();
 let sidebar = document.getElementById('content-left');
-let sidebar_now_position = sidebar.getBoundingClientRect().top;
+let sidebar_now_position = sidebar.getBoundingClientRect();
 var position  = mod_bg - sidebar_now_position;
-sidebar.style.marginTop = position - 10 + 'px';
-</script>
+console.log(mod_bg);
+console.log(sidebar_now_position);
+sidebar.style.marginTop = position + 'px';
+</script> -->
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
 </html>
