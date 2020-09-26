@@ -32,6 +32,7 @@
 }
 
 .navbar-brand{
+margin-left: 3em;
 -webkit-animation-duration: 1s;
 animation-duration: 1s;
 -webkit-animation-fill-mode: both;
