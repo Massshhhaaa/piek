@@ -65,6 +65,7 @@ margin-bottom: 3em;
 }
 
 @media (max-width: 767.98px) {
+  main{padding: 1em;}
   .wrapper{
     display: flex;
     align-items: center;
