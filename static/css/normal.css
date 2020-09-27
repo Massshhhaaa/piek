@@ -153,23 +153,30 @@ padding: 0 5em;
 .pic{
   display: block;
   width: 100%;
-  max-width: 150px;
+  max-width: 170px;
   height: auto;
   margin: 0 auto;
 }
 
 .separately{
 background-color: #fff;
-border-radius: 20px;
+
+
+
 width: 30%;
 }
-
+/* .separately:nth-of-type(n+2){
+	border-left: 1px dotted #999;
+}
+.separately:nth-of-type(4){
+	border-left: 1px dotted #fff;
+} */
 .separately h1{
   font-family: "Raleway";
   font-weight: 500;
   text-align: center;
   color: #292929;
-  font-size: 1.1em;
+  font-size: 1.15em;
 	box-sizing: border-box;
 
 }
