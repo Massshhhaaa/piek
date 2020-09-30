@@ -56,11 +56,12 @@ main{margin-bottom: -40px !important;}
 </style>
 {% else %}
 {% include 'mainapp/header.html' %}
-<div class="container title bg-light" >
+<div style="z-index: 99!important; position: relative;background-color: #fff;">
+<div class="container title">
 	<div class="rellax" data-rellax-speed="-2">
 		<h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center" style="margin-top: 7rem;">{{subgroup_info.name}}</h1>
 	</div>
-
+</div>
 </div>
 
 {% endif %}
