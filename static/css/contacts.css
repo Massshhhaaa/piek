@@ -23,7 +23,7 @@
 .tel-email b{
  font-family: "SF UI Text";
  font-weight: 600;
- color: #444;
+ color: #444 !important;
 }
  h5{  font-size: 1.1em !important;}
 
