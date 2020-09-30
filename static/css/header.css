@@ -2,7 +2,7 @@
 	border-color: #8a1524;
 }
 .phone-number{
-	color: var(--nav_link_color);
+	color: var(--nav_link_color) !important;
 }
 @media (max-width: 760px){
 	.dropdown .dropdown-menu a{
