@@ -1,9 +1,6 @@
 .nav-item a:hover{
 	border-color: #8a1524;
 }
-.nav-link.phone-number{
-	color: var(--nav_link_color)!important;
-}
 @media (max-width: 760px){
 	.dropdown .dropdown-menu a{
 		/*background-color: #eeeeee !important;
