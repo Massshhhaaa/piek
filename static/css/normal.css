@@ -204,7 +204,7 @@ width: 30%;
   main {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-		margin-top: -5px !important;
+		margin-bottom: -5px!important;
   }
   .center-md{font-size: 1em; text-align: center;}
   .container{padding: 0;}
