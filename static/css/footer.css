@@ -5,9 +5,8 @@
 }
 .footer{
   padding-top: 100px;
-
   letter-spacing: .56px;
-  border-top: 1px solid #d7d7d7;
+  /* border-top: 1px solid #d7d7d7; */
   background-color: (--footer_bg_color);
   font-weight: lighter;
   position: fixed;
@@ -70,7 +69,6 @@
 }
   .left-block div:nth-last-child(1) a{
     font-size: 1em;
-    color: #fff !important;
     margin-bottom: 20px;
   }
   .tiny-footer p{
