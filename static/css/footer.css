@@ -1,8 +1,14 @@
-
+:root{
+  	--footer_bg_color: #fff;
+    --tiny_footer_bg_color: #f5f5f5;
+    --footer_text_color: #272727;
+}
 .footer{
   padding-top: 100px;
+
   letter-spacing: .56px;
-  background-color: #444;
+  border-top: 1px solid #d7d7d7;
+  background-color: (--footer_bg_color);
   font-weight: lighter;
   position: fixed;
   width: 100%;
@@ -13,33 +19,33 @@
 
 .footer a, .footer p{
   letter-spacing: .56px;
-  color: #bcbcbc;
+  color: var(--footer_text_color);
   font-family: "Raleway";
   font-weight: 300;
-  margin-bottom: 0;
   transition-duration: .2s;
 }
 .footer a:hover{
     text-decoration: none;
-    color: yellow;
+    color: #4e0000;
 }
 .footer h2{
-  font-family: Raleway;
-  font-size: 1.5em;
-  font-weight: 400;
+  font-family: 'Raleway';
+  color: #272727;
+  font-size: 1.3em;
+  font-weight: 500;
 }
 .left-block p, .left-block a{
   font-size: 0.91em;
   font-family: "SF UI Text";
-  color: #dedede;
+  color: #3a3a3a;
 }
 .tiny-footer{
  display: flex;
- background-color: #333;
- min-height: 20px;
+ background-color: var(--tiny_footer_bg_color);
+ min-height: 30px;
 }
 .tiny-footer p{
-  color: #dedede;
+  color: #000;
   font-size: 0.7em;
   padding: 10px 15px !important;
   font-family: "SF UI Text";
