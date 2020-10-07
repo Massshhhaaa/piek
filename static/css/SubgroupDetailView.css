@@ -21,10 +21,13 @@ main{
 }
 
 .subgroup-description p, .subgroup-description span{
-  font: 16px "Raleway", serif 300;
-  color: #484848;
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 1.1em !important;
   line-height: 25px;
-  letter-spacing: .54px;
+  letter-spacing: .02em;
+  color: #484848;
+
 }
 .title h1{
   font-family: 'SF Ui Display';
