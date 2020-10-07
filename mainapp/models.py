@@ -27,7 +27,7 @@ class Documentation(models.Model):
     file = models.FileField()
 
     class Meta:
-        ordering = ['key_sort']
+        ordering = ['name']
 
     def __str__(self):
         return str(self.name)
