@@ -22,8 +22,13 @@ class Group(models.Model):
 
 class Documentation(models.Model):
     key_filter = models.CharField(max_length=20)
+    key_sort = models.IntegerField(null=True, blank=True, unique=True)
     name = models.CharField(max_length=255)
     file = models.FileField()
+
+    class Meta:
+        ordering = ['key_sort']
+
     def __str__(self):
         return str(self.name)
 
