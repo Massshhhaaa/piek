@@ -21,10 +21,8 @@ main{
 }
 
 .subgroup-description p, .subgroup-description span{
-  font-family: 'Raleway';
-  font-weight: 400;
-  color: #222222;
-  font-size: 1.2em;
+  font: 16px "Raleway", serif 300;
+  color: #484848;
   line-height: 25px;
   letter-spacing: .54px;
 }
