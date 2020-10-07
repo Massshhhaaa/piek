@@ -83,7 +83,7 @@ main a:hover, a:focus{
 .title-text{
   font-family: 'Raleway';
   font-weight: 600;
-  color: #fff;
+  color: var(--company_name_color);
   font-size: 3.5em;
   letter-spacing: 1px;
   text-align: left;
@@ -100,7 +100,7 @@ main a:hover, a:focus{
   margin-bottom: 0px!important;
   font-family: 'Raleway';
   font-weight: 500;
-  color: #fff;
+  color: var(--about_company_color);
   font-size: 1.2em;
 	text-align: left;
   letter-spacing: 1px;
