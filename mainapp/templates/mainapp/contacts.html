@@ -5,6 +5,11 @@
 	<title>ООО "ПЭК" | Контакты</title>
 	<link href="{% static 'css/contacts.css' %}" rel="stylesheet">
 </head>
+<style media="screen">
+:root{
+	--main-bg-color: #f6f4f5;
+}
+</style>
 <body>
 	{% include 'mainapp/header.html' %}
 	<main>
@@ -12,7 +17,7 @@
 			<h1>Наши контакты</h1>
 		</div>
 
-		<div class="container-fluid" style="background-color:#eeeeee;">
+		<div class="container-fluid" style="background-color: var(--main-bg-color);">
 			<div class="container">
 				<div class="d-flex flex-row justify-content-md-between">
 
