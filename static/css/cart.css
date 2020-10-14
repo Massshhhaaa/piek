@@ -115,19 +115,26 @@ background-color: #f6f6f6; }
   outline: 0 !important;
   outline-offset: 0 !important;
 }
-@media (min-width: 300px) and (max-width: 373px){
+@media (min-width: 300px) and (max-width: 410px){
 	.input-designation{
     width: 300px !important;
   }
 }
 @media (max-width: 767.98px) {
-  .item div{
+  .item {
     justify-content: center !important;
+    border: 1px solid #ededed;
+    border-bottom: 1px solid #ededed!important;
+    margin: 1em;
+    border-radius: 20px;
   }
-  .buttons-secton{
-    padding: 0 10px;
+  .buttons-secton div{
+    width: 30%;
   }
-  .btn-delete{padding:0.5em;}
+  .buttons-secton div:last-of-type{
+    width: 20%;
+  }
+  .btn-delete{width: 100%!important;}
   .btn-quantity:active, .input-integer:active, .btn-delete:active{
     transform: scale(1.1);
   }
