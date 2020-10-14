@@ -211,7 +211,7 @@ width: 30%;
   .container{padding: 0;}
 
   .separately{width: 45%; border-left: none!important;}
-
+	.separately h1{font-size: 1.08em;}
 	.iphone-text-small{
 		font-size: 1.7rem !important;
 		font-family: 'SF UI Display';
