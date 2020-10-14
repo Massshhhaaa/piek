@@ -30,16 +30,17 @@
 </div>
 
 
-		<div class="flex-row mt-1 mt-md-0">
+		<div class="buttons-secton flex-row mt-1 mt-md-0">
 
 
 	<!-- plus button -->
+		<div>
 					<input class="btn-quantity w-6rem"
 								dj_url_function="{% url 'update_quantity' pk=item.id %}"
 								type="button"
 								name="plus"
 								value="+" >
-
+		</div>
 	<!-- input quantity -->
 			<form class="js-input-integer" >{%csrf_token%}
 				<input
@@ -56,12 +57,13 @@
 
 
   <!-- minus button -->
+	<div>
 				<input class="btn-quantity w-6rem"
 			 				dj_url_function="{% url 'update_quantity' pk=item.id %}"
 							type="button"
 							name="minus"
 							value="-" >
-
+	</div>
 
 	<!-- mobile delete button -->
 			<div class="d-flex d-md-none">
