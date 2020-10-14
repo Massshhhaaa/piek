@@ -115,12 +115,20 @@ background-color: #f6f6f6; }
   outline: 0 !important;
   outline-offset: 0 !important;
 }
-
-@media (max-width: 760px) {
+@media (min-width: 300px) and (max-width: 373px){
+	.input-designation{
+    width: 300px !important;
+  }
+}
+@media (max-width: 767.98px) {
   .item div{
     justify-content: center !important;
   }
-  .w-6rem{width: 2em;}
-  .btn-delete{width: auto;padding:0.5em;}
-  .input-integer{width: 4em;}
+  .buttons-secton{
+    padding: 0 10px;
+  }
+  .btn-delete{padding:0.5em;}
+  .btn-quantity:active, .input-integer:active, .btn-delete:active{
+    transform: scale(1.1);
+  }
 }
