@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from mainapp.views import *
-from mainapp.views_cart import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -28,7 +27,7 @@ urlpatterns = [
     path('about/', about, name="about"),
     path('docs/', docs, name='docs'),
     path('docs/certificate/', certificate, name='certificate'),
-    
+
     path('docs/general-industrial-design/', general_industrial_design, name='general_industrial_design'),
     path('docs/explosion-proof-design/', explosion_proof_design, name='explosion_proof_design'),
     path('docs/sensors-and-controllers/', sensors_and_controllers, name='sensors_and_controllers'),
@@ -37,9 +36,9 @@ urlpatterns = [
 
     path('checkout/', checkout, name="checkout"),
     path('sent_mail/', sent_mail, name="sent_mail"),
-    path('product/<int:pk>', product, name='product'), # this using as add-to-cart
-    path('remove_from_cart/<int:pk>', remove_from_cart, name='remove_from_cart'),
-    path('update_quantity/<int:pk>', update_quantity, name='update_quantity'),
+    path('ajax/product/<int:pk>', product, name='product'), # this using as add-to-cart
+    path('ajax/remove_from_cart/<int:pk>', remove_from_cart, name='remove_from_cart'),
+    path('ajax/update_quantity/<int:pk>', update_quantity, name='update_quantity'),
     path('update_conventional_designation/<int:pk>', update_conventional_designation, name='update_conventional_designation'),
 
 

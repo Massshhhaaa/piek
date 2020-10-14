@@ -1,7 +1,7 @@
 :root{
   	--footer_bg_color: #fff;
     --tiny_footer_bg_color: #f5f5f5;
-    --footer_text_color: #272727;
+    --footer_text_color: #282828;
 }
 .footer{
   padding-top: 100px;
@@ -20,7 +20,7 @@
   letter-spacing: .56px;
   color: var(--footer_text_color);
   font-family: "Raleway";
-  font-weight: 300;
+  font-weight: normal;
   transition-duration: .2s;
 }
 .footer a:hover{
@@ -29,14 +29,15 @@
 }
 .footer h2{
   font-family: 'Raleway';
-  color: #272727;
-  font-size: 1.3em;
+  color: #000;
+  font-size: 1.1em;
   font-weight: 500;
 }
 .left-block p, .left-block a{
-  font-size: 0.91em;
-  font-family: "SF UI Text";
-  color: #3a3a3a;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Raleway";
+  color: #282828;
 }
 .tiny-footer{
  display: flex;
@@ -51,9 +52,12 @@
   margin-bottom: 0;
 }
 .link-block a {
-  padding: 0.5em 0;
+  padding: 0.7em 0;
 }
-
+.left-block span{
+  font-family: "SF UI Text";
+  font-weight: 300;
+}
 
 @media (max-width: 760px){
   .footer{
@@ -61,10 +65,10 @@
   position: relative !important;
   padding-top: 3em;
   }
-  footer h2{ font-size: 1em; display: flex; justify-content: center;}
+  footer h2{ font-size: 1em; display: flex; justify-content: start;}
   footer a{
     display: table;
-    font-size: 1.1em;
+    font-size: 1em;
     margin:0 auto;
 }
   .left-block div:nth-last-child(1) a{
@@ -75,10 +79,12 @@
     display: flex;
     justify-content: center;
   }
-  .link-block a{
-  padding: 0.4em 0;
-  }
 
+  .link-block a{
+  margin:.3em 0;
+  padding: 0.5em 0;
+  text-align: left !important;
+  }
   .center-md{font-size: 1em; text-align: center;}
   .container{padding: 0;}
 }
