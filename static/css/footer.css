@@ -63,7 +63,7 @@
   .footer{
   z-index: 1 !important;
   position: relative !important;
-  padding-top: 3em;
+  padding-top: 0em;
   }
   footer h2{ font-size: 1em; display: flex; justify-content: start;}
   footer a{
