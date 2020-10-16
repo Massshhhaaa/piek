@@ -39,6 +39,10 @@ background-color: #fff;
   opacity: 0;
   transition: opacity 0.2s ease-out;
 }
+.cart-button-wrapper{
+  transition-duration: .9s !important;
+}
+
 .btn{
   display: flex;
   width: 40px;
@@ -55,6 +59,7 @@ background-color: #fff;
   background-color: inherit;
   outline: none !important;
   box-shadow: none !important;
+
 }
 .btn:hover{
   background-color: #f4f3f2;
@@ -141,4 +146,11 @@ form:nth-last-of-type(1) .btn{
 }
 #MOD tr:nth-of-type(1){
   background-color: var(--mod_table_bg_color);
+}
+
+
+@media (max-width: 767.98px){
+  .cart-button-wrapper:active{
+    transform: scale(-1.01);
+  }
 }

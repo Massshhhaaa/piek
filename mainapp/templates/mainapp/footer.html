@@ -7,12 +7,13 @@
 				<p class="py-1 center-md iphoneseoff">ООО "ПЭК" - разработка, производство, модернизация и продажа электротехнической продукции</p>
 				<p class="py-1 center-md"><span>428037</span>, г. Чебоксары, Машиностроительный<br>проезд <span>17</span></p>
 				<div class="d-flex flex-row flex-md-column">
-				<a  class="py-md-3 py-3" href="tel:+78352570516"><span>8 (8352) 57-05-16</span></a>
-				<a class="py-md-2 py-3" href="mailto:info@piek.ru">info@piek.ru</a>
+				<a  class="d-none d-md-block py-md-3 py-3" href="tel:+78352570516"><span>8 (8352) 57-05-16</span></a>
+				<a class="d-none d-md-block py-md-2 py-3" href="mailto:info@piek.ru">info@piek.ru</a>
 				</div>
 			</div>
 		<div class="d-flex flex-row col-md-8">
 					<div class="d-flex flex-column py-3  py-md-3 col-md-6 link-block">
+						<a  class="contacts-mobile d-inline d-md-none py-md-3 py-3" href="tel:+78352570516"><span>8 (8352) 57-05-16</span></a>
 						<h2 class="pb-3 pb-md-4">Продукция</h2>
 						<a href="/catalog/armature/"> Трубопроводная арматура </a>
 						<a href="/catalog/mechanisms/meof/"> Однооборотные механизмы </a>
@@ -22,6 +23,7 @@
 					</div>
 
 					<div class="d-flex flex-column py-3 py-md-3 col-md-6 link-block">
+						<a class="contacts-mobile d-inline d-md-none py-md-2 py-3" href="mailto:info@piek.ru">info@piek.ru</a>
 						<h2  class="pb-3 pb-md-4">Информация</h2>
 						<a href="/"> Главная </a>
 						<a href="/about/"> О компании </a>
@@ -40,10 +42,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="{% static 'js/prevent.hover.js' %}"></script>
 
-<script>
-document.addEventListener("touchstart", function(){}, true);
-</script>
 <script> <!-- скрипт для футера -->
 	function FooterHeight() {
 		let h = document.getElementById('Footer').offsetHeight;
