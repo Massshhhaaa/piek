@@ -65,7 +65,23 @@ console.log("csrf_token: "+ csrftoken);
 	});
 
 	$(".btn-delete").click(function ()  {
-		var parent  = $(this).parent().parent();
+		var parent = $(this).parent().parent();
+		console.log($(this).attr('dj_url_function'));
+		$.ajax({
+			headers: { "X-CSRFToken": csrftoken },
+			url: $(this).attr('dj_url_function'),
+			type: 'POST',
+			dataType: 'json',
+			success: function(data) {
+				parent.remove();
+			CartCounter(data);
+			}
+		});
+	});
+
+	$(".js-btn-delete-mobile ").click(function ()  {
+		var parent = $(this).parent().parent().parent();
+		console.log(parent);
 		console.log($(this).attr('dj_url_function'));
 		$.ajax({
 			headers: { "X-CSRFToken": csrftoken },

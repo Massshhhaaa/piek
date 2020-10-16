@@ -7,7 +7,7 @@
   padding-top: 100px;
   letter-spacing: .56px;
   /* border-top: 1px solid #d7d7d7; */
-  background-color: (--footer_bg_color);
+  background-color: var(--footer_bg_color);
   font-weight: lighter;
   position: fixed;
   width: 100%;
@@ -15,7 +15,11 @@
   left: 0;
   right: 0;
 }
-
+.contacts-mobile{
+  font:  300 1em "SF UI Text"  !important;
+  margin-bottom: 2em!important;
+  border-bottom: 1px solid #4e0000;
+}
 .footer a, .footer p{
   letter-spacing: .56px;
   color: var(--footer_text_color);
