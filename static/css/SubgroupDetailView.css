@@ -137,7 +137,8 @@ form:nth-last-of-type(1) .btn{
 @media (max-width: 575.98px) {
   .wrapper h1{font-size: 1.2em;     display: flex;
   justify-content: center;
-  align-items: center; height: 100%;
+  align-items: center;
 }
   .wrapper img{width: 150px; border-radius: 20px;}
+  .description strong{font-size: 0.9em!important;}
 }

@@ -147,7 +147,9 @@ form:nth-last-of-type(1) .btn{
 #MOD tr:nth-of-type(1){
   background-color: var(--mod_table_bg_color);
 }
-
+.cart-button-wrapper:active{
+  transform: scale(-1.05);
+}
 
 @media (max-width: 767.98px){
   .cart-button-wrapper:active{
