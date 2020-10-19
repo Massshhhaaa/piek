@@ -107,7 +107,7 @@ background-color: #fff;
 .doc-wrap p:hover {text-decoration: underline;}
 
 table{
-  max-width: 100%;
+  width: 100%;
   border: hidden;
   border-bottom: 1px solid #e1dedc;
 
