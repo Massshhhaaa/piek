@@ -169,8 +169,8 @@ font-family: "SF UI Text";
 
 .sidenav a {
 	font-family: "Raleway";
-	border-bottom: 1px solid #d6d6d6;
-	font-weight: 600;
+	border-bottom: 1px solid #fbf9f8;
+	font-weight: 400;
 	font-size: 1.15em;
 	margin: 0 1.5em;
   text-decoration: none;
@@ -182,7 +182,7 @@ font-family: "SF UI Text";
 	white-space: nowrap;
 }
 .sidenav a:nth-of-type(n+2){
-	margin-top: 1em;
+
 }
 
 .sidenav .closebtn, .closebtn a {
