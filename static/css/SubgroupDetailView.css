@@ -1,6 +1,10 @@
 :root{
-	--description_font_size: 1.2em;
+	--description_font_size: 15px;
   --description_font_color: #222;
+
+  --tables_cell_padding: 16px;
+  --content_line_height: 20px;
+
 	}
 
 
@@ -18,6 +22,10 @@ main{
   transform: translateY(-50%, -50%);
 }
 
+.title h1{
+  font-family: 'SF Ui Display';
+  font-weight: 400;
+}
 .banner-title{
   font-family: 'SF UI Display';
   font-weight: normal;
@@ -35,33 +43,34 @@ main{
   color: var(--description_font_color);
 
 }
-.title h1{
-  font-family: 'SF Ui Display';
-  font-weight: 400;
-}
+
 .content{
   font-family: 'SF UI Text';
   color: #555;
+  line-height: var(--content_line_height);
+
 }
-.content strong,
-.content span{font-family: 'SF UI Text';}
 
 table{
-  max-width: 100%;
+  width: 100%;
   border: hidden;
-  border-bottom: 1px solid #e1dedc;
-
+  border-left: 1px solid #999;
+  margin: 1em 0!important;
 }
 table td{border-right: hidden;}
 
 table tr{
-  border-bottom: 1px solid #e1dedc;
+  border-bottom: hidden;
   transition-duration: .2s;
+
 }
 table tr:hover{
   background-color: #eee;
 }
-
+table td:first-of-type{
+  padding-left: 15px;
+  font-weight: 500;
+  padding: var(--tables_cell_padding);}
 
 #MOD td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table);}
 #MOD tr{border-bottom: 1px solid #e1dedc;}
