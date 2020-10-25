@@ -7,6 +7,8 @@
 <div class="container">
 	<h1 class="my-2 my-md-5 cart-ttl pb-3">Корзина<span class="pl-2">(<span id="js-in-cart-counter">{{ in_cart_counter }}</span>)</span></h1>
 
+	<div class="bg-light p-5 my-5">Вы можете дописать условное обознаение каждого электропривода в соответствии с документацией</div>
+
 	<div class="cart-header d-none d-md-flex">
 		<p>Наименование</p>
 		<p>Количество</p>
@@ -108,6 +110,6 @@
 {% endfor %}
 </script>
 
-<script src="{% static 'js/ajax/ajax.cart.js' %}"></script>
+<script type="module" src="{% static 'js/ajax/ajax.cart.js' %}"></script>
 
 {% endblock scripts %}

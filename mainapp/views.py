@@ -95,7 +95,7 @@ def update_quantity(request, pk):
                 if 'plus' in request.POST.get('name'):
                     request.session['piek_cart'][i].update({'quantity': quantity + 1 })
 
-                if 'minus' in request.POST.get('name'):
+                if 'minus' in request.POST.get('name') and request.session['piek_cart'][i].get('quantity') > 1:
                     request.session['piek_cart'][i].update({'quantity': quantity - 1 })
 
                 if 'integer' in request.POST.get('name'):
@@ -123,6 +123,11 @@ def update_conventional_designation(request, pk):
 @require_POST
 def product(request, pk):
     print("hello ajax on add to cart")
+    form_quantity = 1
+    if request.POST.get('quantity') != None:
+        form_quantity = int(request.POST.get('quantity'))
+        print('form_quantity: '+ str(form_quantity))
+
     product_title = Modification.objects.only('title').get(id=pk)
     if 'piek_cart' not in request.session:
         request.session['piek_cart']= []
@@ -132,14 +137,14 @@ def product(request, pk):
         if  pk == request.session['piek_cart'][i].get('id'):
             quantity = request.session['piek_cart'][i].get('quantity')
             quantity = int(quantity)
-            request.session['piek_cart'][i].update({'quantity': quantity + 1 })
+            request.session['piek_cart'][i].update({'quantity': quantity + form_quantity })
             request.session.modified = True
             existance_in_cart = False
             break
     #Если после проверки его там нет то existance_in_cart останется как True и он добавится
     if existance_in_cart:
         context={'title': str(product_title),
-                 'quantity': 1,
+                 'quantity': form_quantity,
                  'id': pk,
                 }
         request.session['piek_cart'].append(context)

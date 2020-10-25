@@ -34,7 +34,7 @@
 	<div class="row p-0 m-0 mt-5">
 
 		<div class="col-lg-3 d-none d-lg-flex justify-content-center">
-			{% include 'mainapp/sidebar.html' %}
+			{% include 'mainapp//minor/sidebar.html' %}
 		</div>
 
 		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
@@ -52,7 +52,7 @@
 							{% for mod in mod_list %}
 
 							<div class="cart-button-wrapper">
-								<input type="button" class="js-cart-buttons btn" add-to-cart-url='{% url "product" pk=mod.id %}' >
+								<input class="js-cart-buttons btn" type="button" add-to-cart-url='{% url "product" pk=mod.id %}' >
 							</div>
 
 							{% endfor %}
@@ -91,7 +91,7 @@
 		</div>
 	</div>
 
-	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для sidebar.html -->
+	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
 </main>
 {% include 'mainapp/footer.html' %}
 
@@ -136,24 +136,6 @@ function ArrangementCartIcons() {
 
 </script>
 
-<script>
-$(".js-cart-buttons").click(function ()  {
-	$.ajax({
-		headers: { "X-CSRFToken": '{{csrf_token}}' },
-		url: $(this).attr('add-to-cart-url'),
-		type: 'POST',
-		dataType: 'json',
-		success: function(data) {
-				$('#js-cart-counter').html(data.in_cart_counter);
-				$('#js-mobile-cart-counter').html(data.in_cart_counter);
-				if ((document.getElementById('js-cart-counter').textContent || document.getElementById('js-cart-counter').innerText) ==0){document.getElementById('js-cart-counter-wrap').style.display = "none";}else{document.getElementById('js-cart-counter-wrap').style.display = "inline";}
-				if ((document.getElementById('js-mobile-cart-counter').textContent || document.getElementById('js-mobile-cart-counter').innerText) ==0){document.getElementById('js-mobile-cart-counter-wrap').style.display = "none";}else{document.getElementById('js-mobile-cart-counter-wrap').style.display = "inline";}
-		}
-	});
-});
-
-</script>
-
 
  <!-- not used
 <script>
@@ -165,6 +147,7 @@ console.log(mod_bg);
 console.log(sidebar_now_position);
 sidebar.style.marginTop = position + 'px';
 </script> -->
+<script type="module"  src="{% static 'js/ajax/Product.add-to-cart.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
 </html>

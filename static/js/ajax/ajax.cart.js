@@ -1,12 +1,7 @@
+import {CartCounter} from './ajax.cart.counter.js';
+
 const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 console.log("csrf_token: "+ csrftoken);
-	function CartCounter(data){
-		$('#js-cart-counter').html(data.in_cart_counter);
-		$('#js-mobile-cart-counter').html(data.in_cart_counter);
-    $('#js-in-cart-counter').html(data.in_cart_counter);
-			if ((document.getElementById('js-cart-counter').textContent || document.getElementById('js-cart-counter').innerText) ==0){document.getElementById('js-cart-counter-wrap').style.display = "none";}else{document.getElementById('js-cart-counter-wrap').style.display = "inline";};
-			if ((document.getElementById('js-mobile-cart-counter').textContent || document.getElementById('js-mobile-cart-counter').innerText) ==0){document.getElementById('js-mobile-cart-counter-wrap').style.display = "none";}else{document.getElementById('js-mobile-cart-counter-wrap').style.display = "inline";}
-	}
 
   $(".js-conventional_designation").change(function ()  {
 		var elem  = $(this).find('input.input-designation');
@@ -74,7 +69,8 @@ console.log("csrf_token: "+ csrftoken);
 			dataType: 'json',
 			success: function(data) {
 				parent.remove();
-			CartCounter(data);
+			  CartCounter(data);
+
 			}
 		});
 	});
