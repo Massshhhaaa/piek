@@ -10,6 +10,8 @@
 
 </head>
 <body>
+
+
 	{% include 'mainapp/header.html' %}
 
 	<div class="d-flex flex-wrap justify-content-center mt-5 " style="
@@ -27,7 +29,7 @@
 	<div class="row p-0 m-0">
 
 		<div class="col-lg-3 d-none d-lg-flex justify-content-center">
-			{% include 'mainapp/sidebar.html' %}
+			{% include 'mainapp//minor/sidebar.html' %}
 		</div>
 
 
@@ -43,12 +45,12 @@
 					<div class="d-flex flex-column flex-md-row justify-content-center">
 
 						<div class="d-flex flex-column justify-content-center">
-							<form method="POST" action="{% url "product" pk=mod.id %}">
-								{% csrf_token %}
-								<input class="input-quantity mr-3" min="1" value=1 type="text" name="quantity" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-								<input type="hidden" name="next" value="{{ request.path }}"> <!-- WARNING:  -->
-								<div class="d-flex align-self-center p-3 btn-wrap"><input class="btn" type="submit" value=""></div>
+
+							<form id="js-form-add-cart" add-to-cart-url='{% url "product" pk=mod.id %}'>
+								<input id="js-quantity-field" class="input-quantity mr-3" min="1" value=1 type="text" name="quantity" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+								<div class="d-flex align-self-center p-3 btn-wrap"><input id="js-cart-button" class="btn" type="button" value=""></div>
 							</form>
+
 						</div>
 
 						<div class="flex-column m-auto pt-4 pt-md-0 m-md-0"><p class="help-text p-2 pl-md-5">Внести изменения в название вы сможете в корзине</p></div>
@@ -92,6 +94,8 @@ let sidebar_now_position = sidebar.getBoundingClientRect().top;
 var position  = mod_bg - sidebar_now_position;
 sidebar.style.marginTop = position+ 10 + 'px';
 </script>
+
+<script type="module"  src="{% static 'js/ajax/Modification.add-to-cart.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
 </html>

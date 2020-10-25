@@ -1,3 +1,9 @@
+:root{
+	--description_font_size: 1.2em;
+  --description_font_color: #222;
+	}
+
+
 main{
   padding-top: 5rem;
 }
@@ -22,11 +28,11 @@ main{
 
 .subgroup-description p, .subgroup-description span{
   font-family: "Raleway";
-  font-weight: 300;
-  font-size: 1.1em !important;
+  font-weight: 400;
+  font-size: var(--description_font_size)!important;
   line-height: 25px;
-  letter-spacing: .02em;
-  color: #484848;
+  letter-spacing: .54px;
+  color: var(--description_font_color);
 
 }
 .title h1{

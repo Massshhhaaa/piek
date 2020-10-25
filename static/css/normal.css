@@ -73,7 +73,7 @@ main a:hover, a:focus{
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-  -webkit-animation: slide 720s linear infinite;
+  /* -webkit-animation: slide 720s linear infinite; */
 }
 .align-middle{
   position: absolute;

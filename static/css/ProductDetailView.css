@@ -1,7 +1,7 @@
 :root {
   --mod_table_bg_color: #f9f9f9;
   --mod_table_bg_color_hover: #f4f3f2;
-  --height_of_row_mod_table: 8px !important;
+  --height_of_row_mod_table: 10px !important;
   --doc_wrab_bg_color: #edf1f6;
   --doc_wrab_bg_color_hover:#f6eeed;
 }
