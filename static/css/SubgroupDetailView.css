@@ -70,7 +70,7 @@ table td:first-of-type{
 }
 
 #MOD td{margin: 0; padding: var(--height_of_row_mod_table);}
-#MOD tr{border-bottom: 1px solid #333;}
+#MOD tr{border-bottom: 1px solid #333!important;}
 #MOD tr:hover{ background-color: var(--mod_table_bg_color_hover);}
 #MOD{
   width: 100% !important;
