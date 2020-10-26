@@ -69,8 +69,8 @@ table td:first-of-type{
   font-weight: 500;
 }
 
-#MOD td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table);}
-#MOD tr{border-bottom: 1px solid #e1dedc;}
+#MOD td{margin: 0; padding: var(--height_of_row_mod_table);}
+#MOD tr{border-bottom: 1px solid #333;}
 #MOD tr:hover{ background-color: var(--mod_table_bg_color_hover);}
 #MOD{
   width: 100% !important;
