@@ -129,7 +129,7 @@ table tr:hover{
 }
 
 
-#MOD td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table); width: inherit!important;}
+#MOD td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table); width: auto!important;}
 #MOD tr{border-bottom: 1px solid #e1dedc;}
 #MOD tr:hover{ background-color: var(--mod_table_bg_color_hover);}
 #MOD{
