@@ -48,18 +48,16 @@ main{
   font-family: 'SF UI Text';
   color: #555;
   line-height: var(--content_line_height);
-
 }
-
+.content strong{color: #222;}
 table{
   width: 100%;
   border: hidden;
-  border-left: 1px solid #999;
 }
-table td{border-right: hidden;}
+table td{border-right: hidden;padding: var(--tables_cell_padding);}
 
 table tr{
-  border-bottom: hidden;
+  border-bottom: 1px solid #e4e4e4;
   transition-duration: .2s;
 
 }
@@ -69,7 +67,7 @@ table tr:hover{
 table td:first-of-type{
   padding-left: 15px;
   font-weight: 500;
-  padding: var(--tables_cell_padding);}
+}
 
 #MOD td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table);}
 #MOD tr{border-bottom: 1px solid #e1dedc;}
