@@ -1,19 +1,25 @@
 :root {
+  --image_width: 400px;
   --mod_table_bg_color: #f9f9f9;
   --mod_table_bg_color_hover: #f4f3f2;
   --height_of_row_mod_table: 10px !important;
   --doc_wrab_bg_color: #edf1f6;
-  --doc_wrab_bg_color_hover:#f6eeed;
+  --doc_wrab_bg_color_hover: #f6eeed;
+
+
+    --tables_cell_padding: 15px;
+    --content_line_height: 20px;
+
 }
 
 html{
   overflow-x: hidden;
 }
-nav{
-background-color: #fff;
+table p{
+  margin: 0!important;
 }
 .image{
-  width: 400px;
+  width: var(--image_width);
   height: auto;
   z-index: 4;
   background-color: #fff;
@@ -75,10 +81,9 @@ background-color: #fff;
   font-family: 'SF UI Text';
   color: #555;
   max-width: 900px!important;
+  line-height: var(--content_line_height);
 }
-.content strong,
-.content span{font-family: 'SF UI Text';}
-
+.content strong{color: #222;}
 
 .mod_table_bg{
   background-color: var(--mod_table_bg_color);
@@ -88,6 +93,7 @@ background-color: #fff;
    -moz-box-shadow: 0px 0px 3px 3px rgba(249,249,249,1);
    box-shadow: 0px 0px 3px 3px rgba(249,249,249,1);
 }
+
 
 @media (max-width: 780px) {
   .image{width: 250px;}
@@ -112,7 +118,7 @@ table{
   border-bottom: 1px solid #e1dedc;
 
 }
-table td{border-right: hidden;}
+table td{border-right: hidden; padding: var(--tables_cell_padding)}
 
 table tr{
   border-bottom: 1px solid #e1dedc;
