@@ -135,6 +135,14 @@ function ArrangementCartIcons() {
 	});
 
 </script>
+<script type="text/javascript">
+$(".js-cart-buttons").click(function () {
+var id  = "#"+ $(this).attr('id');
+console.log(id);
+$(id).addClass("btn-animate-hover");
+$(id).parent().addClass("btn-animate");
+});
+</script>
 
 
  <!-- not used

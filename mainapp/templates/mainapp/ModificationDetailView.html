@@ -6,6 +6,7 @@
 	<title>{{ product_content.h1_mod }} {{ mod.title }} - ООО ПЭК</title>
 	<link href="{% static 'css/ProductDetailView.css' %}" rel="stylesheet">
 	<link href="{% static 'css/ModificationDetailView.css' %}" rel="stylesheet">
+	<link href="{% static 'css/ModificationsDetailView_CartButtons.css' %}" rel="stylesheet">
 	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
 
 </head>
@@ -40,27 +41,47 @@
 					<h1 class="text-center"> {{ product_content.h1_mod }} {{ mod.title }}</h1>
 				</div>
 
-				<div class="container py-5" id='cart-form-bg' style="background-color: #f9f9f9;border-radius:15px;">
+				<div class="about-modification container py-5" id='cart-form-bg'>
 
-					<div class="d-flex flex-column flex-md-row justify-content-center">
+					<div class="d-flex flex-column flex-md-row justify-content-center border-bottom pb-md-5">
 
 						<div class="d-flex flex-column justify-content-center">
 
 							<form id="js-form-add-cart" add-to-cart-url='{% url "product" pk=mod.id %}'>
 								<input id="js-quantity-field" class="input-quantity mr-3" min="1" value=1 type="text" name="quantity" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-								<div class="d-flex align-self-center p-3 btn-wrap"><input id="js-cart-button" class="btn" type="button" value=""></div>
-							</form>
+								<div class="d-flex align-self-center p-3 btn-wrap">
+
+
+									<div id="js-cart-button" class="add-to-cart">
+										    <div class="default">Добавить</div>
+										    <div class="success">Добавлено</div>
+										    <div class="cart">
+										        <div>
+										            <div></div>
+										            <div></div>
+										        </div>
+										    </div>
+										    <div class="dots"></div>
+									</div>
+
+
+
+						</div>
+						</form>
 
 						</div>
 
 						<div class="flex-column m-auto pt-4 pt-md-0 m-md-0"><p class="help-text p-2 pl-md-5">Внести изменения в название вы сможете в корзине</p></div>
-					</div>
+						</div>
+
+
+							<section class="content pt-5 px-3">
+								{{ mod.content | safe }}
+							</section>
 
 				</div>
+<!-- f -->
 
-				<section class="content py-5 px-3">
-					{{ mod.content | safe }}
-				</section>
 
 				<section class="content py-5 px-3">
 					{{ product_content.content | safe }}
@@ -86,6 +107,7 @@
 		</div>
 	</div>
 </main>
+
 {% include 'mainapp/footer.html' %}
 <script>
 let mod_bg = document.getElementById("cart-form-bg").getBoundingClientRect().top;
@@ -94,7 +116,14 @@ let sidebar_now_position = sidebar.getBoundingClientRect().top;
 var position  = mod_bg - sidebar_now_position;
 sidebar.style.marginTop = position+ 10 + 'px';
 </script>
+<script type="text/javascript">
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', e => {
+        button.classList.toggle('added');
+    });
+});
 
+</script>
 <script type="module"  src="{% static 'js/ajax/Modification.add-to-cart.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
