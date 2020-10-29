@@ -45,9 +45,6 @@ table p{
   opacity: 0;
   transition: opacity 0.2s ease-out;
 }
-.cart-button-wrapper{
-  transition-duration: .9s !important;
-}
 
 .btn{
   display: flex;
@@ -70,7 +67,15 @@ table p{
 .btn:hover{
   background-color: #f4f3f2;
 }
-
+.btn-animate{
+  background:rgba(78,0,0, .05)!important;
+}
+.btn-animate-hover:hover{
+  background-color: transparent !important;
+}
+.btn:active{
+  background-size: 17px;
+}
 
 .content a, .content p, .content span{
   font-family: 'SF UI Text';
@@ -147,18 +152,10 @@ table tr:hover{
 form:nth-last-of-type(1) .btn{
   border: none !important;
 }
-#MOD tr:nth-last-of-type(1){
-  border: none !important;
-}
+
 #MOD tr:nth-of-type(1){
   background-color: var(--mod_table_bg_color);
 }
-.cart-button-wrapper:active{
-  transform: scale(-1.05);
-}
 
 @media (max-width: 767.98px){
-  .cart-button-wrapper:active{
-    transform: scale(-1.01);
-  }
 }
