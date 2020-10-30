@@ -9,7 +9,6 @@
 
 .content-left {
 width: 300px;
-
 margin-bottom: 5vw;
 }
 .content-left.animate {
@@ -17,7 +16,6 @@ opacity: 1;
 }
 
 .sidebar-wrap{
-  background-color: #fff;
   border-radius: 30px;
 }
 .sidebar-title {
@@ -30,7 +28,7 @@ opacity: 1;
   letter-spacing: 1px;
 }
 .sidebar-content{
-  border-right: 1px solid #dedede;
+  border-right: var(--border);
   padding: 0 1em;
 }
 .sidebar-text a{

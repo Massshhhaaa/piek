@@ -54,7 +54,7 @@ animation-delay: 1.7s;
 
  .nav-item a:hover{
   margin-bottom: -1px;
-  border-bottom: 1px solid yellow;
+  border-bottom: 1px solid var(--navbar_bb, #4e0000);
 }
 
 
