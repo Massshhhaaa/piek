@@ -98,8 +98,7 @@ form:nth-last-of-type(1) .btn{
   border: none;
 }
 .wrapper{
- position: relative;
- border-top: 1px solid rgba(0,0,0,.1);
+ border-top: var(--border);
  transition: .3s;
 }
 .wrapper h1 {

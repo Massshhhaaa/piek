@@ -77,15 +77,21 @@ table p{
   background-size: 17px;
 }
 
-.content a, .content p, .content span{
+.content a, .content p, .content span, .mod-table a, .mod-table p, .mod-table span{
   font-family: 'SF UI Text';
   color: #555;
   font-weight: normal;
 }
+.mod-table{
+  font-family: 'SF UI Text';
+  color: #555;
+  line-height: var(--content_line_height);
+  width: 100%!important;
+}
 .content{
   font-family: 'SF UI Text';
   color: #555;
-  max-width: 900px!important;
+  width: 900px!important;
   line-height: var(--content_line_height);
 }
 .content strong{color: #222;}

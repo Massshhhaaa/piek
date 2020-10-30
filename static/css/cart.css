@@ -27,6 +27,9 @@
 .cart-header p:nth-of-type(2){
   margin-right: 6.5em;
 }
+.item{
+  border-bottom: var(--border);
+}
 .item div{
   display: flex;
   justify-content: space-around;
