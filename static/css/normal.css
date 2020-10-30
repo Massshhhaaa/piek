@@ -1,3 +1,7 @@
+:root{
+	--border: 1px solid #e8e8e8;
+	brand_brown: #4e0000;
+}
 * { outline:none; }
 
 @media (min-width: 1200px) and (max-width: 1400px){
@@ -95,7 +99,7 @@ main a:hover, a:focus{
   text-align: left;
   text-transform: uppercase;
 	opacity: 0;
-	margin-top: 30px;
+	margin-top: 50px;
 
 	transition: 1s;
 }.title-text.animate {
@@ -167,21 +171,15 @@ padding: 0 5em;
 }
 
 .separately{
-background-color: #fff;
-
-
-
 width: 30%;
 }
 .separately:nth-of-type(3n+2){
-	border-left: 1px solid #dedede;
+	border-left: var(--border);
 }
 .separately:nth-of-type(3n+3){
-	border-left: 1px solid #dedede;
+	border-left: var(--border);
 }
-.separately:nth-of-type(4){
-	border-left: 1px dotted #fff;
-}
+
 .separately h1{
   font-family: "Raleway";
   font-weight: 500;
