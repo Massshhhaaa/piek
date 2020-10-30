@@ -27,7 +27,6 @@
 }
 
 .container{
-  max-width: 1050px !important;
   padding-top:0px;
 }
 
@@ -165,19 +164,15 @@ padding: 0 5em;
 .pic{
   display: block;
   width: 100%;
-  max-width: 120px;
+  max-width: 170px;
   height: auto;
   margin: 0 auto;
 }
 
 .separately{
-width: 30%;
-}
-.separately:nth-of-type(3n+2){
-	border-left: var(--border);
-}
-.separately:nth-of-type(3n+3){
-	border-left: var(--border);
+width: 100%;
+border-bottom: var(--border);
+	padding: 3em 0!important;
 }
 
 .separately h1{
@@ -186,12 +181,14 @@ width: 30%;
   text-align: center;
   color: #292929;
   font-size: 1.15em;
+	max-width: 300px;
 	box-sizing: border-box;
 
 }
 .item-name:hover{
   text-decoration: none;
   color: #4e0000;
+
 }
 
 .page-ttl{

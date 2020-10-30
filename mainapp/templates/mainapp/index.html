@@ -17,6 +17,21 @@
 	transition: 1s;
 	transition-delay: .6s;
 	}
+
+
+.group-ttl {
+padding: 0 3em;
+}
+
+.group-ttl h1{
+	margin: 3em 0;
+	font: normal 25px "SF UI Display";
+	text-decoration: underline;
+}
+.item-name{
+	font-size: 16px!important;
+}
+
 </style>
 <body>
 
@@ -46,32 +61,59 @@
 			</div>
 
 
-			<main>
-				<div class="row p-0 m-0">
-					<div class="col-lg-3 d-none d-lg-flex justify-content-center p-0">
-						{% include 'mainapp//minor/sidebar.html' %}
-					</div>
+			<main >
+				<div class="d-flex justify-content-around mx-5 p-5">
 
-					<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
-
-						<div class="container pt-md-5">
-							<div class="d-flex flex-wrap">
+							<div class="flex-column group-ttl">
+								<h1>Электроприводы в общепромышленноми исполнении</h1>
 								{% for cat in categories %}
+								{% if cat.id == 1 or cat.id == 2 or cat.id == 3 or cat.id == 6 or cat.id == 7 or cat.id == 8 %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
-									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+								<a class="d-flex flex-row flex-fill" href="catalog/{{ cat.slug }}">
 
-										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
-										<div class="py-2 py-lg-5"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
+									<div class="m-2 py-2 "><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
+									<div class="py-2"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
 
-									</a>
-								</div>
-								{% endfor %}
+								</a>
 							</div>
-						</div>
-					</div>
-				</div>
+							{% endif %}
+							{% endfor %}
+							</div>
 
-				<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
+							<div class="flex-column group-ttl">
+								<h1>Электроприводы во взрывозащищенном исполнении</h1>
+								{% for cat in categories %}
+								{% if cat.id == 13 or cat.id == 4 or cat.id == 5  %}
+								<div class="m-1 m-md-2 d-flex flex-fill separately">
+								<a class="d-flex flex-row flex-fill" href="catalog/{{ cat.slug }}">
+
+									<div class="m-2 py-2 "><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
+									<div class="py-2"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
+
+								</a>
+							</div>
+							{% endif %}
+							{% endfor %}
+							</div>
+
+							<div class="flex-column group-ttl">
+								<h1>Шлагбаумы, датчики, управляющие устройства</h1>
+								{% for cat in categories %}
+								{% if cat.id == 10 or cat.id == 11 or cat.id == 9 or  cat.id == 12 %}
+								<div class="m-1 m-md-2 d-flex flex-fill separately">
+								<a class="d-flex flex-row flex-fill" href="catalog/{{ cat.slug }}">
+
+									<div class="m-2 py-2 "><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
+									<div class="py-2"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
+
+								</a>
+							</div>
+							{% endif %}
+							{% endfor %}
+							</div>
+
+
+				</div>
 			</main>
 			{% include 'mainapp/footer.html' %}
 			<script type="text/javascript">
