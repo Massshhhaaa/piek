@@ -49,14 +49,36 @@
 			<main>
 				<div class="row p-0 m-0">
 					<div class="col-lg-3 d-none d-lg-flex justify-content-center p-0">
-						{% include 'mainapp//minor/sidebar.html' %}
+							{% include 'mainapp//minor/sidebar.html' %}
 					</div>
 
 					<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
+<style media="screen">
+	.boring {
+		font: 600 1.6em "Raleway";
+		width: 100%;
+		z-index: 10;
+		margin-left: 20px;
+		background-color: #fff;
+		width: auto;
+	}
 
+	.section{
+		padding-top: 25px;
+		margin-top: -17px!important;
+		border: 2px solid #f2f2f2;
+		margin: 3em 0;
+		border-radius: 20px;
+	}
+</style>
 						<div class="container pt-md-5">
 							<div class="d-flex flex-wrap">
+
+								<h1 class="boring">Электроприводы в общепромышленном исполнении</h1>
+								<div class="section d-flex flex-wrap">
+
 								{% for cat in categories %}
+								{% if cat.id == 1 or cat.id == 2 or cat.id == 3 or cat.id == 6 or cat.id == 7 or cat.id == 8   %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
 									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
 
@@ -65,7 +87,61 @@
 
 									</a>
 								</div>
+								{% endif %}
 								{% endfor %}
+									</div>
+
+
+								<h1 class="boring">Электроприводы во взрывозащищенном исполнении</h1>
+							<div class="section d-flex flex-wrap">
+
+								{% for cat in categories %}
+								{% if cat.id == 4 or cat.id == 5 or cat.id == 13   %}
+								<div class="m-1 m-md-2 d-flex flex-fill separately">
+									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+
+										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
+										<div class="py-2 py-lg-5"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
+
+									</a>
+								</div>
+								{% endif %}
+								{% endfor %}
+							</div>
+
+								<h1 class="boring">Шлагбаумы, пусковые и управляющие устройства </h1>
+							<div class="section d-flex flex-wrap">
+
+
+								{% for cat in categories %}
+								{% if cat.id == 9  or cat.id == 10  or cat.id == 11   %}
+								<div class="m-1 m-md-2 d-flex flex-fill separately">
+									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+
+										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
+										<div class="py-2 py-lg-5"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
+
+									</a>
+								</div>
+								{% endif %}
+								{% endfor %}
+						</div>
+
+								<h1 class="boring"></h1>
+								{% for cat in categories %}
+								{% if cat.id == 12  %}
+								<div class="m-1 m-md-2 d-flex flex-fill separately">
+									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+
+										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
+										<div class="py-2 py-lg-5"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
+
+									</a>
+								</div>
+								{% endif %}
+								{% endfor %}
+
+
 							</div>
 						</div>
 					</div>
