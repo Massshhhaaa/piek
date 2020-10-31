@@ -91,7 +91,7 @@ table p{
 .content{
   font-family: 'SF UI Text';
   color: #555;
-  width: 900px!important;
+  max-width: 900px!important;
   line-height: var(--content_line_height);
 }
 .content strong{color: #222;}
@@ -111,13 +111,12 @@ table p{
   .doc-wrap{width: 45% !important;}
 }
 
-
 .doc-wrap{
   background-color: var(--doc_wrab_bg_color);
   border-radius: 10px;
   text-align: center;
   width: 30%;
-  transition-duration: .3s;
+  transition: background-color .3s;
 }
 .doc-wrap:hover{background-color: var(--doc_wrab_bg_color_hover);}
 .doc-wrap a {color: black;}
