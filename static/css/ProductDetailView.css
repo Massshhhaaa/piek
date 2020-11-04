@@ -1,35 +1,15 @@
 :root {
-  --image_width: 400px;
+
+  --height_of_row_mod_table: 10px !important;
   --mod_table_bg_color: #f9f9f9;
   --mod_table_bg_color_hover: #f4f3f2;
-  --height_of_row_mod_table: 10px !important;
-  --doc_wrab_bg_color: #edf1f6;
-  --doc_wrab_bg_color_hover: #f6eeed;
-
-
-    --tables_cell_padding: 15px;
-    --content_line_height: 20px;
-
 }
 
 html{
   overflow-x: hidden;
 }
-table p{
-  margin: 0!important;
-}
-.image{
-  width: var(--image_width);
-  height: auto;
-  z-index: 4;
-  background-color: #fff;
-}
-.top-block h1{
-  font-family: 'SF UI Display';
-  font-weight: 400;
-  font-size: 2.3em;
-  margin: 3em 0;
-}
+
+
 .top-block p{
   font-family: 'Raleway';
   font-weight: 400;
@@ -50,51 +30,42 @@ table p{
   display: flex;
   width: 40px;
   justify-content: center;
-  border: none !important;
+  border: none;
   align-items: center;
   cursor: pointer;
   margin: 0;
-  background-image: url("/static/img/cart-plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 0px;
   border-bottom: 1px solid #e1dedc !important;
   background-color: inherit;
   outline: none !important;
   box-shadow: none !important;
+  color: #222;
+  font-size: 18px;
 
+  transition: transform .15s linear forwards, background-color .2s;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn:hover{
   background-color: #f4f3f2;
+
 }
 .btn-animate{
-  background:rgba(78,0,0, .05)!important;
+  color: green!important;
 }
-.btn-animate-hover:hover{
-  background-color: transparent !important;
-}
-.btn:active{
+.btn:active svg{
   background-size: 17px;
+  -webkit-transform: scale(.95);
+          transform: scale(.95);
 }
 
-.content a, .content p, .content span, .mod-table a, .mod-table p, .mod-table span{
-  font-family: 'SF UI Text';
-  color: #555;
-  font-weight: normal;
-}
+
 .mod-table{
   font-family: 'SF UI Text';
   color: #555;
   line-height: var(--content_line_height);
   width: 100%!important;
 }
-.content{
-  font-family: 'SF UI Text';
-  color: #555;
-  max-width: 900px!important;
-  line-height: var(--content_line_height);
-}
-.content strong{color: #222;}
 
 .mod_table_bg{
   background-color: var(--mod_table_bg_color);
@@ -105,38 +76,6 @@ table p{
    box-shadow: 0px 0px 3px 3px rgba(249,249,249,1);
 }
 
-
-@media (max-width: 780px) {
-  .image{width: 250px;}
-  .doc-wrap{width: 45% !important;}
-}
-
-.doc-wrap{
-  background-color: var(--doc_wrab_bg_color);
-  border-radius: 10px;
-  text-align: center;
-  width: 30%;
-  transition: background-color .3s;
-}
-.doc-wrap:hover{background-color: var(--doc_wrab_bg_color_hover);}
-.doc-wrap a {color: black;}
-.doc-wrap p:hover {text-decoration: underline;}
-
-table{
-  width: 100%!important;
-  border: hidden;
-  border-bottom: 1px solid #e1dedc;
-
-}
-table td{border-right: hidden; padding: var(--tables_cell_padding)}
-
-table tr{
-  border-bottom: 1px solid #e1dedc;
-  transition-duration: .2s;
-}
-table tr:hover{
-  background-color: #eee;
-}
 
 
 #MOD td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table);}
@@ -160,7 +99,4 @@ form:nth-last-of-type(1) .btn{
 
 #MOD tr:nth-of-type(1){
   background-color: var(--mod_table_bg_color);
-}
-
-@media (max-width: 767.98px){
 }

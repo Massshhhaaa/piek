@@ -2,7 +2,7 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	{% include 'mainapp/head-property.html' %}
+	{% include 'mainapp/parts/head-property.html' %}
 	<title>Электроприводы МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР от производителя - ООО "ПЭК"</title>
 </head>
 <style>
@@ -37,7 +37,7 @@
 
 
 		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %}); z-index: 99;">
-				{% include 'mainapp/header.html' %}
+				{% include 'mainapp/parts/header.html' %}
 
 				<div class="container title" style="padding-top: 5em;">
 					<h1 class="title-text p-3 pb-5 pb-md-0 p-md-0">Поволжская </br> Электротехническая </br> Компания</h1>
@@ -149,7 +149,7 @@
 
 				<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
 			</main>
-			{% include 'mainapp/footer.html' %}
+			{% include 'mainapp/parts/footer.html' %}
 			<script type="text/javascript">
 				$(document).ready(() => {
 					$('.title-text').addClass('animate');

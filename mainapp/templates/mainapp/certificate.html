@@ -2,7 +2,7 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	{% include 'mainapp/head-property.html' %}
+	{% include 'mainapp/parts/head-property.html' %}
 	<title>ООО "ПЭК" - Сертификаты</title>
   	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
 </head>
@@ -42,7 +42,7 @@ transition-duration: .3s;
 </style>
 
 <body>
-  {% include 'mainapp/header.html' %}
+  {% include 'mainapp/parts/header.html' %}
   <div class="container" style="z-index: 3!important;  background-color: #fff;">
     <div class="rellax" data-rellax-speed="-3">
       <h1 class="iphone-text-small py-md-3 py-5 page-ttl">Сертификаты и декларации о соответствии</h1>
@@ -101,7 +101,7 @@ transition-duration: .3s;
 
 				<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
 			</main>
-			{% include 'mainapp/footer.html' %}
+			{% include 'mainapp/parts/footer.html' %}
       <script src="{% static 'js/rellax.min.js' %}"></script>
       <script>
       // Accepts any class name

@@ -44,17 +44,17 @@ def ProductDetailView(request, slug_product, slug):
 
 
 def ModificationDetailView(request, slug, slug_product, slug_mod):
-    product         = Product.objects.filter(parent__slug=slug, slug_product=slug_product).values('pk')
-    product_content = Product.objects.only('content', 'href_title', 'h1_mod').get(pk__in = product)
-    photos          = ProductImage.objects.filter(page__pk__in=product)
-    docs            = ProductDocs.objects.filter(page__pk__in=product)
-    mod             = get_object_or_404(Modification, slug_mod=slug_mod, parent__pk__in=product)
+    product_pk      = Product.objects.filter(parent__slug=slug, slug_product=slug_product).values('pk')
+    product         = Product.objects.only('content', 'href_title', 'h1_mod').get(pk__in = product_pk)
+    photos          = ProductImage.objects.filter(page__pk__in=product_pk)
+    docs            = ProductDocs.objects.filter(page__pk__in=product_pk)
+    mod             = get_object_or_404(Modification, slug_mod=slug_mod, parent__pk__in=product_pk)
 
     context = {
     'mod' : mod,
     'photos': photos,
+    'product' : product,
     'docs' : docs,
-    'product_content' : product_content,
     'in_cart_counter': cart_counter(request),}
     return render(request, 'mainapp/ModificationDetailView.html', context)
 

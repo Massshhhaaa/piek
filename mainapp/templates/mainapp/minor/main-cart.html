@@ -2,7 +2,7 @@
 {% load static %}
 <html>
 <head>
-	{% include 'mainapp/head-property.html' %}
+	{% include 'mainapp/parts/head-property.html' %}
 	<link rel="stylesheet" href="{% static 'css/cart.css' %}">
 	<title>Корзина - ООО "ПЭК"</title>
 </head>
@@ -20,7 +20,7 @@
 		});
 	</script>
 
-	{% include 'mainapp/header.html' %}
+	{% include 'mainapp/parts/header.html' %}
 
 	<main class="pb-5">
 		<div class="row p-0 m-0">
@@ -55,7 +55,7 @@
 	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
 </main>
 <script src="{% static 'js/scrollpos.js' %}"></script>
-{% include 'mainapp/footer.html' %}
+{% include 'mainapp/parts/footer.html' %}
 {% block scripts %}
 {% endblock scripts %}
 </body>

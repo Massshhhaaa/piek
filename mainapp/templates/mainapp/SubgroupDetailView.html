@@ -2,7 +2,7 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	{% include 'mainapp/head-property.html' %}
+	{% include 'mainapp/parts/head-property.html' %}
 	<title>{{ subgroup_info.title }} - ООО "ПЭК"</title>
 	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
 </head>
@@ -23,7 +23,7 @@
 	</style>
 
 	<div class="banner" style="background-image: url({{ subgroup_info.pic_of_hat.url }});">
-		{% include 'mainapp/header.html' %}
+		{% include 'mainapp/parts/header.html' %}
 
 		<div class="container h-75">
 		<h1 class="container banner-title align-middle p-3">{{subgroup_info.name}}</h1>
@@ -55,7 +55,7 @@ main{margin-bottom: -40px !important;}
 }
 </style>
 {% else %}
-{% include 'mainapp/header.html' %}
+{% include 'mainapp/parts/header.html' %}
 <div style="z-index: 99!important; position: relative;background-color: #fff;">
 <div class="container title">
 	<div class="rellax" data-rellax-speed="-2">
@@ -96,7 +96,7 @@ main{margin-bottom: -40px !important;}
 								</div>
 
 								<div class="flex-column justify-content-center w-100 px-md-5 position-relative">
-									<h1 class="pb-md-3 px-3 py-4 py-md-0">{{ product.href_title }}</h1>
+									<h1 class="mb-md-3 px-3 py-4 py-md-0">{{ product.href_title }}</h1>
 									<div class="d-none px-3 py-2 py-md-0 d-sm-flex flex-column description">{{ product.description |safe }}</div>
 								</div>
 							</div>
@@ -116,7 +116,7 @@ main{margin-bottom: -40px !important;}
 
 	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
 </main>
-{% include 'mainapp/footer.html' %}
+{% include 'mainapp/parts/footer.html' %}
 <script src="{% static 'js/rellax.min.js' %}"></script>
 <script>
 // Accepts any class name

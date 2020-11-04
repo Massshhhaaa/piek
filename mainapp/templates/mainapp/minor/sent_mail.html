@@ -2,7 +2,7 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	{% include 'mainapp/head-property.html' %}
+	{% include 'mainapp/parts/head-property.html' %}
 	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
   <style>
     .picture{
@@ -21,7 +21,7 @@
   </style>
 </head>
 <body>
-{% include 'mainapp/header.html' %}
+{% include 'mainapp/parts/header.html' %}
 
 <main class="main-property" style="z-index: 5;">
   <div class="container title">
@@ -40,7 +40,7 @@
   	</div>
 </main>
 
-{% include 'mainapp/footer.html' %}
+{% include 'mainapp/parts/footer.html' %}
 
 <script src="{% static 'js/rellax.min.js' %}"></script>
 <script>

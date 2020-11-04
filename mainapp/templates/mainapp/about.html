@@ -2,7 +2,7 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	{% include 'mainapp/head-property.html' %}
+	{% include 'mainapp/parts/head-property.html' %}
 	<title>ООО "ПЭК"  О компании </title>
 	<link href="{% static 'css/about.css' %}" rel="stylesheet">
 </head>
@@ -15,7 +15,7 @@
 	}
 </style>
 	<div class="banner" style="background-image: url({% static 'img/about-page/about-banner.jpg' %}); z-index: 99;">
-		{% include 'mainapp/header.html' %}
+		{% include 'mainapp/parts/header.html' %}
 		<div class="container mt-5 pt-5">
 			<h1 class="benefits__header">О компании в цифрах</h1>
 		    <div class="d-flex flex-wrap justify-content-around">
@@ -50,7 +50,7 @@
 
 </main>
 
-	{% include 'mainapp/footer.html' %}
+	{% include 'mainapp/parts/footer.html' %}
 <script src="{% static 'js/jquery.spincrement.js' %}"></script>
 <script>$(document).ready(function(){
     $('.benefits__element p:nth-of-type(1)').spincrement({

@@ -43,18 +43,26 @@
 }
 
 .btn-quantity{
+  cursor: pointer;
   font-weight: 200;
   padding: 0em;
   margin: 0 0.3em;
   font-size: 2em;
   background-color: #fbfbfb;
-  transition: .1s;
   border: 0;
   border-radius: 10px;
   color: #555;
+  transition: transform .15s linear forwards, background-color .2s;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+
 }
 .btn-quantity:hover, .btn-delete:hover{
   background-color: #f6f6f6;
+}
+.btn-quantity:active, .btn-delete:active{
+  -webkit-transform: scale(.98);
+          transform: scale(.98);
 }
 .input-integer{
   color: #555;
