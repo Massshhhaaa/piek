@@ -31,7 +31,7 @@
   font-weight: 500;
 }
 .left-block p, .left-block a{
-  color: #282828;
+  color: var(--footer_text_color);
 }
 .tiny-footer{
  display: flex;
