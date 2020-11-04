@@ -134,7 +134,8 @@ form:nth-last-of-type(1) .btn{
   transform: scale(1.04);
 }
 .description p, .description strong{
-	font-size: 12px!important;
+	font-size: 14px!important;
+	line-height: 20px;
 }
 .description strong{
   font-weight: normal;
