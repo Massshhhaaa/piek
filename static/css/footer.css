@@ -3,6 +3,7 @@
     --footer_text_color: #282828;
 }
 .footer{
+  padding-top: 100px;
   background-color: #fff;
   position: fixed;
   width: 100%;
