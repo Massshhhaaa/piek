@@ -53,11 +53,7 @@ html{
 .btn-animate{
   color: green!important;
 }
-.btn:active svg{
-  background-size: 17px;
-  -webkit-transform: scale(.95);
-          transform: scale(.95);
-}
+
 
 
 .mod-table{
