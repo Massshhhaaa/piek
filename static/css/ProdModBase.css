@@ -66,9 +66,9 @@ table tr:hover{
 
 
 .docs-section{
-  border-top: 1px solid transparent;
-  border-image-source: linear-gradient(to right, yellow, #4e0000);
-  border-image-slice: 1;
+  /* border-top: 1px solid transparent;
+  border-image-source: linear-gradient(to right, yellow, #4e0000); */
+  /* border-image-slice: 1; */
   margin: 5rem 0 3rem;
 }
 
