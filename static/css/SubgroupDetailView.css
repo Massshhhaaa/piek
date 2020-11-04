@@ -101,15 +101,20 @@ form:nth-last-of-type(1) .btn{
  border-top: var(--border);
  transition: .3s;
 }
-.wrapper:hover h1{
-	text-decoration: underline;
-}
+
 .wrapper h1 {
+	display: inline-block!important;
   font-family: 'SF UI Display';
   font-weight: normal;
   font-size: 2em;
   color: #4e0000;
   letter-spacing: -.005em;
+	width: auto!important;
+	transition: border-bottom .2s linear;
+	border-bottom: 1px solid transparent;
+}
+.wrapper:hover h1{
+	border-bottom: 1px solid #4e0000;
 }
 
 .wrapper p{
@@ -123,10 +128,10 @@ form:nth-last-of-type(1) .btn{
     transition: .5s;
 }
 
-.wrapper:hover img{
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
+.wrapper img:hover{
+  -webkit-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 .description strong{
