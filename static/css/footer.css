@@ -13,7 +13,7 @@
   right: 0;
 }
 .contacts-mobile{
-  font:  300 1em "SF UI Text"  !important;
+  font-weight: 500;
   margin-bottom: 2em!important;
   border-bottom: 1px solid #4e0000;
 }
@@ -46,10 +46,10 @@
 .link-block a {
   padding: 0.7em 0;
 }
-.left-block span{
+/* .left-block span{
   font-family: "SF UI Text";
   font-weight: 500;
-}
+} */
 
 @media (max-width: 760px){
   .footer{
