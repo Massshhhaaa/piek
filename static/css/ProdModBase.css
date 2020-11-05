@@ -10,18 +10,41 @@
 }
 
   @media (max-width: 767.98px) {
-  .image{width: 300px!important;}
+    .top-block h1{
+      text-align: left!important;
+      font-size: 1.8em!important;
+      padding: 0 2rem;
+      margin: 2.4em 0!important;
+    }
+
+  .image{
+    width: 300px!important;
+    padding: 2rem 0;
+    border-right: 1px solid #c0c8d0;
+  }
+
   .doc-wrap{width: 45% !important;}
+
+  ::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+      border-radius: 3px;
+      background: linear-gradient( to left, #e66465, #9198e5);
+
+  }
 }
 
 .top-block h1{
   font-family: 'SF UI Display';
   font-weight: normal;
-  font-size: 1.8em;
-  margin: 2em 0;
-  text-align: left!important;
-  padding: 0 2rem;
+  font-size: 2.3em;
+  margin: 4em 0;
+
 }
+
+
 
 table p{
   margin: 0!important;
@@ -36,7 +59,6 @@ table p{
   width: var(--image_width);
   height: auto;
   z-index: 4;
-  border-right: 1px solid #555;
 }
 .images-block a:first-of-type{padding-left: 2rem;}
 .images-block a:last-of-type{padding-right: 2rem;}
