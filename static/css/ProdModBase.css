@@ -10,7 +10,7 @@
 }
 
   @media (max-width: 767.98px) {
-  .image{width: 250px;}
+  .image{width: 300px!important;}
   .doc-wrap{width: 45% !important;}
 }
 
