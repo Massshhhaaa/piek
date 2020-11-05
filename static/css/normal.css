@@ -101,7 +101,7 @@ main a:hover, a:focus{
 	opacity: 0;
 	margin-top: 50px;
 
-	transition: 1s;
+	transition: opacity 1s ease-in, margin 1s linear;
 }.title-text.animate {
 	opacity: 1;
 	margin-top: 0px;
@@ -117,7 +117,7 @@ main a:hover, a:focus{
 	opacity: 0;
 	margin-top: 30px;
 	transition-delay: .5s;
-	transition: 1.3s;
+	transition: opacity 1.3s ease-in, margin 1.3s linear;
 }
 .text.animate {
 	opacity: 1;
