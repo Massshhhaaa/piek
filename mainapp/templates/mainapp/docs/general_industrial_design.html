@@ -49,7 +49,7 @@
       </div>
 
       <div class="p-2">
-      {% for doc in docs %} {% if doc.key_filter == 'мэоф<-400></-400>0' %}
+      {% for doc in docs %} {% if doc.key_filter == 'мэоф-4000' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
       </div>
