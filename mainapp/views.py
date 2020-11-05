@@ -211,6 +211,7 @@ def sensors_and_controllers(request):
     docs = Documentation.objects.all()
     return render(request, 'mainapp/docs/sensors_and_controllers.html', {'in_cart_counter': cart_counter(request), 'docs': docs, })
 def starting_and_control_devices(request):
+    docs = Documentation.objects.all()
     return render(request, 'mainapp/docs/starting_and_control_devices.html', {'in_cart_counter': cart_counter(request), 'docs': docs, })
 def barriers(request):
     docs = Documentation.objects.all()
