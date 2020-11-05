@@ -71,7 +71,7 @@
 		border-radius: 20px;
 	}
 </style>
-						<div class="container pt-md-5">
+						<div class="container py-5">
 							<div class="d-flex flex-wrap">
 
 								<h1 class="boring">Электроприводы в общепромышленном исполнении</h1>
@@ -109,12 +109,10 @@
 								{% endfor %}
 							</div>
 
-								<h1 class="boring">Шлагбаумы, пусковые и управляющие устройства </h1>
+								<h1 class="boring">НКУ, пусковые и управляющие устройства</h1>
 							<div class="section d-flex flex-wrap">
-
-
 								{% for cat in categories %}
-								{% if cat.id == 9  or cat.id == 10  or cat.id == 11   %}
+								{% if cat.id == 9  or cat.id == 10  or cat.id == 14   %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
 									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
 
@@ -125,11 +123,12 @@
 								</div>
 								{% endif %}
 								{% endfor %}
-						</div>
+							</div>
 
 								<h1 class="boring"></h1>
+								<div class="section d-flex flex-wrap m-auto">
 								{% for cat in categories %}
-								{% if cat.id == 12  %}
+								{% if cat.id == 12 or cat.id == 11 %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
 									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
 
@@ -140,7 +139,7 @@
 								</div>
 								{% endif %}
 								{% endfor %}
-
+								</div>
 
 							</div>
 						</div>
