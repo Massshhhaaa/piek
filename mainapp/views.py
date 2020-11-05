@@ -159,17 +159,42 @@ def product(request, pk):
 @require_POST
 def sent_mail(request):
     product_list = request.session['piek_cart']
+
     subject = " ООО ПЭК | Заказ "
     html_template = 'mainapp/html_message.html'
     from_email = "pr@piek.ru"
+    admin_email = "info@piek.ru"
     to_email = request.POST['email']
     name = request.POST['firstname']
+    address = request.POST['address']
+    phone = request.POST['phone']
+    company = request.POST['company']
+    email = request.POST['email']
+    description = request.POST['description']
+    orderstring=''
+    ordr=[]
+    order={}
+    c=0
+    for i in product_list:
+        order=i
+        for x in order:
+            ordr.append(order[x])
+            c+=1
+        if c%3==0:
+            orderstring = orderstring + '\n' + str(ordr[0]) + ' ' + str(ordr[1]) + ' шт.'
+            ordr=[]
+
+
 
     html_message = render_to_string(html_template, { 'product_list': product_list, 'name' : name, })
 
     message = EmailMessage(subject, html_message, from_email, [to_email])
     message.content_subtype = 'html'
     message.send()
+    message2text = name + '\n' + phone + '\n' + email + '\n' + 'Адрес: ' + address + '\n' + 'Компания: ' + company + '\n' + 'Пожелания: ' + description + '\n' + 'Заказ: '+ '\n' + orderstring
+    message2 = EmailMessage(subject, message2text, from_email, [admin_email])
+    message2.send()
+
     request.session['piek_cart'].clear()
     request.session.modified = True
     return render(request, 'mainapp/minor/sent_mail.html')
