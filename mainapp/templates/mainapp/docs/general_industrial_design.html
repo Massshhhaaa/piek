@@ -19,7 +19,7 @@
     <div class="d-flex flex-column">
 
       <div class="p-2">
-      {% for doc in docs %} {% if doc.key_filter == 'мэоф-6,3' %}
+      {% for doc in docs %} {% if doc.key_filter == 'control_devices' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
       </div>
