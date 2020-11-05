@@ -26,6 +26,27 @@
   {% endfor %}
   </div>
 
+	<script type="text/javascript">
+	function PhotosWidth(){
+		if (window.matchMedia("(min-width: 768px) and (max-width: 1199.98px)").matches){
+		var images = document.querySelectorAll(".images-block a");
+
+		for(i = 0; i < images.length; i++){
+			var width  = 100/document.querySelector(".images-block").children.length;
+			if (width > 50) {width=50}
+			images[i].style.cssText = 'width: '+width+'%!important';
+		}
+	} else {
+		var images = document.querySelectorAll(".images-block a");
+		for(i = 0; i < images.length; i++){
+			images[i].removeAttribute("style");
+		}
+
+	}
+	}
+	PhotosWidth();
+	</script>
+
   <!-- End Images block  -->
 
 
@@ -120,9 +141,13 @@ function ArrangementCartIcons() {
 		document.querySelector('#cart_btn').style['opacity'] = 1;
 	}
 
+
+
 	$(function(){
+		PhotosWidth();
 		ArrangementCartIcons();//calling function on window load
 		$(window).resize(function(){
+			PhotosWidth();
 			ArrangementCartIcons();//calling function on window resize
 		});
 	});
