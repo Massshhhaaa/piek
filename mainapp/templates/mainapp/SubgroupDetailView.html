@@ -25,8 +25,8 @@
 	<div class="banner" style="background-image: url({{ subgroup_info.pic_of_hat.url }});">
 		{% include 'mainapp/parts/header.html' %}
 
-		<div class="container h-75">
-		<h1 class="container banner-title align-middle p-3">{{subgroup_info.name}}</h1>
+		<div class="container h-75 primary_ttl">
+		<h1 class="container align-middle p-3 text-white">{{subgroup_info.name}}</h1>
 	</div>
 </div>
 <style media="screen">
@@ -57,9 +57,9 @@ main{margin-bottom: -40px !important;}
 {% else %}
 {% include 'mainapp/parts/header.html' %}
 <div style="z-index: 99!important; position: relative;background-color: #fff;">
-<div class="container title">
-	<div class="rellax" data-rellax-speed="-2">
-		<h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center" style="margin-top: 7rem;">{{subgroup_info.name}}</h1>
+<div class="container ">
+	<div class="rellax primary_ttl" data-rellax-speed="-2">
+		<h1 class="d-flex justify-content-center iphone-text-small py-md-3 py-5 px-3 text-center " style="margin-top: 7rem;">{{subgroup_info.name}}</h1>
 	</div>
 </div>
 </div>

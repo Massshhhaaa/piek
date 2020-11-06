@@ -123,6 +123,7 @@ table tr:hover{
   width: 30%;
   transition: background-color .3s;
 }
+.doc-wrap p{font: 200 1em "SF UI Text"; color: #000;}
 .doc-wrap:hover{background-color: var(--doc_wrab_bg_color_hover);}
 .doc-wrap a {color: black;}
 .doc-wrap p:hover {text-decoration: underline;}

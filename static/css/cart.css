@@ -2,14 +2,8 @@
     outline: 0 !important;
     outline-offset: 0 !important;
 }
-.cart-ttl{
-  font-family: 'Raleway';
-  font-weight: 200;
-  color: #333;
-  display: flex;
-  justify-content: center;
-}
-.cart-ttl span{
+
+.secondary_ttl span{
   color: #8a1524;
   font-family: 'SF UI Display';
   font-weight: 200;
