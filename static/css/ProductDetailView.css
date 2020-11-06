@@ -10,16 +10,6 @@ html{
 }
 
 
-.top-block p{
-  font-family: 'Raleway';
-  font-weight: 400;
-  color: #222222;
-  font-size: 1.2em;
-  line-height: 25px;
-
-  letter-spacing: .54px;
-}
-
 #cart_btn{
   width: auto;
   opacity: 0;

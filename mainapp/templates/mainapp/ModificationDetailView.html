@@ -15,17 +15,36 @@
 	{% include 'mainapp/parts/header.html' %}
 	<main>
 		<!-- Images block  -->
-		<div class="d-flex flex-wrap justify-content-center mt-5 " style="
-		background-color: #fff;
-		position: relative;
-		z-index: 2;">
+		<div class="d-flex flex-md-wrap justify-content-md-center images-block">
 
-		{% for p in photos %}
-		<a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
-			<img  src="{{p.image.url}}" class="image">
-		</a>
-		{% endfor %}
-	</div>
+	  {% for p in photos %}
+	  <a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
+	    <img  src="{{p.image.url}}" class="image">
+	  </a>
+	  {% endfor %}
+	  </div>
+
+		<script type="text/javascript">
+		function PhotosWidth(){
+			if (window.matchMedia("(min-width: 768px) and (max-width: 1199.98px)").matches){
+			var images = document.querySelectorAll(".images-block a");
+
+			for(i = 0; i < images.length; i++){
+				var width  = 100/document.querySelector(".images-block").children.length;
+				if (width > 50) {width=50}
+				images[i].style.cssText = 'width: '+width+'%!important';
+			}
+		} else {
+			var images = document.querySelectorAll(".images-block a");
+			for(i = 0; i < images.length; i++){
+				images[i].removeAttribute("style");
+			}
+
+		}
+		}
+		PhotosWidth();
+		</script>
+
 
 	<!-- End Images block  -->
 
@@ -41,10 +60,9 @@
 		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index row p-0 m-0">
 			<div class="container">
 
-				<div class="top-block">
-					<h1 class="text-center"> {{ product.h1_mod }} {{ mod.title }}</h1>
+				<div class="primary_ttl">
+					<h1> {{ product.h1_mod }} {{ mod.title }}</h1>
 				</div>
-
 
 				<div class="about-modification container py-5" id='cart-form-bg'>
 

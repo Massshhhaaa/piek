@@ -228,3 +228,20 @@
 	font-weight: bold;
 	font-style: normal;
 }
+////
+@font-face {
+	font-family: 'Anonymous';
+	src: url('../fonts/AnonymousPro-Bold.ttf');
+	src: local('AnonymousPro-Bold'), local('AnonymousPro-Bold'),
+		url('../fonts/AnonymousPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Anonymous';
+	src: url('../fonts/AnonymousPro-Regular.ttf');
+	src: local('AnonymousPro-Regular'), local('AnonymousPro-Regular'),
+		url('../fonts/AnonymousPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

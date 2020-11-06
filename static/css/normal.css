@@ -108,10 +108,10 @@ main a:hover, a:focus{
 }
 .text{
   margin-bottom: 0px!important;
-  font-family: 'Raleway';
-  font-weight: 500;
+  font-family: 'Anonymous';
+  font-weight: normal;
   color: var(--about_company_color);
-  font-size: 1.2em;
+  font-size: 1.4em;
 	text-align: left;
   letter-spacing: 1px;
 	opacity: 0;
@@ -127,6 +127,19 @@ main a:hover, a:focus{
 padding: 0 5em;
 }
 
+/* Заголовки страниц */
+.primary_ttl h1{
+	font: normal 2.2em  'Anonymous';
+	text-align: center;
+	padding: 5rem 3rem 3rem;
+}
+.secondary_ttl h1{
+	color: #333;
+	font: 300 2.3em 'Raleway';
+	text-align: center;
+	padding: 3.3rem 3rem 2rem;
+}
+/* -- */
 
 @media (max-width: 330px) {
   .text{
@@ -146,13 +159,20 @@ padding: 0 5em;
 		font-size: 2.2em;
 	}
 }
-@media (min-width: 375px) and (max-width: 760px){
+@media (min-width: 375px) and (max-width: 767.98px){
+
 	.title-text{
 		padding-top:0.5em;
 		font-size: 2.2em;
 	}
 }
-
+@media (max-width: 767.98px) {
+		.primary_ttl h1{
+			text-align: left;
+			font-size: 1.6em;
+			padding: 0 2rem;
+		}
+}
 
 
 /* ----box catalog */
