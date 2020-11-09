@@ -6,7 +6,7 @@
 
   --tables_cell_padding: 15px;
   --content_line_height: 23px;
-
+	--content_font_color: #444;
 }
 
   @media (max-width: 767.98px) {
@@ -77,14 +77,14 @@ table p{
 
 .content a, .content p, .content span, .mod-table a, .mod-table p, .mod-table span{
   font-family: 'SF UI Text';
-  color: #555;
+  color: var(--content_font_color);
   font-weight: normal;
   line-height: var(--content_line_height);
   font-size: 14px!important;
 }
 .content{
   font-family: 'SF UI Text';
-  color: #555;
+  color: var(--content_font_color);
   max-width: 900px!important;
   line-height: var(--content_line_height);
 }

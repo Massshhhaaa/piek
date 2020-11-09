@@ -2,9 +2,6 @@
 	--description_font_size: 15px;
   --description_font_color: #222;
 
-  --tables_cell_padding: 16px;
-  --content_line_height: 22px;
-	--content_font_color: #444;
 	}
 
 .primary_ttl h1{
@@ -40,20 +37,6 @@ main{
   color: var(--description_font_color);
 
 }
-
-.content{
-  font-family: 'SF UI Text';
-  color: #555;
-  line-height: var(--content_line_height);
-}
-
-.content span{
-	font-family: 'SF UI Text';
-	line-height: var(--content_line_height);
-	color: var(--content_font_color);
-	font-size: 14px!important;
-}
-.content strong{color: #222;}
 
 table{
   width: 100%;
