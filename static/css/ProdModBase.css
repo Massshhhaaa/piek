@@ -4,7 +4,7 @@
   --doc_wrab_bg_color_hover: #f6eeed;
 
 
-  --tables_cell_padding: 15px;
+  --tables_cell_padding: 14px;
   --content_line_height: 23px;
 	--content_font_color: #444;
 }
@@ -63,6 +63,7 @@ table p{
   margin: 0!important;
 }
 
+
 .images-block{
   margin-top: 5rem;
   z-index: 2;
@@ -75,7 +76,7 @@ table p{
 
 
 
-.content a, .content p, .content span, .content li, .mod-table a, .mod-table p, .mod-table span, table td{
+.content a, .content p, .content span, .content li, .mod-table a, .mod-table p, .mod-table span, .content   table td{
   font-family: 'SF UI Text';
   color: var(--content_font_color);
   font-weight: normal;
@@ -114,13 +115,15 @@ table tr:hover{
 
 
 
+
+
+/* DOCUMENTS */
 .docs-section{
   /* border-top: 1px solid transparent;
   border-image-source: linear-gradient(to right, yellow, #4e0000); */
   /* border-image-slice: 1; */
   margin: 5rem 0 3rem;
 }
-
 
 .doc-wrap{
   background-color: var(--doc_wrab_bg_color);
@@ -133,3 +136,4 @@ table tr:hover{
 .doc-wrap:hover{background-color: var(--doc_wrab_bg_color_hover);}
 .doc-wrap a {color: black;}
 .doc-wrap p:hover {text-decoration: underline;}
+/*  END DOCUMENTS */
