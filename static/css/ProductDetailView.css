@@ -46,6 +46,7 @@ html{
 
 
 
+
 .mod-table{
   font: normal 12px 'SF UI Text';
   color: #333;
@@ -61,8 +62,9 @@ html{
    -moz-box-shadow: 0px 0px 3px 3px rgba(249,249,249,1);
    box-shadow: 0px 0px 3px 3px rgba(249,249,249,1);
 }
-
-
+#MOD span, #MOD p, #MOD td{
+  font-size: 13px;
+}
 
 #MOD td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table);}
 #MOD tr{border-bottom: 1px solid #e1dedc;}
@@ -74,7 +76,6 @@ html{
 }
 #MOD td:first-of-type{
   font-size: 12px!important;
-
 }
 #MOD tr:nth-child(n+2) td:nth-child(1){
   border: none;
