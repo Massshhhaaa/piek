@@ -22,8 +22,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', main_def, name='main_def'),
     path('contacts/', contacts, name='contacts'),
-    path('jet_api/', include('jet_django.urls')),
-    path('grappelli/', include('grappelli.urls')), # grappelli URLS
     path('admin/', admin.site.urls),
     path('cart/', cart, name="cart"),
     path('about/', about, name="about"),

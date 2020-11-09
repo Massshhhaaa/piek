@@ -4,8 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class ProductImageInline(admin.StackedInline):
     model = ProductImage
-    classes = ('grp-collapse grp-open',)
-
+    extra = 0
 
 class ModificationInline(admin.StackedInline):
     exclude = ('slug_mod',)
