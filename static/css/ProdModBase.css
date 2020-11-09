@@ -75,18 +75,19 @@ table p{
 
 
 
-.content a, .content p, .content span, .mod-table a, .mod-table p, .mod-table span, table td{
+.content a, .content p, .content span, .content li, .mod-table a, .mod-table p, .mod-table span, table td{
   font-family: 'SF UI Text';
   color: var(--content_font_color);
   font-weight: normal;
   line-height: var(--content_line_height);
-  font-size: 14px !important;
+  font-size: 14px!important;
 }
 .content{
   font-family: 'SF UI Text';
   color: var(--content_font_color);
   max-width: 900px!important;
   line-height: var(--content_line_height);
+  padding-bottom: 4rem;
 }
 .content strong{color: #222;}
 
