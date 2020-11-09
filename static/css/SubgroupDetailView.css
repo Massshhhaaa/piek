@@ -2,11 +2,14 @@
 	--description_font_size: 15px;
   --description_font_color: #222;
 
+	--primary_ttl_color: #fff;
+
 	}
 
 .primary_ttl h1{
 	font-size: 2.9em;
   text-align: center;
+	color: var(--primary_ttl_color);
 }
 main{
   padding-top: 5rem;
@@ -57,30 +60,6 @@ table td:first-of-type{
   font-weight: 500;
 }
 
-#MOD td{margin: 0; padding: var(--height_of_row_mod_table);=}
-#MOD tr{border-bottom: 1px solid #333!important;}
-#MOD tr:hover{ background-color: var(--mod_table_bg_color_hover);}
-#MOD{
-  width: 100% !important;
-  height: auto !important;
-  border: none !important;
-}
-#MOD tr:nth-child(n+2) td:nth-child(1){
-  border: none;
-  padding: 10px !important;
-}
-#MOD tr:nth-child(1) td:nth-child(1){
-  min-width:30% !important;
-}
-form:nth-last-of-type(1) .btn{
-  border: none !important;
-}
-#MOD tr:nth-last-of-type(1){
-  border: none !important;
-}
-#MOD tr:nth-of-type(1){
-  background-color: var(--mod_table_bg_color);
-}
 
 .wrapper:nth-of-type(1){
   border: none;

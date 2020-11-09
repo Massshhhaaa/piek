@@ -47,8 +47,8 @@ html{
 
 
 .mod-table{
-  font-family: 'SF UI Text';
-  color: #555;
+  font: normal 12px 'SF UI Text';
+  color: #333;
   line-height: var(--content_line_height);
   width: 100%!important;
 }
@@ -71,6 +71,10 @@ html{
   width: 100% !important;
   height: auto !important;
   border: none !important;
+}
+#MOD td:first-of-type{
+  font-size: 12px!important;
+
 }
 #MOD tr:nth-child(n+2) td:nth-child(1){
   border: none;

@@ -13,6 +13,7 @@ class Group(models.Model):
     description = HTMLField(null=True, blank=True)
     content     = HTMLField(null=True, blank=True)
     pic_of_hat  = models.ImageField(upload_to='pic_of_hat', null=True, blank=True, help_text='size: 1920x500px')
+    dark_banner = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['position']

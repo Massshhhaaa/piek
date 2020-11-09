@@ -16,12 +16,27 @@
 <body>
 	<!-- WARNING: Условия -->
 	{% if subgroup_info.pic_of_hat %}
+
+
+	{% if subgroup_info.dark_banner %}
 	<style media="screen">
 	:root{
 		--navbar_bg_color: inherit;
 		--nav_link_color: #fff;
 		}
 	</style>
+
+	{% else %}
+	<style media="screen">
+	:root{
+		--navbar_bg_color: inherit;
+		--nav_link_color: #000;
+		--primary_ttl_color: #000;
+		}
+	</style>
+
+
+	{% endif %}
 
 	<div class="banner" style="background-image: url({{ subgroup_info.pic_of_hat.url }});">
 		{% include 'mainapp/parts/header.html' %}
