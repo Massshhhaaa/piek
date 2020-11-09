@@ -5,6 +5,7 @@
 	{% include 'mainapp/parts/head-property.html' %}
 	<title>{{ subgroup_info.title }} - ООО "ПЭК"</title>
 	<link href="{% static 'css/SubgroupDetailView.css' %}" rel="stylesheet">
+	<link href="{% static 'css/ProdModBase.css' %}" rel="stylesheet">
 </head>
 <style media="screen">
 :root{
@@ -106,8 +107,8 @@ main{margin-bottom: -40px !important;}
 				</section>
 
 
-				<section class="container pb-5">
-					<div class="content p-2">{{ subgroup_info.content|safe }}</div>
+				<section class="container">
+					<div class="content pt-5 px-2">{{ subgroup_info.content|safe }}</div>
 				</section>
 
 
