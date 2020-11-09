@@ -26,6 +26,7 @@
   {% endfor %}
   </div>
 
+<!-- Скрипт для рассчета ширины фотографий в зависимости от их количества -->
 	<script type="text/javascript">
 	function PhotosWidth(){
 		if (window.matchMedia("(min-width: 768px) and (max-width: 1199.98px)").matches){
@@ -69,7 +70,7 @@
 				<div class="container">
 
 
-		<!-- Modifications List Table  -->
+<!-- Modifications List Table  -->
 				<div class="mod_table_bg py-5">
 					<div class="d-flex pl-4 pl-md-0">
 						<div class="d-flex flex-column"  id="cart_btn">
@@ -95,8 +96,7 @@
 
 					</div>
 				</div>
-
-		<!-- End Modifications List Table  -->
+<!-- End Modifications List Table  -->
 
 				{% include 'mainapp/parts/ProdModBase.html' %}
 

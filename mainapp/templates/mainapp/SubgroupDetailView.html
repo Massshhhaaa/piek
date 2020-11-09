@@ -96,11 +96,14 @@ main{margin-bottom: -40px !important;}
 
 		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
 			<div id="content-right" class="mx-auto">
+			<div class="container px-3">
 
-				<div class="container px-3">
-				{% if subgroup_info.description %}<div class="subgroup-description">{{subgroup_info.description | safe }}</div>{% endif %}
-				</div>
-				<section class="container m-auto pt-5">
+				{% if subgroup_info.description %}
+				<div class="subgroup-description">{{subgroup_info.description | safe }}</div>
+				{% endif %}
+
+				{% if subgroup_info.product_list %}
+				<section class="m-auto pt-5">
 					{% for product in product_list %}
 					<div class="d-flex wrapper py-2 py-md-5 ">
 						<a href="info/{{ product.slug_product }}" class="w-100">
@@ -120,22 +123,21 @@ main{margin-bottom: -40px !important;}
 					</div>
 					{% endfor %}
 				</section>
+				{% endif %}
 
 
-				<section class="container">
-					<div class="content pt-5 px-2">{{ subgroup_info.content|safe }}</div>
-				</section>
+			<div class="content pt-5 px-2">{{ subgroup_info.content|safe }}</div>
 
-
+		</div>
 		</div>
 	</div>
 
 	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
 </main>
+
 {% include 'mainapp/parts/footer.html' %}
 <script src="{% static 'js/rellax.min.js' %}"></script>
 <script>
-// Accepts any class name
 var rellax = new Rellax('.rellax');
 </script>
 </body>
