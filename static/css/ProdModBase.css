@@ -9,12 +9,10 @@
 	--content_font_color: #444;
 }
 
-.top-block h1{
-  font-family: 'SF UI Display';
-  font-weight: normal;
-  font-size: 2.3em;
-  margin: 4rem 0;
+main{
+  padding-bottom: 5rem;
 }
+
 table p{margin: 0!important;}
 
 
@@ -38,6 +36,7 @@ table p{margin: 0!important;}
   font-size: 14px;
 }
 .content{
+  padding-top: 2rem;
   font-family: 'SF UI Text';
   color: var(--content_font_color);
   max-width: 900px!important;
@@ -57,11 +56,11 @@ table p{margin: 0!important;}
   border-right: hidden;
   padding: var(--tables_cell_padding);
 }
-.content table td:first-of-type,
+/* .content table td:first-of-type,
 .content table td:first-of-type span
 .content table td:first-of-type p{
   color: #000!important;
-}
+} */
 
 .content table tr{
   border-bottom: 1px solid #e1dedc;
@@ -80,7 +79,7 @@ table p{margin: 0!important;}
   /* border-top: 1px solid transparent;
   border-image-source: linear-gradient(to right, yellow, #4e0000); */
   /* border-image-slice: 1; */
-  margin: 5rem 0 3rem;
+  margin-top: 5rem;
 }
 
 .doc-wrap{
@@ -98,16 +97,18 @@ table p{margin: 0!important;}
 
 
 @media (max-width: 767.98px) {
-  .top-block h1{
-    text-align: left!important;
-    font-size: 1.8em!important;
-    padding: 0 2rem;
-    margin: 2.4em 0!important;
+  main{padding-bottom: 1rem;}
+  .primary_ttl h1{
+  padding: 3rem 2rem 2rem!important;
+  }
+  .content{margin-top: 2rem; padding: 0 1rem;}
+  .content table td{
+    --tables_cell_padding: 5px;
   }
 
 .image{
   width: 300px!important;
-  padding: 2rem 0;
+  padding: 10px 0;
   border-right: 1px solid #c0c8d0;
 }
 .images-block a:first-of-type{padding-left: 2rem;}

@@ -1,6 +1,5 @@
 :root{
-	--description_font_size: 15px;
-  --description_font_color: #222;
+
 
 	--primary_ttl_color: #000;
 
@@ -32,16 +31,19 @@ main{
 
 
 .subgroup-description p, .subgroup-description span{
+	--description_font_size: 15px;
+	--description_font_color: #222;
+
   font-family: "Raleway";
   font-weight: 400;
-  font-size: var(--description_font_size)!important;
+  font-size: var(--description_font_size);
   line-height: 25px;
   letter-spacing: .54px;
   color: var(--description_font_color);
 
 }
 
-table{
+/* table{
   width: 100%;
   border: hidden;
 }
@@ -58,7 +60,7 @@ table tr:hover{
 table td:first-of-type{
   padding-left: 15px;
   font-weight: 500;
-}
+} */
 
 
 .wrapper:nth-of-type(1){
@@ -111,7 +113,11 @@ table td:first-of-type{
 }
 
 @media (max-width: 767.98px) {
-  .banner-title{font-size: 2rem;}
+	.subgroup-description{padding: 0 1rem;}
+	.subgroup-description p, .subgroup-description span{font-size: 1em;}
+	.primary_ttl h1{
+		font-size: 1.8em;
+	}
   .wrapper{
     display: flex;
     align-items: center;
