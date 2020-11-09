@@ -2189,7 +2189,8 @@ textarea.form-control {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .form-text {
@@ -3172,6 +3173,7 @@ fieldset:disabled a.btn {
 .btn-block {
   display: block;
   width: 100%;
+  border-radius: 20px;
 }
 
 .btn-block + .btn-block {
