@@ -79,6 +79,8 @@ table p{
   font-family: 'SF UI Text';
   color: #555;
   font-weight: normal;
+  line-height: var(--content_line_height);
+  font-size: 14px!important;
 }
 .content{
   font-family: 'SF UI Text';
