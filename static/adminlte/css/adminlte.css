@@ -3174,6 +3174,7 @@ fieldset:disabled a.btn {
   display: block;
   width: 100%;
   border-radius: 20px;
+  border-color: #4e0000;
 }
 
 .btn-block + .btn-block {
