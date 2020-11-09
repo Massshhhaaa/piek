@@ -15,9 +15,9 @@ main{
   padding-top: 5rem;
 }
 .banner{
-  position: fixed;
+  position: relative;
   height: 500px;
-  top: -25px;
+  /* top: -25px; */
 }
 .align-middle{
   position: absolute;

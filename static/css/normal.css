@@ -101,7 +101,7 @@ main a:hover, a:focus{
 	opacity: 0;
 	margin-top: 50px;
 
-	transition: opacity 1s ease-in, margin 1s linear;
+	transition: opacity .7s ease-in, margin .7s linear;
 }.title-text.animate {
 	opacity: 1;
 	margin-top: 0px;
@@ -135,7 +135,7 @@ padding: 0 5em;
 }
 .secondary_ttl h1{
 	color: #333;
-	font: 300 2.3em 'Raleway';
+	font: 200 2.3em 'Raleway';
 	text-align: center;
 	padding: 3.3rem 3rem 2rem;
 }

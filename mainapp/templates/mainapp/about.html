@@ -10,14 +10,23 @@
 <style media="screen">
 :root{
 	--navbar_bg_color: inherit;
-	--nav_link_color: #fff;
-	--navbar_bb: yellow;
+	--nav_link_color: #000;
+	--navbar_bb: ;
 	}
 </style>
-	<div class="banner" style="background-image: url({% static 'img/about-page/about-banner.jpg' %}); z-index: 99;">
 		{% include 'mainapp/parts/header.html' %}
+
+<main>
+	<div class="container inflow">
+		<p>ООО ПЭК  - группа компаний, специализирующихся на производстве исполнительных механизмов и электроприводов для трубопроводной арматуры.</p>
+		<p>Собственное производство полного цикла и R&D центр в Чебоксарах.</p>
+	</div>
+
+	<div class="about__banner" style="background-image: url({% static 'img/about-page/about-banner.jpg' %}); z-index: 99;">
+
 		<div class="container mt-5 pt-5">
-			<h1 class="benefits__header">О компании в цифрах</h1>
+
+			<h1 class="benefits__header pt-5">О компании в цифрах</h1>
 		    <div class="d-flex flex-wrap justify-content-around">
 
 		        <div class="benefits__element">
@@ -33,18 +42,27 @@
 		            <p>лет в сфере производства электроприводов</p>
 		        </div>
 		    </div>
+
 		</div>
 	</div>
 
-<main>
-	<!-- <canvas class="background"></canvas> -->
-	<div class="container">
-		<div class="px-3 py-5 subgroup-description">Поволжская Электротехническая Компания (ООО "ПЭК") специализируется на разработке, изготовлении и реализации исполнительных механизмов и электроприводов для трубопроводной арматуры. Компания представлена на рынке систем автоматизации технологических процессов с 2000 года и зарекомендовала себя за это время как динамично развивающаяся компания, надежный поставщик продукции высокого качества.</br></br>
+
+	<div class="container inflow">
+		<!-- <div class="px-3 py-5 subgroup-description">Поволжская Электротехническая Компания (ООО "ПЭК") специализируется на разработке, изготовлении и реализации исполнительных механизмов и электроприводов для трубопроводной арматуры. Компания представлена на рынке систем автоматизации технологических процессов с 2000 года и зарекомендовала себя за это время как динамично развивающаяся компания, надежный поставщик продукции высокого качества.</br></br>
 
 		Благодаря производственному и интеллектуальному потенциалу, "ПЭК" выполняет полный цикл работ: от исследования и разработки, до выпуска продукции и ее сервисного обслуживания на объектах эксплуатации. Постоянная работа специалистов компании по совершествованию технических решений, позволяет предлагать потребителям продукцию, успешно конкурирующую с отечественными и зарубежными аналогами.
 
-		</div>
+		</div> -->
+		<p>ООО Механика использует для металлообработки точные обрабатывающие ЧПУ центры от производителей Mazak, Hortford, Dossan, которые позволяют нам  за счет концентрации операции иметь самые маленькие сроки изготовления.
+Каждая серия прошедшая металлообработку исключительно проверяется на измерительном центре.</p>
+
 	</div>
+
+	<div class="container">
+<div class="about__banner" style="background-image: url({% static 'img/about-page/image_2.jpg' %});">
+
+	</div>
+</div>
 
 
 
@@ -59,22 +77,12 @@
     });
 });
 </script>
-<!-- <script src="{% static 'js/particles.min.js' %}"></script>
-<script>
-window.onload = function() {
- Particles.init ({
-	 selector: '.background',
-	color: ['#dedede' , '#e9d3d3'],
-	connectParticles: 'True',
 
-			responsive: [{
-		  	breakpoint: 768,
-		    options: {
-		    	maxParticles: 20, }
-		  }]
-	});
-};
-</script> -->
+
+<script src="{% static 'js/rellax.min.js' %}"></script>
+<script>
+var rellax = new Rellax('.rellax');
+</script>
 </body>
 
 </html>
