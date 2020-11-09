@@ -88,28 +88,30 @@ table p{
   color: var(--content_font_color);
   max-width: 900px!important;
   line-height: var(--content_line_height);
-  padding-bottom: 4rem;
 }
 .content strong{color: #222;}
 
 
 
-table{
+.content table{
   width: 100%!important;
   border: hidden;
   border-bottom: 1px solid #e1dedc;
 
 }
-table td{
+.content table td{
   border-right: hidden;
   padding: var(--tables_cell_padding);
 }
+.content table td:first-of-type{
+  color: #000;
+}
 
-table tr{
+.content table tr{
   border-bottom: 1px solid #e1dedc;
   transition-duration: .2s;
 }
-table tr:hover{
+.content table tr:hover{
   background-color: #eee;
 }
 
