@@ -8,7 +8,7 @@ main{
     --footer_text_color: #d4d4d4;
     --footer_headers: #fff;
 }
-.inflow{padding: 6rem 0;}
+.inflow{padding: 6rem 1rem;}
  .inflow p{
    font: normal 1.5em "SF UI Text";
    line-height: 30px;
