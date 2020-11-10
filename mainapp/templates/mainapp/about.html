@@ -61,11 +61,10 @@
 
 	<div class="container">
 <div class="about__banner" style="background-image: url({% static 'img/about-page/image_2.jpg' %});">
-
-	</div>
+</div>
 </div>
 
-
+{% include 'mainapp/parts/about.history.html'%}
 
 </main>
 
@@ -80,9 +79,37 @@
 </script>
 
 
-<script src="{% static 'js/rellax.min.js' %}"></script>
+<!-- <script src="{% static 'js/rellax.min.js' %}"></script>
 <script>
 var rellax = new Rellax('.rellax');
+</script> -->
+
+<script type="module">
+import {Gradient} from "../../../static/js/js-color-gradient.js";
+const colorGradient = new Gradient();
+
+
+var about_history_rows = $('.history div.row.h');
+var about_history_lines = $('.history div.row.t')
+
+colorGradient.setGradient("#9198e5", "#e66465"); // from .. to ..
+colorGradient.setMidpoint(about_history_rows.length+1); // set to  color steps
+colorGradient.getArray(); // get all 8 colors: [ "#d11630", "#bd2534", ... ]
+console.log(colorGradient.getColor(1)); // #bd2534
+
+for (var i = 0; i <= about_history_rows.length; i++ ){
+
+	// $(about_history_rows).eq(i).attr('id', 'story_'+i );
+	// var elem = document.querySelectorAll("#story"+i+" .col-2::after ");
+	var color = colorGradient.getColor(i+1);
+	// кружочки
+	$(about_history_rows).eq(i).find('.circle').css('background-color', color);
+
+	$(about_history_rows).eq(i).find('.col-2 .after').attr('style', 'border-color:'+ color);
+	$(about_history_rows).eq(i).find('h5').attr('style', 'color: '+color);
+	// линии
+	$(about_history_lines).eq(i).find('div, hr').attr('style', 'border-color: '+ color);
+}
 </script>
 </body>
 

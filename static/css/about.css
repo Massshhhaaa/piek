@@ -1,3 +1,13 @@
+main{
+  padding-bottom: 0!important;
+  box-shadow: none;
+}
+:root{
+    --footer_bg_color: #000;
+    --tiny_footer_bg_color: #000;
+    --footer_text_color: #d4d4d4;
+    --footer_headers: #fff;
+}
 .inflow{padding: 6rem 0;}
  .inflow p{
    font: normal 1.5em "SF UI Text";
@@ -99,3 +109,126 @@ main{
   font-size: 16px;
   margin-top: 20em;
 } */
+.history h5{
+  font-size: 17px;
+  padding: 1em 0;
+}
+.history h2{
+  font-size: 35px;
+  background: -webkit-linear-gradient(left, #9198e5, #d92324);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+  margin: 0 4rem 7rem;
+}
+.history p{
+  font-size: 13px;
+  color: #c0c0c0;
+}
+.blue-bg {
+  margin-top: 100px;
+  padding: 200px 0;
+  background-color: #000;
+  height: 100%;
+}
+
+.circle {
+  font-weight: bold;
+  padding: 15px 8px;
+  border-radius: 50%;
+  background-color: #ED8D8D;
+  color: #fff;
+  max-height: 50px;
+  z-index: 2;
+  transition: transform .2s;
+}
+.circle:hover{
+  transform: scale(1.4);
+}
+.r{align-items: center;
+justify-content: flex-end;}
+.r div.col-6{text-align: right;}
+.h.row {
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+}
+.h.row .col-2 {
+  display: inline-flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+}
+.h.row .col-2 .after {
+  content: "";
+  position: absolute;
+  border-left: 3px solid #ED8D8D;
+  z-index: 1!important;
+}
+.h.row .col-2.bottom .after{
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+.h.row .col-2.full .after {
+  height: 100%;
+  left: calc(50% - 3px);
+}
+
+.h.row .col-2.full-again .after {
+  height: 100%;
+  left: calc(50% - 0px);
+}
+
+.h.row .col-2.top .after {
+  height: 50%;
+  left: calc(50% - 3px);
+  top: 0;
+}
+
+.t div {
+  padding: 0;
+  height: 40px;
+}
+.t hr {
+  border-top: 3px solid #ED8D8D;
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+.t .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+.t .corner {
+  border: 3px solid #ED8D8D;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.t .top-right {
+  left: 50%;
+  top: -50%;
+}
+.t .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+.t .top-left {
+  left: -50%;
+  top: -50%;
+}
+.t .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}
+
+@media (max-width: 767.98px){
+  .col-6{
+    flex: 0 0 60%!important;
+    max-width: 60%!important;
+  }
+  .history h2{
+    font-size: 25px;
+    margin: 0 1rem 4rem;
+  }
+}
