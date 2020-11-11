@@ -140,17 +140,14 @@ main{
 }
 
 .circle {
-  font-weight: bold;
-  padding: 15px 8px;
+  font-weight: normal;
+  font-family: "SF UI Text";
+  padding: 15px 10px;
   border-radius: 50%;
   background-color: #ED8D8D;
   color: #fff;
   max-height: 50px;
   z-index: 2;
-  transition: transform .2s;
-}
-.circle:hover{
-  transform: scale(1.4);
 }
 .r{align-items: center;
 justify-content: flex-end;}
