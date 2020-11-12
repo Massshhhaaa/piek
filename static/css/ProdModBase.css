@@ -135,6 +135,6 @@ table p{margin: 0!important;}
     width: 100%!important;
   }
 }
-@media (min-width: 1199.98px) {
+@media (min-width: 2560px) {
   .image{width: var(--image_width)!important;}
 }
