@@ -1,4 +1,8 @@
-
+{% if in_cart_counter == 0 %}
+<style media="screen">
+  .js-cart-counter-wrap{display:none}
+</style>
+{% endif %}
 
 
 <div id="menu-close"></div>
@@ -52,6 +56,7 @@
 
 
         <!-- {% if in_cart_counter == 0 %} <style media="screen"> .cart-counter{ display: none; } </style> {% endif %} -->
+
 
           <li class="d-none d-md-block nav-item active px-3">
             <a class="nav-link position-relative" href="/cart">
