@@ -8,7 +8,7 @@ SECRET_KEY = 'kr3u3@2s8$a_&3oy$q-$=1woj5vso!%q1(mm7%2(1itq#ig-16'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['45.10.110.71','45.10.110.58']
+ALLOWED_HOSTS = ['45.10.110.71','45.10.110.58', 'piek.ru']
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 587
