@@ -130,11 +130,11 @@ table p{margin: 0!important;}
 }
 
 
-@media (min-width: 768px)and (max-width: 2560px) {
+@media (min-width: 768px)and (max-width: 1199.98px) {
   .image{
     width: 100%!important;
   }
 }
-@media (min-width: 2560px) {
+@media (min-width: 1199.98px) {
   .image{width: var(--image_width)!important;}
 }
