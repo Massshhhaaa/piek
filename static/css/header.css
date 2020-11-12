@@ -24,7 +24,7 @@
 .contact-block a:last-child{
 	font-weight: 500 !important;
 }
-.contact-block a:hover{border-bottom: none!important;}
+.contact-block a:hover{border-color: transparent!important;}
 
 .navbar{
   background-color: var(--navbar_bg_color);
