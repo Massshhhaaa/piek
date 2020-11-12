@@ -2,7 +2,11 @@
     outline: 0 !important;
     outline-offset: 0 !important;
 }
-
+.promt-text{
+  border-radius: 20px;
+  background: #f9f9f9;
+  padding: 3rem;
+}
 .secondary_ttl span{
   color: #8a1524;
   font-family: 'SF UI Display';

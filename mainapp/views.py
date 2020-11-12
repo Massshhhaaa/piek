@@ -164,6 +164,7 @@ def sent_mail(request):
     html_template = 'mainapp/html_message.html'
     from_email = "pr@piek.ru"
     admin_email = "info@piek.ru"
+    
     to_email = request.POST['email']
     name = request.POST['firstname']
     address = request.POST['address']

@@ -8,7 +8,7 @@
 
 	<div class="secondary_ttl"><h1>Корзина<span class="pl-2">(<span id="js-in-cart-counter">{{ in_cart_counter }}</span>)</span></h1></div>
 
-	<div class="bg-light p-5 my-5">Вы можете дописать условное обознаение каждого электропривода в соответствии с документацией</div>
+	<div class="my-5 promt-text">Вы можете дописать условное обознаение каждого электропривода в соответствии с документацией</div>
 
 	<div class="cart-header d-none d-md-flex">
 		<p>Наименование</p>
@@ -89,7 +89,7 @@
 
 	{% endfor %}
 	<div class="d-flex justify-content-center">
-		<a href="{% url 'checkout'%}" class="btn d-flex justify-content-center mt-5">Перейти к оформлению заказа</a>
+		<a href="{% url 'checkout'%}" class="btn d-flex justify-content-center mt-5">Оформить заказ</a>
 	</div>
 		<!-- <img class="w-100 my-5 pt-5"src="{% static 'img/Структура условного обозначения.jpg' %}" alt=""> -->
 </div>
