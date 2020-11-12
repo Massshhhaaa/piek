@@ -18,37 +18,37 @@
 
     <div class="d-flex flex-column">
 
-      <div class="p-2">
+      <div class="py-2">
       {% for doc in docs %} {% if doc.key_filter == 'мэоф-6,3' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
       </div>
 
-      <div class="p-2">
+      <div class="py-2">
       {% for doc in docs %} {% if doc.key_filter == 'мэоф-15' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
       </div>
 
-      <div class="p-2">
+      <div class="py-2">
       {% for doc in docs %} {% if doc.key_filter == 'мэоф-40' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
       </div>
 
-      <div class="p-2">
+      <div class="py-2">
       {% for doc in docs %} {% if doc.key_filter == 'мэоф-250' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
       </div>
 
-      <div class="p-2">
+      <div class="py-2">
       {% for doc in docs %} {% if doc.key_filter == 'мэоф-630' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
       </div>
 
-      <div class="p-2">
+      <div class="py-2">
       {% for doc in docs %} {% if doc.key_filter == 'мэоф-4000' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
@@ -71,7 +71,19 @@
 </section>
 
 <section class="">
-  <h2 class="doc-section__title">Документация на электроприводы МЭМ</h2>
+  <h2 class="doc-section__title">Документация на механизмы МЭП</h2>
+  <div class="doc-section bg-light p-md-5 p-3">
+    <div class="d-flex flex-column">
+      {% for doc in docs %} {% if doc.key_filter == 'мэп'%}
+        <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
+        {% endif %} {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<section class="">
+  <h2 class="doc-section__title">Документация на механизмы МЭМ</h2>
   <div class="doc-section bg-light p-md-5 p-3">
     <div class="d-flex flex-column">
       {% for doc in docs %} {% if doc.key_filter == 'мэм'%}

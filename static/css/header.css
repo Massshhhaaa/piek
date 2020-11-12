@@ -16,14 +16,16 @@
 }
 
 /* ----header */
-.contact-block div{
+.contact-block a{
 	font-family: 'SF UI Text' !important;
 	font-weight: 700 !important;
 	position: relative;
 }
-.contact-block div:last-child{
+.contact-block a:last-child{
 	font-weight: 500 !important;
 }
+.contact-block a:hover{border-color: transparent!important;}
+
 .navbar{
   background-color: var(--navbar_bg_color);
   z-index: 10 !important;
@@ -49,7 +51,6 @@ animation-delay: 1.7s;
   font-weight: 500;
   letter-spacing: .56px;
 	font-size: 1em;
-
 }
 
  .nav-item a:hover{
