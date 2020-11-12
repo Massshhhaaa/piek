@@ -69,17 +69,17 @@ table p{margin: 0!important;}
 .content table tr:hover{
   background-color: #eee;
 }
-
+.contet img{max-width: 100%!important;}
 
 
 
 
 /* DOCUMENTS */
 .docs-section{
-  /* border-top: 1px solid transparent;
+  border-top: 1px solid transparent;
   border-image-source: linear-gradient(to right, yellow, #4e0000); */
-  /* border-image-slice: 1; */
-  margin-top: 5rem;
+  border-image-slice: 1;
+  margin-top: 4rem;
 }
 
 .doc-wrap{
