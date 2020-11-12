@@ -49,9 +49,11 @@ animation-delay: 1.7s;
   font-weight: 500;
   letter-spacing: .56px;
 	font-size: 1em;
-
 }
-
+.phone-number{
+	font-family: "SF UI Text"!important;
+	font-weight: normal!important;
+}
  .nav-item a:hover{
   margin-bottom: -1px;
   border-bottom: 1px solid var(--navbar_bb, #4e0000);
