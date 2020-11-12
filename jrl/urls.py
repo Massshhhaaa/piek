@@ -49,7 +49,7 @@ urlpatterns = [
     path('catalog/<path:slug>/', SubgroupDetailView, name='SubgroupDetailView'),
 
     path('tinymce/', include('tinymce.urls')),
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ]
 
 
 if settings.DEBUG:

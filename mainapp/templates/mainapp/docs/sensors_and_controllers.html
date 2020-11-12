@@ -7,10 +7,16 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="d-flex bg-light" style="height: 200px;">
+<section class="">
+  <h2 class="doc-section__title">Документация на механизмы МЭО-IICT4 (МЭОФ-IIBT4)</h2>
+  <div class="doc-section bg-light p-md-5 p-3">
+
+      {% for doc in docs %} {% if doc.key_filter == 'блок' %}
+        <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
+        {% endif %} {% endfor %}
+
   </div>
-</div>
+</section>
 
 
 {% endblock content %}

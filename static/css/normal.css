@@ -40,6 +40,13 @@ html{
 		box-sizing: border-box;
 }
 
+.secondary-page-description{
+	font-size: 14px!important;
+	color: #474747;
+	padding: 3rem 5rem 0;
+	font-weight: 300;
+}
+
 body {
     width: 100% !important;
     overflow-x: hidden;
