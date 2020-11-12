@@ -165,6 +165,7 @@ def sent_mail(request):
     from_email = "pr@piek.ru"
     admin_email = "info@piek.ru"
     
+    
     to_email = request.POST['email']
     name = request.POST['firstname']
     address = request.POST['address']
@@ -172,19 +173,18 @@ def sent_mail(request):
     company = request.POST['company']
     email = request.POST['email']
     description = request.POST['description']
-    orderstring=''
-    ordr=[]
-    order={}
-    c=0
-    for i in product_list:
-        order=i
-        for x in order:
-            ordr.append(order[x])
-            c+=1
-        if c%3==0:
-            orderstring = orderstring + '\n' + str(ordr[0]) + ' ' + str(ordr[1]) + ' шт.'
-            ordr=[]
+    orderstring = ''
+    
 
+
+        
+    for product in product_list:
+        if product.get('conventional_designation') != '' and product.get('conventional_designation') != None:
+            outputordertitle = product.get('conventional_designation')
+        else:
+            outputordertitle = product.get('title')
+
+        orderstring = orderstring + outputordertitle + ' ' + str(product.get('quantity')) + 'шт.' + '\n'
 
 
     html_message = render_to_string(html_template, { 'product_list': product_list, 'name' : name, })
@@ -192,6 +192,7 @@ def sent_mail(request):
     message = EmailMessage(subject, html_message, from_email, [to_email])
     message.content_subtype = 'html'
     message.send()
+    
     message2text = name + '\n' + phone + '\n' + email + '\n' + 'Адрес: ' + address + '\n' + 'Компания: ' + company + '\n' + 'Пожелания: ' + description + '\n' + 'Заказ: '+ '\n' + orderstring
     message2 = EmailMessage(subject, message2text, from_email, [admin_email])
     message2.send()
