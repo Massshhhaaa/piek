@@ -31,7 +31,7 @@ main{
 
 
 .subgroup-description p, .subgroup-description span{
-	--description_font_size: 15px;
+	--description_font_size: 16px;
 	--description_font_color: #222;
 
   font-family: "Raleway";
