@@ -43,6 +43,21 @@
 			images[i].removeAttribute("style");
 		}
 
+		if (window.matchMedia("(min-width: 1199.98px) and (max-width: 1441px)").matches){
+		var images = document.querySelectorAll(".images-block a");
+
+		for(i = 0; i < images.length; i++){
+			var width  = 100/document.querySelector(".images-block").children.length;
+			if (width > 50) {width=50}
+			if (width = 50) {width=70}
+			images[i].style.cssText = 'width: '+width+'%!important';
+		}
+	} else {
+		var images = document.querySelectorAll(".images-block a");
+		for(i = 0; i < images.length; i++){
+			images[i].removeAttribute("style");
+		}
+
 	}
 	}
 	PhotosWidth();
