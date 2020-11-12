@@ -33,7 +33,7 @@ table p{margin: 0!important;}
   color: var(--content_font_color);
   font-weight: normal;
   line-height: var(--content_line_height);
-  font-size: 15px!important;
+  font-size: 14px!important;
 }
 .content{
   padding-top: 2rem;
