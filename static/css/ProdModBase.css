@@ -76,9 +76,6 @@ table p{margin: 0!important;}
 
 /* DOCUMENTS */
 .docs-section{
-  border-top: 1px solid transparent;
-  border-image-source: linear-gradient(to right, #edf1f6, #f6eeed);
-  border-image-slice: 1;
   margin-top: 4rem;
 }
 
