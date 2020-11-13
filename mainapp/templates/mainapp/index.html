@@ -64,7 +64,7 @@
 								{% for cat in categories %}
 								{% if cat.id == 1 or cat.id == 2 or cat.id == 3 or cat.id == 6 or cat.id == 7 or cat.id == 8   %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
-									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+									<a class="d-flex flex-column flex-fill" href="{{ cat.slug }}">
 
 										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
 										<div class="py-2 py-lg-5"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
@@ -82,7 +82,7 @@
 								{% for cat in categories %}
 								{% if cat.id == 4 or cat.id == 5 or cat.id == 13   %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
-									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+									<a class="d-flex flex-column flex-fill" href="{{ cat.slug }}">
 
 										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
 										<div class="py-2 py-lg-5"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
@@ -98,7 +98,7 @@
 								{% for cat in categories %}
 								{% if cat.id == 9  or cat.id == 10  or cat.id == 14   %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
-									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+									<a class="d-flex flex-column flex-fill" href="{{ cat.slug }}">
 
 										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
 										<div class="py-2 py-lg-5"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
@@ -114,7 +114,7 @@
 								{% for cat in categories %}
 								{% if cat.id == 12 or cat.id == 11 %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
-									<a class="d-flex flex-column flex-fill" href="catalog/{{ cat.slug }}">
+									<a class="d-flex flex-column flex-fill" href="{{ cat.slug }}">
 
 										<div class="m-2 py-2 my-lg-3"><img class="pic"src="{{ cat.img.url }}" alt="Исполнительный механизм" title="{{ cat.title }}"></div>
 										<div class="py-2 py-lg-5"><h1 class="item-name"style="text-decoration:none;">{{ cat.title }}</h1></div>
