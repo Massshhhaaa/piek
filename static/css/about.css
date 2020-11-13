@@ -3,16 +3,126 @@ main{
   box-shadow: none;
 }
 :root{
+    --navbar_bg_color: #fff;
+    --nav_link_color: #000;
+    --navbar_bb: ;
+
     --footer_bg_color: #000;
     --tiny_footer_bg_color: #000;
     --footer_text_color: #d4d4d4;
     --footer_headers: #fff;
 }
+
+.about__banner{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  color: #000;
+  font-family: "Anonymous";
+}
+ .benefits__header {
+    padding: 0 15px 30px;
+    font-weight: 400;
+    text-align: center;
+    font-family: "SF UI Display";
+
+}
+.benefits__element {width: 33%;  margin-top: 5rem;}
+
+.benefits__element p {
+    font-family: "SF UI Display";
+    text-align: center;
+    padding: 0rem 1rem;
+}
+
+.benefits__element p:nth-of-type(1) {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.benefits__element p:nth-of-type(2) {
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+
+
+
+/* BLOCK ANIMATION */
+
+/* Анимация первого счетчика */
+@property --num1 {
+  syntax: "<integer>";
+  initial-value: 19;
+  inherits: false;
+}
+.benefits__element:first-of-type p:first-of-type{
+  animation: counter1 3s alternate ease-in-out;
+  counter-reset: num1 var(--num1);
+}
+
+.benefits__element:first-of-type p:first-of-type::after {
+  content: counter(num1);
+}
+
+@keyframes counter1 {
+  from {--num1: 5;}
+  to {--num1: 19;}
+}
+
+/* Анимация второго счетчика */
+@property --num2 {
+  syntax: "<integer>";
+  initial-value: 700;
+  inherits: false;
+}
+.benefits__element:nth-last-of-type(2) p:first-of-type{
+  animation: counter2 3s alternate ease-in-out;
+  counter-reset: num2 var(--num2);
+}
+
+.benefits__element:nth-of-type(2) p:first-of-type::after {
+  content: counter(num2);
+}
+
+@keyframes counter2 {
+  from {--num2: 680;}
+  to {--num2: 700;}
+}
+
+/* Анимация третьего счетчика */
+@property --num3 {
+  syntax: "<integer>";
+  initial-value: 4250;
+  inherits: false;
+}
+.benefits__element:nth-of-type(3) p:first-of-type{
+  animation: counter3 3s alternate ease-in-out;
+  counter-reset: num3 var(--num3);
+}
+
+.benefits__element:nth-of-type(3) p:first-of-type::after {
+  content: counter(num3);
+}
+
+@keyframes counter3 {
+  from {--num3: 4200;}
+  to {--num3: 4250;}
+}
+
+/* ENDBLOCK ANIMATION */
+
+
+
+
 .inflow{padding: 5rem 1rem;}
  .inflow p{
    font: normal 17px "SF UI Text";
-   line-height: 28px;
-    margin-top: 2.3rem;
+   line-height: 25px;
+    margin-top: 2rem;
     text-align: justify;
  }
  .inflow .about__banner p{
@@ -27,46 +137,7 @@ main{
    margin-left: auto;
  }
 
-.about__banner{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 600px;
-  color: #fff;
-  font-family: "SF UI Text";
 
-}
-
- .benefits__header {
-    padding: 0 15px 40px;
-    font-weight: 400;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-}
-.benefits__element {width: 33%;  margin-top: 5rem;}
-
-main{
-  padding-bottom: 10em;
-}
-
-.benefits__element p {
-    font-family: "SF UI Display";
-    text-align: center;
-    line-height: 1.3;
-}
-
-.benefits__element p:nth-of-type(1) {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px
-}
-
-.benefits__element p:nth-last-of-type(1) {
-    font-size: 1.3rem;
-}
 
 
 .subgroup-description{
