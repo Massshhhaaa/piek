@@ -26,7 +26,7 @@ urlpatterns = [
     path('cart/', cart, name="cart"),
     path('about/', about, name="about"),
     path('docs/', docs, name='docs'),
-    path('docs/certificate/', certificate, name='certificate'),
+    path('certificates/', certificate, name='certificate'),
 
     path('docs/general-industrial-design/', general_industrial_design, name='general_industrial_design'),
     path('docs/explosion-proof-design/', explosion_proof_design, name='explosion_proof_design'),
@@ -42,11 +42,11 @@ urlpatterns = [
     path('update_conventional_designation/<int:pk>', update_conventional_designation, name='update_conventional_designation'),
 
 
-    path('catalog/<path:slug>/info/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView),
+    path('<path:slug>/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView),
 
-    path('catalog/<path:slug>/info/<slug:slug_product>/', ProductDetailView, name='ProductDetailView'),
+    path('<path:slug>/<slug:slug_product>/', ProductDetailView, name='ProductDetailView'),
 
-    path('catalog/<path:slug>/', SubgroupDetailView, name='SubgroupDetailView'),
+    path('<path:slug>/', SubgroupDetailView, name='SubgroupDetailView'),
 
     path('tinymce/', include('tinymce.urls')),
     ]
