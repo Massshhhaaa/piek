@@ -241,11 +241,6 @@ width: 30%;
 
   .separately{width: 45%; border-left: none!important;}
 	.separately h1{font-size: 1.08em;}
-	.iphone-text-small{
-		font-size: 1.7rem !important;
-		font-family: 'SF UI Display';
-		font-weight: normal;
-	}
 	.page-ttl{
 		margin-top: 0rem;
 		font: 200 1.8em 'Raleway';

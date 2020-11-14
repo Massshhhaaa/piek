@@ -114,6 +114,10 @@ table td:first-of-type{
 }
 
 @media (max-width: 767.98px) {
+	.primary_ttl h1{
+		font-size: 24px;
+	}
+
 	.subgroup-description{padding: 0 1rem;}
 	.subgroup-description p, .subgroup-description span{font-size: 1em;}
 	.primary_ttl h1{

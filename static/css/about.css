@@ -236,9 +236,10 @@ justify-content: flex-end;}
   .blue-bg{
     padding-bottom: 50px!important;
   }
-  .benefits__element{padding: 1em; margin-top: 2em!important;}
+  .benefits__element{padding: 0.5em; margin-top: 2em!important;}
   .benefits__element p {
       font-size: 0.9em!important;
+      padding: 0!important;
   }
 
   .benefits__element p:nth-of-type(1) {

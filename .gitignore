@@ -4,3 +4,5 @@ config/*
 adminstatic/*
 *.pyc
 piek.conf
+jrl/local_settings.py
+jrl/local_settings.py
