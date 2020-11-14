@@ -6,6 +6,8 @@
 	<title>О компании | ПЭК</title>
 	<link href="{% static 'css/about.css' %}" rel="stylesheet">
 </head>
+
+
 <body>
 
 <main>
@@ -18,16 +20,16 @@
 			<div class="d-flex flex-wrap justify-content-around">
 
 				<div class="benefits__element">
-					<p>19</p>
-					<p>лет в сфере производства электроприводов</p>
+					<p data-aos="fade-down" data-aos-duration="1000">19</p>
+					<p data-aos="fade" data-aos-duration="200">лет в сфере производства электроприводов</p>
 				</div>
 				<div class="benefits__element">
-					<p>700</p>
-					<p>модификаций электроприводов</p>
+					<p data-aos="fade-down" data-aos-duration="1300">700</p>
+					<p data-aos="fade" data-aos-duration="200" >модификаций электроприводов</p>
 				</div>
 				<div class="benefits__element">
-					<p>4250</p>
-					<p>кв. м. производственных площадей</p>
+					<p data-aos="fade-down" data-aos-duration="1600">4250</p>
+					<p data-aos="fade" data-aos-duration="200">кв. м. производственных площадей</p>
 				</div>
 			</div>
 
@@ -38,7 +40,7 @@
 	<div class="container inflow">
 
 
-		<p>ПЭК - группа компаний, специализирующихся на производстве исполнительных механизмов и электроприводов для трубопроводной арматуры.</p>
+		<p >ПЭК - группа компаний, специализирующихся на производстве исполнительных механизмов и электроприводов для трубопроводной арматуры.</p>
 		<p>У нас собственное производство полного цикла, в том числе литейный цех, цех термообработки и конструкторское бюро в Чебоксарах.</p>
 
 
@@ -48,10 +50,12 @@
 
 		<div class="about__banner mt-5" style="background-image: url({% static 'img/about-page/image_2.jpg' %});"></div>
 
+		<div >
 		<p class="pt-4">Каждая партия, прошедшая металлообработку, исключительно проверяется на измерительном центре.
 			Кроме того, мы постоянно проводим ресурсные испытания, цель которых - повышение качества и увеличение ресурса работы продукции.</p>
+		</div>
 		<!-- <div class="about__banner mt-5" style="background-image: url({% static 'img/about-page/5.jpg' %});"></div> -->
-		<div class="about__banner mt-5" style="background-image: url({% static 'img/about-page/4.jpg' %});"></div>
+		<div  class="about__banner mt-5" style="background-image: url({% static 'img/about-page/4.jpg' %});"></div>
 	</div>
 
 	{% include 'mainapp/parts/about.history.html'%}

@@ -2,14 +2,9 @@
 {% load static %}
 <head>
 	{% include 'mainapp/parts/head-property.html' %}
-	<title>ООО "ПЭК" | Контакты</title>
+	<title>Контакты ПЭК</title>
 	<link href="{% static 'css/contacts.css' %}" rel="stylesheet">
 </head>
-<style media="screen">
-:root{
-	--main-bg-color: #f6f4f5;
-}
-</style>
 <body>
 	{% include 'mainapp/parts/header.html' %}
 	<main>
@@ -27,7 +22,7 @@
 						<p class="pt-md-2"><b>Почтовый адрес:</b></br> Россия, 428000, Чувашская Республика, </br>г. Чебоксары, а/я 163</p>
 						<p class="tel-email"> Тел:<b>  8 (8352) 57-05-16 </b></p>
 						<p class="tel-email"> Факс:<b> 8 (8352) 57-05-19  </b></p>
-						<p class="tel-email"> E-mail:<b> info@piek.ru </b></p>
+						<a class="tel-email" href="mailto:info@piek.ru"> E-mail:<b> info@piek.ru </b></a>
 					</div>
 
 					<div class="d-none d-lg-flex flex-column ">
@@ -48,7 +43,7 @@
 					<h2 class="mt-md-4 office-title">Московское представительство</h2>
 					<p class="pt-md-2"> Россия, 105318, г.Москва, Измайловское шоссе, д.28</p>
 					<p class="tel-email"> Тел/Факс:<b> 8 (499) 110-90-85  </b></p>
-					<p class="tel-email"> E-mail:<b> info@piek.ru </b></p>
+					<a class="tel-email" href="mailto:info@piek.ru"> E-mail:<b> info@piek.ru </b></a>
 				</div>
 
 
@@ -58,17 +53,17 @@
 
 							<div class="flex-column px-5 px-md-0 py-3 px-md-3">
 							<h5 class="office-title">По коммерческим вопросам</h5>
-							<p class="tel-email"> E-mail:<b> info@piek.ru </b></p>
+							<a class="tel-email"  href="mailto:info@piek.ru"> E-mail:<b> info@piek.ru </b></a>
 							</div>
 
 							<div class="flex-column px-5 px-md-0 py-3 px-md-3">
 							<h5 class="office-title">По техническим вопросам</h5>
-							<p class="tel-email"> E-mail:<b> loseev@piek.ru </b></p>
+							<a class="tel-email"  href="mailto:loseev@piek.ru"> E-mail:<b> loseev@piek.ru </b></a>
 							</div>
 
 							<div class="flex-column px-5 px-md-0 py-3 px-md-3">
 							<h5 class="office-title">Отдел снабжения</h5>
-							<p class="tel-email"> E-mail:<b> snab@piek.ru </b></p>
+							<a class="tel-email" href="mailto:snab@piek.ru" > E-mail:<b> snab@piek.ru </b></a>
 							</div>
 
 						</div>

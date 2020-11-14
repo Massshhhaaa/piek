@@ -12,11 +12,6 @@
 	--company_name_color: #000;
 	--about_company_color: #000;
 	}
-.content-left {
-	opacity: 0;
-	transition: 1s;
-	transition-delay: .6s;
-	}
 </style>
 <body>
 		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %}); z-index: 99;">
@@ -24,18 +19,26 @@
 
 				<div class="container title" style="padding-top: 5em;">
 					<h1 class="title-text p-3 pb-5 pb-md-0 p-md-0">Поволжская </br> Электротехническая </br> Компания</h1>
-						<h2 class="text px-3 p-md-0 pt-md-4">Производит исполнительные механизмы МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
+
+						<h2 data-aos="fade-up"
+							 data-aos-duration="1000"
+							 data-aos-delay="500"
+							  class="text px-3 p-md-0 pt-md-4">Производит исполнительные механизмы МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 					</div>
 			</div>
 
 
 			<main>
 				<div class="row p-0 m-0">
-					<div class="col-lg-3 d-none d-lg-flex justify-content-center p-0">
+					<div  data-aos="fade"
+						 data-aos-duration="1000"
+						 data-aos-delay="900" class="col-lg-3 d-none d-lg-flex justify-content-center p-0">
 							{% include 'mainapp//minor/sidebar.html' %}
 					</div>
 
+
 					<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
+
 <style media="screen">
 	.boring {
 		font: 600 1.6em "Raleway";
@@ -110,7 +113,10 @@
 							</div>
 
 								<h1 class="boring"></h1>
-								<div class="section d-flex flex-wrap m-auto">
+								<div data-aos="fade"
+									 data-aos-duration="800"
+									 data-aos-delay="50"
+									 class="section d-flex flex-wrap m-auto">
 								{% for cat in categories %}
 								{% if cat.id == 12 or cat.id == 11 %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">
@@ -133,12 +139,12 @@
 				<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
 			</main>
 			{% include 'mainapp/parts/footer.html' %}
-			<script type="text/javascript">
+			<!-- <script type="text/javascript">
 				$(document).ready(() => {
 					$('.title-text').addClass('animate');
 					$('.text').addClass('animate');
 					$('.content-left').addClass('animate');
 				});
-			</script>
+			</script> -->
 		</body>
 		</html>
