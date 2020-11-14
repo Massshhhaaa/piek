@@ -19,8 +19,16 @@ from mainapp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.contrib.sitemaps.views import sitemap
+from mainapp.sitemaps import StaticViewSitemap
+
+sitemaps = {
+    'static' : StaticViewSitemap
+}
+
 urlpatterns = [
     path('', main_def, name='main_def'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('contacts/', contacts, name='contacts'),
     path('admin/', admin.site.urls),
     path('cart/', cart, name="cart"),
