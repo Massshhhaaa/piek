@@ -18,20 +18,21 @@ from django.urls import path, include
 from mainapp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic.base import TemplateView
 
 from django.contrib.sitemaps.views import sitemap
-from mainapp.sitemaps import StaticViewSitemap, GroupSitemap
+from mainapp.sitemaps import StaticViewSitemap, GroupsSitemap, ProductsSitemap, ModificationsSitemap
 
 sitemaps = {
     'static' : StaticViewSitemap,
-    'group' : GroupSitemap
+    'group' : GroupsSitemap,
+    'product': ProductsSitemap,
+    'modification': ModificationsSitemap
 }
 
 urlpatterns = [
     path('', main_def, name='main_def'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('contacts/', contacts, name='contacts'),
-    path('admin/', admin.site.urls),
     path('cart/', cart, name="cart"),
     path('about/', about, name="about"),
     path('docs/', docs, name='docs'),
@@ -48,18 +49,18 @@ urlpatterns = [
     path('ajax/product/<int:pk>', product, name='product'), # this using as add-to-cart
     path('ajax/remove_from_cart/<int:pk>', remove_from_cart, name='remove_from_cart'),
     path('ajax/update_quantity/<int:pk>', update_quantity, name='update_quantity'),
-    path('update_conventional_designation/<int:pk>', update_conventional_designation, name='update_conventional_designation'),
+    path('ajax/update_conventional_designation/<int:pk>', update_conventional_designation, name='update_conventional_designation'),
 
 
-    path('<path:slug>/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView),
-
+    path('<path:slug>/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView, name='ModificationDetailView'),
     path('<path:slug>/<slug:slug_product>/', ProductDetailView, name='ProductDetailView'),
-
     path('<path:slug>/', SubgroupDetailView, name='SubgroupDetailView'),
 
     path('tinymce/', include('tinymce.urls')),
+    path('admin/', admin.site.urls),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
+     path("robots.txt", TemplateView.as_view(template_name="mainapp/minor/robots.txt", content_type="text/plain"),),
     ]
-
 
 if settings.DEBUG:
      urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

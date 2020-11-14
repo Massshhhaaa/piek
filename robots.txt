@@ -1,4 +1,0 @@
-User-Agent: *
-Host: piek.ru
-
-Sitemap: http://piek.ru/sitemap.xml

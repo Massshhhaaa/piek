@@ -1,0 +1,7 @@
+User-Agent: *
+Host: piek.ru
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /sent_mail/
+
+Sitemap: http://piek.ru/sitemap.xml

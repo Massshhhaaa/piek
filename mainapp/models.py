@@ -22,7 +22,7 @@ class Group(models.Model):
         return str(self.title)
 
     def get_absolute_url(self):
-        return f'/{self.slug}/' 
+        return reverse('SubgroupDetailView', args=[self.slug])
 
 class Documentation(models.Model):
     key_filter = models.CharField(max_length=20)
@@ -55,6 +55,9 @@ class Product(models.Model):
     def __str__(self):
         return str(self.href_title)
 
+    def get_absolute_url(self):
+        return reverse('ProductDetailView', kwargs={'slug':self.parent.slug,'slug_product':self.slug_product})
+
 class ProductImage(models.Model):
     page = models.ForeignKey(Product, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='mechanisms', null=True)
@@ -79,6 +82,9 @@ class Modification(models.Model):
 
     class Meta:
         ordering = ['parent__id']
+
+    def get_absolute_url(self):
+        return reverse('ModificationDetailView', kwargs={'slug':self.parent.parent.slug,'slug_product':self.parent.slug_product,'slug_mod':self.slug_mod})
 
     def save(self, *args, **kwargs):
         self.slug_mod = slugify(self.title)
