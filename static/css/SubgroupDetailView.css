@@ -36,6 +36,7 @@ main{
 
   font-family: "Raleway";
   font-weight: 400;
+	text-align: justify;
   font-size: var(--description_font_size);
   line-height: 25px;
   letter-spacing: .54px;
