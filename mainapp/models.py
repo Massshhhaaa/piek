@@ -21,6 +21,9 @@ class Group(models.Model):
     def __str__(self):
         return str(self.title)
 
+    def get_absolute_url(self):
+        return f'/{self.slug}/' 
+
 class Documentation(models.Model):
     key_filter = models.CharField(max_length=20)
     key_sort = models.IntegerField(null=True, blank=True, unique=True)
