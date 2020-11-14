@@ -5,6 +5,7 @@
 	{% include 'mainapp/parts/head-property.html' %}
 	<title>О компании | ПЭК</title>
 	<link href="{% static 'css/about.css' %}" rel="stylesheet">
+	<link href="{% static 'css/aos.css' %}" rel="stylesheet">
 </head>
 
 
@@ -62,8 +63,10 @@
 
 </main>
 
+<script src="{% static 'js/aos.js' %}"></script>
+<script>AOS.init();</script>
 {% include 'mainapp/parts/footer.html' %}
-<script src="{% static 'js/jquery.spincrement.js' %}"></script>
+<!-- <script src="{% static 'js/jquery.spincrement.js' %}"></script> -->
 <!-- <script>$(document).ready(function(){
 	$('.benefits__element:nth-of-type(1) p:nth-of-type(1)').spincrement({
 		from: 1,
