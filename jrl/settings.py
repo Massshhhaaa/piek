@@ -5,7 +5,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SESSION_COOKIE_AGE = 43200
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '45.10.110.58','piek.ru']
+ALLOWED_HOSTS = ['45.10.110.71', 'localhost', '127.0.0.1', '45.10.110.58','piek.ru']
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'pr@piek.ru'
+EMAIL_HOST_PASSWORD = 'oevvvmohbdmddyru'
+DEFAULT_FROM_EMAIL = 'pr@piek.ru'
+EMAIL_USE_TLS = True
 
 INSTALLED_APPS = [
     'jazzmin',
