@@ -32,6 +32,10 @@ sitemaps = {
 
 urlpatterns = [
     path('', main_def, name='main_def'),
+    path('admin/', admin.site.urls),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
+     path("robots.txt", TemplateView.as_view(template_name="mainapp/minor/robots.txt", content_type="text/plain"),),
+
     path('contacts/', contacts, name='contacts'),
     path('cart/', cart, name="cart"),
     path('about/', about, name="about"),
@@ -57,9 +61,6 @@ urlpatterns = [
     path('<path:slug>/', SubgroupDetailView, name='SubgroupDetailView'),
 
     path('tinymce/', include('tinymce.urls')),
-    path('admin/', admin.site.urls),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
-     path("robots.txt", TemplateView.as_view(template_name="mainapp/minor/robots.txt", content_type="text/plain"),),
     ]
 
 if settings.DEBUG:
