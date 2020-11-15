@@ -34,7 +34,8 @@ urlpatterns = [
     path('', main_def, name='main_def'),
     path('admin/', admin.site.urls),
     path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}),
-     path("robots.txt/", TemplateView.as_view(template_name="mainapp/minor/robots.txt", content_type="text/plain"),),
+    path('tinymce/', include('tinymce.urls')),
+    path("robots.txt/", TemplateView.as_view(template_name="mainapp/minor/robots.txt", content_type="text/plain"),),
 
     path('contacts/', contacts, name='contacts'),
     path('cart/', cart, name="cart"),
@@ -59,8 +60,6 @@ urlpatterns = [
     path('<path:slug>/<slug:slug_product>/<slug:slug_mod>', ModificationDetailView, name='ModificationDetailView'),
     path('<path:slug>/<slug:slug_product>/', ProductDetailView, name='ProductDetailView'),
     path('<path:slug>/', SubgroupDetailView, name='SubgroupDetailView'),
-
-    path('tinymce/', include('tinymce.urls')),
     ]
 
 if settings.DEBUG:
