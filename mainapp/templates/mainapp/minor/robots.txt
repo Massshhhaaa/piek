@@ -3,5 +3,6 @@ Host: piek.ru
 Disallow: /admin/
 Disallow: /checkout/
 Disallow: /sent_mail/
+Disallow: /catalog
 
 Sitemap: http://piek.ru/sitemap.xml
