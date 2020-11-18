@@ -5,5 +5,3 @@ Disallow: /checkout/
 Disallow: /sent_mail/
 Disallow: /catalog/
 Host: https://piek.ru
-
-Sitemap: http://piek.ru/sitemap.xml
