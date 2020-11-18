@@ -5,7 +5,7 @@ from mainapp.models import Group, Product, Modification
 class StaticViewSitemap(Sitemap):
 
     def items(self):
-        return ['main_def','about', 'docs']
+        return ['main_def','about', 'docs', 'contacts']
 
     def location(self, item):
         return reverse(item)
