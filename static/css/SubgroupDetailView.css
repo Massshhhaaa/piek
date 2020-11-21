@@ -84,7 +84,7 @@ table td:first-of-type{
 	border-bottom: 1px solid transparent; */
 }
 .wrapper:hover h1{
-	text-decoration: underline solid yellow 2px;
+	text-decoration: underline solid yellow;
 }
 
 .wrapper p{
