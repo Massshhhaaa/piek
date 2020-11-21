@@ -80,11 +80,11 @@ table td:first-of-type{
   color: #4e0000;
   letter-spacing: -.005em;
 	width: auto!important;
-	transition: border-bottom .2s linear;
-	border-bottom: 1px solid transparent;
+	/* transition: border-bottom .2s linear;
+	border-bottom: 1px solid transparent; */
 }
 .wrapper:hover h1{
-	border-bottom: 1px solid #4e0000;
+	text-decoration: underline solid yellow 2px;
 }
 
 .wrapper p{
