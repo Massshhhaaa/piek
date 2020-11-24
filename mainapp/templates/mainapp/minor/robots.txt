@@ -6,4 +6,4 @@ Disallow: /checkout/
 Disallow: /sent_mail/
 Disallow: /catalog/
 
-Sitemap: https://piek.ru/sitemap.xml
+Sitemap: https://piek.ru/sitemap.xml/
