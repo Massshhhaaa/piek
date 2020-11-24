@@ -35,7 +35,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}),
     path('tinymce/', include('tinymce.urls')),
-    path("robots.txt", TemplateView.as_view(template_name="mainapp/minor/robots.txt", content_type="text/plain"),),
+    path("robots.txt", TemplateView.as_view(template_name="mainapp/minor/robots.txt", content_type="text/plain), ),
+    path("robots.txt/", TemplateView.as_view(template_name="mainapp/minor/robots.txt", content_type="text/plain"), ),
 
     path('contacts/', contacts, name='contacts'),
     path('cart/', cart, name="cart"),
