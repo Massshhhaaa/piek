@@ -14,6 +14,7 @@ EMAIL_HOST_PASSWORD = 'oevvvmohbdmddyru'
 DEFAULT_FROM_EMAIL = 'pr@piek.ru'
 EMAIL_USE_TLS = True
 
+
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
@@ -25,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'mainapp',
     'tinymce',
+    'jet_django',
 ]
 
 MIDDLEWARE = [
