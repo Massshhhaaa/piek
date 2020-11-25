@@ -13,6 +13,8 @@ EMAIL_HOST_USER = 'pr@piek.ru'
 EMAIL_HOST_PASSWORD = 'oevvvmohbdmddyru'
 DEFAULT_FROM_EMAIL = 'pr@piek.ru'
 EMAIL_USE_TLS = True
+JET_PROJECT = 'piek_5'
+JET_TOKEN = '595d233b-1632-42fe-bf86-22e55763bbb2'
 
 
 INSTALLED_APPS = [
