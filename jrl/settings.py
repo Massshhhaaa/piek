@@ -15,7 +15,7 @@ DEFAULT_FROM_EMAIL = 'pr@piek.ru'
 EMAIL_USE_TLS = True
 
 JET_PROJECT = 'piek_6'
-JET_TOKEN = '1695bfe1-1674-43ac-a37b-b0457e997c68'
+JET_TOKEN = 'd44c034f-5a36-4a63-9e41-bb333904c29f'
 
 INSTALLED_APPS = [
     'jazzmin',
