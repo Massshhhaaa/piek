@@ -5,6 +5,6 @@ Disallow: /admin/
 Disallow: /checkout/
 Disallow: /sent_mail/
 Disallow: /catalog/
-Disallow: /docs/
+Disallow: /media/
 
 Sitemap: https://piek.ru/sitemap.xml/
