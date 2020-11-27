@@ -61,6 +61,7 @@ class Product(models.Model):
 class ProductImage(models.Model):
     page = models.ForeignKey(Product, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='mechanisms', null=True)
+    show = models.BooleanField(default=True)
 
     def __str__(self):
         return str(self.page.name)
