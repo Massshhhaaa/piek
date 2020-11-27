@@ -58,7 +58,7 @@ table p{margin: 0!important;}
   padding: var(--tables_cell_padding);
 }
 .content table td:first-of-type,
-.content table td:first-of-type span
+.content table td:first-of-type span,
 .content table td:first-of-type p{
   color: #000!important;
 }
