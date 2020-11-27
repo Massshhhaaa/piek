@@ -42,7 +42,7 @@ table p{margin: 0!important;}
   max-width: 900px!important;
   line-height: var(--content_line_height);
 }
-.content strong{color: #222; font-size: 14px;}
+.content strong{color: #480413; font-size: 14px;}
 .content table strong{color: #222; font-size: 13px!important;}
 
 
@@ -57,11 +57,11 @@ table p{margin: 0!important;}
   border-right: hidden;
   padding: var(--tables_cell_padding);
 }
-/* .content table td:first-of-type,
+.content table td:first-of-type,
 .content table td:first-of-type span
 .content table td:first-of-type p{
   color: #000!important;
-} */
+}
 
 .content table tr{
   border-bottom: 1px solid #e1dedc;
