@@ -114,11 +114,16 @@
 		width: 80px;
 		margin: 0 auto;
 	}
-	.sensors-inner p{
+	.sensors-inner h5{
 		font: 600 1.4em 'SF UI Text';
 		margin: 0 auto;
 		padding: 1em;
 		}
+		.sensors-inner p{
+			font: 600 1em 'SF UI Text';
+			margin: 0 auto;
+			padding: 1em;
+			}
 </style>
 				<div class="d-flex flex-wrap my-5">
 					{% for sensor in sensors_list %}
@@ -126,6 +131,7 @@
 
 								<div class="sensors-inner">
 									<img src="{{sensor.file.url}}" alt="">
+									<h5>{{sensor.character}}</h5>
 									<p>{{sensor.name}}</p>
 								</div>
 

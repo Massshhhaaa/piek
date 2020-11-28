@@ -39,7 +39,7 @@ def ProductDetailView(request, slug_product, slug):
         available_sensors.append(product.sensors[i])
     print('Все датчики: ', available_sensors)
 
-    sensors_list = Sensors.objects.filter(name__in=available_sensors)
+    sensors_list = Sensors.objects.filter(character__in=available_sensors)
 
     print(sensors_list)
 
