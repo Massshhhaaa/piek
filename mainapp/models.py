@@ -106,11 +106,11 @@ class Modification(models.Model):
 # этот класс содержит все варианты датчиков для исполнительных механизмов
 # Данные из этого класс вытягиваются на страница продукта, модификации
 class Sensors(models.Model):
-    name = models.CharField(choices=SENSOR_CHOICES, max_length=250)
-    file = models.FileField()
+    character   = models.CharField(choices=SENSOR_CHOICES, max_length=250)
+    name        = models.CharField(max_length=50)
+    description = models.CharField(max_length=255)
+    file        = models.FileField()
 
-    class Meta:
-        ordering = ['name']
 
     def __str__(self):
         return str(self.name)

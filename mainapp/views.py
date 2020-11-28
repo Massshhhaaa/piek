@@ -34,13 +34,21 @@ def ProductDetailView(request, slug_product, slug):
     docs     = ProductDocs.objects.filter(page = product)
     mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
 
-    a = product.sensors
+    available_sensors = []
+    for i, sensor in enumerate(product.sensors):
+        available_sensors.append(product.sensors[i])
+    print('Все датчики: ', available_sensors)
+
+    sensors_list = Sensors.objects.filter(name__in=available_sensors)
+
+    print(sensors_list)
 
     context = {
     'product' : product,
     'photos': photos,
     'docs': docs,
     'mod_list' : mod_list,
+    'sensors_list': sensors_list,
     'in_cart_counter': cart_counter(request),
     }
     return render(request, 'mainapp/ProductDetailView.html', context)
