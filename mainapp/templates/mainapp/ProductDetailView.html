@@ -97,16 +97,38 @@
 					</div>
 				</div>
 <!-- End Modifications List Table  -->
+
+<h4 class="sensors-ttl">Виды блоков сигнализации положения </h4>
+	<div class="d-flex flex-wrap mb-5">
+		{% for sensor in sensors_list %}
+			<div class="sensors-wrap">
+
+					<div class="sensors-inner">
+						<img src="{{sensor.file.url}}" alt="">
+						<h5>{{sensor.character}}</h5>
+						<p>{{sensor.name}}</p>
+						<p class="sensor__description"> Не следует, однако, забывать о том, что социально-экономическое развитие играет важную роль </p>
+					</div>
+
+			</div>
+		{% endfor %}
+	</div>
+
+
 <style>
+	.sensors-ttl{
+		margin-top: 3rem;
+		font: 500 16px "SF UI Text";
+	}
 	.sensors-wrap{
 		display: flex;
 		margin: 1rem;
 		width: 21%;
+		height: 230px;
 	}
 	.sensors-inner{
 		width: 100%;
 		display: flex;
-		padding: 2em;
 		flex-direction: column;
 		border: var(--border);
 		border-radius: 15px;
@@ -114,10 +136,10 @@
 	}
 	.sensors-inner img{
 		width: 80px;
-		margin: 0 auto;
+		margin: 1rem auto 0;
 	}
 	.sensors-inner h5{
-		font: 600 1.4em 'SF UI Text';
+		font: 600 16px 'SF UI Text';
 		margin: 0 auto;
 		padding: 1em;
 		}
@@ -127,24 +149,31 @@
 			padding: .6rem;
 			margin: 0;
 			}
+		.sensor__description{
+			font-size: 12px!important;
+			opacity: 0;
+			color: #333;
+			z-index: -99!important;
+		}
+
+
+		.sensors-inner:hover img{
+			opacity: 0;
+			transition: opacity .3s ease-in-out;
+		}
+		.sensors-inner:hover h5{
+			margin-top: -50%;
+			transition: margin-top .4s ease-in-out;
+		}
+		.sensors-inner:hover .sensor__description{
+			display: flex;
+			opacity: 1;
+			transition: opacity .8s ease-in-out;
+		}
 </style>
 
 
 				{% include 'mainapp/parts/ProdModBase.html' %}
-				<h4 class="mt-5 mb-2">Виды блоков сигнализации положения </h4>
-					<div class="d-flex flex-wrap mb-5">
-						{% for sensor in sensors_list %}
-							<div class="sensors-wrap">
-
-									<div class="sensors-inner">
-										<img src="{{sensor.file.url}}" alt="">
-										<h5>{{sensor.character}}</h5>
-										<p>{{sensor.name}}</p>
-									</div>
-
-							</div>
-						{% endfor %}
-					</div>
 
 
 			</div>
