@@ -178,3 +178,13 @@ thead th a{
   border: none !important;
   color: #777 !important;
 }
+input[type="checkbox"], input[type="radio"] {
+  width: 20px!important;
+  height: 20px!important;
+  border-radius: 8px!important;
+  border-color: #cecece !important;
+}
+
+.card-body{
+padding: 0!important;
+}

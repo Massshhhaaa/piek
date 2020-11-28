@@ -72,7 +72,7 @@ class ProductImage(models.Model):
     show = models.BooleanField(default=True)
 
     def __str__(self):
-        return str(self.page.name)
+        return str(self.page.id)
 
 class ProductDocs(models.Model):
     page = models.ForeignKey(Product, on_delete=models.CASCADE)
