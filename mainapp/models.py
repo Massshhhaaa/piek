@@ -2,6 +2,13 @@ from django.db import models
 from pytils.translit import slugify
 from tinymce import HTMLField
 from django.shortcuts import reverse
+from multiselectfield import MultiSelectField
+
+SENSOR_CHOICES = (('М', 'М'),
+               ('У', 'У'),
+               ('Р', 'Р'),
+               ('И', 'И'),
+               ('БЦА', 'БЦА'))
 
 class Group(models.Model):
     title       = models.CharField(max_length=250)
@@ -48,6 +55,7 @@ class Product(models.Model):
     mod_table    = HTMLField(help_text="Указание идентификатора обязательно. id = 'MOD'")
     description  = HTMLField('description group', null=True, blank=True)
     content      = HTMLField()
+    sensors       = MultiSelectField(choices=SENSOR_CHOICES, max_choices=10, max_length=100, null=True, blank=True)
 
     class Meta:
         ordering = ['id']
@@ -93,3 +101,16 @@ class Modification(models.Model):
 
     def __str__(self):
         return str(self.title)
+
+
+# этот класс содержит все варианты датчиков для исполнительных механизмов
+# Данные из этого класс вытягиваются на страница продукта, модификации
+class Sensors(models.Model):
+    name = models.CharField(choices=SENSOR_CHOICES, max_length=250)
+    file = models.FileField()
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return str(self.name)

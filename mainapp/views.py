@@ -5,6 +5,7 @@ from mainapp.models import *
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 from django.http import JsonResponse
+from multiselectfield import MultiSelectField
 
 
 def main_def(request):
@@ -32,6 +33,8 @@ def ProductDetailView(request, slug_product, slug):
     photos   = ProductImage.objects.filter(page = product)
     docs     = ProductDocs.objects.filter(page = product)
     mod_list = Modification.objects.only('title', 'slug_mod','id').filter(parent__parent__slug=slug, parent__slug_product=slug_product)
+
+    a = product.sensors
 
     context = {
     'product' : product,
@@ -164,8 +167,8 @@ def sent_mail(request):
     html_template = 'mainapp/html_message.html'
     from_email = "pr@piek.ru"
     admin_email = "info@piek.ru"
-    
-    
+
+
     to_email = request.POST['email']
     name = request.POST['firstname']
     address = request.POST['address']
@@ -174,10 +177,10 @@ def sent_mail(request):
     email = request.POST['email']
     description = request.POST['description']
     orderstring = ''
-    
 
 
-        
+
+
     for product in product_list:
         if product.get('conventional_designation') != '' and product.get('conventional_designation') != None:
             outputordertitle = product.get('conventional_designation')
@@ -192,7 +195,7 @@ def sent_mail(request):
     message = EmailMessage(subject, html_message, from_email, [to_email])
     message.content_subtype = 'html'
     message.send()
-    
+
     message2text = name + '\n' + phone + '\n' + email + '\n' + 'Адрес: ' + address + '\n' + 'Компания: ' + company + '\n' + 'Пожелания: ' + description + '\n' + 'Заказ: '+ '\n' + orderstring
     message2 = EmailMessage(subject, message2text, from_email, [admin_email])
     message2.send()
