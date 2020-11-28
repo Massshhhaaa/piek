@@ -19,11 +19,11 @@
   <!-- Images block  -->
   <div class="d-flex flex-md-wrap justify-content-md-center images-block">
 
-  {% for p in photos %}
+  {% for p in photos %}{% if p.show %}
   <a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
     <img  src="{{p.image.url}}" class="image">
   </a>
-  {% endfor %}
+  {% endif %}{% endfor %}
   </div>
 
 <!-- Скрипт для рассчета ширины фотографий в зависимости от их количества -->
@@ -131,7 +131,7 @@
 
 
 				{% include 'mainapp/parts/ProdModBase.html' %}
-				<h4 class="mt-5 mb-2">Виды блоков сигнализации положения </h4>
+				<!-- <h4 class="mt-5 mb-2">Виды блоков сигнализации положения </h4>
 					<div class="d-flex flex-wrap mb-5">
 						{% for sensor in sensors_list %}
 							<div class="sensors-wrap">
@@ -144,7 +144,7 @@
 
 							</div>
 						{% endfor %}
-					</div>
+					</div> -->
 
 
 			</div>
