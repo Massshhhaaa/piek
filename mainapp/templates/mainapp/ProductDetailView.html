@@ -98,25 +98,6 @@
 				</div>
 <!-- End Modifications List Table  -->
 
-{% if sensors_list %}
-<h4 class="sensors-ttl">Виды блоков сигнализации положения </h4>
-	<div class="d-flex flex-wrap mb-5">
-		{% for sensor in sensors_list %}
-			<div class="sensors-wrap">
-
-					<div class="sensors-inner">
-						<img src="{{sensor.file.url}}" alt="">
-						<h5>{{sensor.character}}</h5>
-						<p>{{sensor.name}}</p>
-						<p class="sensor__description">{{sensor.description}}</p>
-					</div>
-
-			</div>
-		{% endfor %}
-	</div>
-{% endif %}
-
-
 				{% include 'mainapp/parts/ProdModBase.html' %}
 
 
