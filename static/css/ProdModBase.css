@@ -98,6 +98,7 @@ table p{margin: 0!important;}
 .sensors-ttl{
   margin-top: 3rem;
   font: 500 16px "SF UI Text";
+  color: #30020c;
 }
 .sensors-wrap{
   display: flex;
@@ -155,7 +156,7 @@ table p{margin: 0!important;}
     transition: opacity .8s ease-in-out;
   }
 
-  
+
 @media (max-width: 767.98px) {
   main{padding-bottom: 1rem;}
   .primary_ttl h1{
