@@ -98,6 +98,7 @@
 				</div>
 <!-- End Modifications List Table  -->
 
+{% if sensors_list %}
 <h4 class="sensors-ttl">Виды блоков сигнализации положения </h4>
 	<div class="d-flex flex-wrap mb-5">
 		{% for sensor in sensors_list %}
@@ -113,69 +114,7 @@
 			</div>
 		{% endfor %}
 	</div>
-
-
-<style>
-	.sensors-ttl{
-		margin-top: 3rem;
-		font: 500 16px "SF UI Text";
-	}
-	.sensors-wrap{
-		display: flex;
-		margin: 1rem;
-		width: 21%;
-		height: 230px;
-	}
-	.sensors-inner{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		/* border: var(--border); */
-		border-radius: 15px;
-		/* background: #f3f2f1; */
-	}
-	.sensors-inner img{
-		width: 80px;
-		margin: 1rem auto 0;
-		transition: opacity .2s ease-in-out;
-		transition-delay: .3s;
-	}
-	.sensors-inner h5{
-		font: 600 16px 'SF UI Text';
-		margin: 0 auto;
-		padding: 1em;
-		transition: margin-top .3s ease-in-out;
-		}
-		.sensors-inner p{
-			font: normal 14px 'SF UI Text';
-			text-align: center;
-			padding: .6rem;
-			margin: 0;
-			}
-		.sensor__description{
-
-			font-size: 12px!important;
-			opacity: 0;
-			color: #333;
-			z-index: -99!important;
-			transition: opacity .2s ease-in-out;
-		}
-
-
-		.sensors-inner:hover img{
-			opacity: 0;
-			transition: opacity .3s ease-in-out;
-		}
-		.sensors-inner:hover h5{
-			margin-top: -50%;
-			transition: margin-top .4s ease-in-out;
-		}
-		.sensors-inner:hover .sensor__description{
-			display: flex;
-			opacity: 1;
-			transition: opacity .8s ease-in-out;
-		}
-</style>
+{% endif sensors_list %}
 
 
 				{% include 'mainapp/parts/ProdModBase.html' %}
