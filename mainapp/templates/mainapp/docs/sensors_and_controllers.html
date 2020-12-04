@@ -2,19 +2,28 @@
 {% load static %}
 
 {% block title %}
-<title>Руководства по эксплуатации для электроприводов в общепромышленнном исполнении - ПЭК</title>
+<title>Документация на датчики - ПЭК</title>
 {% endblock title %}
+
 
 {% block content %}
 
 <section class="">
-  <h2 class="doc-section__title">Документация на механизмы МЭО-IICT4 (МЭОФ-IIBT4)</h2>
+  <h2 class="doc-section__title">Документация на блоки сигнализации положения</h2>
   <div class="doc-section bg-light p-md-5 p-3">
-
-      {% for doc in docs %} {% if doc.key_filter == 'блок' %}
+      {% for doc in docs %} {% if doc.key_filter == 'бсп' %}
         <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
         {% endif %} {% endfor %}
+  </div>
+</section>
 
+
+<section class="">
+  <h2 class="doc-section__title">Документация на механизмы сигнализации положения</h2>
+  <div class="doc-section bg-light p-md-5 p-3">
+      {% for doc in docs %} {% if doc.key_filter == 'мсп' %}
+        <a href="{{doc.file.url}}"><p>- {{doc.name }}</p></a>
+        {% endif %} {% endfor %}
   </div>
 </section>
 
