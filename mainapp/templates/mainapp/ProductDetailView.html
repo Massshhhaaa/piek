@@ -97,9 +97,9 @@
 					</div>
 				</div>
 <!-- End Modifications List Table  -->
-
+ 			<div class="container-hero">
 				{% include 'mainapp/parts/ProdModBase.html' %}
-
+			</div>
 
 			</div>
 			</section>
@@ -160,6 +160,11 @@ var id  = "#"+ $(this).attr('id');
 console.log(id);
 $(id).addClass("btn-animate");
 });
+
+$('.sensors-wrap').hover(
+       function(){ $('.content').addClass('sensor-content-animate') },
+       function(){ $('.content').removeClass('sensor-content-animate') }
+)
 </script>
 
 

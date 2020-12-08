@@ -2,7 +2,7 @@
 
 {% if sensors_list %}
 <h4 class="sensors-ttl">Виды блоков сигнализации положения </h4>
-	<div class="d-flex flex-wrap mb-5">
+	<div class="d-flex flex-wrap mb-5 ss">
 		{% for sensor in sensors_list %}
 			<div class="sensors-wrap">
 
@@ -10,10 +10,16 @@
 						<img src="{{sensor.file.url}}" alt="">
 						<h5>{{sensor.character}}</h5>
 						<p>{{sensor.name}}</p>
-						<p class="sensor__description">{{sensor.description}}</p>
-					</div>
+
+
 
 			</div>
+
+		<div class="sensor__description">
+			<p class="sensor__description--name">{{sensor.name}}</p>
+			<p>{{sensor.description}}</p>
+		</div>
+		</div>
 		{% endfor %}
 	</div>
 {% endif %}

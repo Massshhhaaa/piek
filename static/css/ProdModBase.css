@@ -104,58 +104,104 @@ table p{margin: 0!important;}
   display: flex;
   margin: 1rem;
   width: 21%;
-  height: 230px;
+  height: auto;
 }
 .sensors-inner{
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* border: var(--border); */
+  border: var(--border);
   border-radius: 15px;
   /* background: #f3f2f1; */
 }
+
+
+.sensors-inner:not(:first-child) {
+    margin-left: -50px;
+}
+
+.sensors-inner:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.sensors-inner:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+
 .sensors-inner img{
   width: 80px;
-  margin: 1rem auto 0;
-  transition: opacity .2s ease-in-out;
-  transition-delay: .3s;
+  margin: 1rem auto ;
 }
 .sensors-inner h5{
   font: 600 16px 'SF UI Text';
   margin: 0 auto;
-  padding: 1em;
-  transition: margin-top .3s ease-in-out;
+  padding: 1rem 0 ;
   }
   .sensors-inner p{
     font: normal 14px 'SF UI Text';
     text-align: center;
-    padding: .6rem;
-    margin: 0;
+    padding: 1rem .6rem;
     }
+
+
   .sensor__description{
+    display: none;
+    background: #fff;
+    bottom: 10%;
+    border-radius: 16px;
+    right: 20%;
+    position: fixed;
+    padding: 4rem 1rem;
+    font-size: 15px!important;
+    color: #000;
+    max-width: 300px;
+    z-index: 1!important;
+    /* -webkit-box-shadow: 5px 5px 4px 5px #f3f2f1;
+   box-shadow: 5px 5px 4px 5px #f3f2f1; */
+   border: 1px dotted #380e0e;
+   pointer-events:none;
 
-    font-size: 12px!important;
-    opacity: 0;
-    color: #333;
-    z-index: -99!important;
-    transition: opacity .2s ease-in-out;
   }
 
 
-  .sensors-inner:hover img{
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-  }
-  .sensors-inner:hover h5{
-    margin-top: -50%;
-    transition: margin-top .4s ease-in-out;
-  }
-  .sensors-inner:hover .sensor__description{
+.sensor__description--name{
+  display: block;
+  -webkit-transform: rotate(270deg) translateY(-100%) translateX(calc(-100% - 100px));
+          transform: rotate(270deg) translateY(-100%) translateX(calc(-100% - 100px));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  font-size: 24px;
+  font-weight: 900;
+  -webkit-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s;
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s;
+  opacity: 0;
+}
+
+
+.sensors-wrap  .sensors-inner:hover + .sensor__description{
     display: flex;
-    opacity: 1;
-    transition: opacity .8s ease-in-out;
   }
+.sensors-wrap  .sensors-inner:hover + .sensor__description .sensor__description--name{
+  opacity: 1;
+  -webkit-transform: rotate(270deg) translateY(-100%) translateX(-100%);
+          transform: rotate(270deg) translateY(-100%) translateX(-100%);
+}
 
+.content{
+  transform-origin: center;
+  transition:
+    filter 200ms linear;
+}
+.sensor-content-animate{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
 
 @media (max-width: 767.98px) {
   main{padding-bottom: 1rem;}
