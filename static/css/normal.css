@@ -83,7 +83,6 @@ main a:hover, a:focus{
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-  /* -webkit-animation: slide 720s linear infinite; */
 }
 .align-middle{
   position: absolute;
@@ -103,8 +102,6 @@ main a:hover, a:focus{
   letter-spacing: 1px;
   text-align: left;
   text-transform: uppercase;
-/*
-	transition: opacity .7s ease-in, margin .7s linear; */
 }
 .text{
   margin-bottom: 0px!important;
@@ -196,6 +193,7 @@ padding: 0 5em;
 
 .separately{
 width: 30%;
+position: relative;
 }
 .separately:nth-of-type(3n+2){
 	border-left: var(--border);
@@ -213,11 +211,23 @@ width: 30%;
 	box-sizing: border-box;
 
 }
+.separately h3:hover{
+	text-decoration: underline!important;
+}
 .item-name:hover{
   text-decoration: none;
   color: #4e0000;
 }
 
+/* .separately:hover a::before{
+	display: flex;
+	left: 50%;
+	top: 50%;
+	z-index: -1;
+	transform: translate(-50%, -50%);
+	position: absolute;content: '';width: 150px;height: 150px; border-radius: 50%;
+	background-color: #f3f2f1;
+} */
 .page-ttl{
 	margin-top: 4rem;
   font-family: 'Raleway';

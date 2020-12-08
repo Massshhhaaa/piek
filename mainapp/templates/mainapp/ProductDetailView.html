@@ -161,23 +161,19 @@ console.log(id);
 $(id).addClass("btn-animate");
 });
 
-$('.sensors-wrap').hover(
-       function(){ $('.content').addClass('sensor-content-animate') },
-       function(){ $('.content').removeClass('sensor-content-animate') }
+
+// Sensors animation
+$('.sensors-inner').hover(
+       function(){
+				 $('.sensors-inner:not(:hover)').addClass('sensor-hov'),
+				 $('.content').addClass('sensor-content-animate')},
+       function(){
+				 $('.sensors-inner').removeClass('sensor-hov'),
+			 	$('.content').removeClass('sensor-content-animate') },
 )
+
 </script>
 
-
- <!-- not used
-<script>
-let mod_bg = document.getElementById("MOD").getBoundingClientRect();
-let sidebar = document.getElementById('content-left');
-let sidebar_now_position = sidebar.getBoundingClientRect();
-var position  = mod_bg - sidebar_now_position;
-console.log(mod_bg);
-console.log(sidebar_now_position);
-sidebar.style.marginTop = position + 'px';
-</script> -->
 <script type="module"  src="{% static 'js/ajax/Product.add-to-cart.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>

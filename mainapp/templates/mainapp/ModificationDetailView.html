@@ -125,6 +125,17 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 		button.classList.toggle('added');
 	});
 });
+</script>
+<script type="text/javascript">
+// Sensors animation
+$('.sensors-inner').hover(
+       function(){
+				 $('.sensors-inner:not(:hover)').addClass('sensor-hov'),
+				 $('.content').addClass('sensor-content-animate')},
+       function(){
+				 $('.sensors-inner').removeClass('sensor-hov'),
+			 	$('.content').removeClass('sensor-content-animate') },
+)
 
 </script>
 <script type="module"  src="{% static 'js/ajax/Modification.add-to-cart.js' %}"></script>
