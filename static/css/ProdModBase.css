@@ -116,7 +116,8 @@ table p{margin: 0!important;}
   display: flex;
   flex-direction: column;
   height: 210px;
-  width: calc(100%/5 + 0px);
+  margin: 8px;
+  width: calc(100%/5 - 18px);
 
   border-radius: 16px;
   box-shadow: 1px 2px 12px 0 rgba(94,94,94,.12);
@@ -130,17 +131,17 @@ table p{margin: 0!important;}
 
 //not working
 .sensors-inner:not(:nth-of-type(2n+1)) {
-    margin-left: -20px;
+    margin-left: -10px;
 }
 
 .sensors-inner:hover {
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   transition: 0.4s ease-out;
 }
 
 .sensors-inner:hover ~ .sensors-inner {
   position: relative;
-  left: 20px;
+  left: 00px;
   transition: 0.4s ease-out;
 }
 
@@ -221,7 +222,7 @@ table p{margin: 0!important;}
     filter 100ms linear;
 }
 .sensor-content-animate{
-  filter: brightness(1) saturate(0) contrast(0) blur(20px);
+  filter: brightness(2.5) saturate(.3) contrast(1) blur(5px);
 }
 
 
