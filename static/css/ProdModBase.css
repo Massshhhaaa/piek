@@ -221,7 +221,7 @@ table p{margin: 0!important;}
     filter 100ms linear;
 }
 .sensor-content-animate{
-  filter: brightness(1.9) saturate(0) contrast(0) blur(6px);
+  filter: brightness(1) saturate(0) contrast(0) blur(20px);
 }
 
 
