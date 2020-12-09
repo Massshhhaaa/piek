@@ -96,7 +96,9 @@ table p{margin: 0!important;}
 /* SENSORS BLOCK */
 
 .sensors-hero{
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
 .sensors-ttl{
   margin-top: 3rem;
@@ -112,7 +114,7 @@ table p{margin: 0!important;}
 
 
 
-.sensors-inner {
+.sensor-inner {
   display: flex;
   flex-direction: column;
   height: 210px;
@@ -130,49 +132,46 @@ table p{margin: 0!important;}
 }
 
 //not working
-.sensors-inner:not(:nth-of-type(2n+1)) {
+.sensor-inner:not(:nth-of-type(2n+1)) {
     margin-left: -10px;
 }
 
-.sensors-inner:hover {
+.sensor-inner:hover {
   transform: translateY(-10px);
   transition: 0.4s ease-out;
 }
 
-.sensors-inner:hover ~ .sensors-inner {
+.sensor-inner:hover ~ .sensor-inner {
   position: relative;
   left: 00px;
   transition: 0.4s ease-out;
 }
 
-.sensors-grid:hover > .sensors-inner:not(:hover) img{
+.sensors-grid:hover > .sensor-inner:not(:hover) img{
   filter: brightness(1.5) saturate(0) contrast(1.2) blur(0px);
 }
 
-.sensors-inner img{
+.sensor-inner img{
   width: 80px;
   margin: 1rem auto;
 }
-.sensors-inner h5{
+.sensor-inner h5{
   font: 600 16px 'SF UI Text';
   margin: 0 auto;
   padding: 1rem 0 ;
   }
-  .sensors-inner p{
+  .sensor-inner p{
     font: normal 14px 'SF UI Text';
     text-align: center;
     padding: 1rem .6rem;
     }
 
-
   .sensor__description{
     display: none;
     background: #fff;
-    bottom: 10%;
     border-radius: 16px;
-    right: 20%;
-    position: fixed!important;
-    margin: 0rem 1rem 4rem;
+    position: absolute;
+    right: 0;
     padding: 2rem;
     font-family: "SF UI Text";
     font-size: 15px!important;
@@ -207,10 +206,10 @@ table p{margin: 0!important;}
 }
 
 
-.sensors-inner:hover + .sensor__description{
+.sensor-inner:hover + .sensor__description{
     display: flex;
   }
-.sensors-inner:hover + .sensor__description .sensor__description--name{
+.sensor-inner:hover + .sensor__description .sensor__description--name{
   opacity: 1;
   -webkit-transform: rotate(270deg) translateY(-100%) translateX(-100%);
           transform: rotate(270deg) translateY(-100%) translateX(-100%);

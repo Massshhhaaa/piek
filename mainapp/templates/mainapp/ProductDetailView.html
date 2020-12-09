@@ -60,11 +60,9 @@
 
 	<div class="row p-0 m-0 mt-5">
 
-		<div class="col-lg-3 d-none d-lg-flex justify-content-center">
 			{% include 'mainapp//minor/sidebar.html' %}
-		</div>
 
-		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
+		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0 js-content">
 
 			<section class="col p-0">
 				<div class="container">
@@ -112,27 +110,26 @@
 
 <!-- WARNING:  -->
 <script>
-var n = 0;
+
 let arr = [];
 let arr_slug = [];
+
 {% for mod in mod_list %}
-arr[n] = "{{mod.title}}";
-arr_slug[n] = "{{ mod.slug_mod }}";
-n++;
+arr.push("{{mod.title}}");
+arr_slug.push("{{ mod.slug_mod }}");
 {% endfor %}
 
-var k = 2; //номер строки в таблице
-for (let j = 0; j < arr.length; j++) {
-	$("#MOD tr:nth-child(" + k + ") td:nth-child(1)").text(arr[j]);
-	$("#MOD tr:nth-child(" + k + ") td:nth-child(1)").wrap("<a href=" + arr_slug[j] + "></a>");
-	k++;
+for (let j = 0, k=2; j < arr.length; j++, k++) {
+	$(`#MOD tr:nth-child( ${k} ) td:nth-child(1)`).text(arr[j]);
+	$(`#MOD tr:nth-child( ${k} ) td:nth-child(1)`).wrap(`<a href= ${arr_slug[j]} ></a>`);
 }
 </script>
-<script>
 
+<script>
 function ArrangementCartIcons() {
 		let first_row_height = $('#MOD > tbody > tr:nth-child(1)').outerHeight();
 		let second_row_height = $('#MOD > tbody > tr:nth-child(2)').outerHeight();
+
 		{% for mod in mod_list %}
 		var row_height = $('#MOD > tbody > tr:nth-child('+ ({{ forloop.counter }} + 1) +')').outerHeight();
 		$('.cart-button-wrapper:nth-of-type('+ {{ forloop.counter }} +') .btn').attr('id', 'btn_'+ {{forloop.counter}});
@@ -141,39 +138,10 @@ function ArrangementCartIcons() {
 		document.querySelector('#cart_btn').style['margin-top'] = first_row_height +1+ 'px';
 		document.querySelector('#cart_btn').style['opacity'] = 1;
 	}
-
-
-
-	$(function(){
-		PhotosWidth();
-		ArrangementCartIcons();//calling function on window load
-		$(window).resize(function(){
-			PhotosWidth();
-			ArrangementCartIcons();//calling function on window resize
-		});
-	});
-
-</script>
-<script type="text/javascript">
-$(".js-cart-buttons").click(function () {
-var id  = "#"+ $(this).attr('id');
-console.log(id);
-$(id).addClass("btn-animate");
-});
-
-
-// Sensors animation
-$('.sensors-inner').hover(
-       function(){
-				 $('.sensors-inner:not(:hover)').addClass('sensor-hov'),
-				 $('.content').addClass('sensor-content-animate')},
-       function(){
-				 $('.sensors-inner').removeClass('sensor-hov'),
-			 	$('.content').removeClass('sensor-content-animate') },
-)
-
 </script>
 
+
+<script src="{% static 'js/piek_modules/Product.js' %}"></script>
 <script type="module"  src="{% static 'js/ajax/Product.add-to-cart.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
