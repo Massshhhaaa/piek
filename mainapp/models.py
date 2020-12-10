@@ -10,7 +10,10 @@ SENSOR_CHOICES = (('М', 'М'),
                ('И', 'И'),
                ('БЦА', 'БЦА'),
                ('БКП', 'БКП'),
-               ('ЕД', 'ЕД'))
+               ('ЕД', 'ЕД'),
+
+               ('БУМ', 'БУМ'),
+               ('ЕДМ', 'ЕДМ'),)
 
 class Group(models.Model):
     title       = models.CharField(max_length=250)
