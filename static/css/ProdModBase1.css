@@ -232,44 +232,60 @@ table p{margin: 0!important;}
 }
 
 @media (max-width: 767.98px) {
-  main{padding-bottom: 1rem;}
-  .primary_ttl h1{
-  padding: 3rem 2rem 2rem!important;
+        main{padding-bottom: 1rem;}
+        .primary_ttl h1{
+        padding: 3rem 2rem 2rem!important;
+        }
+        .content{margin-top: 2rem; padding: 0 1rem;}
+        .content table td{
+          --tables_cell_padding: 5px;
+          font-size: 12px!important;
+        }
+
+      .image{
+        width: 300px!important;
+        padding: 10px 0;
+        border-right: 1px solid #c0c8d0;
+      }
+      .images-block a:first-of-type{padding-left: 2rem;}
+
+      .images-block a:last-of-type{padding-right: 2rem;}
+      .images-block a:last-of-type .image{border-right: none;}
+
+      .doc-wrap{width: 45% !important;}
+
+      ::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      ::-webkit-scrollbar-thumb:horizontal {
+          border-radius: 3px;
+          background: linear-gradient( to left, #e66465, #9198e5);
+      }
+}
+
+@media (max-width: 767.98px) {
+  .sensors-ttl{
+    padding: 0 1rem;
   }
-  .content{margin-top: 2rem; padding: 0 1rem;}
-  .content table td{
-    --tables_cell_padding: 5px;
+
+  .sensor-inner{ 
+    width: calc(100%/3 - 18px);
+    height: 200px;
   }
-
-.image{
-  width: 300px!important;
-  padding: 10px 0;
-  border-right: 1px solid #c0c8d0;
-}
-.images-block a:first-of-type{padding-left: 2rem;}
-
-.images-block a:last-of-type{padding-right: 2rem;}
-.images-block a:last-of-type .image{border-right: none;}
-
-.doc-wrap{width: 45% !important;}
-
-::-webkit-scrollbar {
-  height: 3px;
-}
-
-::-webkit-scrollbar-thumb:horizontal {
-    border-radius: 3px;
-    background: linear-gradient( to left, #e66465, #9198e5);
-
-}
+  .sensor-inner p{margin-bottom: 0;}
+  .sensor-inner h5{padding: 5px;}
 }
 
 
 @media (min-width: 768px)and (max-width: 1199.98px) {
-  .image{
-    width: 100%!important;
+    .sensor__description{
+      margin: 1.5rem;
+    }
+    .image{
+      width: 100%!important;
+    }
   }
-}
-@media (min-width: 1199.98px) {
-  .image{width: var(--image_width)!important;}
+  @media (min-width: 1199.98px) {
+    .image{width: var(--image_width)!important;}
 }

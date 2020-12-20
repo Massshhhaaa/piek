@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 {% load static %}
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	<meta name="description" content="{{ product.meta_description }}">
 	<meta name="keywords" content="{{ product.meta_keywords }}">
+
 	{% include 'mainapp/parts/head-property.html' %}
 	<title>{{ product.href_title }} - ПЭК</title>
 	<link href="{% static 'css/ProductDetailView.css' %}" rel="stylesheet">
 	<link href="{% static 'css/ProdModBase1.css' %}" rel="stylesheet">
-
 	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
 
 </head>
 <body>
 	{% include 'mainapp/parts/header.html' %}
-
 <main>
 
   <!-- Images block  -->
@@ -110,18 +109,13 @@
 </main>
 {% include 'mainapp/parts/footer.html' %}
 
-
-
 <script>
-
 let arr = [];
 let arr_slug = [];
-
 {% for mod in mod_list %}
 arr.push("{{mod.title}}");
 arr_slug.push("{{ mod.slug_mod }}");
 {% endfor %}
-
 for (let j = 0, k=2; j < arr.length; j++, k++) {
 	$(`#MOD tr:nth-child( ${k} ) td:nth-child(1)`).text(arr[j]);
 	$(`#MOD tr:nth-child( ${k} ) td:nth-child(1)`).wrap(`<a href= ${arr_slug[j]} ></a>`);
@@ -144,6 +138,7 @@ function ArrangementCartIcons() {
 </script>
 
 
+<script src="{% static 'js/piek_modules/Sensors.js' %}"></script>
 <script src="{% static 'js/piek_modules/Product.js' %}"></script>
 <script type="module"  src="{% static 'js/ajax/Product.add-to-cart.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>

@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 {% load static %}
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	{% include 'mainapp/parts/head-property.html' %}
 	<title>{{ product.h1_mod }} {{ mod.title }} - ПЭК</title>
 	<link href="{% static 'css/ModificationDetailView.css' %}" rel="stylesheet">
 	<link href="{% static 'css/ModificationsDetailView_CartButtons.css' %}" rel="stylesheet">
 	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
-
 	<link href="{% static 'css/ProdModBase1.css' %}" rel="stylesheet">
 
 </head>
 <body>
 	{% include 'mainapp/parts/header.html' %}
-	<main>
+<main>
 		<!-- Images block  -->
 		<div class="d-flex flex-md-wrap justify-content-md-center images-block">
 
@@ -55,7 +54,7 @@
 			{% include 'mainapp//minor/sidebar.html' %}
 
 
-		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index row p-0 m-0">
+		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index row p-0 m-0 js-content">
 			<div class="container">
 
 				<div class="primary_ttl">
@@ -102,7 +101,9 @@
 				</div>
 				<!-- f -->
 
+				<div class="container-hero">
 				{% include 'mainapp/parts/ProdModBase.html' %}
+				</div>
 
 			</div>
 		</div>
@@ -124,18 +125,10 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 	});
 });
 </script>
-<script type="text/javascript">
-// Sensors animation
-$('.sensors-inner').hover(
-       function(){
-				 $('.sensors-inner:not(:hover)').addClass('sensor-hov'),
-				 $('.content').addClass('sensor-content-animate')},
-       function(){
-				 $('.sensors-inner').removeClass('sensor-hov'),
-			 	$('.content').removeClass('sensor-content-animate') },
-)
 
-</script>
+
+<script src="{% static 'js/piek_modules/Sensors.js' %}"></script>
+
 <script type="module"  src="{% static 'js/ajax/Modification.add-to-cart.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
