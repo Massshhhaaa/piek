@@ -108,6 +108,10 @@ class Modification(models.Model):
     def __str__(self):
         return str(self.title)
 
+class Certificate(models.Model):
+    title   = models.CharField(max_length=200, null=True)
+    picture = models.ImageField(upload_to='certificates/picture', null=True)
+    file    = models.FileField(upload_to='certificates/file', null=True)
 
 # этот класс содержит все варианты датчиков для исполнительных механизмов
 # Данные из этого класс вытягиваются на страница продукта, модификации
@@ -115,7 +119,7 @@ class Sensors(models.Model):
     character   = models.CharField(choices=SENSOR_CHOICES, max_length=250)
     name        = models.CharField(max_length=50)
     description = models.CharField(max_length=255)
-    file        = models.FileField()
+    icon_file        = models.FileField()
 
 
     def __str__(self):
