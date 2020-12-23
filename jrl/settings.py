@@ -14,6 +14,10 @@ EMAIL_HOST_PASSWORD = 'oevvvmohbdmddyru'
 DEFAULT_FROM_EMAIL = 'pr@piek.ru'
 EMAIL_USE_TLS = True
 
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = False
+COMPRESS_OUTPUT_DIR = 'cache'
+
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
@@ -23,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'compressor',
     'mainapp',
     'tinymce',
 ]
@@ -81,6 +86,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -99,6 +111,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+COMPRESS_ROOT = 'static/'
 STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [STATIC_DIR]
