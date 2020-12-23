@@ -113,6 +113,10 @@ class Certificate(models.Model):
     picture = models.ImageField(upload_to='certificates/picture', null=True)
     file    = models.FileField(upload_to='certificates/file', null=True)
 
+
+    def __str__(self):
+        return str(self.title)
+
 # этот класс содержит все варианты датчиков для исполнительных механизмов
 # Данные из этого класс вытягиваются на страница продукта, модификации
 class Sensors(models.Model):
