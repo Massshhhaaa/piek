@@ -14,9 +14,6 @@ EMAIL_HOST_PASSWORD = 'oevvvmohbdmddyru'
 DEFAULT_FROM_EMAIL = 'pr@piek.ru'
 EMAIL_USE_TLS = True
 
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = False
-COMPRESS_OUTPUT_DIR = 'cache'
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -27,7 +24,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-    'compressor',
     'mainapp',
     'tinymce',
 ]
@@ -86,11 +82,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
-)
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'compressor.finders.CompressorFinder',
+# )
 
 
 
