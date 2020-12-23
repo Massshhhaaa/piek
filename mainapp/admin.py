@@ -21,6 +21,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('href_title', 'parent', 'slug_product',)
 
 class DocumentationAdmin(admin.ModelAdmin):
+    list_filter = ('document_category',)
     list_display = ('name' , 'key_filter', 'key_sort')
 
 class ModificationAdmin(admin.ModelAdmin):
