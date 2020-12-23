@@ -22,7 +22,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 class DocumentationAdmin(admin.ModelAdmin):
     list_filter = ('document_category',)
-    list_display = ('name' , 'key_filter', 'key_sort')
+    list_display = ('name' ,'document_category' ,'key_filter', 'key_sort')
 
 class ModificationAdmin(admin.ModelAdmin):
     exclude = ('slug_mod',)
