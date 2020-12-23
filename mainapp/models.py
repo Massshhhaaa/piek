@@ -15,6 +15,14 @@ SENSOR_CHOICES = (('М', 'М'),
                ('БУМ', 'БУМ'),
                ('ЕДМ', 'ЕДМ'),)
 
+DOCS_CATEGORIES_CHOICES = (
+     ('Общепром', 'Общепром'),
+     ('Взрыв', 'Взрыв'),
+     ('Датчики и контроллеры', 'Датчики и контроллеры'),
+     ('Пусковые и управляющие', 'Пусковые и управляющие'),
+     ('Шлагбаумы', 'Шлагбаумы'),
+)
+
 class Group(models.Model):
     title       = models.CharField(max_length=250)
     position    = models.IntegerField('Позиция на странице', unique=True)
@@ -37,10 +45,11 @@ class Group(models.Model):
         return reverse('SubgroupDetailView', args=[self.slug])
 
 class Documentation(models.Model):
-    key_filter = models.CharField(max_length=20)
-    key_sort = models.IntegerField(null=True, blank=True, unique=True)
-    name = models.CharField(max_length=255)
-    file = models.FileField()
+    key_filter    = models.CharField(max_length=20)
+    key_sort      = models.IntegerField(null=True, blank=True, unique=True)
+    name          = models.CharField(max_length=255)
+    file          = models.FileField()
+    document_category = models.CharField(choices=DOCS_CATEGORIES_CHOICES, max_length=255, null=True)
 
     class Meta:
         ordering = ['key_sort']
@@ -112,7 +121,6 @@ class Certificate(models.Model):
     title   = models.CharField(max_length=200, null=True)
     picture = models.ImageField(upload_to='certificates/picture', null=True)
     file    = models.FileField(upload_to='certificates/file', null=True)
-
 
     def __str__(self):
         return str(self.title)
