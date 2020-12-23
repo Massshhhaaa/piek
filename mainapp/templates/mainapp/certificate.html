@@ -67,7 +67,7 @@ transition-duration: .3s;
 
                 {% for cert in cert %}
                 <a href="{{ cert.file.url }}">
-                  <img src="{{ cert.picture }}" alt="Сертификат соответсвия" title="При клике на картинку откроется PDF документ.">
+                  <img src="{{ cert.picture.url }}" alt="Сертификат соответсвия" title="При клике на картинку откроется PDF документ.">
                 </a>
                 {% endfor%}
 
