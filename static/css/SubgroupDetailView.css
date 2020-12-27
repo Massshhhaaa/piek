@@ -5,11 +5,16 @@
 
 	}
 
+.container-900{
+  max-width: 900px!important;
+  margin: 0 auto;
+}
 .primary_ttl h1{
 	font-size: 2.9em;
-  text-align: center;
+  text-align: left;
 	color: var(--primary_ttl_color);
-	margin: 0;
+  margin: 0;
+  padding-left: 0;
 }
 .primary_ttl{
 	padding-top: 5rem!important;
@@ -84,12 +89,13 @@ table td:first-of-type{
   font-size: 1.9em;
   color: #4e0000;
   letter-spacing: -.005em;
-	width: auto!important;
+  width: auto!important;
 	/* transition: border-bottom .2s linear;
 	border-bottom: 1px solid transparent; */
 }
 .wrapper:hover h2{
-	text-decoration: underline solid yellow;
+  text-decoration: underline solid #000;
+  
 }
 
 .wrapper p{
