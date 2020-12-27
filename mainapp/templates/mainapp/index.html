@@ -16,15 +16,19 @@
 	}
 </style>
 <body>			
-		<div class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %}); z-index: 99;">
+		<div  class="banner" style="background-image: url({% static 'img/main_page/banner/slider-1.jpg' %}); z-index: 99;">
 	
 				{% include 'mainapp/parts/header.html' %}
 
 				<div class="container title" style="padding-top: 5em;">
-					<h1 class="title-text p-3 pb-5 pb-md-0 p-md-0">Поволжская </br> Электротехническая </br> Компания</h1>
+					<h1 data-aos="fade"
+					data-aos-duration="800"
+					data-aos-delay="0"
+					class="title-text p-3 pb-5 pb-md-0 p-md-0">Поволжская </br> Электротехническая </br> Компания</h1>
 
-						<h2
-							  class="text px-3 p-md-0 pt-md-4">Производит исполнительные механизмы МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
+						<h2 data-aos="fade"
+						data-aos-duration="800"
+						data-aos-delay="0" class="text px-3 p-md-0 pt-md-4">Производит исполнительные механизмы МЭО, МЭОФ, МЭП, МЭМ, ПЭМ, ПБР</h2>
 					</div>
 			</div>
 
@@ -56,7 +60,10 @@
 		width: 100%;
 	}
 </style>
-						<div class="container py-5 px-lg-5">
+						<div data-aos="fade-up"
+						data-aos-duration="800"
+						data-aos-delay="400"
+						class="container py-5 px-lg-5">
 							<div class="d-flex flex-wrap">
 
 								<h1 class="boring">Электроприводы в общепромышленном исполнении</h1>
@@ -95,7 +102,10 @@
 							</div>
 
 								<h1 class="boring">НКУ, пусковые и управляющие устройства</h1>
-							<div class="section d-flex flex-wrap">
+							<div data-aos="fade"
+							data-aos-duration="800"
+							data-aos-delay="50" 
+							class="section d-flex flex-wrap">
 								{% for cat in categories %}
 								{% if cat.id == 9  or cat.id == 10  or cat.id == 14   %}
 								<div class="m-1 m-md-2 d-flex flex-fill separately">

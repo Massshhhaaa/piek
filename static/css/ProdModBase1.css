@@ -28,32 +28,34 @@ table p{margin: 0!important;}
 
 
 
-.content a, .content p, .content span, .content li, .mod-table a, .mod-table p, .mod-table span, .content   table td{
+
+.content a, .content p, .content span, .content li, .mod-table a, .mod-table p, .mod-table span, .content   table td, .mod-content {
   font-family: 'SF UI Text';
   color: var(--content_font_color);
   font-weight: normal;
   line-height: var(--content_line_height);
   font-size: 13px!important;
 }
-.content{
+.content,{
   padding-top: 2rem;
   font-family: 'SF UI Text';
   color: var(--content_font_color);
   max-width: 900px!important;
   line-height: var(--content_line_height);
+  margin: 0 auto;
 }
 .content strong{color: #30020c; font-size: 16px; font-weight: 500;}
 .content table strong{color: #222; font-size: 13px!important;}
 
 
 
-.content table{
+.content table, .mod-content table{
   width: 100%!important;
   border: hidden;
   border-bottom: 1px solid #e1dedc;
 
 }
-.content table td{
+.content table td, .mod-content table td{
   border-right: hidden;
   padding: var(--tables_cell_padding);
 }
@@ -61,15 +63,30 @@ table p{margin: 0!important;}
 .content table td:first-of-type span,
 .content table td:first-of-type p{
   color: #000!important;
+
 }
 
-.content table tr{
+.content table tr, .mod-content table tr{
   border-bottom: 1px solid #e1dedc;
-  transition-duration: .2s;
+  transition: all .2s ease;
 }
-.content table tr:hover{
-  background-color: #eee;
+
+.content table{
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
+
+.content table tr td span{
+  transition: all .3s ease;
+}
+.content table tr:hover td span {
+  color: #00004e!important;
+ 
+}
+
+
+
+.content tr:last-of-type, .content tr:last-of-type td ,.content table{border-bottom: none!important;}
 .contet img{max-width: 100%!important;}
 
 
@@ -131,19 +148,13 @@ table p{margin: 0!important;}
 
 }
 
-//not working
-.sensor-inner:not(:nth-of-type(2n+1)) {
-    margin-left: -10px;
-}
 
 .sensor-inner:hover {
   transform: translateY(-10px);
-  transition: 0.4s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .sensor-inner:hover ~ .sensor-inner {
-  position: relative;
-  left: 00px;
   transition: 0.4s ease-out;
 }
 
@@ -218,7 +229,7 @@ table p{margin: 0!important;}
 .content{
   transform-origin: center;
   transition:
-    filter 100ms linear;
+    filter 50ms linear;
 }
 .sensor-content-animate{
   filter: brightness(2.5) saturate(.3) contrast(1) blur(5px);
