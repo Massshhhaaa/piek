@@ -50,8 +50,8 @@
 
 {% include 'mainapp/parts/header.html' %}
 <div style="z-index: 99!important; position: relative; background: #fff;">
-<div class="container-900 ">
-	<div class="rellax primary_ttl" data-rellax-speed="0">
+<div class="container-900 px-md-5">
+	<div class="primary_ttl">
 		<h1 class="d-flex justify-content-center py-md-3">{{subgroup_info.name}}</h1>
 	</div>
 </div>
@@ -68,7 +68,7 @@
 			<div id="content-right" class="mx-auto">
 			<div class="container-900">
 
-				<div class="subgroup-description">{{subgroup_info.description | safe }}</div>
+				<div class="subgroup-description px-md-5">{{subgroup_info.description | safe }}</div>
 
 				<section class="m-auto pt-5">
 					{% for product in product_list %}

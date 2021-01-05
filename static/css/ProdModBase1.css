@@ -72,8 +72,8 @@ table p{margin: 0!important;}
 }
 
 .content table{
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
 }
 
 .content table tr td span{

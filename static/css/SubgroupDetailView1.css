@@ -126,7 +126,7 @@ table td:first-of-type{
 
 @media (max-width: 767.98px) {
 	.primary_ttl h1{
-		font-size: 24px;
+		font-size: 35px!important;
 	}
 
 	.subgroup-description{padding: 0 1rem;}
