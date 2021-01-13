@@ -29,6 +29,7 @@ def SubgroupDetailView(request, slug):
 
 def ProductDetailView(request, slug_product, slug):
     session_id = request.session._get_or_create_session_key()
+    group    = Group.objects.only('groups_content').get(slug=slug)
     product  = Product.objects.get(parent__slug=slug, slug_product=slug_product)
     photos   = ProductImage.objects.filter(page = product)
     docs     = ProductDocs.objects.filter(page = product)
@@ -42,6 +43,7 @@ def ProductDetailView(request, slug_product, slug):
 
     context = {
     'product' : product,
+    'group' : group,
     'photos': photos,
     'docs': docs,
     'mod_list' : mod_list,
