@@ -335,12 +335,12 @@ main {
 	margin: 0 auto;
 	z-index: 2;
 	background-color: #fff!important;
-	border-bottom-left-radius: 40px;
-	border-bottom-right-radius: 40px;
+	/* border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px; */
 	background-color: #fff;
-	-webkit-box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35);
+	/* -webkit-box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35);
 	-moz-box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35);
-	box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35);
+	box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35); */
 }
 
 main a:hover,
@@ -559,16 +559,16 @@ h3 {
 /* FOOTER STYLES */
 
 :root {
-	--footer_bg_color: #f9f9f9;
+	--footer_bg_color: #fff;
 	--tiny_footer_bg_color: #f9f9f9;
 	--footer_text_color: #282828;
 	--footer_headers: #000;
 }
 
 .footer {
-	padding-top: 100px;
+	padding-top: 50px;
 	background-color: var(--footer_bg_color);
-	position: fixed;
+	position: relative;
 	width: 100%;
 	bottom: 0;
 	left: 0;
