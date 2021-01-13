@@ -29,7 +29,7 @@ table p{margin: 0!important;}
 
 
 
-.content a, .content p, .content span, .content li, .mod-table a, .mod-table p, .mod-table span, .content   table td, .mod-content {
+.content a, .content p, .content p span, .content li, .mod-table a, .mod-table p, .mod-table span, .content   table td, .mod-content {
   font-family: 'SF UI Text';
   color: var(--content_font_color);
   font-weight: normal;
