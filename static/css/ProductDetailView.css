@@ -5,11 +5,11 @@
   --mod_table_bg_color_hover: #f4f3f2;
 }
 
-h6, h6 span {
-  color: #000;
-  font-size: 14px;
-  font-family: sans-serif;
-  font-weight: bold;
+.content h6, h6 span {
+  color: #000!important;
+  font-size: 14px!important;
+  font-family: "SF UI Text";
+  font-weight: 500!important;
 }
 html{
   overflow-x: hidden;
