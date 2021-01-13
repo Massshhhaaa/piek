@@ -29,7 +29,9 @@
   <div class="content">
     {{ product.content | safe }}
 
+    {% if group.groups_content  %}
     {{ group.groups_content | safe }}
+    {% endif %}
   </div>
 
 <!-- End Technical characteristics -->
