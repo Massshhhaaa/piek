@@ -115,7 +115,7 @@ table p{margin: 0!important;}
 .sensors-hero{
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem;
 }
 .sensors-ttl{
   margin-top: 3rem;
@@ -198,7 +198,7 @@ table p{margin: 0!important;}
 
   }
   .sensor__description p:last-of-type{
-    font: 300 15"SF UI Text"!important;
+    font: 300 15px "SF UI Text"!important;
   }
 
 
