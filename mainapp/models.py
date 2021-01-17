@@ -28,13 +28,13 @@ class Group(models.Model):
     position    = models.IntegerField('Позиция на странице', unique=True)
     meta_description = models.TextField(null=True, blank=True)
     name        = models.CharField('Название на странице группы', null=True, blank=True,max_length=250)
-    img         = models.ImageField(upload_to='main_page', null=True, blank=True)
+    img         = models.ImageField(upload_to='main_page', null=True, blank=True, help_text='размер 925x625, ppi 300 и вес не более 60кб')
     slug        = models.CharField('url', unique=True, null=True, blank=True, max_length=200, help_text='for instance, "mechanisms/meo"' )
     description = HTMLField(null=True, blank=True)
     content     = HTMLField(null=True, blank=True)
     pic_of_hat  = models.ImageField(upload_to='pic_of_hat', null=True, blank=True, help_text='size: 1920x500px')
     dark_banner = models.BooleanField(default=True)
-    groups_content = HTMLField(null=True, blank=True, help_text='Блок информации показывается на каждой странице группы (для обопщенной информации)')
+    groups_content = HTMLField(null=True, blank=True, help_text='Блок информации показывается на каждой странице группы (для обобщенной информации)')
     
 
     class Meta:
@@ -132,7 +132,7 @@ class Certificate(models.Model):
 class Sensors(models.Model):
     character   = models.CharField(choices=SENSOR_CHOICES, max_length=250)
     name        = models.CharField(max_length=50)
-    description = models.CharField(max_length=255)
+    description = models.TextField(max_length=700)
     icon_file        = models.FileField()
 
 
