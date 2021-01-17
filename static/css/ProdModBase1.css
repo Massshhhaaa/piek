@@ -184,7 +184,7 @@ table p{margin: 0!important;}
     position: absolute;
     right: 0;
     padding: 2rem;
-    font-family: "SF UI Text"!important;
+   
     font-size: 15px!important;
 
     color: #222;
@@ -196,6 +196,9 @@ table p{margin: 0!important;}
    pointer-events:none;
    line-height: 20px;
 
+  }
+  .sensor__description p, .sensor__description span{
+    font-family: "SF UI Text"!important;
   }
 
 
