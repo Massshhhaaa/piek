@@ -184,16 +184,17 @@ table p{margin: 0!important;}
     position: absolute;
     right: 0;
     padding: 2rem;
-    font-family: "SF UI Text";
+    font-family: "SF UI Text"!important;
     font-size: 15px!important;
 
-    color: #000;
-    max-width: 300px;
+    color: #222;
+    max-width: 380px;
     z-index: 1!important;
     -webkit-box-shadow: 5px 5px 4px 5px #f3f2f1;
    box-shadow: 5px 5px 4px 5px #f3f2f1;
    border: 1px dashed #777;
    pointer-events:none;
+   line-height: 20px;
 
   }
 

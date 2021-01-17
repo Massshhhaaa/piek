@@ -41,15 +41,14 @@ main{
 
 
 .subgroup-description p, .subgroup-description span{
-	--description_font_size: 15px;
-	--description_font_color: #222;
+	--description_font_size: 14px;
+	--description_font_color: #333;
 
-  font-family: "Raleway";
-  font-weight: 400;
+  font-family: "SF UI Text"!important;
+  font-weight: 300;
 	text-align: justify;
-  font-size: var(--description_font_size);
-  line-height: 25px;
-  letter-spacing: .54px;
+  font-size: var(--description_font_size)!important;
+  line-height: 25px;  
   color: var(--description_font_color);
 
 }
