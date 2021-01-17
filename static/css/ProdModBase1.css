@@ -73,7 +73,7 @@ table p{margin: 0!important;}
 
 .content table{
   border-radius: 16px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
 }
 
 .content table tr td span{
@@ -115,7 +115,7 @@ table p{margin: 0!important;}
 .sensors-hero{
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 3rem;
 }
 .sensors-ttl{
   margin-top: 3rem;
