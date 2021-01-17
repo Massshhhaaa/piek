@@ -185,8 +185,6 @@ table p{margin: 0!important;}
     right: 0;
     padding: 2rem;
    
-    font-size: 15px!important;
-
     color: #222;
     max-width: 380px;
     z-index: 1!important;
@@ -198,7 +196,7 @@ table p{margin: 0!important;}
 
   }
   .sensor__description p, .sensor__description span{
-    font-family: "SF UI Text"!important;
+    font: 300 15px "SF UI Text"!important;
   }
 
 
