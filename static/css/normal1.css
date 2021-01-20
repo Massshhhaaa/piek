@@ -43,6 +43,7 @@ html {
 	font-size: 0.8em;
 	-webkit-font-smoothing: antialiased;
 	box-sizing: border-box;
+	
 }
 
 .secondary-page-description {
@@ -58,6 +59,9 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: visible;
+
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+	font-weight: normal;
 }
 
 
@@ -68,11 +72,6 @@ body {
 }
 
 @media (max-width: 760px) {
-	.dropdown .dropdown-menu a {
-		/*background-color: #eeeeee !important;
-		opacity: 0.7 !important;
-		color: #000 !important;*/
-	}
 	.navbar {
 		padding-left: 0px;
 	}
@@ -85,7 +84,6 @@ body {
 /* ----header */
 
 .contact-block a {
-	font-family: 'SF UI Text' !important;
 	font-weight: 700 !important;
 	position: relative;
 }
@@ -118,8 +116,6 @@ body {
 
 .nav-link {
 	color: var(--nav_link_color) !important;
-	font-family: 'Raleway';
-	font-weight: 500;
 	letter-spacing: .56px;
 	font-size: 1em;
 }
@@ -129,7 +125,7 @@ body {
 	border-bottom: 1px solid var(--navbar_bb, #4e0000);
 }
 
-nav.navbar .dropdown:hover>.dropdown-menu {
+/* nav.navbar .dropdown:hover>.dropdown-menu {
 	display: block;
 	margin-bottom: 0px;
 	border-radius: 15px;
@@ -158,7 +154,7 @@ nav.navbar .dropdown:hover>.dropdown-menu>.dropdown-item {
 	-webkit-box-shadow: 0px 0px 5px 4px rgba(85, 85, 85, 0.1);
 	-moz-box-shadow: 0px 0px 5px 4px rgba(85, 85, 85, 0.1);
 	box-shadow: 0px 0px 5px 4px rgba(85, 85, 85, 0.1);
-}
+} */
 
 @media (max-width: 760px) {
 	.dropdown-menu {
@@ -192,11 +188,11 @@ nav.navbar .dropdown:hover>.dropdown-menu>.dropdown-item {
 	.navbar-brand {
 		margin-left: 0em;
 	}
-	.dropdown-item:hover {
+	/* .dropdown-item:hover {
 		background-color: transparent !important;
 		border-bottom: none;
 		margin-bottom: 0px;
-	}
+	} */
 	.nav-item a:hover {
 		border-bottom: 0px;
 		margin-bottom: 0px;
@@ -337,7 +333,7 @@ main {
 	background-color: #fff!important;
 	/* border-bottom-left-radius: 40px;
 	border-bottom-right-radius: 40px; */
-	background-color: #fff;
+
 	/* -webkit-box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35);
 	-moz-box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35);
 	box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35); */
@@ -366,17 +362,16 @@ a:focus {
 	transform: translateY(-50%, -50%);
 }
 
-@-webkit-keyframes slide {
+/* @-webkit-keyframes slide {
 	from {
 		background-position: 0 0;
 	}
 	to {
 		background-position: -2000px 0;
 	}
-}
+} */
 
 .title-text {
-	font-family: 'Raleway';
 	font-weight: 600;
 	color: var(--company_name_color);
 	font-size: 3.5em;
@@ -390,15 +385,11 @@ a:focus {
 	font-family: 'Anonymous';
 	font-weight: normal;
 	color: var(--about_company_color);
-	font-size: 1.4em;
+	font-size: 1.5em;
 	text-align: left;
 	letter-spacing: 1px;
 }
 
-.text.animate {
-	opacity: 1;
-	margin-top: 0px;
-}
 
 .title {
 	padding: 0 5em;
@@ -415,7 +406,7 @@ a:focus {
 
 .secondary_ttl h1 {
 	color: #333;
-	font: 200 2.3em 'Raleway';
+	font-weight: 300;
 	text-align: center;
 	padding: 3.3rem 3rem 2rem;
 }
@@ -466,13 +457,6 @@ a:focus {
 
 /* ----box catalog */
 
-.container p,
-h1,
-h2,
-h3 {
-	font-family: "Raleway";
-}
-
 .pic {
 	display: block;
 	width: 100%;
@@ -494,17 +478,33 @@ h3 {
 	border-left: var(--border);
 }
 
-.separately h1,
 .separately h3 {
-	font-family: "Raleway";
-	font-weight: 500;
+	font-weight: normal;
 	text-align: center;
-	color: #000;
+	color: #111;
 	font-size: 15px;
 	box-sizing: border-box;
 	transition: all .2s cubic-bezier(0.23, 1, 0.320, 1) ;
 }
 
+.boring {
+	font-weight: 500;
+	font-size: 1.6em;
+	width: 100%;
+	z-index: 10;
+	margin-left: 20px;
+	background-color: #fff;
+	width: auto;
+}
+
+.section{
+	padding-top: 25px;
+	margin-top: -17px!important;
+	border: 2px solid #f2f2f2;
+	margin: 3em 0;
+	border-radius: 20px;
+	width: 100%;
+}
 
 .page-ttl {
 	margin-top: 4rem;
@@ -525,13 +525,13 @@ h3 {
 		-webkit-touch-callout: none/*only to disable context menu on long press*/
 	}
 	main {
-		border-bottom-left-radius: 30px;
+		/* border-bottom-left-radius: 30px;
 		border-bottom-right-radius: 30px;
-		margin-bottom: 0px!important;
+		margin-bottom: 0px!important; */
 		padding-bottom: 1em;
-		-webkit-box-shadow: none;
+		/* -webkit-box-shadow: none;
 		-moz-box-shadow: none;
-		box-shadow: none;
+		box-shadow: none; */
 	}
 	.center-md {
 		font-size: 1em;
@@ -588,7 +588,6 @@ h3 {
 .left-block a,
 .tiny-footer p {
 	color: var(--footer_text_color);
-	font-family: "SF UI Text";
 	font-weight: normal;
 }
 
@@ -774,17 +773,17 @@ h3 {
 /* CONTSCTS HTML STYLES */
 
 :root {
-	--main-bg-color: #f6f4f5;
+	--main-bg-color: #f7f7f7;
 }
 
 .office-title {
+	font-weight: normal;
 	font-size: 1.8em;
 	color: #4e0000;
 }
 
 .adress,
 .adress p {
-	font-family: "SF UI Text" !important;
 	font-weight: normal;
 	font-size: 1em;
 	color: #555;
@@ -795,7 +794,6 @@ h3 {
 }
 
 .tel-email b {
-	font-family: "SF UI Text";
 	font-weight: 600;
 	color: #444 !important;
 }

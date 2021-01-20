@@ -30,7 +30,7 @@ table p{margin: 0!important;}
 
 
 .content a, .content p, .content p span, .content li, .mod-table a, .mod-table p, .mod-table span, .content   table td, .mod-content {
-  font-family: 'SF UI Text';
+  font-family: "-apple-system",BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
   color: var(--content_font_color);
   font-weight: normal;
   line-height: var(--content_line_height);
@@ -184,7 +184,7 @@ table p{margin: 0!important;}
     position: absolute;
     right: 0;
     padding: 2rem;
-   
+    font-family: "-apple-system",BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
     font-size: 15px!important;
 
     color: #222;
@@ -198,7 +198,8 @@ table p{margin: 0!important;}
 
   }
   .sensor__description p:last-of-type{
-    font: 300 15px "SF UI Text"!important;
+    font-family: "-apple-system",BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif!important;
+    font-weight: 300;
   }
 
 

@@ -1,8 +1,5 @@
 :root{
-
-
 	--primary_ttl_color: #000;
-
 	}
 
 .container-900{
@@ -44,7 +41,7 @@ main{
 	--description_font_size: 15px;
 	--description_font_color: #333;
 
-  font-family: "SF UI Text"!important;
+  overflow-wrap: break-word;
   font-weight: 300;
 	text-align: justify;
   font-size: var(--description_font_size)!important;
@@ -83,14 +80,11 @@ table td:first-of-type{
 
 .wrapper h2 {
 	display: inline-block!important;
-  font-family: 'SF UI Display';
   font-weight: normal;
-  font-size: 1.9em;
-  color: #4e0000;
+  font-size: 1.8em;
+  color: #3d0000;
   letter-spacing: -.005em;
   width: auto!important;
-	/* transition: border-bottom .2s linear;
-	border-bottom: 1px solid transparent; */
 }
 .wrapper:hover h2{
   text-decoration: underline solid #000;
