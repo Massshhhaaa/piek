@@ -28,6 +28,7 @@ main{
     padding: 0 15px 30px;
     font-weight: 400;
     text-align: center;
+    font-family: "SF UI Display";
 
 }
 .benefits__element {width: 33%;  margin-top: 5rem;}
@@ -53,8 +54,7 @@ main{
 
 .inflow{padding: 5rem 1rem;}
  .inflow p{
-   font-weight: normal;
-   font-size: 17px;
+   font: normal 17px "SF UI Text";
    line-height: 25px;
     margin-top: 2rem;
     text-align: justify;
@@ -83,6 +83,14 @@ main{
   letter-spacing: .54px;
   z-index: 10!important;
 }
+
+/* .background {
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0;
+  z-index: 4!important;
+} */
 
 
 .image{
