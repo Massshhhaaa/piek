@@ -11,15 +11,27 @@
 			<div class="sensor-inner">
 						<img src="{{sensor.icon_file.url}}" alt="">
 						<h5>{{sensor.character}}</h5>
-						<p>{{sensor.name}}</p>
-			</div>
+            <p>{{sensor.name}}</p>
+      </div>
 
-		<div class="sensor__description">
-			<p class="sensor__description--name">{{sensor.name}}</p>
-			<p>{{sensor.description}}</p>
-		</div>
-		{% endfor %}
-	</div>
+
+             
+
+
+    {% endfor %}
+    <div class="sensor-inner">
+    <button class="learn-more">
+      <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">Подробнее</span>
+    </button>
+  </div>
+
+  </div>
+  
+
+
 {% endif %}
 <!-- End Block sensors variation  -->
 
