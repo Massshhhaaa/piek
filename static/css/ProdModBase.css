@@ -244,7 +244,7 @@ button.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
   width: 1.125rem;
-  height: 0.13rem;
+  height: 0.125rem;
   background: none;
 }
 button.learn-more .circle .icon.arrow::before {
@@ -254,7 +254,7 @@ button.learn-more .circle .icon.arrow::before {
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #fff;
+  border-top: 0.125rem solid rgb(255, 255, 255);
   border-right: 0.125rem solid #fff;
   transform: rotate(45deg);
 }
