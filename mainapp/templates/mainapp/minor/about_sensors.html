@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{% include 'mainapp/parts/head-property.html' %}
+	<title>Электроника - ПЭК</title>
+</head>
+
+<body>
+  {% include 'mainapp/parts/header.html' %}
+  <style>
+.sensor-wrapper{
+    width: 45%;
+    border-radius: 3px;
+    box-shadow: 1px 2px 12px 0 rgba(94,94,94,.12);
+}
+.sensor-wrapper img{
+    width: 80px;
+
+}
+
+.sensor-meta div:first-of-type{
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 1rem 0 2rem;
+}
+
+.sensor-meta div:last-of-type{
+    font-weight: 300;
+    font-size: 13px;
+    margin: 0 1rem;
+}
+
+
+.sensor-description{
+    font-size: 14px;
+    padding: 1.3rem;
+    text-align: justify;
+
+}
+  </style>
+
+	<main>
+        <div class="container mt-5">
+            <div class="d-flex flex-wrap">
+
+                {% for sensor in sensors %}
+                <div class="flex-column sensor-wrapper m-3 my-5">
+
+                    <div class="d-flex m-3 sensor-meta">
+                        <img src="{{ sensor.icon_file.url }}" alt="">
+                        <div>{{ sensor.character }}</div>
+                        <div>{{ sensor.name }}</div>
+                    </div>
+
+                    <div class="sensor-description">{{ sensor.description }}</div>
+
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+
+
+    </main>
+
+			{% include 'mainapp/parts/footer.html' %}
+      <script src="{% static 'js/rellax.min.js' %}"></script>
+      <script>
+      // Accepts any class name
+      var rellax = new Rellax('.rellax');
+      </script>
+		</body>
+		</html>
