@@ -128,7 +128,7 @@ class Certificate(models.Model):
 
 # этот класс содержит все варианты датчиков для исполнительных механизмов
 # Данные из этого класс вытягиваются на страница продукта, модификации
-class Sensors(models.Model):
+class Sensor(models.Model):
     character   = models.CharField(choices=SENSOR_CHOICES, max_length=250)
     name        = models.CharField(max_length=50)
     description = models.TextField(max_length=700)

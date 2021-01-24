@@ -283,6 +283,9 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
   color: #fff;
 }
+button:active, button:focus{
+  outline: none;
+}
 
 /* 
   .sensor__description{

@@ -44,6 +44,8 @@ urlpatterns = [
     path('docs/', docs, name='docs'),
     path('certificates/', certificate, name='certificate'),
 
+    path('sensors/', sensors, name="sensors"),
+
     path('docs/general-industrial-design/', general_industrial_design, name='general_industrial_design'),
     path('docs/explosion-proof-design/', explosion_proof_design, name='explosion_proof_design'),
     path('docs/sensors-and-controllers/', sensors_and_controllers, name='sensors_and_controllers'),

@@ -39,7 +39,7 @@ def ProductDetailView(request, slug_product, slug):
     for i, sensor in enumerate(product.sensors):
         available_sensors.append(product.sensors[i])
     print('Все датчики: ', available_sensors)
-    sensors_list = Sensors.objects.filter(character__in=available_sensors)
+    sensors_list = Sensor.objects.filter(character__in=available_sensors)
 
     context = {
     'product' : product,
@@ -64,7 +64,7 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
     for i, sensor in enumerate(product.sensors):
         available_sensors.append(product.sensors[i])
     print('Все датчики: ', available_sensors)
-    sensors_list = Sensors.objects.filter(character__in=available_sensors)
+    sensors_list = Sensor.objects.filter(character__in=available_sensors)
 
     context = {
     'mod' : mod,
@@ -226,9 +226,10 @@ def cart_counter(request):
             counter += int(request.session['piek_cart'][i].get('quantity'))
     return counter
 
-
-
-
+def sensors(request):
+    sensors = Sensor.objects.all()
+    return render(request, 'mainapp/minor/about_sensors.html', {'in_cart_counter': cart_counter(request),
+                                                                'sensors': sensors,})
 
 
 
