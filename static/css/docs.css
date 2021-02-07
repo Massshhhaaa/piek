@@ -15,50 +15,57 @@ text-align: center;
 
 .red{
   color: #d92324 !important;
-  border-color: #d92324 !important;
+  border-left-color: #d92324 !important;
 }
 .grey{
   color: #727272 !important;
-  border-color: #727272 !important;
+  border-left-color: #727272 !important;
 }
 .orange{
   color: #ffae1a!important;
-  border-color: #ffae1a!important;
+  border-left-color: #ffae1a!important;
 }
 .green{
   color:#00e600!important;
-  border-color: #00e600 !important;
+  border-left-color: #00e600 !important;
 }
 .yellow{
   color:#ffe500!important;
-  border-color: #ffe500 !important;
+  border-left-color: #ffe500 !important;
 }
 .lightgrey{
   color: #d5d5d5 !important;
-  border-color: #d5d5d5 !important;
+  border-left-color: #d5d5d5 !important;
 }
 
 .wrapper{
   background-color: #fff;
   width: 100%;
-  margin-bottom: 10px;
   transition: .2s;
+  
+ 
+  padding: 5rem 0 5rem;
 }
 .wrapper > a{
   margin: 0 auto;
   width: 600px;
   border-left: 1px solid #fceaea;
-  padding: 1.5rem 0;
+  border-bottom: 1px solid #eaeaea;
+  padding: 1.5rem 0 40px;
+
+  transition: box-shadow .2s ease,border .2s ease;
 
 }
 .wrapper > a:hover{
   border-left: 1px solid #555;
+  /* box-shadow: 0 8px 30px rgba(0,0,0,0.12); */
 
 }
 .wrapper h1 {
   font:  300 1.2em 'SF UI Text';
   color: #222;
   padding: 0 2em;
+  
 }
 
 .wrapper img{

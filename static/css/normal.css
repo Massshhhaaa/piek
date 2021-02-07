@@ -60,6 +60,16 @@ body {
 	padding: 0;
 	overflow: visible;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	direction: ltr;
+    font-feature-settings: 'kern';
+    text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 
@@ -337,12 +347,7 @@ main {
 	margin: 0 auto;
 	z-index: 2;
 	background-color: #fff!important;
-	/* border-bottom-left-radius: 40px;
-	border-bottom-right-radius: 40px; */
-	background-color: #fff;
-	/* -webkit-box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35);
-	-moz-box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35);
-	box-shadow: 0px 5px 5px 0px rgba(219, 219, 219, 0.35); */
+
 }
 
 main a:hover,
@@ -416,8 +421,9 @@ a:focus {
 }
 
 .secondary_ttl h1 {
-	color: #333;
-	font: 200 2.3em 'Raleway';
+	color: #000;
+	font-weight: 400;
+	font-size: 2em;
 	text-align: center;
 	padding: 3.3rem 3rem 2rem;
 }
@@ -468,12 +474,7 @@ a:focus {
 
 /* ----box catalog */
 
-.container p,
-h1,
-h2,
-h3 {
-	font-family: "Raleway";
-}
+
 
 .pic {
 	display: block;
@@ -561,15 +562,18 @@ h3 {
 /* FOOTER STYLES */
 
 :root {
-	--footer_bg_color: #fff;
-	--tiny_footer_bg_color: #f9f9f9;
-	--footer_text_color: #282828;
-	--footer_headers: #000;
+
+	--footer_text_color: #666;
+	--footer_headers: #111;
 }
 
 .footer {
+	background-color: #fafafa;
+    border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	
 	padding-top: 50px;
-	background-color: var(--footer_bg_color);
+
 	position: relative;
 	width: 100%;
 	bottom: 0;
@@ -580,7 +584,7 @@ h3 {
 .contacts-mobile {
 	font-weight: 500;
 	margin-bottom: 2em!important;
-	border-bottom: 1px solid #4e0000;
+	border-bottom: 1px solid #eaeaea;
 }
 
 .footer a,
@@ -590,12 +594,15 @@ h3 {
 .left-block a,
 .tiny-footer p {
 	color: var(--footer_text_color);
-	font-family: "SF UI Text";
-	font-weight: normal;
+	transition: color .3s;
+	font-size: 13px;
+	font-weight: 400;
+	text-decoration: none;
 }
 
 .footer a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	color: #111;
 }
 
 .footer h2 {
@@ -609,27 +616,16 @@ h3 {
 	color: var(--footer_text_color);
 }
 
-.tiny-footer {
-	display: flex;
-	background-color: var(--tiny_footer_bg_color);
-	min-height: 30px;
-}
-
-.tiny-footer p {
-	font-size: 0.7em;
-	padding: 10px 15px !important;
-	margin-bottom: 0;
-}
 
 .link-block a {
 	padding: 0.7em 0;
 }
 
-
-/* .left-block span{
-  font-family: "SF UI Text";
-  font-weight: 500;
-} */
+.iso-cerf{
+	margin-top: 3rem;
+	padding-top: 50px;
+}
+.iso-cerf img{width: 60px;}
 
 @media (max-width: 767.98px) {
 	.footer {
@@ -773,14 +769,15 @@ h3 {
 /* END SIDEBAR STYLES */
 
 
-/* CONTSCTS HTML STYLES */
+/* CONTACTS HTML STYLES */
 
 :root {
-	--main-bg-color: #f6f4f5;
+	--main-bg-color: #fff;
 }
 
 .office-title {
-	font-size: 1.8em;
+	font-weight: normal;
+	font-size: 1.5em;
 	color: #4e0000;
 }
 
@@ -795,7 +792,7 @@ h3 {
 .tel-email {
 	color: #444;
 }
-
+.tel-email:hover{color: #000;}
 .tel-email b {
 	font-family: "SF UI Text";
 	font-weight: 600;
