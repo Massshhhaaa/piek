@@ -622,10 +622,12 @@ a:focus {
 }
 
 .iso-cerf{
-	margin-top: 3rem;
-	padding-top: 50px;
+	margin-top: 1rem;
+	padding-top: 40px;
+	line-height: 14px;
 }
-.iso-cerf img{width: 60px;}
+.iso-cerf p{text-transform: uppercase; font-size: 12px; font-weight: 300;}
+.iso-cerf img{height: 80px;}
 
 @media (max-width: 767.98px) {
 	.footer {
