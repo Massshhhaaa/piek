@@ -50,7 +50,6 @@ table p{margin: 0!important;}
   line-height: var(--content_line_height);
   margin: 0 auto;
 }
-.content strong{color: #30020c; font-size: 16px; font-weight: 500;}
 .content table strong{color: #222; font-size: 13px!important;}
 
 
