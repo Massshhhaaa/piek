@@ -103,7 +103,7 @@ margin-bottom: 3em;
   }
   .wrapper > a{padding: 3px!important;border-left: 1px solid #555;}
   .wrapper img{height: 70px;}
-  .wrapper h1{font-size: 1.6em; text-decoration: underline;}
+  .wrapper h1{ text-decoration: none;}
 
 }
 

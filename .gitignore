@@ -6,3 +6,4 @@ adminstatic/*
 piek.conf
 jrl/prod_settings.py
 jrl/local_settings.py
+*.DS_Store

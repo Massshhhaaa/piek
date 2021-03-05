@@ -462,7 +462,7 @@ a:focus {
 		padding: 0 2rem;
 	}
 	.secondary_ttl h1 {
-		font-size: 2.3em;
+		font-size: 1.5em;
 		padding: 3rem 1rem 1rem!important;
 	}
 	.secondary-page-description {
@@ -565,10 +565,11 @@ a:focus {
 
 	--footer_text_color: #666;
 	--footer_headers: #111;
+	--footer_bg_color: #fafafa;
 }
 
 .footer {
-	background-color: #fafafa;
+	background-color: var(--footer_bg_color);
     border-top: 1px solid #eaeaea;
 	border-bottom: 1px solid #eaeaea;
 	

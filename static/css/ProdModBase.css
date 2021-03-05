@@ -37,7 +37,6 @@ table p{margin: 0!important;}
 
 
 .content a, .content p, .content p span, .content li, .mod-table a, .mod-table p, .mod-table span, .content   table td, .mod-content {
-  font-family: 'SF UI Text';
   color: var(--content_font_color);
   font-weight: normal;
   line-height: var(--content_line_height);
@@ -59,7 +58,6 @@ table p{margin: 0!important;}
 .content table, .mod-content table{
   width: 100%!important;
   border: hidden;
-  border-bottom: 1px solid #e1dedc;
 
 }
 .content table td, .mod-content table td{
@@ -112,7 +110,7 @@ table p{margin: 0!important;}
   transition: box-shadow .3s;
 }
 .doc-wrap p{font: 200 1em "SF UI Text"; color: #000;}
-.doc-wrap:hover{border: 1px solid transparent; box-shadow: 0 10px 60px rgba(0,0,0,0.09);;}
+.doc-wrap:hover{border: 1px solid transparent; box-shadow: 0 10px 30px rgba(0,0,0,0.09);;}
 .doc-wrap a {color: black;}
 
 /*  END DOCUMENTS */
@@ -122,12 +120,13 @@ table p{margin: 0!important;}
 .sensors-hero{
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem 0 3rem;
+  margin: 2rem 0 6rem;
 }
 .sensors-ttl{
-  margin-top: 3rem;
-  font: 500 16px "SF UI Text";
-  color: #30020c;
+  margin-top: 4rem;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
 }
 .sensors-wrap{
   display: flex;
@@ -282,75 +281,6 @@ button:active, button:focus{
   outline: none;
 }
 
-/* 
-  .sensor__description{
-    display: none;
-    background: #fff;
-    border-radius: 16px;
-    position: absolute;
-    right: 0;
-    padding: 2rem;
-   
-    font-size: 15px!important;
-
-    color: #222;
-    max-width: 380px;
-    z-index: 1!important;
-    -webkit-box-shadow: 5px 5px 4px 5px #f3f2f1;
-   box-shadow: 5px 5px 4px 5px #f3f2f1;
-   border: 1px dashed #777;
-   pointer-events:none;
-   line-height: 20px;
-
-  }
-  .sensor__description p:last-of-type{
-    font: 300 15px "SF UI Text"!important;
-  }
-
-
-.sensor__description--name{
-  display: block;
-  -webkit-transform: rotate(270deg) translateY(-100%) translateX(calc(-100% + 100px));
-          transform: rotate(270deg) translateY(-100%) translateX(calc(-100% + 100px));
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  position: absolute;
-  left: 0;
-  top: 0;
-  max-width: 150px;
-  font-size: 24px;
-  font-weight: 900;
-  padding: .5rem;
-  -webkit-transition: all 0.75s linear 0.35s;
-  opacity: 0;
-  line-height: 16px;
-}
-
-
-.sensor-inner:hover + .sensor__description{
-    display: flex;
-  }
-.sensor-inner:hover + .sensor__description .sensor__description--name{
-  opacity: 1;
-  -webkit-transform: rotate(270deg) translateY(-100%) translateX(-100%);
-          transform: rotate(270deg) translateY(-100%) translateX(-100%);
-}
-
-.content{
-  transform-origin: center;
-  transition:
-    filter 50ms linear;
-}
-.sensor-content-animate{
-  filter: brightness(2.5) saturate(.3) contrast(1) blur(5px);
-}
-
-
-/* Класс для датчиков, которые должны уйти на второй план при наведении на выбранный */
-/* .sensor-hov{
-  filter: brightness(1) saturate(.2) contrast(1) blur(0);
-
-}  */
 
 @media (max-width: 767.98px) {
         main{padding-bottom: 1rem;}
