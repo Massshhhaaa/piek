@@ -52,16 +52,27 @@
 		<div class="js-content ">
 			<div class="col p-0 container">
 
-				<div class="primary_ttl">
+				<div class="primary_ttl mb-5">
 					<h1> {{ product.h1_mod }} {{ mod.title }}</h1>
 				</div>
 
-				<div class="about-modification container py-5" id='cart-form-bg'>
 
-					<!-- Add to cart section			 -->
-					<div class="d-flex flex-column flex-md-row justify-content-center border-bottom pb-md-5">
+				<div class="d-flex m-3">
+					<div class=" about-modification container py-5" id='cart-form-bg'>
+
+						<div class="flex-column">
+							<section class="mod-content px-3">
+								{{ mod.content | safe }}
+							</section>
+						</div>
+
+					</div>
+
+
+					<!-- Add to cart section -->
+					<div class="d-none d-md-flex flex-column ml-4 pt-md-1">
+
 						<div class="d-flex flex-column justify-content-center">
-
 							<form id="js-form-add-cart" add-to-cart-url='{% url "product" pk=mod.id %}'>
 								<input id="js-quantity-field" class="input-quantity mr-3" min="1" value=1 type="text" name="quantity" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
 								<div class="d-flex align-self-center p-3 btn-wrap">
@@ -81,21 +92,13 @@
 
 								</div>
 							</form>
-
 						</div>
 
-						<div class="flex-column m-auto pt-4 pt-md-0 m-md-0"><p class="help-text p-2 pl-md-5">Внести изменения в название вы сможете в корзине</p></div>
+						<div class="flex-column m-auto pt-5 pt-md-0 m-md-0"><p class="help-text p-2 pl-md-5">Внести изменения в название вы сможете в корзине</p></div>
 					</div>
 					<!-- End Add to cart section -->
+			</div>
 
-
-					<section class="mod-content pt-5 px-3">
-						{{ mod.content | safe }}
-					</section>
-
-
-				</div>
-				<!-- f -->
 
 				<div class="container-hero">
 				{% include 'mainapp/parts/ProdModBase.html' %}

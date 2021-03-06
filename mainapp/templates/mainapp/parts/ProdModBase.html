@@ -4,7 +4,8 @@
 
 <!-- Block sensors variation  -->
 {% if sensors_list %}
-<h4 class="sensors-ttl">Виды блоков сигнализации положения</h4>
+<h4 class="sensors-ttl">
+  <span>Доступные блоки сигнализации положения<a href="{% url 'sensors' %}" class="senslink"> <span>|</span> Подробнее &#8594;</a></span> </h4>
 	<div class="sensors-hero">
 		{% for sensor in sensors_list %}
 
@@ -19,14 +20,14 @@
 
 
     {% endfor %}
-    <div class="sensor-inner">
+    <!-- <div class="sensor-inner">
     <button onclick="location.href='{% url 'sensors' %}'" type="button"  class="learn-more">
       <span class="circle" aria-hidden="true">
         <span class="icon arrow"></span>
       </span>
       <span class="button-text">Подробнее</span>
     </button>
-  </div>
+  </div> -->
 
   </div>
   
@@ -52,6 +53,7 @@
 
 
   <!-- Documentation -->
+  <h4 class="docs-ttl"><span>Документация</span></h4>
 
 <div class="docs-section d-flex flex-wrap">
   {% for doc in docs %}

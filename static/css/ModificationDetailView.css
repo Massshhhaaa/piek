@@ -24,11 +24,15 @@ form{
 }
 .about-modification{
   border-radius: 15px;
-  border: 1px solid var(--border_color);
+  border: var(--border);
 }
 
+.mod-content td:first-of-type{
+  width: 60%!important;
+}
 .about-modification .content table tr{
   border-color: var(--border_color);
+
 }
 .about-modification .content table{border: none!important;}
 .about-modification .content table td{border: none !important;}

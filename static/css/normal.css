@@ -1,6 +1,8 @@
 :root {
 	--border: 1px solid #e8e8e8;
-	brand_brown: #4e0000;
+	--brand_brown: #4e0000;
+	--link-color: #0070f3;
+
 }
 
 * {
