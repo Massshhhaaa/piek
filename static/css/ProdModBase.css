@@ -205,14 +205,6 @@ table p{margin: 0!important;}
     }
 
 
-.sensor-inner:last-of-type{
-  justify-content: center;
-  align-items: center;
-  font-weight: 700!important;
-  box-shadow: none;
-  
-}
-
 
 
 
@@ -250,6 +242,9 @@ table p{margin: 0!important;}
 }
 
 @media (max-width: 767.98px) {
+  .sensor-ttl span{
+    display: inline-block;
+    line-height: 8px;}
   .sensor-inner{ 
     width: calc(100%/3 - 0px);
     height: 200px;
