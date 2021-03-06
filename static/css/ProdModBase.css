@@ -43,7 +43,6 @@ table p{margin: 0!important;}
   font-size: 14px!important;
 }
 .content{
-  padding: 0rem 1rem 0;
   color: var(--content_font_color);
   max-width: 1000px!important;
   line-height: var(--content_line_height);
@@ -152,22 +151,24 @@ table p{margin: 0!important;}
 
 
 .sensor-inner {
+  --sensiner-border: 1px dashed rgb(212, 212, 212);
   display: flex;
   flex-direction: column;
   height: 190px;
-  margin: 8px;
-  width: calc(100%/5 - 18px);
+  width: calc(100%/5 - 0px);
   /* box-shadow: 1px 2px 12px 0 rgba(94,94,94,.0);
   border-radius: 16px; */
-  border-right: 1px dashed rgb(212, 212, 212);
+  border-right: var(--sensiner-border);
 /*   margin-left: -50px; */
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
 }
-.sensor-inner:nth-last-of-type(1){
+.sensor-inner:nth-last-of-type(1),
+.sensor-inner:nth-of-type(5n){
   border:none;
 }
+
 
 
 .sensor-more{
@@ -220,7 +221,7 @@ table p{margin: 0!important;}
         .primary_ttl h1{
         padding: 3rem 2rem 2rem!important;
         }
-        .content{margin-top: 2rem; padding: 0 1rem;}
+        .content{margin-top: 2rem;}
         .content table td{
           --tables_cell_padding: 8px;
           font-size: 12px!important;
@@ -249,12 +250,8 @@ table p{margin: 0!important;}
 }
 
 @media (max-width: 767.98px) {
-  .sensors-ttl{
-    padding: 0 1rem;
-  }
-
   .sensor-inner{ 
-    width: calc(100%/3 - 18px);
+    width: calc(100%/3 - 0px);
     height: 200px;
   }
   .sensor-inner p{margin-bottom: 0;}

@@ -84,14 +84,6 @@ main{
   z-index: 10!important;
 }
 
-/* .background {
-  position: absolute;
-  display: block;
-  top: 0px;
-  left: 0;
-  z-index: 4!important;
-} */
-
 
 .image{
   z-index: 1;
@@ -235,6 +227,8 @@ justify-content: flex-end;}
 
 
 @media (max-width: 767.98px){
+  main{padding: 0;}
+  .about__banner{height: 300px;}
   .blue-bg{
     padding-bottom: 50px!important;
   }
@@ -249,7 +243,7 @@ justify-content: flex-end;}
   }
   div.container.inflow{padding-bottom: 0!important;}
   .inflow{padding: 4rem 0rem;}
-  .inflow p{padding: 0rem 1rem;font-size: 1.1em;line-height: 22px;}
+  .inflow p{padding: 0 1rem; font-size: 1.1em;line-height: 22px;}
   .col-6{
     flex: 0 0 60%!important;
     max-width: 60%!important;

@@ -10,10 +10,11 @@
 
 }
 .help-text{
-  color: #777;
+  color: rgb(163, 163, 163);
   margin-bottom: 5px;
   text-align: center;
-  width: 200px;
+  width: 300px;
+  margin-top: 20px;
 }
 
 form{

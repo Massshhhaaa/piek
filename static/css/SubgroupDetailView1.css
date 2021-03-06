@@ -124,11 +124,6 @@ table td:first-of-type{
 }
 
 @media (max-width: 767.98px) {
-	.primary_ttl h1{
-		font-size: 35px!important;
-	}
-
-	.subgroup-description{padding: 0 1rem;}
 	.subgroup-description p, .subgroup-description span{font-size: 1em;}
 	.primary_ttl h1{
 		font-size: 1.8em;
@@ -149,5 +144,5 @@ table td:first-of-type{
   justify-content: center;
   align-items: center; height: 100%;
 }
-  .wrapper img{width: 150px; border-radius: 20px;}
+  .wrapper img{width: 180px;}
 }
