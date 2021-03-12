@@ -12,7 +12,7 @@
 
 
   --tables_cell_padding: 14px;
-  --content_line_height: 23px;
+  --content_lh: 1.7;
 	--content_font_color: #444;
 }
 
@@ -60,6 +60,16 @@ table p{margin: 0!important;}
   font-size: 16px!important;
   font-weight: 700!important;
 }
+
+.content > p,
+.content > div ,
+.content > ul{
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: var(--content_lh);
+}
+
+
 .content h4{font-size: 15px!important; margin-bottom: 12px;}
 
 .content table, .mod-content table{
@@ -104,13 +114,7 @@ table p{margin: 0!important;}
 .contet img{max-width: 100%!important;}
 
 
-.content > p,
-.content > div ,
-.content > ul{
-  max-width: 850px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
+
 
 /* DOCUMENTS */
 .docs-section{
