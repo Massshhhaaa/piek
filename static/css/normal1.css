@@ -469,11 +469,14 @@ a:focus {
 /* ----home page catalog */
 
 .boring {
-	font-size: 1.6em;
+	font-size: 14px;
 	width: 100%;
 	z-index: 10;
 	margin-left: 20px;
+	padding: 0 10px;
 	background-color: #fff;
+	font-weight: 800;
+	text-transform: uppercase;
 	width: auto;
 }
 

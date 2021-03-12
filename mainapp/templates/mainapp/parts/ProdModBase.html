@@ -4,14 +4,18 @@
 
 <!-- Block sensors variation  -->
 {% if sensors_list %}
+<div class="lines-svg" style="margin: 5rem 0 2rem; opacity: 0.02;"></div>
 <h4 class="sensors-ttl">
-  <span>Доступные блоки сигнализации положения<a href="{% url 'sensors' %}" class="senslink"> <span>|</span> Подробнее &#8594;</a></span> </h4>
+  <span>Доступные блоки сигнализации положения<a href="{% url 'sensors' %}" class="senslink"><span>|</span>Подробнее &#8594;</a></span> </h4>
 	<div class="sensors-hero">
 		{% for sensor in sensors_list %}
 
 			<div class="sensor-inner">
-						<img src="{{sensor.icon_file.url}}" alt="">
-						<h5>{{sensor.character}}</h5>
+
+          <img src="{{sensor.icon_file.url}}" alt="">
+
+          
+          <h5>{{sensor.character}}</h5>					
             <p>{{sensor.name}}</p>
       </div>
 
@@ -20,19 +24,8 @@
 
 
     {% endfor %}
-    <!-- <div class="sensor-inner">
-    <button onclick="location.href='{% url 'sensors' %}'" type="button"  class="learn-more">
-      <span class="circle" aria-hidden="true">
-        <span class="icon arrow"></span>
-      </span>
-      <span class="button-text">Подробнее</span>
-    </button>
-  </div> -->
-
   </div>
-  
-
-
+  <div class="lines-svg" style="margin: 2rem 0 3rem;"></div>
 {% endif %}
 <!-- End Block sensors variation  -->
 
@@ -53,7 +46,11 @@
 
 
   <!-- Documentation -->
+
+{% if docs %}
+<div class="lines-svg" style="margin: 5rem 0 1rem;"></div>
   <h4 class="docs-ttl"><span>Документация</span></h4>
+{% endif %}
 
 <div class="docs-section d-flex flex-wrap">
   {% for doc in docs %}

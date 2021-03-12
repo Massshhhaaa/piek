@@ -54,35 +54,13 @@ main{
 
 .inflow{padding: 5rem 1rem;}
  .inflow p{
-   font: normal 17px "SF UI Text";
-   line-height: 25px;
+   font: normal 16px "SF UI Text";
+   max-width: 850px;
+   margin: 0 auto;
+   line-height: 1.7;
     margin-top: 2rem;
     text-align: justify;
  }
- .inflow .about__banner p{
-   padding: 5em;
-   background: -webkit-linear-gradient(left, #3a0001, #000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-   max-width: 600px;
-   text-align: left;
-   font-size: 20px;
-   font-weight: 500;
-   margin-left: auto;
- }
-
-
-
-
-.subgroup-description{
-  font-family: 'Raleway';
-  font-weight: 400;
-  color: #222222;
-  font-size: 1.2em;
-  line-height: 25px;
-  letter-spacing: .54px;
-  z-index: 10!important;
-}
 
 
 .image{
@@ -96,24 +74,10 @@ main{
   box-sizing: border-box;
 
 }
-.measuring-probe p{
-  font: normal 2.3em "SF UI Display";
-  color: #fff;
-  padding-top: 3em;
-}
-.measuring-probe .text-right{
-  font-size: 2em;
 
-}
-.measuring-probe .textf{
-  width: 400px;
-  color: #fefefe;
-  font-size: 16px;
-  margin-top: 20em;
-} */
 .history h5{
-  font-size: 17px;
-  padding: 1em 0;
+  font-weight: 700;
+  padding: .2rem 0;
 }
 .history h2{
   font-size: 35px;
@@ -124,6 +88,7 @@ main{
 }
 .history p{
   font-size: 13px;
+  line-height: 1.5;
   color: #c0c0c0;
 }
 .blue-bg {
@@ -229,9 +194,6 @@ justify-content: flex-end;}
 @media (max-width: 767.98px){
   main{padding: 0;}
   .about__banner{height: 300px;}
-  .blue-bg{
-    padding-bottom: 50px!important;
-  }
   .benefits__element{padding: 0.5em; margin-top: 2em!important;}
   .benefits__element p {
       font-size: 0.9em!important;
