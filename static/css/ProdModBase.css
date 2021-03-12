@@ -159,7 +159,7 @@ table p{margin: 0!important;}
   opacity: .06;
 }
 
-.sensors-ttl span, .docs-ttl span, .content h4 {
+.sensors-ttl span, .docs-ttl span, .content h4, .content h4 span{
   font-size: 15px!important;
   background: -webkit-linear-gradient(left, #090979, #0473bf);
   -webkit-background-clip: text;
