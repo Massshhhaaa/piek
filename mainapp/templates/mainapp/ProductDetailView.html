@@ -83,7 +83,7 @@
 							{% endfor %}
 						</div>
 
-						{% if product.mod_table %}
+						{% if product.mod_table | safe %}
 						<div class="flex-column mod-table">
 								{{ product.mod_table | safe }}
 						</div>
