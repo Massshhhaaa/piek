@@ -62,7 +62,7 @@ class Documentation(models.Model):
 
 class Product(models.Model):
     content      = HTMLField(help_text="Подзаголовки - H4. Черные подзаговолки просто как B")
-    mod_table    = HTMLField(help_text="Нужно идентификатора обязательно. id = 'MOD'")
+    mod_table    = HTMLField(help_text="Нужно идентификатора обязательно. id = 'MOD'", null=True, blank=True)
     meta_description = models.TextField(help_text='Описание для поисковой системы (100-150символов)', null=True, blank=True)
     img          = models.ImageField('Изображение для ссылки', upload_to='mechanisms_preview')
     name         = models.CharField(max_length=250)
