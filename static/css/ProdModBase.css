@@ -85,7 +85,7 @@ table p{margin: 0!important;}
 .content table td:first-of-type p{
   color: #000!important;
 }
-.content table td p, .content table td span{
+.content table td p, .content table td span, .content table td {
   font-size: 14px !important;
 }
 .content table td:first-of-type{  border-right: 1px dashed #e1dedc;}
