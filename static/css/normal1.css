@@ -614,16 +614,12 @@ a:focus {
 	font-weight: 500;
 }
 
-.left-block p,
-.left-block a {
-	color: var(--footer_text_color);
-	padding-top: 1rem;
-}
-
 .f-go-section a{
 	margin-left: 0rem;
 	color: rgba(0, 0, 0, 0.7);
 	font-weight: 600;
+	width: fit-content;
+	margin: .4rem 2rem ;
 }
 
 .footer-go-mess{
@@ -647,10 +643,6 @@ a:focus {
 }
 
 
-
-.f-go-section a{
-padding: .4rem 2rem ;
-}
 .f-go-section a:hover{color: blue;}
 
 .link-block a {
@@ -699,6 +691,17 @@ padding: .4rem 2rem ;
 	}
 	.container {
 		padding: 0;
+	}
+
+
+	.f-go-section{
+		margin-bottom: 3.5rem;
+		padding: 20px 1rem;
+		font-size: 14px;
+		border-bottom: var(--border);
+	}
+	.footer-go-mess::after{
+		display: none;
 	}
 }
 
