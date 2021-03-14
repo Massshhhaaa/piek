@@ -15,7 +15,6 @@
 <body>
 	{% include 'mainapp/parts/header.html' %}
 <main>
-
   <!-- Images block  -->
   <div class="d-flex flex-md-wrap justify-content-md-center images-block">
 
@@ -24,6 +23,7 @@
     <img  src="{{p.image.url}}" class="image">
   </a>
   {% endif %}{% endfor %}
+  <!-- <div class="lines-svg border" style="margin: 5rem 0 0rem; opacity: 0.02;"></div> -->
   </div>
 
 <!-- Скрипт для рассчета ширины фотографий в зависимости от их количества -->
@@ -52,11 +52,13 @@
 
 
 
-<div class="primary_ttl">
+<div data-aos="fade-right" data-aos-duration="2000" class="primary_ttl">
 	<h1> {{ product.name }}</h1>
 </div>
 
+<div class="vert-line">
 
+</div>
 
 		<div class="container js-content">
 
@@ -136,6 +138,7 @@ function ArrangementCartIcons() {
 
 <script src="{% static 'js/piek_modules/Sensors.js' %}"></script>
 <script src="{% static 'js/piek_modules/Product.js' %}"></script>
+
 <script type="module"  src="{% static 'js/ajax/Product.add-to-cart.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 </body>
