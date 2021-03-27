@@ -15,6 +15,7 @@ class ProductDocsInline(admin.StackedInline):
     model = ProductDocs
     extra = 0
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_filter = ('parent',)
     inlines = [ProductImageInline, ModificationInline, ProductDocsInline]

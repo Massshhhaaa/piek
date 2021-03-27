@@ -27,16 +27,14 @@ class Group(models.Model):
     title       = models.CharField(max_length=250)
     position    = models.IntegerField('Позиция на странице', unique=True)
     meta_description = models.TextField(null=True, blank=True)
+    groups_content = HTMLField(null=True, blank=True, help_text='Блок информации показывается на каждой странице группы (для обобщенной информации)')
     name        = models.CharField('Название на странице группы', null=True, blank=True,max_length=250)
     img         = models.ImageField(upload_to='main_page', null=True, blank=True, help_text='размер 925x625, ppi 300 и вес не более 60кб')
-    slug        = models.CharField('url', unique=True, null=True, blank=True, max_length=200, help_text='for instance, "mechanisms/meo"' )
     description = HTMLField(null=True, blank=True)
-    content     = HTMLField(null=True, blank=True)
+    slug        = models.CharField('url', unique=True, null=True, blank=True, max_length=200, help_text='например stance, "mechanisms/meo"' )
     pic_of_hat  = models.ImageField(upload_to='pic_of_hat', null=True, blank=True, help_text='size: 1920x500px')
     dark_banner = models.BooleanField(default=True)
-    groups_content = HTMLField(null=True, blank=True, help_text='Блок информации показывается на каждой странице группы (для обобщенной информации)')
     
-
     class Meta:
         ordering = ['position']
 
@@ -47,11 +45,11 @@ class Group(models.Model):
         return reverse('SubgroupDetailView', args=[self.slug])
 
 class Documentation(models.Model):
-    key_filter    = models.CharField(max_length=20)
-    key_sort      = models.IntegerField(null=True, blank=True, unique=True)
     name          = models.CharField(max_length=255)
     file          = models.FileField()
     document_category = models.CharField(choices=DOCS_CATEGORIES_CHOICES, max_length=255, null=True)
+    key_filter    = models.CharField(max_length=20)
+    key_sort      = models.IntegerField(null=True, blank=True, unique=True)
 
     class Meta:
         ordering = ['key_sort']
