@@ -60,16 +60,15 @@ class Documentation(models.Model):
 
 
 class Product(models.Model):
-    content      = HTMLField(help_text="Подзаголовки - H4. Черные подзаговолки просто как B")
-    mod_table    = HTMLField(help_text="Нужно идентификатора обязательно. id = 'MOD' ")
+    content      = HTMLField(help_text="синие подзаголовки - H4. Черные подзаговолки просто жирным")
+    mod_table    = HTMLField('Таблица модификаций', help_text="Нужно добавить id | <table id = 'MOD'>  ")
     meta_description = models.TextField(help_text='Описание для поисковой системы (100-150символов)', null=True, blank=True)
-    img          = models.ImageField('Изображение для ссылки', upload_to='mechanisms_preview')
+    
     name         = models.CharField('Страница группы. Название', max_length=250)
-    
-    
     h1_mod       = models.CharField('Заголовок всех модификаций',max_length=250)
 
     href_title   = models.CharField("Превью. Название", max_length=250,)
+    img          = models.ImageField('Превью. Картинка', upload_to='mechanisms_preview')
     description  = HTMLField('Превью. Описание', null=True, blank=True)
 
     sensors       = MultiSelectField(choices=SENSOR_CHOICES, max_choices=10, max_length=100, null=True, blank=True)
@@ -88,7 +87,7 @@ class Product(models.Model):
 class ProductImage(models.Model):
     page = models.ForeignKey(Product, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='mechanisms', null=True)
-    show = models.BooleanField(default=True)
+    show = models.BooleanField('Показывать?', default=True)
 
     def __str__(self):
         return str(self.page.id)
