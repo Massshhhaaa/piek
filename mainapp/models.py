@@ -25,7 +25,7 @@ DOCS_CATEGORIES_CHOICES = (
 
 class Group(models.Model):
     title       = models.CharField(max_length=250)
-    position    = models.IntegerField('Позиция на странице', unique=True)
+    position    = models.IntegerField('Позиция на странице каталога', unique=True)
     meta_description = models.TextField(null=True, blank=True)
     groups_content = HTMLField(null=True, blank=True, help_text='Блок информации показывается на каждой странице группы (для обобщенной информации)')
     name        = models.CharField('Название на странице группы', null=True, blank=True,max_length=250)
@@ -61,17 +61,20 @@ class Documentation(models.Model):
 
 class Product(models.Model):
     content      = HTMLField(help_text="Подзаголовки - H4. Черные подзаговолки просто как B")
-    mod_table    = HTMLField(help_text="Нужно идентификатора обязательно. id = 'MOD'")
+    mod_table    = HTMLField(help_text="Нужно идентификатора обязательно. id = 'MOD' ")
     meta_description = models.TextField(help_text='Описание для поисковой системы (100-150символов)', null=True, blank=True)
     img          = models.ImageField('Изображение для ссылки', upload_to='mechanisms_preview')
-    name         = models.CharField(max_length=250)
-    href_title   = models.CharField("title group", max_length=250,)
+    name         = models.CharField('Страница группы. Название', max_length=250)
     
-    h1_mod       = models.CharField(max_length=250)
-    description  = HTMLField('description group', null=True, blank=True)
+    
+    h1_mod       = models.CharField('Заголовок всех модификаций',max_length=250)
+
+    href_title   = models.CharField("Превью. Название", max_length=250,)
+    description  = HTMLField('Превью. Описание', null=True, blank=True)
+
     sensors       = MultiSelectField(choices=SENSOR_CHOICES, max_choices=10, max_length=100, null=True, blank=True)
     parent       = models.ForeignKey(Group, on_delete=models.CASCADE)
-    slug_product = models.SlugField('url', help_text='for instance, "40 or 6_3"')
+    slug_product = models.SlugField('url', help_text='Например, "160" или "6_3"')
 
     class Meta:
         ordering = ['id']
