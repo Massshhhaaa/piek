@@ -56,6 +56,7 @@ def ProductDetailView(request, slug_product, slug):
 def ModificationDetailView(request, slug, slug_product, slug_mod):
     product_pk      = Product.objects.filter(parent__slug=slug, slug_product=slug_product).values('pk')
     product         = Product.objects.only('content', 'href_title', 'h1_mod').get(pk__in = product_pk)
+    group           = Group.objects.only('groups_content').get(slug=slug)
     photos          = ProductImage.objects.filter(page__pk__in=product_pk)
     docs            = ProductDocs.objects.filter(page__pk__in=product_pk)
     mod             = get_object_or_404(Modification, slug_mod=slug_mod, parent__pk__in=product_pk)
@@ -69,6 +70,7 @@ def ModificationDetailView(request, slug, slug_product, slug_mod):
     context = {
     'mod' : mod,
     'photos': photos,
+    'group': group,
     'product' : product,
     'sensors_list': sensors_list,
     'docs' : docs,
