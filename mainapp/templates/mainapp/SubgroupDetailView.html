@@ -91,8 +91,9 @@
 					{% endfor %}
 				</section>
 
-
+			{% if subgroup_info.content %}
 			<div class="content">{{ subgroup_info.content|safe }}</div>
+			{% endif %}
 
 		</div>
 

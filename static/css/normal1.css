@@ -458,7 +458,7 @@ a:focus {
 	padding: 0 10px;
 	width: auto;
 	font-weight: 500;
-	color: var(--brand_brown);
+	color: #333;
 	background: white;
 	margin-bottom: -17px;
 }
