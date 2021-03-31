@@ -34,7 +34,7 @@ class Group(models.Model):
     slug        = models.CharField('url', unique=True, null=True, blank=True, max_length=200, help_text='например stance, "mechanisms/meo"' )
     pic_of_hat  = models.ImageField(upload_to='pic_of_hat', null=True, blank=True, help_text='size: 1920x500px')
     dark_banner = models.BooleanField(default=True)
-    content     = models.HTMLField(null=True, blank=True)
+    content     = HTMLField(null=True, blank=True)
     
     class Meta:
         ordering = ['position']
