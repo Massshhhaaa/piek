@@ -27,6 +27,7 @@ class Group(models.Model):
     title       = models.CharField(max_length=250)
     position    = models.IntegerField('Позиция на странице каталога', unique=True)
     meta_description = models.TextField(null=True, blank=True)
+    
     groups_content = HTMLField(null=True, blank=True, help_text='Блок информации показывается на каждой странице группы (для обобщенной информации)')
     name        = models.CharField('Название на странице группы', null=True, blank=True,max_length=250)
     img         = models.ImageField(upload_to='main_page', null=True, blank=True, help_text='размер 925x625, ppi 300 и вес не более 60кб')
@@ -62,7 +63,7 @@ class Documentation(models.Model):
 class Product(models.Model):
     content      = HTMLField(help_text="синие подзаголовки - H4. Черные подзаговолки просто жирным")
     mod_table    = HTMLField(help_text="Нужно добавить id тегу table. id = 'MOD' ")
-    meta_description = models.TextField(help_text='Описание для поисковой системы (100-150символов)', null=True, blank=True)
+    meta_description = models.TextField(help_text='Описание для поисковой системы (160-200 знаков)', null=True, blank=True)
     
     name         = models.CharField('Страница группы. Название', max_length=250)
     h1_mod       = models.CharField('Заголовок всех модификаций',max_length=250)
