@@ -62,7 +62,7 @@ class Documentation(models.Model):
 
 class Product(models.Model):
     content      = HTMLField(help_text="синие подзаголовки - H4. Черные подзаговолки просто жирным")
-    mod_table    = HTMLField(help_text="Нужно добавить id тегу table. id = 'MOD' ")
+    mod_table    = HTMLField(null=True, blank=True)
     meta_description = models.TextField(help_text='Описание для поисковой системы (160-200 знаков)', null=True, blank=True)
     
     name         = models.CharField('Страница группы. Название', max_length=250)

@@ -3,10 +3,8 @@
 <html>
 <head>
 	<meta name="description" content="{{ product.meta_description }}">
-	<meta name="keywords" content="{{ product.meta_keywords }}">
-
 	{% include 'mainapp/parts/head-property.html' %}
-	<title>{{ product.href_title }} - ПЭК</title>
+	<title>{{ product.href_title }}</title>
 	<link href="{% static 'css/ProductDetailView.css' %}" rel="stylesheet">
 	<link href="{% static 'css/ProdModBase.css' %}" rel="stylesheet">
 	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
@@ -52,42 +50,42 @@
 
 
 
-<div data-aos="fade-right" data-aos-duration="2000" class="primary_ttl">
-	<h1> {{ product.name }}</h1>
-</div>
+<div class="primary_ttl"><h1> {{ product.name }}</h1></div>
 
 		<div class="container js-content">
 
-			<section class="col p-0">
 				<div class="container">
 
 
 <!-- Modifications List Table  -->
-				<div class="mod_table_bg py-5">
-					<div class="d-flex pl-4 pl-md-0">
-						<div class="d-flex flex-column"  id="cart_btn">
+				{% if product.mod_table %}
+					<div class="mod_table_bg py-5">
+						<div class="d-flex pl-4 pl-md-0">
+							<div class="d-flex flex-column"  id="cart_btn">
 
-							{% for mod in mod_list %}
+								{% for mod in mod_list %}
 
-							<div class="cart-button-wrapper">
-								<button class="js-cart-buttons btn" type="button" add-to-cart-url='{% url "product" pk=mod.id %}' >
-									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  										<path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-										  <path fill-rule="evenodd" d="M8.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z"/>
-									</svg>
-								</button>
+								<div class="cart-button-wrapper">
+									<button class="js-cart-buttons btn" type="button" add-to-cart-url='{% url "product" pk=mod.id %}' >
+										<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+											<path fill-rule="evenodd" d="M8.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z"/>
+										</svg>
+									</button>
+								</div>
+
+								{% endfor %}
 							</div>
 
-							{% endfor %}
+							
+							<div class="mod-table">
+									{{ product.mod_table | safe }}
+							</div>
+							
+
 						</div>
-
-						<div class="flex-column mod-table">
-								{{ product.mod_table | safe }}
-
-						</div>
-
 					</div>
-				</div>
+				{% endif %}
 <!-- End Modifications List Table  -->
 
  			<div class="container-hero">
@@ -95,11 +93,9 @@
 			</div>
 
 			</div>
-			</section>
 		</div>
 
 
-	<!-- <div class="clear" style="clear: both;"></div>  NOTE: необходимо для /minor/sidebar.html  -->
 </main>
 {% include 'mainapp/parts/footer.html' %}
 
@@ -111,18 +107,18 @@ arr.push("{{mod.title}}");
 arr_slug.push("{{ mod.slug_mod }}");
 {% endfor %}
 for (let j = 0, k=2; j < arr.length; j++, k++) {
-	$(`#MOD tr:nth-child( ${k} ) td:nth-child(1)`).text(arr[j]);
-	$(`#MOD tr:nth-child( ${k} ) td:nth-child(1)`).wrap(`<a href= ${arr_slug[j]} ></a>`);
+	$(`.mod-table table tr:nth-child( ${k} ) td:nth-child(1)`).text(arr[j]);
+	$(`.mod-table table tr:nth-child( ${k} ) td:nth-child(1)`).wrap(`<a href= ${arr_slug[j]} ></a>`);
 }
 </script>
 
 <script>
 function ArrangementCartIcons() {
-		let first_row_height = $('#MOD > tbody > tr:nth-child(1)').outerHeight();
-		let second_row_height = $('#MOD > tbody > tr:nth-child(2)').outerHeight();
+		let first_row_height = $('.mod-table table  > tbody > tr:nth-child(1)').outerHeight();
+		let second_row_height = $('.mod-table table  > tbody > tr:nth-child(2)').outerHeight();
 
 		{% for mod in mod_list %}
-		var row_height = $('#MOD > tbody > tr:nth-child('+ ({{ forloop.counter }} + 1) +')').outerHeight();
+		var row_height = $('.mod-table table  > tbody > tr:nth-child('+ ({{ forloop.counter }} + 1) +')').outerHeight();
 		$('.cart-button-wrapper:nth-of-type('+ {{ forloop.counter }} +') .btn').attr('id', 'btn_'+ {{forloop.counter}});
 		document.querySelector('#btn_'+ {{forloop.counter }} +'').style['height'] = row_height + 'px';
 		{% endfor %}

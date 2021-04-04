@@ -11,8 +11,13 @@ main{
     --tiny_footer_bg_color: #000;
     --footer_text_color: #d4d4d4;
     --footer_headers: #fff;
+
+    --timeline-opacity: .6;
 }
 
+.f-go-section p, a{
+  color: rgba(255, 255, 255, 0.87) !important;
+}
 
 
 .about__banner{
@@ -57,7 +62,7 @@ main{
    font: normal 16px "SF UI Text";
    max-width: 850px;
    margin: 0 auto;
-   line-height: 1.7;
+   line-height: 1.5;
     margin-top: 2rem;
     text-align: justify;
  }
@@ -107,7 +112,7 @@ main{
   max-height: 50px;
   z-index: 2;
 }
-.r{align-items: center;
+.r{align-items: center; 
 justify-content: flex-end;}
 .r div.col-6{text-align: right;}
 .h.row {
@@ -122,6 +127,7 @@ justify-content: flex-end;}
   justify-content: center;
 }
 .h.row .col-2 .after {
+  opacity: var(--timeline-opacity);
   content: "";
   position: absolute;
   border-left: 3px solid #ED8D8D;
@@ -153,6 +159,7 @@ justify-content: flex-end;}
   height: 40px;
 }
 .t hr {
+  opacity: var(--timeline-opacity);
   border-top: 3px solid #ED8D8D;
   margin: 0;
   top: 17px;
@@ -163,24 +170,29 @@ justify-content: flex-end;}
   overflow: hidden;
 }
 .t .corner {
+  opacity: var(--timeline-opacity);
   border: 3px solid #ED8D8D;
   width: 100%;
   position: relative;
   border-radius: 15px;
 }
 .t .top-right {
+  opacity: var(--timeline-opacity);
   left: 50%;
   top: -50%;
 }
 .t .left-bottom {
+  opacity: var(--timeline-opacity);
   left: -50%;
   top: calc(50% - 3px);
 }
 .t .top-left {
+  opacity: var(--timeline-opacity);
   left: -50%;
   top: -50%;
 }
 .t .right-bottom {
+  opacity: var(--timeline-opacity);
   left: 50%;
   top: calc(50% - 3px);
 }
