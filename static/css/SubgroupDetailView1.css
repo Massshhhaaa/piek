@@ -38,7 +38,7 @@ main{
   font-family: 'SF Ui Display';
   font-weight: 400;
 }
-
+   
 
 .subgroup-description p, .subgroup-description span{
 	--description_font_size: 16px;
@@ -110,6 +110,7 @@ table td:first-of-type{
   -ms-transform: scale(1.04);
   transform: scale(1.04);
 }
+
 .description p, .description strong{
 	font-size: 14px!important;;
 	line-height: 1.8;
@@ -134,6 +135,11 @@ table td:first-of-type{
     .content span{font-size: 0.85em!important;}
     .wrapper h2{font-size: 1.6em; color: #000; font-weight: normal;}
 
+    .description p, .description strong{
+      font-size: 12px !important;
+      line-height: 1.5;
+    }
+
 }
 
 @media (max-width: 575.98px) {
@@ -142,4 +148,7 @@ table td:first-of-type{
   align-items: center; height: 100%;
 }
   .wrapper img{width: 180px;}
+
+
+
 }

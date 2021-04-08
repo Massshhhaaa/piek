@@ -6,6 +6,8 @@
 	<title>О компании</title>
 	<link href="{% static 'css/about.css' %}" rel="stylesheet">
 	<link href="{% static 'css/aos.css' %}" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
 
 
@@ -47,22 +49,23 @@
 		<p >ПЭК - группа компаний, специализирующихся на производстве исполнительных механизмов и электроприводов для трубопроводной арматуры.</p>
 		<p>У нас собственное производство полного цикла, в том числе литейный цех, цех термообработки и конструкторское бюро в Чебоксарах.</p>
 
-
 		<p>Компания использует для металлообработки точные обрабатывающие ЧПУ центры от производителей Mazak, Hortford, Dossan, Mitsubishi, которые позволяют нам  за счет концентрации операции  и больших производственных мощностей иметь самые маленькие сроки изготовления, которые обычно составляют от 5 до 12 дней.</p>
 
-
-
-		<div class="about__banner mt-5" style="background-image: url({% static 'img/about-page/image_2.jpg' %});"></div>
-
-		<div >
-		<p class="pt-4">Каждая партия, прошедшая металлообработку, исключительно проверяется на измерительном центре.
+		<p cl>Каждая партия, прошедшая металлообработку, исключительно проверяется на измерительном центре.
 			Кроме того, мы постоянно проводим ресурсные испытания, цель которых - повышение качества и увеличение ресурса работы продукции.</p>
-		</div>
-		<!-- <div class="about__banner mt-5" style="background-image: url({% static 'img/about-page/5.jpg' %});"></div> -->
-		<div  class="about__banner mt-5" style="background-image: url({% static 'img/about-page/4.jpg' %});"></div>
-		<div  class="about__banner mt-5" style="background-image: url({% static 'img/about-page/5.jpg' %});"></div>
-	</div>
+	
 
+		<div class="splide mt-5">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<img class="splide__slide" src="{% static 'img/about-page/image_2.jpg' %}">
+					<img class="splide__slide" src="{% static 'img/about-page/4.jpg' %}">
+					<img class="splide__slide" src="{% static 'img/about-page/5.jpg' %}">
+				</ul>
+			</div>
+		</div>
+
+	</div>
 	{% include 'mainapp/parts/about.history.html'%}
 
 </main>
@@ -70,6 +73,14 @@
 <script src="{% static 'js/aos.js' %}"></script>
 <script>AOS.init();</script>
 {% include 'mainapp/parts/footer.html' %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script>
+	document.addEventListener( 'DOMContentLoaded', function () {
+		new Splide( '.splide' ).mount();
+	} );
+</script>
 
 
 <script type="module">
