@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'mainapp',
+    'compressor', 
     'tinymce',
 ]
 
@@ -58,6 +59,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'jrl.wsgi.application'
 
+STATICFILES_FINDERS  =  [ 
+    'django.contrib.staticfiles.finders.FileSystemFinder' , 
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder' , 
+    'compressor.finders.CompressorFinder',
+]
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -116,6 +126,7 @@ STATICFILES_DIRS = [STATIC_DIR]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+
 
 
 JAZZMIN_SETTINGS = {
@@ -217,31 +228,13 @@ JAZZMIN_SETTINGS = {
 
 
 TINYMCE_DEFAULT_CONFIG = {
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 20,
-    'selector': 'textarea',
-    'theme': 'modern',
-    'plugins': '''
-            textcolor paste save link image media preview codesample contextmenu
-            table code lists fullscreen  insertdatetime  nonbreaking
-            contextmenu directionality searchreplace wordcount visualblocks
-            visualchars code fullscreen autolink lists  charmap print  hr
-            anchor pagebreak
-            ''',
-    'toolbar1': '''
-            fullscreen bold italic underline | styleselect | fontsizeselect  | forecolor backcolor | alignleft alignright |
-            aligncenter alignjustify | indent outdent | bullist numlist table |
-            | link image media | paste pastetext |
-            ''',
-    'toolbar2': '''
-              code |visualblocks visualchars |
-            charmap hr pagebreak nonbreaking anchor |
-            ''',
-    'contextmenu': 'formats | link image',
-    'menubar': True,
-    'content_css' : '/static/css/SubgroupDetailView.css',
-    'statusbar': True,
-    'min_height': '300',
+    'TINYMCE_COMPRESSOR': True,
+
+    'toolbar': 'undo redo |  styleselect  |  bold italic underline | alignleft aligncenter alignjustify table | outdent indent',
+    'plugins': 'image link autolink charmap hr toc fullscreen autoresize table advlist',
+
+    'content_css' : '/static/css/00.css',
+
 }
 
 
@@ -250,3 +243,4 @@ try:
     from .local_settings import *
 except ImportError:
     from .prod_settings import *
+

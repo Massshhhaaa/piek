@@ -115,7 +115,7 @@ body {
 }
 
 .navbar-brand {
-	margin-left: 3em;
+
 	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
 	-webkit-animation-fill-mode: both;
@@ -127,13 +127,13 @@ body {
 
 .nav-link {
 	color: var(--nav_link_color) !important;
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 1em;
 }
 
 .nav-item a:hover {
 	margin-bottom: -1px;
-	border-bottom: 1px solid var(--navbar_bb, #4e0000);
+	border-bottom: 1px solid var(--navbar_bb, #444444);
 }
 
 nav.navbar .dropdown:hover>.dropdown-menu {
@@ -391,7 +391,6 @@ a:focus {
 
 .primary_ttl h1 {
 	font: normal 2.3em 'Anonymous';
-	text-align: center;
 	padding: 5rem 3rem 3rem;
 }
 

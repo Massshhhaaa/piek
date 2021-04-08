@@ -2,7 +2,7 @@
 
   --height_of_row_mod_table: 12px;
   --mod_table_bg_color: #f9f9f9;
-  --mod_table_bg_color_hover: #f4f3f2;
+  --mod_table_bg_color_hover: #eeeeee;
 }
 
 
@@ -25,69 +25,24 @@ html{
   cursor: pointer;
   margin: 0;
   border-radius: 0px;
-  border-bottom: 1px solid #e1dedc !important;
+  border-bottom: 1px dashed #e1dedc !important;
   background-color: inherit;
   outline: none !important;
   box-shadow: none !important;
-  color: #999;
+  color: #3d3d3d;
   font-size: 18px;
 
   transition: transform .15s linear forwards, background-color .2s;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
 }
-.btn:hover{
-  background-color: #f4f3f2;
 
-}
+
 .btn-animate{
-  color: green!important;
-}
-.primary_ttl{
-  margin: 4rem 0 3rem;
+  color:#224cf3!important;
 }
 
-.mod-table{
-  font-size: 12px;
-  color: #222;
-  line-height: var(--content_line_height);
-  width: 100%!important;
-}
 
-.mod_table_bg{
-  background-color: var(--mod_table_bg_color);
-   overflow-x: auto;
-   box-shadow: 1px 2px 12px 0 rgba(94,94,94,.12);
-}
-.mod-table table  span, .mod-table table  p, .mod-table table  td{
-  font-size: 13px;
-}
-
-.mod-table table  td{border: none !important; margin: 0; padding: var(--height_of_row_mod_table);}
-.mod-table table  tr{border-bottom: 1px solid #e1dedc;}
-.mod-table table  tr:hover{ background-color: var(--mod_table_bg_color_hover);}
-.mod-table table {
-  width: 100% !important;
-  height: auto !important;
-  border: none !important;
-}
-.mod-table table  td:first-of-type{
-  font-size: 13px!important;
-}
-.mod-table table  tr:nth-child(n+2) td:nth-child(1){
-  border: none;
-  padding: 10px !important;
-}
-.mod-table table  tr:nth-child(1) td:nth-child(1){
-  min-width:30% !important;
-}
-form:nth-last-of-type(1) .btn{
-  border: none !important;
-}
-
-.mod-table table  tr:nth-of-type(1){
-  background-color: var(--mod_table_bg_color);
-}
 
 @media (max-width: 767.98px) {
   :root{
@@ -96,3 +51,27 @@ form:nth-last-of-type(1) .btn{
   .mod-table table  td{ padding: 0 var(--height_of_row_mod_table);}
 
 }
+
+
+
+:root{
+  --cart_buttons_color: #efefef;
+  --cart_buttons_radius: 20px;
+
+  --border_color: #e5e5e5;
+}
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+
+}
+
+
+form{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 42px;
+}
+
+

@@ -1,114 +1,68 @@
-<!DOCTYPE html>
+{% extends 'mainapp/ProductGenezis.html' %}
 {% load static %}
-<html>
-<head>
-	{% include 'mainapp/parts/head-property.html' %}
-	<title>{{ mod.title }} {{ product.h1_mod }}</title>
-	<link href="{% static 'css/ModificationDetailView.css' %}" rel="stylesheet">
-	<link href="{% static 'css/ModificationsDetailView_CartButtons.css' %}" rel="stylesheet">
-	<link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
-	<link href="{% static 'css/ProdModBase.css' %}" rel="stylesheet">
 
-</head>
-<body>
-	{% include 'mainapp/parts/header.html' %}
-<main>
-		<!-- Images block  -->
-		<div class="d-flex flex-md-wrap justify-content-md-center images-block">
-
-	  {% for p in photos %}{% if p.show %}
-	  <a data-fancybox='images' href="{{p.image.url}}" data-width="1200">
-	    <img  src="{{p.image.url}}" class="image">
-	  </a>
-	  {% endif %}{% endfor %}
-	  </div>
-
-		<script type="text/javascript">
-		function PhotosWidth(){
-			if (window.matchMedia("(min-width: 768px) and (max-width: 1199.98px)").matches){
-			var images = document.querySelectorAll(".images-block a");
-
-			for(i = 0; i < images.length; i++){
-				var width  = 100/document.querySelector(".images-block").children.length;
-				if (width > 50) {width=50}
-				images[i].style.cssText = 'width: '+width+'%!important';
-			}
-		} else {
-			var images = document.querySelectorAll(".images-block a");
-			for(i = 0; i < images.length; i++){
-				images[i].removeAttribute("style");
-			}
-
-		}
-		}
-		PhotosWidth();
-		</script>
-
-
-	<!-- End Images block  -->
+{% block title %}
+<title>{{ mod.title }} {{ product.h1_mod }}</title>
+{% endblock title %}
 
 
 
-		<div class="js-content ">
-			<div class="col p-0 container">
-
-				<div class="primary_ttl mb-5">
-					<h1> {{ product.h1_mod }} {{ mod.title }}</h1>
-				</div>
-
-
-				<div class="d-flex m-0 m-md-3">
-					<div class=" about-modification container py-5" id='cart-form-bg'>
-
-						<div class="flex-column">
-							<section class="mod-content">
-								{{ mod.content | safe }}
-							</section>
-						</div>
-
-					</div>
-
-
-					<!-- Add to cart section -->
-					<div class="d-none d-md-flex flex-column ml-4 pt-md-1">
-
-						<div class="d-flex flex-column justify-content-center">
-							<form id="js-form-add-cart" add-to-cart-url='{% url "product" pk=mod.id %}'>
-								<input id="js-quantity-field" class="input-quantity mr-3" min="1" value=1 type="text" name="quantity" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-								<div class="d-flex align-self-center p-3 btn-wrap">
-
-
-									<div id="js-cart-button" class="add-to-cart">
-										<div class="default">Купить</div>
-										<div class="success">Добавлено</div>
-										<div class="cart">
-											<div>
-												<div></div>
-												<div></div>
-											</div>
-										</div>
-										<div class="dots"></div>
-									</div>
-
-								</div>
-							</form>
-						</div>
-
-						<div class="flex-column m-auto pt-5 pt-md-0 m-md-0"><p class="help-text">Внести изменения в название вы сможете в корзине</p></div>
-					</div>
-					<!-- End Add to cart section -->
-			</div>
-
-
-				<div class="container-hero">
-				{% include 'mainapp/parts/ProdModBase.html' %}
-				</div>
-
-			</div>
+{% block name %}
+	<div class="flex-column order-1  primary_ttl">
+		<a class="product-parent" href="/{{ product.parent.slug }}"><p>{{ product.parent }} / {{ mod.parent }}</p></a>
+		<h1>{{ product.h1_mod }} {{ mod.title }}</h1>
 	</div>
-</main>
+{% endblock name %}
 
-{% include 'mainapp/parts/footer.html' %}
+
+{% block table %}
+<div class="container">
+<div class="d-flex">
+<div class="about-modification container py-4" id='cart-form-bg'>
+
+	<div class="flex-column mod-content">
+
+			{{ mod.content | safe }}
+	</div>
+
+</div>
+
+
+<!-- Add to cart section -->
+<div class="d-none d-md-flex flex-column ml-4 pt-md-1">
+
+	<div class="d-flex flex-column justify-content-center">
+		<form id="js-form-add-cart" add-to-cart-url='{% url "product" pk=mod.id %}'>
+			<input id="js-quantity-field" class="input-quantity mr-3" min="1" value=1 type="text" name="quantity" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+			<div class="d-flex align-self-center p-3 btn-wrap">
+
+
+				<div id="js-cart-button" class="add-to-cart">
+					<div class="default">Купить</div>
+					<div class="success">Добавлено</div>
+					<div class="cart">
+						<div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+					<div class="dots"></div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+</div>
+<!-- End Add to cart section -->
+</div>
+</div>
+{% endblock table %}
+
+
+
+
+
+{% block scripts %}
 <script>
 let mod_bg = document.getElementById("cart-form-bg").getBoundingClientRect().top;
 let sidebar = document.getElementById('content-left');
@@ -125,9 +79,8 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 </script>
 
 
-<script src="{% static 'js/piek_modules/Sensors.js' %}"></script>
+
 
 <script type="module"  src="{% static 'js/ajax/Modification.add-to-cart.js' %}"></script>
-<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
-</body>
-</html>
+
+{% endblock scripts %}

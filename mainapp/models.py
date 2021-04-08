@@ -1,6 +1,6 @@
 from django.db import models
 from pytils.translit import slugify
-from tinymce import HTMLField
+from tinymce.models import HTMLField
 from django.shortcuts import reverse
 from multiselectfield import MultiSelectField
 
@@ -62,6 +62,7 @@ class Documentation(models.Model):
 
 class Product(models.Model):
     content      = HTMLField(help_text="синие подзаголовки - H4. Черные подзаговолки просто жирным")
+    product_description = HTMLField(null=True, blank=True)
     mod_table    = HTMLField(null=True, blank=True)
     meta_description = models.TextField(help_text='Описание для поисковой системы (160-200 знаков)', null=True, blank=True)
     
@@ -88,7 +89,10 @@ class Product(models.Model):
 class ProductImage(models.Model):
     page = models.ForeignKey(Product, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='mechanisms', null=True)
-    show = models.BooleanField('Показывать?', default=True)
+    first = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ('-first',)
 
     def __str__(self):
         return str(self.page.id)
