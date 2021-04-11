@@ -573,17 +573,33 @@ a:focus {
 
 .footer {
 	background-color: var(--footer_bg_color);
-    border-top: 1px solid #eaeaea;
-	border-bottom: 1px solid #eaeaea;
+/* 
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea; */
 	
-	padding-top: 50px;
+	padding: 0px 0 30px;
 
-	position: relative;
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	right: 0;
 }
+
+.vert-line{
+	margin: 0 auto;
+	width: 1px;
+	height: 100px;
+	background-color: #000;
+}
+footer .links a{
+	font-family: "SF UI Text";
+	padding: 1rem;
+	font-size: 13px;
+	color: #000;
+	font-weight: 300;
+}
+footer .links a:hover{
+	color: blue;
+}
+
+
+
 
 .contacts-mobile {
 	font-weight: 500;
@@ -599,56 +615,52 @@ a:focus {
 .tiny-footer p {
 	color: var(--footer_text_color);
 	transition: color .3s;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: normal;
 	text-decoration: none;
 	letter-spacing: -.1px;
 }
 
-.footer a:hover {
-	text-decoration: none;
-	color: #111;
-}
 
 .footer h2 {
 	color: var(--footer_headers);
-	font-size: 1.1em;
-	font-weight: 500;
+	font-size: 15px;
+	font-weight: 700;
+	margin-bottom: 1rem;
 }
 
-.f-go-section a{
-	margin-left: 0rem;
-	color: rgba(0, 0, 0, 0.7);
-	font-weight: 600;
-	width: fit-content;
-	margin: .4rem 2rem ;
-}
 
 .footer-go-mess{
-	font-size: 26px!important;
+	font-size: 24px!important;
 	font-weight: 800!important;
-	line-height: 1.3;
+	line-height: 1.2;
 	letter-spacing: -1px!important;
 	color: rgb(53, 53, 53)!important;
 	margin-bottom: 2rem;
 }
-.footer-go-mess::after{
+/* .footer-go-mess::after{
 	content: '';
 	position: absolute;
-	bottom: 40px;
+	bottom: 20px;
 	left: 0px;
 	height: 30px;
 	width: 30px;
 	border-left: 1px solid black ;
 	border-bottom: 1px solid #000;
 	border-bottom-left-radius: 10px;
-}
+} */
 
 
-.f-go-section a:hover{color: blue;}
+.f-go-section a:hover,
+.link-block a:hover{color: blue;}
 
-.link-block a {
-	padding: 0.5em 0;
+.link-block a, .f-go-section a{
+
+	color: #222;
+	font-size: 15px;
+	font-weight: 300;
+	padding-top: .7rem;
+	width: fit-content;
 }
 
 .iso-cerf{
@@ -656,7 +668,17 @@ a:focus {
 	padding-top: 40px;
 	line-height: 14px;
 }
-.iso-cerf p{text-transform: uppercase; font-size: 12px; font-weight: 300;}
+.iso-cerf p{text-transform: uppercase;
+	 font-size: 12px; 
+	 font-weight: 300;
+	
+}
+.iso-cerf a{
+	color: #555;
+}
+.iso-cerf a:hover{
+	text-decoration: none;
+}
 .iso-cerf img{height: 80px;}
 
 @media (max-width: 767.98px) {
