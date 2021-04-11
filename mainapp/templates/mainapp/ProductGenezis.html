@@ -72,15 +72,33 @@
 	{% if sensors_list %}
 	<h4 class="sensors-ttl">
 	<span>Доступные блоки сигнализации положения
-		<a href="{% url 'sensors' %}">| Подробнее &#8594;</a>
+		<a onclick="sensors_rerendering()" href="javascript:void(0);">| Подробнее &#8594;</a>
 	</span> 
 	</h4>
 	<div class="sensors-hero">
 			{% for sensor in sensors_list %}
 			<div class="sensor-inner">
 			<img src="{{sensor.icon_file.url}}" alt="">     
-			<h5>{{sensor.character}}</h5>					
-				<p>{{sensor.name}}</p>
+			<p class="sensor-character">{{sensor.character}}</p>					
+			<p class="sensor-name">{{sensor.name}}</p>
+		</div>
+		{% endfor %}
+	</div>
+	
+
+		
+	<div class="rerend-b-sensors block">
+		{% for sensor in sensors_list %}
+		<div class="flex-column sensor-wrap">
+
+			<div class="d-flex m-2 sensor-meta">
+				<img src="{{ sensor.icon_file.url }}" alt="">
+				<div class="sensor-character">{{ sensor.character }}</div>
+				<div  class="sensor-name">{{ sensor.name }}</div>
+			</div>
+
+			<div class="sensor-description">{{ sensor.description }}</div>
+
 		</div>
 		{% endfor %}
 	</div>
@@ -141,6 +159,14 @@
 	document.addEventListener( 'DOMContentLoaded', function () {
 		new Splide( '.splide' ).mount();
 	} );
+</script>
+<script>
+	function sensors_rerendering(){
+		var div = document.getElementsByClassName("rerend-b-sensors");
+		div[0].classList.add('b-show');
+
+		document.getElementsByClassName("sensors-hero")[0].classList.add('block');
+	}
 </script>
 
 {% block scripts %}
