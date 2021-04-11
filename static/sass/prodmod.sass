@@ -60,7 +60,7 @@
 
     span, p
         margin: 0 !important
-        font-family: 'SF UI Text '
+        font-family: 'SF UI Text'
         font-size: 16px !important
         line-height: 1.5 !important
         max-width: 850px
@@ -77,6 +77,8 @@
             color: #000
             font-size: 13px
             width: 100% !important
+            @media (max-width: 767.98px)
+                font-size: 12px
             table
                 width: 100% !important
                 border: none
@@ -188,21 +190,38 @@
     font-size: 14px
     text-align: center
     padding: 0rem .6rem
+    @media (max-width: 767.98px)
+        font-size: 12px
 
 .rerend-b-sensors
     flex-wrap: wrap
-    justify-content: center
+
     .sensor-wrap
-        width: 45%
+        width: calc((100%/2) - 1rem)
         border-radius: 16px
         border: 1px solid #eaeaea
         transition: box-shadow .3s
         margin: .5rem
+
+        @media (max-width: 767.98px)
+            margin: .3rem
+            width: calc((100%/2) - .3rem)
+            &:nth-of-type(2n)
+               margin-right: 0
+            &:nth-of-type(2n+1)
+                margin-left: 0
+                
         &:hover
             box-shadow: 1px 2px 20px 0 rgba(94,94,94,.2)
         img
             margin: 1rem
             width: 70px
+            height: 100%
+
+            @media (max-width: 767.98px)
+                width: 40px
+                margin: .5rem
+
         .sensor-character
             margin-top: 0rem
             margin-right: 0rem
@@ -211,12 +230,19 @@
             margin: 0 1rem
             margin-top: 1rem
             color: #707375
+            @media (max-width: 767.98px)
+                margin: auto 0
+                color: #333
 
         .sensor-description
             padding-top: 0 !important
             font-size: 14px
             padding: 1.3rem
             color: #444
+            @media (max-width: 767.98px)
+                font-size: 12px
+                padding: .5rem
+
 
 .block
   display: none !important
