@@ -1,73 +1,31 @@
 <!DOCTYPE html>
 {% load static %}
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	{% include 'mainapp/parts/head-property.html' %}
-	<title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
-  <style>
-    .picture{
-    background: url({% static 'img/5.jpg' %}) center -120px no-repeat;
-    background-size: cover;
-    }
-    .contrast-el{
-      transition: color .3s ease-in;
-    }
-    .text-center{
-      color: #000;
-      font-family: 'SF UI Text';
-      font-weight: 500;
-      font-size: 2em;
-    }
-  </style>
-</head>
+<html>
+  <head>
+      {% include 'mainapp/parts/head-property.html' %}
+      <title>ООО "ПЭК" - Производство исполнительных механизмов и электроприводов</title>
+      <style>
+        .text-center{
+          color: #000;
+          font-family: 'SF UI Text';
+          font-weight: 500;
+          font-size: 2em;
+        }
+      </style>
+  </head>
 <body>
 {% include 'mainapp/parts/header.html' %}
 
-<main class="main-property" style="z-index: 5;">
+<main class="main-property" >
   <div class="container title">
   	<div class="rellax" data-rellax-speed="-3">
-  		<p class="d-flex justify-content-center text-center p-4">Ваша заявка отпралена менеджеру и в течениие часа он с вами свяжется </p>
+  		<p class="d-flex justify-content-center text-center p-4">Спасибо. Ваша заявка отпралена менеджеру. Мы рабоатем пн-пт с 8 до 18</p>
   	</div>
 
   </div>
 
-  <div class="container-fluid px-0" style="padding-bottom: 200px;" >
-    <div class="picture" style="height: 500px;"></div>
-  </div>
-  <div class="container title ">
-  	<div class="rellax p-4" data-rellax-speed="5">
-  		<p class="d-flex justify-content-center text-center contrast-el">Большую часть заказов мы изготовливаем не дольше 14 дней</p>
-  	</div>
 </main>
 
 {% include 'mainapp/parts/footer.html' %}
-
-<script src="{% static 'js/rellax.min.js' %}"></script>
-<script>
-// Accepts any class name
-var rellax = new Rellax('.rellax');
-</script>
-<script type="text/javascript">
-  const box = document.querySelector("div.picture");
-  var start_pic = window.pageYOffset + box.getBoundingClientRect().top
-  var end_pic = window.pageYOffset + box.getBoundingClientRect().bottom
-  var el = document.querySelector("p.contrast-el");
-
-  userHasScrolled = false;
-window.onscroll = function (e){
-
-  var el_absolute_height = window.pageYOffset + el.getBoundingClientRect().top + (el.clientHeight / 2);
-
-  if( el_absolute_height < end_pic) {
-    document.querySelector('p.contrast-el').style['color'] = '#fff';
-  }else{
-    document.querySelector('p.contrast-el').style['color'] = '#000';
-  }
-
-
-    userHasScrolled = true;
-}
-
-</script>
 </body>
 </html>

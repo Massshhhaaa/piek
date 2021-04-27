@@ -228,12 +228,6 @@ def cart_counter(request):
             counter += int(request.session['piek_cart'][i].get('quantity'))
     return counter
 
-def sensors(request):
-    sensors = Sensor.objects.all()
-    return render(request, 'mainapp/minor/about_sensors.html', {'in_cart_counter': cart_counter(request),
-                                                                'sensors': sensors,})
-
-
 
 
 def contacts(request):
