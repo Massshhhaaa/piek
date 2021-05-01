@@ -3,9 +3,10 @@
     outline-offset: 0 !important;
 }
 .promt-text{
-  border-radius: 20px;
-  background: #f9f9f9;
   padding: 3rem;
+  max-width: 500px;
+  color: rgb(114, 114, 114);
+  margin: 0 auto;
 }
 .secondary_ttl span{
   color: #8a1524;
@@ -14,7 +15,6 @@
   font-size: 0.8em;
 }
 .cart-header{
-  font-family: 'SF UI Text';
   display: flex;
   justify-content: space-around;
   font-size: 0.9em;
@@ -23,7 +23,7 @@
   border-bottom: 1px solid #e8e8e9;
 }
 .cart-header p:nth-of-type(2){
-  margin-right: 6.5em;
+  margin-right: 9.5em;
 }
 .item{
   border-bottom: var(--border);
@@ -83,7 +83,7 @@
 background-color: #f6f6f6; }
 
 .input-designation{
-  font-size: 1.1em;
+  font-size: 14px;
   height: 30px;
   color: #555;
   text-align: center;
@@ -111,17 +111,18 @@ background-color: #f6f6f6; }
 
 .btn{
   background-color: transparent;
-  color: #000;
-  border-color: #53e83c;
-  border-radius: 80px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  border-radius: 10px;
   outline: 0 !important;
   outline-offset: 0 !important;
+  margin-bottom: 3rem;
 }
 
 .btn:hover{
-  background-color: #e2ffde;
-  color: #000;
-  border-color: #53e83c;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-color: #000;
   outline: 0 !important;
   outline-offset: 0 !important;
 }

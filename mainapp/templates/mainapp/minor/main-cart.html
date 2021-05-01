@@ -22,37 +22,11 @@
 
 	{% include 'mainapp/parts/header.html' %}
 
-	<main class="pb-5">
-		<div class="row p-0 m-0">
 
-
-			<style media="screen">
-			@media (min-width: 1200px) and (max-width: 1600px){
-				.col-xxl-6{
-					display: flex;
-					flex: 0 0 70%;
-					max-width: 70%;
-				}
-			}
-			@media (min-width: 1600px){
-				.col-xxl-6-index{
-					display: flex;
-					flex: 0 0 50%;
-					max-width: 50%;
-				}
-			}
-		</style>
-
-			{% include 'mainapp//minor/sidebar.html' %}
-
-
-		<div class="col-12 col-lg-9 col-xxl-6 col-xxl-pre-index col-xxl-6-index p-0">
+		<div style="min-height: 80vh;"class="container ">
 			{% block content %}
 			{% endblock content %}
 		</div>
-	</div>
-
-	<div class="clear" style="clear: both;"></div> <!-- NOTE: необходимо для /minor/sidebar.html -->
 </main>
 <script src="{% static 'js/scrollpos.js' %}"></script>
 {% include 'mainapp/parts/footer.html' %}
